@@ -1,0 +1,173 @@
+<h2 class="l_title">Tooltip</h2>
+<div class="l_article">
+  <h3 class="l_title">[data-tooltip]</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style</h4>
+    <div class="l_row">
+      <span role="tooltip" data-tooltip="툴팁의 내용이 들어감">툴팁 1</span>
+      <span role="tooltip" data-tooltip="다른 툴팁 내용입니다">툴팁 2</span>
+    </div>
+    <h4 class="l_title">줄바꿈 발생</h4>
+    <div class="l_row">
+      <span role="tooltip" data-tooltip="월마감 이후 최종 버전 수정 불가 | AI SCM팀에 마감 취소 요청 후 재시도해주세요.">툴팁</span>
+    </div>
+    <h4 class="l_title">type</h4>
+    <div class="l_row">
+      <span role="tooltip" data-tooltip-case="case1" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</span>
+      <span role="tooltip" data-tooltip-case="case2" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</span>
+      <span role="tooltip" data-tooltip-case="case3" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</span>
+    </div>
+    <h4 class="l_title">form 태그에 적용</h4>
+    <div class="l_row">
+      <button type="button" class="button primary outlined md" data-tooltip="월마감 이후 최종 버전 수정 불가|AI SCM팀에 마감 취소 요청 후 재시도해주세요.">최종 확정 취소</button>
+      <button type="button" class="button primary outlined md" disabled data-tooltip="월마감 이후 최종 버전 수정 불가|AI SCM팀에 마감 취소 요청 후 재시도해주세요.">최종 확정 취소</button>
+      <div class="dropdown md">
+        <button class="dropdownButton" data-tooltip="툴팁의 내용이 들어감">메뉴를 선택하세요</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem">
+              <button class="menuButton">옵션1</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">옵션2</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">상시 show</h4>
+    <div class="l_row">
+      <div class="tooltipShowing">
+        <div class="tooltip typeText isActive center top">
+          <span class="tooltipContent">배정취소승인요청<br>반려한 사유</span>
+        </div>
+        <span class="badge manState case7">투입 확정</span>
+      </div>
+    </div>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">툴팁 버튼 위치에 따른 툴팁 방향 (좌, 우, 중앙) </h4>
+    <div class="l_row">
+      <div class="temp_tooltip_pos">
+        <div class="pos pos_left">
+          <button type="button" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</button>
+        </div>
+        <div class="pos pos_center">
+          <button type="button" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</button>
+        </div>
+        <div class="pos pos_right">
+          <button type="button" data-tooltip="월마감 이후 최종 버전 수정 불가">툴팁</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <button type="button" class="button primary outlined md" onclick="openPanel('panelChat')">우측 Panel 열기</button>
+    </div>
+    <h4 class="l_title">툴팁 방향 강제 지정</h4>
+    <div class="l_row">
+      <div class="temp_tooltip_pos">
+        <div class="pos pos_center">
+          <button type="button" data-tooltip-align="left" data-tooltip-position="bottom" data-tooltip="월마감 이후 최종 버전 수정 불가 | AI SCM팀에 마감 취소 요청 후 재시도해주세요.">툴팁</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">[data-members]</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <span
+        role="tooltip"
+        data-members='[
+          {"name":"차은우","status":"ing"},
+          {"name":"김수현","status":"ing"},
+          {"name":"차은우","status":"tbd"},
+          {"name":"김수현","status":"tbd"},
+          {"name":"박보검","status":"tbd"}
+        ]'
+      >
+        Tooltip (클릭)
+      </span>
+    </div>
+    <h4 class="l_title">ui 참고 용</h4>
+    <div class="l_row">
+
+      <div class="tooltip typeMember isActive" style="position: relative; right: 0;">
+        <button type="button" class="button iconOnly buttonClose size8">툴팁 닫기</button>
+        <ul class="memberSimpleList">
+          <li><span class="assign ing">차은우</span></li>
+          <li><span class="assign ing">김수현</span></li>
+          <li><span class="assign tbd">차은우</span></li>
+          <li><span class="assign tbd">김수현</span></li>
+          <li><span class="assign tbd">박보검</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">[data-tooltip-clone]</h3>
+  <div class="l_body">
+    <h4 class="l_title">설명</h4>
+    <p class="l_text">data-tooltip-clone-content 안의 내용을 body 하단에 뿌려줌</p>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>버튼</dt>
+        <dd>data-tooltip-clone-button</dd>
+      </div>
+      <div class="col">
+        <dt>내용</dt>
+        <dd>data-tooltip-clone-content</dd>
+      </div>
+    </dl>
+    <div class="l_row">
+      <div class="tooltipWrap">
+        <button class="button iconOnly buttonTooltip" data-tooltip-clone-button="tooptip1" role="tooltip">툴팁</button>
+        <div class="tooltipCloneContent" data-tooltip-clone-content="tooptip1">
+          <p>선택한 기준과 비교해 실적이 떨어질것으로 예상되는 월을 한눈에 알아볼 수 있도록 색상으로 표시해 드려요. </p>
+          <ul>
+            <li>하락폭이 0.5% 커질 때마다 총 3단계로 점점 더 진해집니다.</li>
+            <li>하락폭이 0.5% 미만인 경우는 색상이 표시되지 않습니다. </li>
+          </ul>
+        </div>
+      </div>
+      <div class="tooltipWrap">
+        <button class="button iconOnly buttonTooltip" data-tooltip-clone-button="tooptip2" role="tooltip">툴팁</button>
+        <div class="tooltipCloneContent" data-tooltip-clone-content="tooptip2">
+          <p>222 내용 내용 내용 내용 내용</p>
+          <p>내용 내용 내용 내용 내용내용 내용 내용</p>
+          <ul>
+            <li>내용 내용내용 내용 내용내용 내용 내용</li>
+            <li>내용 내용내용 내용 내용내용 내용 내용</li>
+            <li>내용 내용내용 내용 내용내용 내용 내용</li>
+            <li>내용 내용 내용 내용 내용내용 내용 내용</li>
+            <li>내용 내용 내용 내용 내용내용 내용 내용</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">[data-tooltip-arr]</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <span
+        role="tooltip"
+        data-tooltip-class="tooltip typeArr1"
+        data-tooltip-arr='[
+          {"name":"채용", "status":"up", "value":"500"},
+          {"name":"퇴사", "status":"up", "value":"200"},
+          {"name":"이동", "status":"up", "value":"100"}
+        ]'
+      >
+        툴팁
+      </span>
+    </div>
+  </div>
+</div>

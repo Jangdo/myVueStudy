@@ -1,0 +1,119 @@
+/* Figma 2392:24136 — SCM_역할 정보 수정 사전 안내 팝업 */
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(15, 23, 42, 0.45);
+  box-sizing: border-box;
+}
+
+.panel {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow:
+    0 24px 48px -12px rgba(15, 23, 42, 0.2),
+    0 0 0 1px rgba(15, 23, 42, 0.06);
+  /* font-family: var(--ui-button-figma-font, "Pretendard Variable", system-ui, sans-serif); */
+  overflow: visible;
+}
+
+.closeBtn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #5f6675;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1;
+}
+
+.closeBtn:hover {
+  background: #f1f5f9;
+  color: #101828;
+}
+
+.body {
+  padding: 20px 24px;
+  padding-top: 48px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.message {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #444b59;
+  text-align: left;
+}
+
+.message p {
+  margin: 0;
+}
+
+
+.footer {
+  padding: 0 24px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+  width: 100%;
+  padding-top: 10px;
+}
+
+.btnCancel,
+.btnConfirm {
+  flex: 1 1 0;
+  min-width: 0;
+  height: 48px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btnCancel {
+  border: 1px solid #dce0e5;
+  background: #fff;
+  color: #444b59;
+}
+
+.btnCancel:hover {
+  background: #f8fafc;
+}
+
+.btnConfirm {
+  border: none;
+  background: #3d63ff;
+  color: #fff;
+}
+
+.btnConfirm:hover {
+  filter: brightness(1.05);
+}

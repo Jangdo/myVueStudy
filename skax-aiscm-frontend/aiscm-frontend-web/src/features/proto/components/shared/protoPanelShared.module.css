@@ -1,0 +1,412 @@
+/* /proto 패널 공통 — `.proto-parity-scope` 토큰 */
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.lead {
+  margin: 0 0 8px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.block {
+  margin-bottom: 8px;
+}
+
+.formGrid {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.formGridTight {
+  display: grid;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.labelInline {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.labelRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.weightsLine {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-bottom: 8px;
+}
+
+.control {
+  font: inherit;
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  background: var(--color-bg-surface);
+  color: var(--color-text);
+  min-width: 0;
+}
+
+.controlFull {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.w56 {
+  width: 56px;
+  box-sizing: border-box;
+}
+.w72 {
+  width: 72px;
+  box-sizing: border-box;
+}
+.w88 {
+  width: 88px;
+  box-sizing: border-box;
+}
+.w90 {
+  width: 90px;
+  box-sizing: border-box;
+}
+.w96 {
+  width: 96px;
+  box-sizing: border-box;
+}
+.minW180 {
+  min-width: 180px;
+}
+
+.btn {
+  padding: 8px 12px;
+  font: inherit;
+  font-weight: 600;
+  font-size: 13px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.err {
+  color: var(--color-danger);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.success {
+  color: var(--color-success);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.warn {
+  color: var(--color-warning);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.muted {
+  color: var(--color-text-muted);
+  font-size: 13px;
+  margin: 0;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0 0 8px;
+}
+
+.costLine {
+  margin: 8px 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.scenarioDesc {
+  margin: 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.list {
+  list-style: disc;
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.listTight {
+  gap: 6px;
+}
+
+.listFlush {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 12px;
+  background: var(--color-bg-surface);
+}
+
+.cardSm {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--color-bg-surface);
+}
+
+.cardMuted {
+  background: var(--color-bg-elevated);
+}
+
+.stack10 {
+  display: grid;
+  gap: 10px;
+}
+
+.stack8 {
+  display: grid;
+  gap: 8px;
+}
+
+.maxW520 {
+  max-width: 520px;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.flexRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.flexRowTight {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.writeStrip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 12px;
+  padding: 10px;
+  background: var(--color-bg-elevated);
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+}
+
+.writeStripLabel {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.fieldset {
+  margin-top: 16px;
+  border: 1px dashed var(--color-border-strong);
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.legend {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  padding: 0 4px;
+}
+
+.fieldsetHelp {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.toastOk {
+  margin-top: 12px;
+  padding: 8px 10px;
+  color: var(--color-success);
+  background: color-mix(in srgb, var(--color-success) 8%, var(--color-bg-surface));
+  border: 1px solid color-mix(in srgb, var(--color-success) 35%, var(--color-border));
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.modalBox {
+  margin-top: 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  background: var(--color-bg-elevated);
+}
+
+.modalStrong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.modalP {
+  margin: 8px 0;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.roleTitle {
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.roleMeta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.detailTitle {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+.detailP {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.userLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: var(--color-text);
+}
+
+.editPanel {
+  margin-top: 12px;
+  border: 1px solid var(--color-border-strong);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--color-bg-elevated);
+}
+
+.grid2 {
+  display: grid;
+  gap: 10px;
+}
+
+.landing {
+  padding: 24px;
+  display: grid;
+  gap: 12px;
+}
+
+.landingTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.landingTitleLg {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.landingBody {
+  margin: 0;
+  color: var(--color-text-secondary);
+}
+
+.landingPre {
+  margin: 0;
+  white-space: pre-wrap;
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.linkRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.linkRow a {
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.logList {
+  margin: 8px 0 0;
+  padding-left: 18px;
+  list-style: disc;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.simulatorTitle {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--color-text);
+}
+
+.simulatorStack {
+  margin-top: 8px;
+  display: grid;
+  gap: 8px;
+}

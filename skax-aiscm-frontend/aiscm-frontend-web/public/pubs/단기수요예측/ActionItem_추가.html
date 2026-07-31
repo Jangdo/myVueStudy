@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg column">
+                  <div class="cmnHeaderTitlePreArea">
+                    <button type="button" class="button transparent md2 iconOnly buttonBack">뒤로</button>
+                  </div>
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">Action Item 추가</h2>
+                    <span class="cmnHeaderText2">모든 Action Item은 생성일을 기준으로 주별 관리됩니다.</span>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader lg">
+                      <div class="cmnHeaderTitleArea">
+                        <strong class="cmnHeaderTitle md2">A조직 계획비 0.5% 감소 (기존 현황 정보)</strong>
+                        <span class="badge actionItem ai">AI생성</span>
+                      </div>
+                    </div>
+                    <div class="fieldsets xl">
+                      <dl class="fieldset type1">
+                        <div class="col">
+                          <dt><label class="required">현황</label></dt>
+                          <dd><input type="text" class="xl" placeholder="현황을 입력해주세요." /></dd>
+                        </div>
+                        <div class="col">
+                          <dt><label class="required">생성일</label></dt>
+                          <dd>
+                            <div class="dropdown xl isReadonly">
+                              <button class="dropdownButton">26.05.11</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <div class="col">
+                          <dt><label class="required">유형</label></dt>
+                          <dd>
+                            <div class="dropdown xl">
+                              <button class="dropdownButton">BR</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <div class="col flex3">
+                          <dt><label class="required">귀속 조직</label></dt>
+                          <dd>
+                            <div class="dropdown xl">
+                              <button class="dropdownButton">귀속 조직을 선택해주세요.</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <div class="col flex1">
+                          <dt><label class="required">귀속 연월</label></dt>
+                          <dd>
+                            <div class="dropdown xl">
+                              <button class="dropdownButton">귀속 연월을 선택해주세요.</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">메뉴2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                        <div class="col">
+                          <dt><label class="required">원인</label></dt>
+                          <dd><input type="text" class="xl" placeholder="Action Item 원인을 입력해주세요" /></dd>
+                        </div>
+                        <div class="col">
+                          <dt><label>해소 방안</label></dt>
+                          <dd><textarea cols="50" rows="3" class="xl" placeholder="해소 방안을 작성해주세요"></textarea></dd>
+                        </div>
+                      </dl>
+                      <div class="buttons footer">
+                        <button type="button" class="button solid submit xl">Action Item 수정 완료</button>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

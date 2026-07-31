@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">프로젝트 정보</h2>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                   <section class="section flex1">
+                    <div class="cmnHeader md">
+                      <div class="cmnHeaderTitleArea">
+                        <strong class="cmnHeaderTitle">담당 팀원</strong>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button outlined assistive md iconPre buttonUpload">PROMIS 보내기</button>
+                          <button type="button" class="button outlined assistive md iconPre buttonDownload">엑셀 다운로드</button>
+                          <button type="button" class="button outlined primary md iconPre buttonAi">AI 추천 조건 설정</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- card -->
+                    <div class="card type2 projectInforTeamMemeber">
+                    </div>
+                    <!-- //card -->
+                     
+                    <!-- floatingArea -->
+                    <div class="floatingArea bottom totalAmount">
+                      <div class="cmnHeader">
+                        <div class="cmnHeaderTitleArea">
+                          <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                        </div>
+                        
+                        <!-- case / floatingArea / 1 : 인건비 한도 X : 입찰/계약 CP 생성시 -->
+                        <div class="cmnHeaderSideArea">
+                          <span class="text">투입 가능 인력의 인건비와 미배정 인력의 인건비 한도를 합산한 금액입니다.</span>
+                          <div class="amounts">
+                            <span class="amount"><span class="number xl primary">138,380,830</span></span>
+                          </div>
+                        </div>
+                        <!-- case / floatingArea / 1 : 인건비 한도 X : 입찰/계약 CP 생성시 -->
+                      </div>
+                    </div>
+                    <!-- //floatingArea -->
+
+                    <!-- floatingArea -->
+                    <div class="floatingArea bottom totalAmount">
+                      <div class="cmnHeader">
+                        <div class="cmnHeaderTitleArea">
+                          <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                        </div>
+                        <!-- case / floatingArea / 2 : 인건비 한도 X : 제안PM선정, 수행PM선정시 -->
+                        <div class="cmnHeaderSideArea">
+                          <span class="text">투입 가능 인력의 인건비와 미배정 인력의 인건비 한도를 합산한 금액입니다.</span>
+                          <div class="amounts">
+                            <span class="amount"><span class="number xl primary">138,380,830</span></span>
+                          </div>
+                        </div>
+                        <!-- //case / floatingArea / 2 : 인건비 한도 X : 제안PM선정, 수행PM선정시 -->
+                      </div>
+                    </div>
+                    <!-- //floatingArea -->
+
+                    <!-- floatingArea -->
+                    <div class="floatingArea bottom totalAmount">
+                      <div class="cmnHeader">
+                        <div class="cmnHeaderTitleArea">
+                          <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                        </div>
+                        <!-- case / floatingArea / 3 : 인건비 한도 O : 사전영업, 과제, 사내활동관리, 투자(개발,사내IT), 본제안(제안teming), 수행teaming -->
+                        <div class="cmnHeaderSideArea">
+                          <span class="text">투입 가능 인력의 인건비와 미배정 인력의 인건비 한도를 합산한 금액입니다.</span>
+                          <div class="amounts">
+                            <span class="amount"><span class="number xl primary">9,990,000</span><span class="unit xl primary">원</span></span>
+                            <span class="amount"><span class="number xl gray">9,990,000</span><span class="unit xl gray">원</span></span>
+                          </div>
+                        </div>
+                        <!-- //case / floatingArea / 3 : 인건비 한도 O : 사전영업, 과제, 사내활동관리, 투자(개발,사내IT), 본제안(제안teming), 수행teaming -->
+                      </div>
+                    </div>
+                    <!-- //floatingArea -->
+
+                    <!-- floatingArea -->
+                    <div class="floatingArea bottom totalAmount">
+                      <div class="cmnHeader">
+                        <div class="cmnHeaderTitleArea">
+                          <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                        </div>
+                        <!-- case / floatingArea / 4 : 인건비 한도 O & 총 인건비 한도를 초과했을 경우 -->
+                        <div class="cmnHeaderSideArea">
+                          <span class="text">투입 가능 인력의 인건비와 미배정 인력의 인건비 한도를 합산한 금액입니다.</span>
+                          <div class="amounts">
+                            <span class="amount"><span class="number xl danger">9,990,000</span><span class="unit xl danger">원</span></span>
+                            <span class="amount"><span class="number xl gray">9,990,000</span><span class="unit xl gray">원</span></span>
+                          </div>
+                        </div>
+                        <!-- //case / floatingArea / 4 : 인건비 한도 O & 총 인건비 한도를 초과했을 경우 -->
+                      </div>
+                    </div>
+                    <!-- //floatingArea -->
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        우측 영역
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Tooltip
+  new Tooltip();
+
+  // panel size 조절
+  new flexablePanel();
+  // table x scroll
+  new TableScroller({
+    className: 'tablesScrollX'
+  });
+
+  // switch toggle
+  initCheckToggleItems();
+
+  // Accordion
+  Accordion.init();
+
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

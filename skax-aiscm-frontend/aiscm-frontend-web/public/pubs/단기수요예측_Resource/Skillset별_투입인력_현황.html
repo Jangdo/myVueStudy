@@ -1,0 +1,389 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <button type="button" class="button transparent sm iconOnly buttonBack">뒤로</button>
+                    <h2 class="cmnHeaderTitle lg">Skill-set별 투입 인력 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="itemGroupA">
+                      <span class="item"><strong>전사</strong></span>
+                      <span class="item">26년 4월 5주차 기준</span>
+                    </div>
+                    <button type="button" class="button outlined md assistive iconPre buttonDownload">엑셀 다운로드</button>
+                  </div>
+                </div>
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader sm">
+                      <div class="cmnHeaderTitleArea">
+                        <div class="buttons">
+                          <button type="button" class="button filter2 md isActive">26/05</button>
+                          <button type="button" class="button filter2 md">26/06</button>
+                          <button type="button" class="button filter2 md highlight">26/07</button>
+                          <button type="button" class="button filter2 md">26/08</button>
+                          <button type="button" class="button filter2 md">26/09</button>
+                          <button type="button" class="button filter2 md highlight">26/10</button>
+                          <button type="button" class="button filter2 md">26/11</button>
+                          <button type="button" class="button filter2 md">26/12</button>
+                          <button type="button" class="button filter2 md">27/01</button>
+                          <button type="button" class="button filter2 md">27/02</button>
+                          <button type="button" class="button filter2 md">27/03</button>
+                          <button type="button" class="button filter2 md highlight">27/04</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="cards lg">
+                      <div class="card type2">
+                        <div class="cards xl">
+                          <div class="card type5 pType1">
+                            <div class="cmnHeader">
+                              <div class="cmnHeaderTitleArea">
+                                <dl class="dlist typeSkill">
+                                  <div class="row">
+                                    <dt>조회 Skill-set <span class="count">(1/5)</span></dt>
+                                    <dd>
+                                      <div class="itemDepth skill2">
+                                        <span class="item">Software Development</span>
+                                        <span class="item"><strong>ERP-T&C, ERP-FCM, Front-end Development</strong></span>
+                                      </div>
+                                    </dd>
+                                  </div>
+                                </dl>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <button type="button" class="button outlined md assistive">선택</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="chartArea">
+                            <span class="tempImg sample"><img src="/assets/images/temp/graph.jpg" class=""></span><!-- sample 이미지 -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="card type2">
+                        <div class="cmnHeader md">
+                          <div class="cmnHeaderTitleArea">
+                            <h2 class="cmnHeaderTitle sm">보유 인력 목록<span class="cmnHeaderCount"><strong class="cmnHeaderCountNumber2">(6건)</strong></span></h2>
+                          </div>
+                        </div>
+                        <div class="scrollContainer">
+                          <div class="tables tablesScrollX case1">
+                            <table class="table data border" style="min-width:1100px;">
+                              <colgroup>
+                              <col style="width: 145px" />
+                              <col style="width: 180px" />
+                              <col style="width: 70px" />
+                              <col style="width: 80px" />
+                              <col style="width: 275px" />
+                              <col style="width: 160px" />
+                              <col style="width: 180px" />
+                              <col style="width: 64px" />
+                              <col style="width: 80px" />
+                              <col style="width: 275px" />
+                              <col style="width: 160px" />
+                              </colgroup>
+                              <thead>
+                                <tr>
+                                  <th rowspan="2" class="fixedCell left1 borderRight">이름</th>
+                                  <th colspan="5" class="borderRight">투입중</th>
+                                  <th colspan="5">투입예정</th>
+                                </tr>
+                                <tr>
+                                  <th>Skill-set</th>
+                                  <th>레벨</th>
+                                  <th>유형</th>
+                                  <th>프로젝트 명</th>
+                                  <th class="borderRight">기간</th>
+                                  <th>Skill-set</th>
+                                  <th>레벨</th>
+                                  <th>유형</th>
+                                  <th>프로젝트 명</th>
+                                  <th>기간</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td colspan="10" class="isAvailable"><span>가용인력</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td colspan="5" class="isAvailable"><span>가용인력</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                                <tr>
+                                  <td class="fixedCell left1 tac">
+                                    <div class="infoMemberBasic sm">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>4</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                  <td><span>Front-end Development</span></td>
+                                  <td><span>1</span></td>
+                                  <td><span>AI</span></td>
+                                  <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                                  <td><span>26.05.30~28.05.30</span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // TableScroller
+  new TableScroller({
+    className: 'tablesScrollX'
+  });
+});
+</script>
+</html>

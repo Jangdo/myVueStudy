@@ -1,0 +1,41 @@
+version: 0.2
+
+env:
+  exported-variables:
+    - IMAGE_TAG
+    - IMAGE_REPO_URI
+
+phases:
+  pre_build:
+    commands:
+      - IMAGE_REPO_NAME=skax-aiscm/frontend-web
+      - IMAGE_TAG=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c1-7)
+      - IMAGE_REPO_URI=213409298494.dkr.ecr.ap-northeast-2.amazonaws.com/${IMAGE_REPO_NAME}
+      - IMAGE_BASE_URI=213409298494.dkr.ecr.ap-northeast-2.amazonaws.com/base/
+      - aws ecr get-login-password --region ap-northeast-2 | docker login --username AWS --password-stdin 213409298494.dkr.ecr.ap-northeast-2.amazonaws.com
+  build:
+    commands:
+      - echo Build started on `date`
+      - cd aiscm-frontend-web
+      - |
+        docker build \
+          --build-arg NODE_ENV=production \
+          --build-arg NEXT_PUBLIC_API_BASE_URL=${NEXT_PUBLIC_API_BASE_URL} \
+          --build-arg APP_ENV=${APP_ENV} \
+          --build-arg IMAGE_BASE_URI=${IMAGE_BASE_URI} \
+          -t ${IMAGE_REPO_URI}:${IMAGE_TAG} .
+      - docker tag ${IMAGE_REPO_URI}:${IMAGE_TAG} ${IMAGE_REPO_URI}:latest
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - docker push ${IMAGE_REPO_URI}:${IMAGE_TAG}
+      - docker push ${IMAGE_REPO_URI}:latest
+      - echo Docker Push completed.
+      - cd $CODEBUILD_SRC_DIR
+      - sed -i "s|REPOSITORY_PLACEHOLDER|${IMAGE_REPO_URI}|g" devops/helm-charts/scm-frontend-web/values.yaml
+      - sed -i "s|TAG_PLACEHOLDER|${IMAGE_TAG}|g" devops/helm-charts/scm-frontend-web/values.yaml
+      - echo "values.yaml has been updated with Tag ${IMAGE_TAG}"
+artifacts:
+  files:
+    - devops/helm-charts/scm-frontend-web/**/*
+

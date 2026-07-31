@@ -1,0 +1,778 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal :  -->
+                <div class="dimmed">
+                  <div class="modal lg">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">AI 추천 인력</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="accordions type1 typeCondition" data-ui="accordions">
+                        <div class="accordion isExpand">
+                          <div class="accordionHeader">
+                            <div class="titleArea">
+                              <div class="badgeAi">
+                                <div class="inner">
+                                  <span class="text icon">AI</span>
+                                </div>
+                              </div>
+                              <strong class="title">추천 조건 설정</strong>
+                            </div>
+                            <div class="specificArea">
+                              <div class="textItemList">
+                                <span class="item">경험 62, 스킬 87, 역할 14</span>
+                                <span class="item">Software Development, Data Center Engineering, Cloud 부문, AI Talent CoE, NOVA PMO팀</span>
+                              </div>
+                            </div>
+                            <div class="sideArea">
+                              <span class="badge role">배정역할 개발PL</span>
+                              <button type="button" class="buttonAccordion" data-ui="accordionTrigger"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                            </div>
+                          </div>
+                          <div class="accordionBody">
+                            <div class="tabs gapLg">
+                              <div class="tabButtons type1 md2">
+                                <button class="tabButton isActive" data-tab="tab1">가중치 조정</button>
+                                <button class="tabButton " data-tab="tab2">필터 설정</button>
+                              </div>
+
+                              <!-- tabContent 1 -->
+                              <div class="tabContent isActive" data-content="tab1">
+                                <div class="rangeGroup row">
+                                  <!-- ==============================
+                                    # slider 상태 설명
+                                      - 잠금 상태
+                                        - dataset : data-disabled="true"
+                                        - 버튼 클래스 : .buttonLock + .isActive
+                                        - 버튼 label : 잠금 해제
+                                      - 잠금 해제 상태
+                                        - dataset : data-disabled="false"
+                                        - 버튼 클래스 : .buttonLock
+                                        - 버튼 label : 잠금
+                                  ============================== -->
+                                  <div class="rangeItem">
+                                    <div class="slider" data-min="0" data-max="100" data-value="40" data-disabled="true">
+                                      <div class="sliderHeader">
+                                        <div class="titleArea">
+                                          <label class="rangeLabel">역할</label>
+                                          <button class="button iconOnly buttonTooltip3" data-tooltip="해당 역할에 대한 수행 이력을 측정합니다.">툴팁</button>
+                                        </div>
+                                        <div class="sideArea">
+                                          <button class="button transparent xs iconOnly buttonLock isActive">잠금 해제</button>
+                                          <div class="rangeVal slider__value"></div>
+                                        </div>
+                                      </div>
+                                      <div class="sliderBody">
+                                        <input type="range" class="slider__input" />
+                                        <div class="slider__track">
+                                          <div class="slider__fill"></div>
+                                          <div class="slider__thumb"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="rangeItem">
+                                    <div class="slider" data-min="0" data-max="100" data-value="90" data-disabled="false">
+                                      <div class="sliderHeader">
+                                        <div class="titleArea">
+                                          <label class="rangeLabel">스킬</label>
+                                          <button class="button iconOnly buttonTooltip3" data-tooltip="스킬셋 유사도를 측정합니다.">툴팁</button>
+                                        </div>
+                                        <div class="sideArea">
+                                          <button class="button transparent xs iconOnly buttonLock">잠금</button>
+                                          <div class="rangeVal slider__value"></div>
+                                        </div>
+                                      </div>
+                                      <div class="sliderBody">
+                                        <input type="range" class="slider__input" />
+                                        <div class="slider__track">
+                                          <div class="slider__fill"></div>
+                                          <div class="slider__thumb"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="rangeItem">
+                                    <div class="slider" data-min="0" data-max="100" data-value="10" data-disabled="false">
+                                      <div class="sliderHeader">
+                                        <div class="titleArea">
+                                          <label class="rangeLabel">경험</label>
+                                          <button class="button iconOnly buttonTooltip3" data-tooltip="유사 프로젝트 수행 경험을 측정합니다.">툴팁</button>
+                                        </div>
+                                        <div class="sideArea">
+                                          <button class="button transparent xs iconOnly buttonLock">잠금</button>
+                                          <div class="rangeVal slider__value"></div>
+                                        </div>
+                                      </div>
+                                      <div class="sliderBody">
+                                        <input type="range" class="slider__input" />
+                                        <div class="slider__track">
+                                          <div class="slider__fill"></div>
+                                          <div class="slider__thumb"></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                              <!-- tabContent 2 -->
+                              <div class="tabContent " data-content="tab2">
+                                <div class="setItemList">
+                                  <div class="setItemListHeader">
+                                    <strong class="setItemListHeaderTitle md">부문/본부/팀</strong>
+                                  </div>
+                                  <div class="setItemListBody">
+                                    <div class="itemListWrap">
+                                      <!-- ==============================
+                                      #상태 클래스 설명
+                                        - li.isActive : 하위 메뉴 활성
+                                      ==============================-->
+                                      <div class="itemList flex1">
+                                        <ul class="radioList ellipsis">
+                                          <li class="isActive">
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray dash"/>
+                                              <label>Cloud 부문 Cloud 부문 Cloud 부문 Cloud 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="itemList flex1">
+                                        <ul class="radioList ellipsis">
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li class="isActive">
+                                            <input type="checkbox" class="gray"/>
+                                            <label>Cloud 부문</label>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>Cloud 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                      <div class="itemList flex2">
+                                        <ul class="radioList row step2 ellipsis">
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>Cloud 부문 Cloud 부문 Cloud 부문 Cloud 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>Cloud 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>AT서비스 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>Cloud 부문 Cloud 부문 Cloud 부문 Cloud 부문</label>
+                                            </span>
+                                          </li>
+                                          <li>
+                                            <span class="itemRadio">
+                                              <input type="checkbox" class="gray"/>
+                                              <label>제조서비스 부문</label>
+                                            </span>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="setItemSelected">
+                                    <span class="itemSelected">AT서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                                    <span class="itemSelected">제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                                    <span class="itemSelected">AT서비스 제조서비스 제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="setConditionSumary">
+                              <div class="conditionGroup">
+                                <div class="group">
+                                  <dl class="dlist">
+                                    <div class="row">
+                                      <dt>역할</dt>
+                                      <dd><strong>900</strong></dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>스킬</dt>
+                                      <dd><strong>50</strong></dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>경험</dt>
+                                      <dd>
+                                        <strong>3</strong>
+                                        <button class="button iconOnly buttonTooltip3" data-tooltip="가중치의 총합은 100을 초과할 수 없습니다. | 값을 고정하고 싶은 항목은 잠금 기능을 사용하세요.">툴팁</button>
+                                      </dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                                <div class="group">
+                                  <dl class="dlist">
+                                    <div class="row">
+                                      <dt>보기 설정</dt>
+                                      <dd>
+                                        <div class="radios typeButton2">
+                                          <span class="itemRadio">
+                                            <label><input type="radio" name="radioButton" />5명</label>
+                                          </span>
+                                          <span class="itemRadio">
+                                            <label><input type="radio" name="radioButton" checked />10명</label>
+                                          </span>
+                                          <span class="itemRadio">
+                                            <label><input type="radio" name="radioButton" />15명</label>
+                                          </span>
+                                        </div>
+                                      </dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                                <div class="group">
+                                  <dl class="dlist">
+                                    <div class="row">
+                                      <dt>필터 설정</dt>
+                                      <dd><strong>900개</strong></dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                              </div>
+                              <div class="sideArea">
+                                <div class="radios">
+                                  <span class="itemRadio">
+                                    <label><input type="checkbox" class="gray" checked>CP 인건비 미만</label>
+                                  </span>
+                                  <span class="itemRadio">
+                                    <label><input type="checkbox" class="gray" checked>가용 인력만 보기</label>
+                                  </span>
+                                </div>
+                                <div class="buttons md">
+                                  <button type="button" class="button assistive outlined sm iconOnly buttonRefresh">reset</button>
+                                  <button type="button" class="button primary outlined sm buttonRefresh">적용</button>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <!-- case : 검색결과 -->
+                      <div class="tables">
+                        <div class="cmnHeader md">
+                          <div class="cmnHeaderTitleArea">
+                            <h2 class="cmnHeaderTitle sm">추천 결과<span class="cmnHeaderCount"><strong class="cmnHeaderCountNumber2">(총 12건)</strong></span></h2>
+                          </div>
+                        </div>
+                        
+                         <!-- ==============================
+                          # tr 상태 클래스
+                            - 선택됨 : tr.isSelected
+                            - 비활성 : tr.isDisabled
+                        ============================== -->
+                        <table class="table type2">
+                          <colgroup>
+                            <col style="width: 40px" />
+                            <col style="width: 68px" />
+                            <col style="width: 120px" />
+                            <col style="width: 150px" />
+                            <col style="width: auto" />
+                            <col style="width: 90px" />
+                            <col style="width: 240px" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>선택</th>
+                              <th>상태</th>
+                              <th>프로필</th>
+                              <th>직무/Skill-set</th>
+                              <th>프로젝트 수행경험</th>
+                              <th>AI 추천점수</th>
+                              <th>추천 사유</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="radio" /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember job">
+                                  <span class="job">Software Development</span>
+                                  <span class="skill">Front-end Development</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion isExpand">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1 프로젝트 이름 프로젝트 이름 1 프로젝트 이름 프로젝트 이름 1 프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember score">
+                                  <span class="title">적합도</span>
+                                  <span class="number">95</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember recommend">
+                                  <p class="text">AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역</p>
+                                  <dl class="dlist type7">
+                                    <div class="row">
+                                      <dt>경험</dt>
+                                      <dd>62</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>스킬</dt>
+                                      <dd>162</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>역할</dt>
+                                      <dd>2</dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="isSelected">
+                              <td><input type="radio" checked /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember job">
+                                  <span class="job">Software Development</span>
+                                  <span class="skill">Front-end Development</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                              <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember score">
+                                  <span class="title">적합도</span>
+                                  <span class="number">95</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember recommend">
+                                  <p class="text">AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역</p>
+                                  <dl class="dlist type7">
+                                    <div class="row">
+                                      <dt>경험</dt>
+                                      <dd>62</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>스킬</dt>
+                                      <dd>162</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>역할</dt>
+                                      <dd>2</dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="isDisabled">
+                              <td><input type="radio" disabled /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember job">
+                                  <span class="job">Software Development</span>
+                                  <span class="skill">Front-end Development</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                              <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">프로젝트 이름 프로젝트 이름 1</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember score">
+                                  <span class="title">적합도</span>
+                                  <span class="number">95</span>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="infoMember recommend">
+                                  <p class="text">AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 AI추천 사유가 들어가는 영역 추천 사유가 들어가는 영역 추천 사유가 들어가는 영역</p>
+                                  <dl class="dlist type7">
+                                    <div class="row">
+                                      <dt>경험</dt>
+                                      <dd>62</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>스킬</dt>
+                                      <dd>162</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>역할</dt>
+                                      <dd>2</dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <!-- //case : 검색결과 -->
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">역할 배정</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal :  -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+new Tooltip();
+
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// input range
+document.querySelectorAll(".slider").forEach((el) => {
+  new RangeSlider(el);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  Accordion.init();
+});
+</script>
+</html>

@@ -1,0 +1,816 @@
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Frame 2116933973 (1539-17230) + Frame 2116933293 — Figma dev */
+.root {
+
+  font-family: var(--ui-button-figma-font, "Pretendard Variable", system-ui, sans-serif);
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+
+}
+
+.staffingFetchError {
+  margin: 0 0 12px;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #b45309;
+  flex-shrink: 0;
+}
+
+.tdEmpty {
+  padding: 24px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #64748b;
+}
+
+.sectionHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 24px 0 16px;
+}
+
+.sectionTitle {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.excelBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 24px;
+  padding: 0 10px;
+  border: 1px solid #e9eaec;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  color: #2a2e34;
+  cursor: pointer;
+}
+
+.excelBtn:hover {
+  background: #f8fafc;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  border-bottom: 1px solid #e9eaec;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+
+.tab {
+  padding: 8px 8px 12px;
+  margin-right: 8px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #64748b;
+  cursor: pointer;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tab:hover {
+  color: #334155;
+}
+
+.tabActive {
+  color: #005cff;
+  font-weight: 600;
+}
+
+.tabActive::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 2px;
+  background: #005cff;
+  border-radius: 2px 2px 0 0;
+}
+
+/* title (1539-17231): 32px row, 10px gap to table, items-end, suffix gap 4px */
+.toolbar {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  min-height: 32px;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.toolbarPrefix,
+.toolbarSuffix {
+  display: flex;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+/* inner group: gap 2px between 24px icon buttons */
+.iconBtnGroup {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+.toolbarSuffix {
+  align-items: center;
+  gap: 4px;
+}
+
+/* 24x24, radius 4, px-8, border neutral/200, last icon border neutral/150 */
+.iconBtn {
+  width: 24px;
+  height: 24px;
+  box-sizing: border-box;
+  border: 1px solid #DCE0E5;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7c8390;
+  padding: 0 8px;
+}
+
+.iconBtnFav {
+  border-color: #e4e7eb;
+}
+
+.iconBtn:hover {
+  background: #f8fafc;
+}
+
+.iconBtn svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+/* AI 추천 상세 설정 — border primary/300, text #2d55f4, h32, r8, px12 */
+.btnGhost {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #94adff;
+  background: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  color: #2d55f4;
+  line-height: 1.5;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+
+.btnGhost:hover {
+  background: #f5f7ff;
+}
+
+/* 승인요청 — primary/900 */
+.btnPrimary {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: none;
+  background: #0b135e;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.btnPrimary:hover {
+  filter: brightness(1.05);
+}
+
+/* 테이블 — Figma 캡처: 헤더 #f8f9fa, 구분선, 열 비율 고정 */
+.tableWrap {
+  min-height: fit-content;
+  overflow-x: auto;
+  overflow-y: visible;
+  background: #fff;
+}
+
+/* 같은 프로젝트 재조회 중: 레이아웃 유지 + 상단 진행 표시 */
+.tableWrapRefreshing {
+  position: relative;
+  opacity: 0.94;
+  transition: opacity 0.12s ease;
+}
+
+.tableWrapRefreshing::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 35%;
+  background: #005cff;
+  border-radius: 0 2px 2px 0;
+  animation: staffingBusyBar 1s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 2;
+}
+
+@keyframes staffingBusyBar {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(380%);
+  }
+}
+
+.skeletonRow td {
+  vertical-align: middle;
+  border-bottom: 1px solid #edf0f3;
+}
+
+.skeletonBar {
+  height: 12px;
+  max-width: 100%;
+  border-radius: 4px;
+  background: #edf0f3;
+  background-image: linear-gradient(90deg, #edf0f3 0%, #f7f8fa 42%, #edf0f3 84%);
+  background-size: 240% 100%;
+  animation: staffingSkeletonShimmer 1.15s ease-in-out infinite;
+}
+
+.skeletonBarPerson {
+  height: 72px;
+}
+
+.skeletonCheckbox {
+  width: 16px;
+  height: 16px;
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+@keyframes staffingSkeletonShimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 13px;
+  min-width: 1024px;
+}
+
+.colSelect {
+  width: 50px;
+}
+
+.colRole {
+  width: 16%;
+}
+
+.colJop {
+  width: 16%;
+}
+
+.colSkill {
+  width: 20%;
+}
+
+.colStatus {
+  width: 10%;
+}
+
+.colPerson {
+}
+
+.colCompetency {
+  width: 22%;
+}
+
+.colPeriod {
+  width: 150px;
+}
+
+.colAmount {
+  width: 14%;
+}
+
+.colAction {
+  width: 70px;
+}
+
+.table thead th {
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.4;
+  color: #444B59;
+  background: #E4E7EB;
+  padding: 4px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #CCD1D7;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.table thead th:last-child {
+  border-right: none;
+}
+
+.table thead th.thLeft {
+  text-align: left;
+}
+
+.table thead th.thRight {
+  text-align: right;
+}
+
+.table tbody td {
+  padding: 12px 12px;
+  min-height: 56px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EDF0F3;
+  border-right: 1px solid #EDF0F3;
+  vertical-align: middle;
+  color: #101828;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.table tbody td:last-child {
+  border-right: none;
+}
+
+.tdCompetency {
+  text-align: left;
+  vertical-align: top;
+}
+
+.thCheckbox,
+.tdCheckbox {
+  width: 32px;
+  min-width: 32px;
+  text-align: center;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.tdCheckbox {
+  vertical-align: middle;
+}
+
+.tableCheckbox {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccd1d7;
+  cursor: pointer;
+  accent-color: #0b135e;
+}
+
+.thRole,
+.tdRole {
+  min-width: 100px;
+}
+
+.tdRole {
+  font-weight: 600;
+  color: #444B59;
+  text-align: center;
+}
+
+.thStatus,
+.tdStatus {
+  width: 86px;
+  min-width: 72px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.tdJob {
+  text-align: center;
+}
+
+.tdSkill {
+  text-align: center;
+}
+
+.thPerson,
+.tdPerson {
+  width: 240px;
+  text-align: center;
+}
+
+/* 미배정(버튼 2줄) ↔ 배정 완료 프로필 간 행 높이 출렁임 완화 */
+.tdPerson {
+  min-height: 108px;
+  vertical-align: middle;
+}
+
+.tdAmount {
+  vertical-align: middle;
+  font-variant-numeric: tabular-nums;
+  text-align: center;
+}
+
+.tdPeriod {
+  text-align: center;
+}
+
+.thAmount {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.thAction {
+  width: 68px;
+  min-width: 68px;
+  text-align: center;
+}
+
+.tdAction {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badgeGreen {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.badgeGray {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.badgeBlue {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.badgeOrange {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.badgeRed {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.badgeTeal {
+  color: #0f766e;
+  background: #ccfbf1;
+}
+
+.alertIcon {
+  display: block;
+  flex-shrink: 0;
+}
+
+.role {
+  font-weight: 600;
+  color: #444B59;
+}
+
+.job,
+.skill {
+  font-size: 12px;
+  font-weight: 400;
+  color: #444b59;
+}
+
+.personCell {
+  min-width: 0;
+}
+
+.personRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #e2e8f0;
+  flex-shrink: 0;
+}
+
+.personMeta {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-width: 0;
+}
+
+.nameLine {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+}
+
+.personName {
+  font-weight: 600;
+  color: #101828;
+}
+
+.empIdLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 10px;
+  color: #64748b;
+  text-decoration: none;
+  font-weight: 400;
+  margin-top: 2px;
+}
+
+.empIdLink:hover {
+  color: #005cff;
+}
+
+.rankBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 12px;
+  padding: 2px 4px;
+  font-size: 8px;
+  font-weight: 500;
+  color: #3D63FF;
+  border-radius: 20px;
+  background: #E0E7FF;
+  line-height: 1;
+}
+
+.teamSub {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #7c8390;
+  margin-top: 2px;
+}
+
+.personActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.personActionsRow {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.personButtonBox {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  width: 100%;
+}
+
+.switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  border-radius: 8px;
+  background-color: #EDF0F3;
+}
+
+.switch button {
+  height: 20px;
+  padding: 2px 8px;
+  border-radius: 8px;
+  border: none;
+  font-size: 10px;
+  font-weight: 500;
+  color: #9AA1AD;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.switch button.active {
+  color: #FFF;
+  background-color: #101828;
+}
+
+.aiBtn,
+.searchBtn {
+  flex: 1;
+}
+
+.aiBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 80px;
+  height: 24px;
+  padding: 0 8px;
+  font-size: 11px;
+  font-weight: 500;
+  border-radius: 4px;
+  border: 1px solid #94adff;
+  background: #fff;
+  color: #2d55f4;
+  cursor: pointer;
+  line-height: 1.5;
+  flex-shrink: 0;
+}
+
+.aiBtnIcon {
+  flex-shrink: 0;
+  color: #2d55f4;
+  opacity: 0.95;
+}
+
+.aiBtn:hover {
+  background: #f5f7ff;
+}
+
+.searchBtn {
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid #e4e7eb;
+  border-radius: 4px;
+  background: #fff;
+  color: #7c8390;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.searchBtn:hover {
+  background: #f8fafc;
+}
+
+.personTbd {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+
+.tbd {
+  font-size: 13px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.select {
+  width: 100%;
+  height: 24px;
+  padding: 4px 36px 4px 12px;
+  border: 1px solid #dce0e5;
+  border-radius: 8px;
+  background: #fff
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20' fill='none'%3E%3Cpath d='M5 7.5L10 12.5L15 7.5' stroke='%235F6675' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")
+    no-repeat right 10px center;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+  color: #444B59;
+  cursor: pointer;
+  appearance: none;
+  box-sizing: border-box;
+}
+
+.skillMain {
+  font-weight: 400;
+  color: #444B59;
+}
+
+.skillTag {
+  display: inline-block;
+  margin-top: 4px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #9AA1AD;
+  background: #E4E7EB;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.competency {
+  margin: 0;
+  padding-left: 14px;
+  color: #475569;
+  line-height: 1.45;
+  max-width: 420px;
+  font-size: 12px;
+}
+
+.periodMain {
+  font-weight: 400;
+  color: #444B59;
+}
+
+.periodSub {
+  display: inline-flex;
+  font-size: 12px;
+  color: #7c8390;
+  margin-top: 2px;
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #9AA1AD;
+  background-color: #F3F5F7;
+}
+
+.amountStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.amountMain {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #444B59;
+  font-variant-numeric: tabular-nums;
+}
+
+.amountSub {
+  font-size: 11px;
+  color: #8B929E;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.editBtn {
+  
+  height: 24px;
+  padding: 0 8px;
+  font-size: 10px;
+  font-weight: 500;
+  border: 1px solid #DCE0E5;
+  border-radius: 4px;
+  background: #fff;
+  cursor: pointer;
+  color: #444b59;
+  line-height: 1.5;
+}
+
+.editBtn:hover {
+  background: #f8fafc;
+}

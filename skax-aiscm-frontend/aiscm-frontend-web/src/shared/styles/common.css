@@ -1,0 +1,87 @@
+
+/*  */
+.tal {
+  text-align: left !important;
+}
+
+.tar {
+  text-align: right !important;
+}
+
+.tac {
+  text-align: center !important;
+}
+
+
+
+/*  */
+.score {
+  font-weight: 600;
+  color: #3D63FF;
+}
+
+.score.lg {
+  font-size: 20px;
+}
+
+
+
+/*  */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table thead th {
+  padding: 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #CCD1D7;
+  font-size: 12px;
+  font-weight: 500;
+  color: #444B59;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: #E4E7EB;
+}
+
+.table thead th:first-child,
+.table tbody th:first-child,
+.table tbody td:first-child {
+  border-left: none;
+}
+
+.table thead th:last-child,
+.table tbody th:last-child,
+.table tbody td:last-child {
+  border-right: none;
+}
+
+.table tbody th,
+.table tbody td {
+  padding: 12px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #EDF0F3;
+  border-right: 1px solid #EDF0F3;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 13px;
+  font-weight: 600;
+  color: #101828;
+}
+
+
+
+.table.sm {
+
+}
+
+.table.sm thead th {
+  padding: 4px 12px;
+}
+
+.table.sm tbody th,
+.table.sm tbody td {
+  padding: 4px 12px;
+}

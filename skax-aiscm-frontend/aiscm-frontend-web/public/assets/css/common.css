@@ -1,0 +1,222 @@
+
+/* show / hide */
+.dNone {
+  display: none;
+}
+.dBlock {
+  display: block;
+}
+.dFlex {
+  display: flex;
+}
+.blind {
+  overflow: hidden !important;
+  visibility: hidden !important;
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  flex: 0 0 auto !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  font-size: 1px !important;
+  line-height: 1 !important;
+  background: none !important;
+}
+
+/* size */
+.w100 {
+  width: 100% !important;
+}
+.h100 {
+  height: 100% !important;
+}
+
+/* flex : 배율 */
+.flexAuto {
+  flex: 0 1 auto !important;
+}
+.flex1 {
+  flex: 1 !important;
+}
+.flex2 {
+  flex: 2 !important;
+}
+.flex3 {
+  flex: 3 !important;
+}
+.flex4 {
+  flex: 4 !important;
+}
+.flex5 {
+  flex: 5 !important;
+}
+.flex6 {
+  flex: 6 !important;
+}
+.flex7 {
+  flex: 7 !important;
+}
+.flex8 {
+  flex: 8 !important;
+}
+.flex9 {
+  flex: 9 !important;
+}
+.flex10 {
+  flex: 10 !important;
+}
+
+/* flex : 정렬 */
+.justifyCenter {
+  justify-content: center !important;
+} 
+.alignCenter {
+  align-items: center !important;
+}
+
+/* padding */
+.p0 {
+  padding: 0 !important;
+}
+.pl0 {
+  padding-left: 0 !important;
+}
+
+/* margin */
+.mt8 {
+  margin-top: 8px !important;
+}
+.mt12 {
+  margin-top: 12px !important;
+}
+.mt16 {
+  margin-top:16px !important;
+}
+.mt24 {
+  margin-top: 24px !important;
+}
+.mt32 {
+  margin-top: 32px !important;
+}
+.mb0 {
+  margin-bottom: 0 !important;
+}
+.mb10 {
+  margin-bottom: 10px !important;
+}
+.mb16 {
+  margin-bottom: 16px !important;
+}
+.mb20 {
+  margin-bottom: 20px !important;
+}
+.mb24 {
+  margin-bottom: 24px !important;
+}
+.mb30 {
+  margin-bottom: 30px !important;
+}
+.mb32 {
+  margin-bottom: 32px !important;
+}
+
+/* border */
+.brn {
+  border-right: none !important;
+}
+
+/* text 정렬 */
+.tal {
+  text-align: left !important;
+}
+.tar {
+  text-align: right !important;
+}
+.tac {
+  text-align: center !important;
+}
+
+/* text : ellipsis */
+.textEllipsis {
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* font : size */
+.fontXs {
+  font-size: 0.83333rem !important; /* 10px */
+}
+.fontSm {
+  font-size: 0.91666rem !important; /* 11px */
+}
+.fontMd {
+  font-size: 1rem !important; /* 12px */
+}
+.fontMd2 {
+  font-size: 1.08333rem !important; /* 13px */
+}
+.fontLg {
+  font-size: 1.33333rem !important; /* 16px */
+}
+.fontXl {
+  font-size: 1.5rem !important; /* 18px */
+}
+
+/* font : weight */
+.fBold {
+  font-weight: 600 !important;
+}
+
+/* font : color */
+.fontPrimary {
+  color: var(--fontColorPrimary) !important;
+}
+
+/* font : decoration */
+.lineThrough {
+  text-decoration: line-through !important;
+}
+.underline {
+  text-decoration: underline !important;
+}
+
+
+
+/* ==============================
+  temp :
+    - 가이드를 위한 클래스
+    - 삭제해도 실서버에 영향 없음
+============================== */
+
+/* 이미지 : 차트 */
+img.tempImgChart {
+  width: 100%;
+}
+
+/* 이미지 : 기타 */
+.tempImg {
+  display: block;;
+  position: relative;
+}
+.tempImg img {
+  width: 100%;
+}
+.tempImg.sample::before {
+  content: 'SAMPLE';
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: flex;;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, .3);
+}

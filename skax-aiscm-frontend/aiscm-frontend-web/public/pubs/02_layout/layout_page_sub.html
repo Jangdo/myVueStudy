@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">NOVA 개발 1팀 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="buttons">
+                      <a href="#none" class="buttonLink">우리팀 인력 투입현황 보기</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    본문
+                  </section>
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+</html>

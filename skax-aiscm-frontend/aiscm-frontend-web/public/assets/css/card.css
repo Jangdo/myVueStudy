@@ -1,0 +1,818 @@
+
+/* ==============================
+  card group
+============================== */
+
+/* cards ============================== */
+
+/* cards / 공통 ========== */
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cards > .row {
+  display: flex;
+  gap: 10px;
+}
+
+/* size */
+.cards.xxl {
+  gap: 32px;
+}
+.cards.xl {
+  gap: 24px;
+}
+.cards.lg {
+  gap: 16px;
+}
+
+/* cards / type : full ========== */
+.cards.full {
+  flex: 1;
+}
+.cards.full > .row > .card {
+  flex: 1;
+}
+
+
+
+/* cardWrap : card 위에 타이틀이 오는 경우 ============================== */
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /* min-width: 162px; */
+}
+
+
+
+/* cardGroup ============================== */
+/* .cards 와 구분하여 사용하기 위해 만듬 */
+.cardGroup {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  gap: 8px;
+}
+.cardGroup > .card {
+  flex: 1;
+}
+
+
+
+/* card ============================== */
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* card / type : type1 ========== */
+.card.type1 {
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #EDF0F3;
+  background: #ffffff;
+}
+
+/* card / type : type2 ========== */
+.card.type2 {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #DFE3EC;
+  background: #ffffff;
+}
+
+/* card / type : type3 ========== */
+.card.type3 {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #F9FAFC;
+}
+
+/* card / type : type4 ========== */
+.card.type4 {
+  padding: 20px;
+  border-radius: 8px;
+  border: none;
+  background-color: #F7F9FF;
+}
+
+/* card / type : type5 ========== */
+.card.type5 {
+  padding: 16px;
+  border-radius: 8px;
+  border: none;
+  background-color: #F7F8FA;
+}
+
+/* card / option : shadow ========== */
+.card.shadow {
+  box-shadow: 0px 6px 6px 0px rgba(15, 23, 42, 0.02);
+}
+
+/* option : padding */
+.card.pMd {
+  padding: 12px
+}
+.card.pMd2 {
+  padding: 16px
+}
+.card.plg {
+  padding: 20px
+}
+.card.pType1 {
+  padding: 10px 16px;
+}
+
+/* option : gap */
+.card.gapLg {
+  gap: 24px;
+}
+.card.gapMd2 {
+  gap: 16px;
+}
+.card.gapMd {
+  gap: 12px;
+}
+
+
+
+/* ==============================
+  
+============================== */
+
+/* card / type : typePeriodPlan ============================== */
+.cardInfor.typePeriodPlan {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 6px;
+}
+.cardInfor.typePeriodPlan.bg {
+  padding: 14px 20px;
+  border-radius: 8px;
+  background-color: #F9FAFC;
+}
+.cardInfor.typePeriodPlan .itemHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cardInfor.typePeriodPlan .itemHeader .title {
+  font-size: var(--font11);
+  font-weight: 600;
+  color: var(--fontColor7);
+}
+.cardInfor.typePeriodPlan .itemHeader .buttonLink {
+  font-size: var(--font11);
+  color: var(--fontColor6);
+}
+.cardInfor.typePeriodPlan .itemHeader .buttonLink::after {
+  background-image: url('/assets/images/Icon/arrow_8_normal.svg');
+}
+.cardInfor.typePeriodPlan .itemBody {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cardInfor.typePeriodPlan .itemBody .total {
+  font-size: var(--font16);
+  font-weight: 600;
+  color: var(--fontColor9);
+}
+.cardInfor.typePeriodPlan .itemBody .dlist.type9 {
+  justify-content: center;
+}
+
+/* 상태 */
+.cardInfor.typePeriodPlan.isCurrent {
+  background-color: #F7F9FF;
+}
+.cardInfor.typePeriodPlan.isCurrent .title {
+  color: var(--fontColorPrimary);
+}
+
+
+
+/* card / type : typeMemberUseStatus ============================== */
+.cardInfor.typeMemberUseStatus {
+  fleX: 1;
+  display: flex;
+  flex-direction: column;
+  
+}
+.cardInfor.typeMemberUseStatus.bg {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background-color: #F9FAFC;
+}
+.cardInfor.typeMemberUseStatus .dlist {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.cardInfor.typeMemberUseStatus .dlist > .row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cardInfor.typeMemberUseStatus .dlist > .row > dt {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+.cardInfor.typeMemberUseStatus .dlist > .row > dd {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.cardInfor.typeMemberUseStatus .dlist > .row > dd .text {}
+.cardInfor.typeMemberUseStatus .dlist > .row > dd .text.rate {
+  color: #808FAD;
+}
+.cardInfor.typeMemberUseStatus .dlist > .row > dd .text.count {
+  color: var(--fontColor7);
+}
+.cardInfor.typeMemberUseStatus .itemHeader {
+  display: flex;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #EDF0F3;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist {}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row {}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt {
+  font-size: var(--font12);;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark {
+  gap: 4px;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 1px;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark.case1::before {
+  background-color: #3D63FF;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark.case2::before {
+  background-color: #FFAB66;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark.case3::before {
+  background-color: #FFD481;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dt.remark.case4::before {
+  background-color: #BCC1CA;
+}
+.cardInfor.typeMemberUseStatus .itemHeader .dlist > .row > dd {
+  font-size: var(--font12);
+}
+.cardInfor.typeMemberUseStatus .itemBody {}
+.cardInfor.typeMemberUseStatus .itemBody .dlist {}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row {}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row > dt {
+  font-size: var(--font11);
+}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row > dd {
+  font-size: var(--font11);
+}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row > dd .text {}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row > dd .text.rate {}
+.cardInfor.typeMemberUseStatus .itemBody .dlist > .row > dd .text.count {}
+
+
+
+/*  */
+/* card / type : typeBrData ============================== */
+.cardInfor.typeBrData {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-width: 0;
+}
+.cardInfor.typeBrData .itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.cardInfor.typeBrData .itemHeader .titleArea {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.cardInfor.typeBrData .itemHeader .titleArea.column {
+  flex-direction: column;
+  gap: 4px;
+}
+.cardInfor.typeBrData .itemHeader .titleArea .title {
+  display: inline-flex;
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor8);
+}
+.cardInfor.typeBrData .itemHeader .titleArea .date {
+  display: inline-flex;
+  font-size: var(--font11);
+  font-weight: 500;
+  color: var(--fontColor5);
+}
+.cardInfor.typeBrData .itemHeader .sideArea {
+  display: flex;
+  margin-left: auto;
+}
+.cardInfor.typeBrData .itemHeader .buttonDetail {
+  font-size: var(--font12);
+  color: #808FAD;
+}
+.cardInfor.typeBrData .itemHeader .buttonDetail:after {
+  width: 8px;
+  height: 8px;
+  background-image: url(/assets/images/Icon/arrow_8_normal.svg);
+}
+.cardInfor.typeBrData .itemBody {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.cardInfor.typeBrData .itemBody .dataArea {}
+.cardInfor.typeBrData .itemBody .dataArea .dlist {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.cardInfor.typeBrData .itemBody .dataArea .dlist > .row {
+  display: flex;
+  justify-content: flex-start;
+  gap: 4px;
+}
+.cardInfor.typeBrData .itemBody .dataArea .dlist > .row > dt {
+  display: flex;
+  align-items: center;
+  font-size: var(--font11);
+  font-weight: 600;
+  color: var(--fontColor6);
+  line-height: 1.4;
+}
+.cardInfor.typeBrData .itemBody .dataArea .dlist > .row > dd {
+  display: flex;
+  align-items: center;
+  font-size: var(--font12);
+  line-height: 1.4;
+}
+.cardInfor.typeBrData .itemBody .dataArea .dlist > .row > dd .rateIndex {
+  line-height: 1.4;
+}
+.cardInfor.typeBrData .itemBody .totalArea {
+  margin-left: auto;
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist {}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row > dt {
+  display: flex;
+  align-items: center;
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor6);
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row > dt [data-tooltip] {
+  margin-left: 2px;
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row > dd {
+  display: flex;
+  align-items: center;
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row > dd .val {}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row.total > dd .val {
+  font-size: var(--font18);
+  font-weight: 600;
+  color: var(--fontColor6);
+  line-height: 1.1;
+}
+.cardInfor.typeBrData .itemBody .totalArea .dlist > .row.total > dd .val strong {
+  font-size: var(--font24);
+  font-weight: 700;
+  color: var(--fontColor9);
+}
+
+/* typeBrData / type : row ========== */
+.cardInfor.typeBrData.row {
+  flex-direction: row;
+}
+.cardInfor.typeBrData.row .itemHeader {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  width: auto;
+  line-height: 1;
+}
+.cardInfor.typeBrData.row .itemHeader .titleArea {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+.cardInfor.typeBrData.row .itemHeader .titleArea .title,
+.cardInfor.typeBrData.row .itemHeader .titleArea .date {
+}
+.cardInfor.typeBrData.row .itemHeader .sideArea {
+  align-items: center;
+}
+.cardInfor.typeBrData.row .itemBody {
+  justify-content: flex-start;
+  align-items: center;
+  gap: 16px;
+  margin-left: auto;
+}
+.cardInfor.typeBrData.row .itemBody .dataArea .dlist {
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* typeBrData / option : bg ========== */
+.cardInfor.typeBrData.bg {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #F9FAFC;
+}
+
+
+
+/* card / type : typeActionItem ============================== */
+.cardInfor.typeActionItem {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+.cardInfor.typeActionItem.border {
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #E4E7EB;
+  background-color: #FFF;
+}
+.cardInfor.typeActionItem .itemHeader {
+  display: flex;
+  align-items: center;
+}
+.cardInfor.typeActionItem .itemHeader .titelArea {}
+.cardInfor.typeActionItem .itemHeader .sideArea {
+  margin-left: auto;
+}
+.cardInfor.typeActionItem .itemHeader .badge {}
+.cardInfor.typeActionItem .itemHeader .date {
+  margin-left: auto;
+  font-size: var(--font10);
+  font-weight: 400;
+  color: var(--fontColor7);
+}
+.cardInfor.typeActionItem .itemBody {
+  fleX: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.cardInfor.typeActionItem .itemBody .title {
+  width: 100%;
+  min-height: 42px;
+  font-size: var(--font14);
+  font-weight: 700;
+  color: var(--fontColor9);
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.cardInfor.typeActionItem .itemBody .org {
+  margin-top: 12px;
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor6);
+}
+
+/* issueInfor ========== */
+.cardInfor.typeActionItem .issueInfor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.cardInfor.typeActionItem .issueInfor .issueItem {
+  display: inline-flex;
+  align-items: center;
+}
+.cardInfor.typeActionItem .issueInfor.case1 {}
+.cardInfor.typeActionItem .issueInfor.case1 .part {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor7);
+}
+.cardInfor.typeActionItem .issueInfor.case1 .date {
+  font-size: var(--font13);
+  font-weight: 400;
+  color: var(--fontColor5);
+}
+.cardInfor.typeActionItem .issueInfor.case1 {}
+.cardInfor.typeActionItem .issueInfor.case1 .part {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor7);
+}
+.cardInfor.typeActionItem .issueInfor.case1 .date {
+  font-size: var(--font13);
+  font-weight: 400;
+  color: var(--fontColor5);
+}
+
+
+
+/* card / type : typeActionItem2 ============================== */
+.cardInfor.typeActionItem2 {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  width: 100%;
+  min-width: 0;
+}
+.cardInfor.typeActionItem2.border {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #EDF0F3;
+}
+.cardInfor.typeActionItem2 .titleArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cardInfor.typeActionItem2 .sideArea {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  margin-left: auto;
+}
+.cardInfor.typeActionItem2 .bottomArea {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+.cardInfor.typeActionItem2 .titleArea .title {
+  font-size: var(--font14);
+  font-weight: 600;
+  color: #2B313D
+}
+.cardInfor.typeActionItem2 .cardInfor.typeBrData.row .itemHeader .titleArea .title {
+  font-size: var(--font14);
+  font-weight: 600;
+}
+.cardInfor.typeActionItem2 .cardInfor.typeBrData.row .itemBody .dataArea .dlist > .row > dt {
+  font-size: var(--font10);
+  color: var(--fontColor7);
+}
+.cardInfor.typeActionItem2 .cardInfor.typeBrData.row .itemBody .totalArea .dlist > .row.total > dd .val strong {
+  font-size: var(--font18);
+  font-weight: 600;
+}
+
+/* option : size ========== */
+.cardInfor.typeActionItem2.sm {
+  gap: 8px;
+}
+.cardInfor.typeActionItem2.sm .titleArea .title {
+  font-size: var(--font13);
+}
+.cardInfor.typeActionItem2.sm .itemSummaryInfor {
+  gap: 20px;
+}
+.cardInfor.typeActionItem2.sm .itemSummaryInfor > .col + .col::before {
+  left: -10px;
+}
+.cardInfor.typeActionItem2.sm .itemSummaryInfor .dlist > dt,
+.cardInfor.typeActionItem2.sm .itemSummaryInfor .dlist > dd {
+  font-size: var(--font11);
+}
+
+
+
+/* card / type : typeProfile ============================== */
+.cardInfor.typeProfile {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.cardInfor.typeProfile .itemHeader {
+  display: flex;
+}
+.cardInfor.typeProfile .itemBody {
+  display: flex;
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid #E4E7EB;
+}
+
+/* 상속 / itemGroupA ========== */
+.cardInfor.typeProfile .itemGroupA {}
+
+/* 상속 / infoMemberBasic ========== */
+.cardInfor.typeProfile .infoMemberBasic {
+  gap: 12px;
+}
+
+.cardInfor.typeProfile .infoMemberBasic .thumb {
+  width: 40px;
+  height: 40px;
+}
+.cardInfor.typeProfile .infoMemberBasic .userName {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: var(--font16);
+}
+.cardInfor.typeProfile .infoMemberBasic .userName:after {
+  content: '';
+  width: 8px;
+  height: 8px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("/assets/images/Icon/arrow_8_light.svg");
+}
+.cmnEventListButton:hover .cardInfor.typeProfile.bg .infoMemberBasic .userName:after {
+  background-image: url("/assets/images/Icon/arrow_8_normal.svg");
+}
+
+/* option : bg ========== */
+.cardInfor.typeProfile.bg {
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background-color: #F7F8FA;
+}
+
+
+
+/* card / type : typeSkillStatus ============================== */
+.cardInfor.typeSkillStatus {
+  overflow: hidden;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  height: 90px;
+  text-align: left;
+}
+.cardInfor.typeSkillStatus.bg {
+  height: 108px;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #F9FAFC;
+  background-color: #F9FAFC;
+}
+.cardInfor.typeSkillStatus .itemHeader {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.cardInfor.typeSkillStatus .itemHeader .text {
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor6);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cardInfor.typeSkillStatus .itemHeader .title {
+  font-size: var(--font16);
+  font-weight: 600;
+  color: var(--fontColor9);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.cardInfor.typeSkillStatus .itemBody {
+  display: flex;
+  width: 100%;
+}
+.cardInfor.typeSkillStatus .itemBody .dlist {
+  gap: 4px 6px;
+}
+.cardInfor.typeSkillStatus .itemBody .dlist > .row {
+  padding-right: 6px;
+}
+.cardInfor.typeSkillStatus .itemBody .dlist > .row dt {
+  font-size: var(--font10);
+}
+
+
+
+/* card / type : typeIssue ============================== */
+.card.typeIssue {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 114px;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 1px solid #E4E7EB;
+  background-color: #FFF;
+}
+.card.typeIssue .cardHeader {
+  display: flex;
+  align-items: center;
+}
+.card.typeIssue .cardHeader .badge {}
+.card.typeIssue .cardHeader .notice {
+  margin-left: auto;
+  font-size: var(--font11);
+  font-weight: 400;
+  color: var(--fontColor7);
+}
+.card.typeIssue .cardHeader .notice strong {
+  font-weight: 600;
+  color: inherit;
+}
+.card.typeIssue .cardHeader .notice.burning {
+  color: var(--fontColorPrimary);
+}
+.card.typeIssue .cardBody {}
+
+/* issueInfor ========== */
+.card.typeIssue .issueInfor {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.card.typeIssue .issueInfor .issueItem {
+  display: inline-flex;
+  align-items: center;
+}
+.card.typeIssue .issueInfor.case1 {}
+.card.typeIssue .issueInfor.case1 .part {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor7);
+}
+.card.typeIssue .issueInfor.case1 .date {
+  font-size: var(--font13);
+  font-weight: 400;
+  color: var(--fontColor5);
+}
+.card.typeIssue .issueInfor.case2  {}
+.card.typeIssue .issueInfor.case2 .team {
+  font-size: var(--font12);
+  font-weight: 400;
+  color: var(--fontColor5);
+}
+.card.typeIssue .issueInfor.case2 .user {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor7);
+}
+.card.typeIssue .issueInfor.case2 .part {
+  font-size: var(--font16);
+  font-weight: 600;
+  color: var(--fontColor5);
+}
+.card.typeIssue .issueInfor.case2 .issueInforRow {}
+.card.typeIssue .issueInfor.case2 .issueInforRow .issueItem + .issueItem::before {
+  content: '';
+  display: block;
+  height: 12px;
+  margin-left: 6px;
+  padding-left: 6px;
+  border-left: 1px solid #EDF0F3;
+
+}
+.card.typeIssue .issueInfor.case3 {}
+.card.typeIssue .issueInfor.case3 .project {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor8);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}

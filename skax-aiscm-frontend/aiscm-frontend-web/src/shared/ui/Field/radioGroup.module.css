@@ -1,0 +1,32 @@
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.input {
+  display: none;
+}
+
+.circle {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+}
+
+.input:checked + .circle {
+  background: #111;
+  border-color: #111;
+}
+
+.label {
+  font-size: 14px;
+}

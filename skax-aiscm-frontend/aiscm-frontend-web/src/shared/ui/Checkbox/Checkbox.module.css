@@ -1,0 +1,94 @@
+.root {
+  position: relative;
+  display: inline-flex;
+  align-items: baseline;
+  gap: var(--ui-space-2, 8px);
+  min-height: 20px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 네이티브 체크박스: 시각은 숨기고 포커스/상태는 유지 */
+.input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+/* 포커스: 시각 박스에 ring */
+.input:focus-visible + .item {
+  outline: 2px solid var(--primary, #2563eb);
+  outline-offset: 2px;
+}
+
+/* 20×20 박스 (Figma .rec) */
+.item {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #bcc1ca;
+  border-radius: 6px;
+  background: #fff;
+}
+
+/* 미선택 + 활성(기본) */
+.input:not(:disabled):not(:checked) + .item {
+  background: var(--ui-checkbox-surface-unchecked, #fff);
+  border-color: var(--ui-checkbox-border, #bcc1ca);
+}
+
+/* 선택 + 활성 */
+.input:not(:disabled):checked + .item {
+  background: var(--ui-checkbox-accent, #4872fe);
+  border-color: var(--ui-checkbox-accent, #4872fe);
+}
+
+/* disabled + 미선택 */
+.input:disabled:not(:checked) + .item {
+  background: var(--ui-checkbox-surface-disabled-unchecked, #edf0f3);
+  border-color: var(--ui-checkbox-border, #bcc1ca);
+  cursor: not-allowed;
+}
+
+/* disabled + 선택 */
+.input:disabled:checked + .item {
+  background: var(--ui-checkbox-accent-faded, #4872fe4c);
+  border-color: transparent;
+  cursor: not-allowed;
+}
+
+/* 체크 아이콘 — :checked 일 때만 표시 */
+.icon {
+  transition: opacity 0.1s ease;
+  opacity: 0;
+  flex-shrink: 0;
+  color: #ffffff;
+}
+
+.input:checked + .item .icon {
+  opacity: 1;
+}
+
+/* disabled+checked 는 연한 배경 위에도 흰 체크 유지 */
+.input:disabled:checked + .item .icon {
+  color: #ffffff;
+}
+
+.text {
+}
+
+.root[data-disabled="true"] {
+  cursor: not-allowed;
+  opacity: 0.9;
+}

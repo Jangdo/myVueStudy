@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+/* 
+  *temp.css
+    - 화면 레이아웃은 기존 레이아웃의 구조, 스타일 그대로 사용
+    - 이 css 파일은 레이아웃 형태를 가져오기 위한 임시 파일 임
+    - 배포시 삭제 해야함
+*/
+
+@import "swiper-bundle.min.css";
+@import "plugin.css"; /* plugin customizing */
+
+@import "token.css";
+@import "reset.css";
+@import "form.css";
+@import "button.css";
+@import "icon.css";
+@import "badge.css";
+
+@import "temp.css"; /* 실제 레이아웃 컴포넌트에 적용 후, 삭제 예정 */
+
+@import "layout.css";
+@import "common.css";
+@import "table.css";
+@import "card.css";
+@import "component.css";
+
+@import "page.css"; /* 개별 페이지 */
+
+@import "lsy.css"; /* 취합 후, 삭제 예정 */

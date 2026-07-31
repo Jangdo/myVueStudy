@@ -1,0 +1,148 @@
+.primary {
+    align-items: center;
+    background-color: #4872ff;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: var(--library-spacing-8);
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px 8px;
+    position: relative;
+    width: 125.8px;
+}
+
+.primary .text-wrapper {
+    color: #ffffff;
+    font-family: var(--caption-c1-medium-font-family);
+    font-size: var(--caption-c1-medium-font-size);
+    font-style: var(--caption-c1-medium-font-style);
+    font-weight: var(--caption-c1-medium-font-weight);
+    letter-spacing: var(--caption-c1-medium-letter-spacing);
+    line-height: var(--caption-c1-medium-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+
+/*  ------------------------------------------------------------------------------------------------ */
+.assistive {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #dce0e5;
+    border-radius: var(--library-spacing-8);
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px 8px;
+    position: relative;
+    width: 125.8px;
+}
+
+.assistive .text-wrapper {
+    color: #2b313d;
+    font-family: var(--caption-c1-medium-font-family);
+    font-size: var(--caption-c1-medium-font-size);
+    font-style: var(--caption-c1-medium-font-style);
+    font-weight: var(--caption-c1-medium-font-weight);
+    letter-spacing: var(--caption-c1-medium-letter-spacing);
+    line-height: var(--caption-c1-medium-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+
+/*  ------------------------------------------------------------------------------------------------ */
+.assistive-danger {
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: #dce0e5;
+    border-radius: var(--library-spacing-8);
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px 8px;
+    position: relative;
+    width: 125.8px;
+}
+
+.assistive-danger .text-wrapper {
+    color: #d35050;
+    font-family: var(--caption-c1-medium-font-family);
+    font-size: var(--caption-c1-medium-font-size);
+    font-style: var(--caption-c1-medium-font-style);
+    font-weight: var(--caption-c1-medium-font-weight);
+    letter-spacing: var(--caption-c1-medium-letter-spacing);
+    line-height: var(--caption-c1-medium-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+
+/*  ------------------------------------------------------------------------------------------------ */
+.submit-button {
+    align-items: center;
+    background-color: var(--primary-blue900);
+    border-radius: var(--library-spacing-8);
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px 8px;
+    position: relative;
+    width: 120px;
+}
+
+.submit-button .text-wrapper {
+    color: #ffffff;
+    font-family: var(--caption-c1-semibold-font-family);
+    font-size: var(--caption-c1-semibold-font-size);
+    font-style: var(--caption-c1-semibold-font-style);
+    font-weight: var(--caption-c1-semibold-font-weight);
+    letter-spacing: var(--caption-c1-semibold-letter-spacing);
+    line-height: var(--caption-c1-semibold-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+/* ------------------------------------------------------------------------------------------------ */
+.disabled {
+    align-items: center;
+    background-color: #f0f1f2;
+    border: 1px solid;
+    border-color: transparent;
+    border-radius: var(--library-spacing-8);
+    display: flex;
+    gap: 4px;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    padding: 3px 8px;
+    position: relative;
+    width: 120px;
+}
+
+.disabled .text-wrapper {
+    color: #9aa1ad;
+    font-family: var(--caption-c1-semibold-font-family);
+    font-size: var(--caption-c1-semibold-font-size);
+    font-style: var(--caption-c1-semibold-font-style);
+    font-weight: var(--caption-c1-semibold-font-weight);
+    letter-spacing: var(--caption-c1-semibold-letter-spacing);
+    line-height: var(--caption-c1-semibold-line-height);
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}

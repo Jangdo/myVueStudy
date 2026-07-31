@@ -1,0 +1,799 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <!-- tabs -->
+                  <div class="tabs">
+                    <div class="cmnHeader lg">
+                      <div class="cmnHeaderTitleArea">
+                        <button type="button" class="button transparent sm iconOnly buttonBack">뒤로</button>
+                        <h2 class="cmnHeaderTitle lg">조직별 인력 상세</h2>
+                      </div>
+                    </div>
+                    <div class="tabButtons type3 rightTop">
+                      <div class="itemGroupA">
+                        <span class="item"><strong>전사 기준</strong></span>
+                      </div>
+                      <div class="buttons">
+                        <button class="tabButton isActive" data-tab="tab1">누적</button>
+                        <button class="tabButton" data-tab="tab2">예상</button>
+                      </div>
+                    </div>
+
+                    <!-- tabContent 1 : 누적 보기 -->
+                    <div class="tabContent isActive" data-content="tab1">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab1Inner1">채용 <span class="count">24</span></button>
+                            <button class="tabButton" data-tab="tab1Inner2">퇴사 <span class="count">12</span></button>
+                            <button class="tabButton" data-tab="tab1Inner3">이동 <span class="count">7</span></button>
+                          </div>
+                          <div class="sideArea">
+                            <button type="button" class="button outlined md assistive iconPre buttonDownload">엑셀 다운로드</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 1 inner 1 : 채용 필요 -->
+                        <div class="tabContent isActive" data-content="tab1Inner1">
+                          <section class="section">
+                            <div class="tables">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 187px;">
+                                  <col style="width: 187px;">
+                                  <col style="width: 187px;">
+                                  <col style="width: 120px;">
+                                  <col style="width: 120px;">
+                                  <col style="width: 281px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="3">조직</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">채용 시기</th>
+                                    <th scope="col">투입 프로젝트 정보</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td rowspan="9" class="noStripe">AI서비스 A부문</td>
+                                    <td rowspan="6" class="noStripe">NOVA 추진 A본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO A팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>NH투자증권 고객관리 시스템 개선 프로젝트</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>삼성전자 스마트홈 솔루션 개발</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NOVA PMO B팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>NH투자증권 고객관리 시스템 개선 프로젝트</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>삼성전자 스마트홈 솔루션 개발</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NH투자증권 AI 챗봇<br> 서비스 도입 프로젝트</td>
+                                    <td class="noStripe">NOVA PMO C팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>NH투자증권 고객관리 시스템 개선 프로젝트</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO D팀</td>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>삼성전자 스마트홈 솔루션 개발</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO E팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="6" class="noStripe">AI서비스 B부문</td>
+                                    <td rowspan="4" class="noStripe">NOVA 추진 B본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO F팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="2" class="noStripe">NOVA 추진 C본부</td>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO H팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>KB은행 OOO Agent 구축 제안</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 1 : 채용 필요 -->
+
+                        <!-- tabContent 1 inner 2 : 퇴사 결과 -->
+                        <div class="tabContent " data-content="tab1Inner2">
+                          <section class="section">
+                            <div class="tables">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 267px;">
+                                  <col style="width: 267px;">
+                                  <col style="width: 267px;">
+                                  <col style="width: 140px;">
+                                  <col style="width: 140px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="3">조직</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">퇴사 시기</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td rowspan="9" class="noStripe">AI서비스 A부문</td>
+                                    <td rowspan="6" class="noStripe">NOVA 추진 A본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO A팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NOVA PMO B팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NH투자증권 AI 챗봇<br> 서비스 도입 프로젝트</td>
+                                    <td class="noStripe">NOVA PMO C팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO D팀</td>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO E팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="6" class="noStripe">AI서비스 B부문</td>
+                                    <td rowspan="4" class="noStripe">NOVA 추진 B본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO F팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="2" class="noStripe">NOVA 추진 C본부</td>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO H팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 2 : 퇴사 결과 -->
+                         <!-- tabContent 1 inner 3 : 이동 결과 -->
+                        <div class="tabContent " data-content="tab1Inner3">
+                          <section class="section">
+                            <div class="cmnHeader sm">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <button type="button" class="button filter2 md isActive">전체</button>
+                                  <button type="button" class="button filter2 md">IN</button>
+                                  <button type="button" class="button filter2 md">OUT</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables ">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 421px;">
+                                  <col style="width: 421px;">
+                                  <col style="width: 120px;">
+                                  <col style="width: 120px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">변경</th>
+                                    <th scope="col">기존</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">이동 시기</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td rowspan="3">AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td rowspan="5">AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="5" class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 3 : 이동 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 1 : 누적 보기 -->
+
+                    <!-- tabContent 2 : 예상 보기 -->
+                    <div class="tabContent " data-content="tab2">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab2Inner1">채용 <span class="count">14</span></button>
+                            <button class="tabButton" data-tab="tab2Inner2">퇴사 <span class="count">22</span></button>
+                            <button class="tabButton" data-tab="tab2Inner3">이동 <span class="count">17</span></button>
+                          </div>
+                          <div class="sideArea">
+                            <button type="button" class="button outlined md assistive iconPre buttonDownload">엑셀 다운로드</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 2 inner 1 : 승인 필요 -->
+                        <div class="tabContent isActive" data-content="tab2Inner1">
+                          <section class="section">
+                            <div class="cmnHeader sm">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <button type="button" class="button filter2 md isActive">전체</button>
+                                  <button type="button" class="button filter2 md">채용 요청</button>
+                                  <button type="button" class="button filter2 md">채용 진행 </button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables ">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 168px;">
+                                  <col style="width: 80px;">
+                                  <col style="width: 80px;">
+                                  <col style="width: 168px;">
+                                  <col style="width: 168px;">
+                                  <col style="width: 80px;">
+                                  <col style="width: 168px;">
+                                  <col style="width: 168px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">투입 프로젝트 정보</th>
+                                    <th scope="col">인원</th>
+                                    <th scope="col">등급(상/중/하)</th>
+                                    <th scope="col">필요 Skill-set</th>
+                                    <th scope="col">필요 요소기술</th>
+                                    <th scope="col">예정월</th>
+                                    <th scope="col">채용 기준</th>
+                                    <th scope="col">채용 진행 상태</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td rowspan="4" class="noStripe">NH투자증권 고객관리 <br>시스템 개선 프로젝트</td>
+                                    <td rowspan="4" class="noStripe">4</td>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NH투자증권 고객관리 <br>시스템 개선 프로젝트</td>
+                                    <td class="noStripe">1</td>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="2" class="noStripe">NH투자증권 고객관리 <br>시스템 개선 프로젝트</td>
+                                    <td rowspan="2" class="noStripe">2</td>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                  <tr>
+                                    <td>상</td>
+                                    <td>Front-end Development</td>
+                                    <td>(요소기술)</td>
+                                    <td>26.06</td>
+                                    <td>삼성전자 대리 이상</td>
+                                    <td>S&amp;OP 확정</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 1 : 승인 필요 -->
+
+                        <!-- tabContent 2 inner 2 : 처리 결과 -->
+                        <div class="tabContent " data-content="tab2Inner2">
+                          <section class="section">
+                            <div class="cmnHeader sm">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <button type="button" class="button filter2 md isActive">전체</button>
+                                  <button type="button" class="button filter2 md">퇴사</button>
+                                  <button type="button" class="button filter2 md">정년퇴직</button>
+                                  <button type="button" class="button filter2 md">촉탁해지</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables ">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 221px;">
+                                  <col style="width: 221px;">
+                                  <col style="width: 221px;">
+                                  <col style="width: 140px;">
+                                  <col style="width: 140px;">
+                                  <col style="width: 140px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col" colspan="3">조직</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">퇴직 시기</th>
+                                    <th scope="col">사유</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td rowspan="9" class="noStripe">AI서비스 A부문</td>
+                                    <td rowspan="6" class="noStripe">NOVA 추진 A본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO A팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>정년퇴직</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>촉탁해지</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NOVA PMO B팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>정년퇴직</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>촉탁해지</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="3" class="noStripe">NH투자증권 AI 챗봇<br> 서비스 도입 프로젝트</td>
+                                    <td class="noStripe">NOVA PMO C팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO D팀</td>
+                                    <td>이순신</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO E팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="6" class="noStripe">AI서비스 B부문</td>
+                                    <td rowspan="4" class="noStripe">NOVA 추진 B본부</td>
+                                    <td rowspan="3" class="noStripe">NOVA PMO F팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="2" class="noStripe">NOVA 추진 C본부</td>
+                                    <td class="noStripe">NOVA PMO G팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">NOVA PMO H팀</td>
+                                    <td>황진이</td>
+                                    <td>26. 06. 05</td>
+                                    <td>퇴사</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 2 : 처리 결과 -->
+                        <!-- tabContent 2 inner 3 : 이동 결과 -->
+                        <div class="tabContent " data-content="tab2Inner3">
+                          <section class="section">
+                            <div class="cmnHeader sm">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <button type="button" class="button filter2 md isActive">전체</button>
+                                  <button type="button" class="button filter2 md">IN</button>
+                                  <button type="button" class="button filter2 md">OUT</button>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table border stripe data">
+                                <colgroup>
+                                  <col style="width: 421px;">
+                                  <col style="width: 421px;">
+                                  <col style="width: 120px;">
+                                  <col style="width: 120px;">
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th scope="col">변경</th>
+                                    <th scope="col">기존</th>
+                                    <th scope="col">이름</th>
+                                    <th scope="col">이동 시기</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td rowspan="3">AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td rowspan="5">AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td rowspan="5" class="noStripe">AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>AI서비스 A부문 > NOVA 추진 A본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                  <tr>
+                                    <td>AI서비스 A부문 > NOVA 추진 B본부 > NOVA PMO팀</td>
+                                    <td>홍길동</td>
+                                    <td>26. 06. 05</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 3 : 이동 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 2 : 예상  보기 -->
+                  </div>
+                  <!-- //tabs -->
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+</script>
+</html>

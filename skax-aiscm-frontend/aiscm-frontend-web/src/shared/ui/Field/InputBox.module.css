@@ -1,0 +1,96 @@
+/* root */
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 0 4px;
+}
+
+/* label */
+
+.required .label::after {
+  content: "*";
+  color: red;
+}
+
+.label {
+
+}
+
+/* field box */
+.box {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  height: 44px;
+  border-radius: 8px;
+  border: 1px solid #DCE0E5;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #101828;
+  background: #FFF;
+}
+
+/* size */
+.xl {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+.lg {
+  height: 40px;
+  padding: 0 24px;
+}
+
+.md {
+  height: 28px;
+  padding: 0 16px;
+}
+
+.sm {
+  height: 24px;
+  padding: 0 8px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+/* focus */
+.focus {
+  border-color: blue;
+}
+
+/* input */
+.input {
+  height: 100%;
+  border: none;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: #7c8390;
+}
+
+/* button clear */
+.buttonClear {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.aaa {
+  border: 1px solid red;
+}
+.searchIcon {
+  flex-shrink: 0;
+  display: block;
+  color: #7c8390;
+}

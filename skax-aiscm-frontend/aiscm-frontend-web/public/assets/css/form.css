@@ -1,0 +1,1858 @@
+
+/* input field ============================== */
+
+/* input field ============================== */
+input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-md);
+  padding: 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  font-size: var(--field-font-size-md);
+  font-weight: var(--fontNormal);
+  color: var(--field-font-color);
+  background-color: var(--field-bg-color);
+}
+input:not([type='radio'], [type='checkbox'], [type="range"]):focus-visible {
+  outline: none;
+  border-color: var(--field-border-color-active);
+}
+input:not([type='radio'], [type='checkbox'], [type="range"]):disabled {
+  border-color: var(--field-border-color-disabled);
+  color: var(--field-font-color-disabled);
+  background-color: var(--field-bg-color-disabled);
+}
+input:not([type='radio'], [type='checkbox'], [type="range"])[readonly] {
+  border-color: var(--field-border-color-readonly);
+  color: var(--field-font-color-readonly);
+  background-color: var(--field-bg-color-readonly);
+}
+input:not([type='radio'], [type='checkbox'], [type="range"]).isInvalid {
+  border-color: var(--field-border-color-invalid);
+}
+
+/* input field / size */
+input.xxl:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-xxl);
+  padding: 0 var(--field-padding-x-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+input.xl:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-xl);
+  padding: 0 var(--field-padding-x-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+input.lg:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-lg);
+  padding: 0 var(--field-padding-x-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+input.md2:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-md2);
+  padding: 0 var(--field-padding-x-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+input.md:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-md);
+  padding: 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+input.sm:not([type='radio'], [type='checkbox'], [type="range"]) {
+  height: var(--field-height-sm);
+  padding: 0 var(--field-padding-x-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+
+
+/* select ============================== */
+select {
+  height: var(--field-height-md);
+  padding: 0 var(--field-padding-x-md);
+  padding-right: var(--field-selectbox-icon-size-md);
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  font-size: var(--field-font-size-md);
+  font-weight: var(--fontNormal);
+  color: var(--field-font-color);
+  background: var(--field-selectbox-icon);
+}
+select:focus-visible {
+  outline: none;
+  border-color: var(--field-border-color-active);
+}
+select:disabled {
+  border-color: var(--field-border-color-disabled);
+  color: var(--field-font-color-disabled);
+  background-color: var(--field-bg-color-disabled);
+}
+select[readonly] {
+  border-color: var(--field-border-color-readonly);
+  color: var(--field-font-color-readonly);
+  background-color: var(--field-bg-color-readonly);
+}
+select.isInvalid {
+  border-color: var(--field-border-color-invalid);
+}
+
+/* select / size */
+select.lg,
+select.xl,
+select.xxl {
+  background: var(--field-selectbox-icon-lg);
+}
+select.xxl {
+  height: var(--field-height-xxl);
+  padding: 0 var(--field-selectbox-icon-size-xxl) 0 var(--field-padding-x-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+select.xl {
+  height: var(--field-height-xl);
+  padding: 0 var(--field-selectbox-icon-size-xl) 0 var(--field-padding-x-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+select.lg {
+  height: var(--field-height-lg);
+  padding: 0 var(--field-selectbox-icon-size-lg) 0 var(--field-padding-x-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+select.md2 {
+  height: var(--field-height-md2);
+  padding: 0 var(--field-selectbox-icon-size-md2) 0 var(--field-padding-x-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+select.md {
+  height: var(--field-height-md);
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+select.sm {
+  height: var(--field-height-sm);
+  padding: 0 var(--field-selectbox-icon-size-sm) 0 var(--field-padding-x-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+
+/* textarea ============================== */
+textarea {
+  height: var(--field-height-md);
+  padding: var(--field-padding-y-md) var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  font-size: var(--field-font-size-md);
+  font-weight: var(--fontNormal);
+  color: var(--field-font-color);
+  background-color: var(--field-bg-color);
+}
+textarea:focus-visible {
+  outline: none;
+  border-color: var(--field-border-color-active);
+}
+textarea:disabled {
+  border-color: var(--field-border-color-disabled);
+  color: var(--field-font-color-disabled);
+  background-color: var(--field-bg-color-disabled);
+}
+textarea[readonly] {
+  border-color: var(--field-border-color-readonly);
+  color: var(--field-font-color-readonly);
+  background-color: var(--field-bg-color-readonly);
+}
+textarea.isInvalid {
+  border-color: var(--field-border-color-invalid);
+}
+
+/* textarea /size */
+textarea.xxl {
+  height: var(--field-height-xxl);
+  padding: var(--field-padding-y-xxl) var(--field-padding-x-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+textarea.xl {
+  height: var(--field-height-xl);
+  padding: var(--field-padding-y-xl) var(--field-padding-x-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+textarea.lg {
+  height: var(--field-height-lg);
+  padding: var(--field-padding-y-lg) var(--field-padding-x-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+textarea.md2 {
+  height: var(--field-height-md2);
+  padding: var(--field-padding-y-md2) var(--field-padding-x-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+textarea.md {
+  height: var(--field-height-md);
+  padding: var(--field-padding-y-md) var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+textarea.sm {
+  height: var(--field-height-sm);
+  padding: var(--field-padding-y-sm) var(--field-padding-x-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+
+
+/* dropdown ============================== */
+.dropdown {
+  position: relative;
+  min-width: 0;
+}
+/* 상태 : 활성 */
+.dropdown.isOpen .dropdownButton {
+  border-color: var(--field-border-color-active);
+  outline: none;
+}
+.dropdown.isOpen .dropdownMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+/* root button */
+.dropdown .dropdownButton {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 0;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: pointer;
+
+  height: var(--field-height-md);
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  font-size: var(--field-font-size-md);
+  font-weight: var(--fontNormal);
+  color: var(--field-font-color);
+  background-color: var(--field-bg-color);
+}
+.dropdown .dropdownButton::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  flex: 0 0 auto;
+  display: block;
+  width: var(--field-selectbox-icon-size-md);
+  height: 100%;
+  background: var(--field-dropdown-icon);
+}
+.dropdown .dropdownButton.placeholder {
+  font-weight: var(--fontThin);
+  color: var(--field-font-color-placeholder);
+}
+
+/* option wrap */
+.dropdown .dropdownMenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-6px);
+  transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+  overflow-y: auto;
+  position: absolute;
+  z-index: 90;
+  top: calc(100% + 1px);
+  left: 0;
+  min-width: 100%;
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  background-color: var(--field-bg-color);
+}
+/* 분기선 */
+.dropdown .menuItemDivider {
+  position: relative;
+  padding: 4px 8px;
+}
+.dropdown .menuItemDivider::before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  right: 8px;
+  border-top: 1px solid #EDF0F3;
+}
+/* option item */
+.dropdown .menuItem {
+  position: relative;
+}
+.dropdown .menuButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  margin-right: 18px; /* 옵션선택시 dropdown 사이즈가 미세하게 줄어드는거 방지*/
+  border: none;
+  text-align: left;
+  white-space: nowrap;
+  cursor: pointer;
+
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-weight: var(--fontThin);
+  color: var(--field-selectbox-option-font-color);
+  background: var(--field-selectbox-option-bg-color);
+}
+.dropdown .menuButton:hover {
+  font-weight: var(--fontNormal);
+  color: var(--field-selectbox-option-font-color-active);
+  background: var(--field-selectbox-option-bg-color-active);
+}
+.dropdown .menuButton.isSelected {
+  font-weight: var(--fontNormal);
+  color: var(--field-selectbox-option-font-color-active);
+  background: var(--field-selectbox-option-bg-color-active);
+}
+
+/* 하위메뉴 ========== */
+/* 하위메뉴 wrap */
+.dropdown .subMenu {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(-6px);
+  transition: opacity .18s ease, transform .18s ease, visibility .18s ease;
+  overflow: visible;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  min-height: 100%;
+  box-shadow: 0 10px 30px rgba(0,0,0,.08);
+
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  background-color: var(--field-bg-color);
+}
+.dropdown .subMenu .subMenuInner {}
+.dropdown .subMenu .menuItem {}
+.dropdown .subMenu .menuButton {}
+
+/* submenu arrow */
+.dropdown .menuItem:has(.subMenu) > .menuButton::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  display: block;
+  height: 100%;
+
+  width: var(--field-selectbox-icon-size-md);
+  background: var(--field-dropdown-option-icon);
+}
+.dropdown .menuItem:hover > .subMenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+/* dropdown / 상태 ========== */
+
+/* 상태 : disabled */
+.dropdown.isDisabled {}
+.dropdown.isDisabled .dropdownButton,
+.dropdown .dropdownButton:disabled {
+  pointer-events: none;
+  border-color: var(--field-border-color-disabled);
+  color: var(--field-font-color-disabled);
+  background-color: var(--field-bg-color-disabled);
+}
+.dropdown.isDisabled .dropdownButton::after,
+.dropdown .dropdownButton:disabled::after {
+  opacity: .7;
+}
+
+/* 상태 : readonly */
+.dropdown.isReadonly {}
+.dropdown.isReadonly .dropdownButton {
+  pointer-events: none;
+  border-color: var(--field-border-color-readonly);
+  color: var(--field-font-color-readonly);
+  background-color: var(--field-bg-color-readonly);
+}
+.dropdown.isReadonly .dropdownButton::after {
+  opacity: .7;
+}
+
+
+
+/* dropdown / 유형 / scroll to anchor ============================== */
+[data-anchor-scroll] {
+  position: relative;
+  /* scroll-margin-top: 280px; */
+}
+/* 스크롤시 상단 고정 */
+[data-anchor-fixed] .dropdownMenu {
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.1);
+}
+[data-anchor-fixed].isSticky {
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+[data-anchor-fixed].isSticky .dropdownButton {
+  box-shadow: 0 2px 8px rgba(0,0,0,.12);
+}
+
+
+
+/* dropdown / size ============================== */
+
+/* root 버튼 */
+.dropdown.xxl .dropdownButton,
+.fieldBox.xxl .dropdown .dropdownButton,
+.fieldset.xxl .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-xxl);
+  padding: 0 var(--field-selectbox-icon-size-xxl) 0 var(--field-padding-x-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+.dropdown.xl .dropdownButton,
+.fieldBox.xl .dropdown .dropdownButton,
+.fieldset.xl .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-xl);
+  padding: 0 var(--field-selectbox-icon-size-xl) 0 var(--field-padding-x-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+.dropdown.lg .dropdownButton,
+.fieldBox.lg .dropdown .dropdownButton,
+.fieldset.lg .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-lg);
+  padding: 0 var(--field-selectbox-icon-size-lg) 0 var(--field-padding-x-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+.dropdown.md2 .dropdownButton,
+.fieldBox.md2 .dropdown .dropdownButton,
+.fieldset.md2 .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-md2);
+  padding: 0 var(--field-selectbox-icon-size-md2) 0 var(--field-padding-x-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+.dropdown.md .dropdownButton,
+.fieldBox.md .dropdown .dropdownButton,
+.fieldset.md .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-md);
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+.dropdown.sm .dropdownButton,
+.fieldBox.sm .dropdown .dropdownButton,
+.fieldset.sm .fieldBox .dropdown .dropdownButton {
+  height: var(--field-height-sm);
+  padding: 0 var(--field-selectbox-icon-size-sm) 0 var(--field-padding-x-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+/* root 버튼 / 아이콘 */
+.dropdown.xxl .dropdownButton::after,
+.dropdown.xl .dropdownButton::after,
+.dropdown.lg .dropdownButton::after,
+.fieldBox.xxl .dropdown .dropdownButton::after,
+.fieldBox.xl .dropdown .dropdownButton::after,
+.fieldBox.lg .dropdown .dropdownButton::after,
+.fieldset.xxl .fieldBox .dropdown .dropdownButton::after,
+.fieldset.xl .fieldBox .dropdown .dropdownButton::after,
+.fieldset.lg .fieldBox .dropdown .dropdownButton::after {
+  background: var(--field-dropdown-icon-lg);
+}
+.dropdown.xxl .dropdownButton::after,
+.fieldBox.xxl .dropdown .dropdownButton::after,
+.fieldset.xxl .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-xxl);
+}
+.dropdown.xl .dropdownButton::after,
+.fieldBox.xl .dropdown .dropdownButton::after,
+.fieldset.xl .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-xl);
+}
+.dropdown.lg .dropdownButton::after,
+.fieldBox.lg .dropdown .dropdownButton::after,
+.fieldset.lg .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-lg);
+}
+.dropdown.md2 .dropdownButton::after,
+.fieldBox.md2 .dropdown .dropdownButton::after,
+.fieldset.md2 .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-md2);
+}
+.dropdown.md .dropdownButton::after,
+.fieldBox.md .dropdown .dropdownButton::after,
+.fieldset.md .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-md);
+}
+.dropdown.sm .dropdownButton::after,
+.fieldBox.sm .dropdown .dropdownButton::after,
+.fieldset.sm .fieldBox .dropdown .dropdownButton::after {
+  width: var(--field-selectbox-icon-size-sm);
+}
+
+/* option wrap */
+.dropdown.xxl .dropdownMenu,
+.fieldBox.xxl .dropdown .dropdownMenu,
+.fieldset.xxl .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-xxl);
+}
+.dropdown.xl .dropdownMenu,
+.fieldBox.xl .dropdown .dropdownMenu,
+.fieldset.xl .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-xl);
+}
+.dropdown.lg .dropdownMenu,
+.fieldBox.lg .dropdown .dropdownMenu,
+.fieldset.lg .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-lg);
+}
+.dropdown.md2 .dropdownMenu,
+.fieldBox.md2 .dropdown .dropdownMenu,
+.fieldset.md2 .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-md2);
+}
+.dropdown.md .dropdownMenu,
+.fieldBox.md .dropdown .dropdownMenu,
+.fieldset.md .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-md);
+}
+.dropdown.sm .dropdownMenu,
+.fieldBox.sm .dropdown .dropdownMenu,
+.fieldset.sm .fieldBox .dropdown .dropdownMenu {
+  border-radius: var(--field-radius-sm);
+}
+
+/* option item */
+.dropdown.xxl .menuItem,
+.fieldBox.xxl .dropdown .menuItem,
+.fieldset.xxl .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-xxl) - 0px);
+  padding: 6px;
+}
+.dropdown.xl .menuItem,
+.fieldBox.xl .dropdown .menuItem,
+.fieldset.xl .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-xl) - 2px);
+  padding: 6px;
+}
+.dropdown.lg .menuItem,
+.fieldBox.lg .dropdown .menuItem,
+.fieldset.lg .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-lg) - 4px);
+  padding: 4px;
+}
+.dropdown.md2 .menuItem,
+.fieldBox.md2 .dropdown .menuItem,
+.fieldset.md2 .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-md2) - 0px);
+  padding: 4px;
+}
+.dropdown.md .menuItem,
+.fieldBox.md .dropdown .menuItem,
+.fieldset.md .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-md) - 4px);
+  padding: 2px;
+}
+.dropdown.sm .menuItem,
+.fieldBox.sm .dropdown .menuItem,
+.fieldset.sm .fieldBox .dropdown .menuItem {
+  height: calc(var(--field-height-sm) - 0px);
+  padding: 2px;
+}
+
+/* option button */
+.dropdown.xxl .menuButton,
+.fieldBox.xxl .dropdown .menuButton,
+.fieldset.xxl .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(56px + 16px) 0 16px; */
+  padding: 0 var(--field-selectbox-icon-size-xxl) 0 var(--field-padding-x-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+.dropdown.xl .menuButton,
+.fieldBox.xl .dropdown .menuButton,
+.fieldset.xl .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(46px + 16px) 0 16px; */
+  padding: 0 var(--field-selectbox-icon-size-xl) 0 var(--field-padding-x-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+.dropdown.lg .menuButton,
+.fieldBox.lg .dropdown .menuButton,
+.fieldset.lg .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(40px + 12px) 0 16px; */
+  padding: 0 var(--field-selectbox-icon-size-lg) 0 var(--field-padding-x-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+.dropdown.md2 .menuButton,
+.fieldBox.md2 .dropdown .menuButton,
+.fieldset.md2 .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(32px + 12px) 0 12px; */
+  padding: 0 var(--field-selectbox-icon-size-md2) 0 var(--field-padding-x-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+.dropdown.md .menuButton,
+.fieldBox.md .dropdown .menuButton,
+.fieldset.md .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(28px + 16px) 0 8px; */
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+.dropdown.sm .menuButton,
+.fieldBox.sm .dropdown .menuButton,
+.fieldset.sm .fieldBox .dropdown .menuButton {
+  /* padding: 0 calc(24px + 8px) 0 8px; */
+  padding: 0 var(--field-selectbox-icon-size-sm) 0 var(--field-padding-x-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+
+
+/* dropdown / option ============================== */
+
+/* border none / 옵션메뉴의 길이가 .dropdownButton 길이에 영향을 주지 않음 */
+.dropdown.transparent .dropdownButton {
+  width: auto;
+  border-color: transparent;
+  min-width: auto !important;
+  background-color: transparent;
+}
+
+/* dropdown / 하위메뉴 ========== */
+/* dropdown / 하위메뉴 / 상단 정렬 */
+.dropdown.multiple.top .menuItem {
+  position: static;
+}
+
+/* dropdown / 하위메뉴 scroll */
+.dropdown.multiple.scroll .menuItem {
+  position: static;
+}
+.dropdown.multiple.scroll .dropdownMenuInner {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 120px;
+}
+.dropdown.multiple.scroll .subMenuInner {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 120px;
+}
+
+/* dropdown / 하위메뉴 */
+.dropdown.multiple .dropdownMenu {
+  overflow: visible;
+  max-height: none;
+}
+/* dropdown / 하위메뉴 / size */
+.dropdown.xxl.multiple.scroll .dropdownMenuInner,
+.dropdown.xxl.multiple.scroll .subMenuInner {
+  height: 280px;
+}
+.dropdown.xl.multiple.scroll .dropdownMenuInner,
+.dropdown.xl.multiple.scroll .subMenuInner {
+  height: 220px;
+}
+.dropdown.lg.multiple.scroll .dropdownMenuInner,
+.dropdown.lg.multiple.scroll .subMenuInner {
+  height: 200px;
+}
+.dropdown.md2.multiple.scroll .dropdownMenuInner,
+.dropdown.md2.multiple.scroll .subMenuInner {
+  height: 160px;
+}
+.dropdown.md.multiple.scroll .dropdownMenuInner,
+.dropdown.md.multiple.scroll .subMenuInner {
+  height: 140px;
+}
+.dropdown.sm.multiple.scroll .dropdownMenuInner,
+.dropdown.sm.multiple.scroll .subMenuInner {
+  height: 120px;
+}
+
+
+
+/* ==============================
+  field group
+============================== */
+
+/* fieldItemCard ============================== */
+.fieldItemCard {
+  flex: 1;
+  display: flex;
+  align-items: flex-start;
+  gap: 6px;
+  min-width: 100%;
+  min-height: 100%;
+  padding: 4px 8px;
+  border-radius: 8px;
+  border: 1px solid #E4E7EB;
+  background-color: #F5F7F9;
+}
+.fieldItemCard .item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.fieldItemCard .item .title {
+  font-size: var(--font11);
+  font-weight: 500;
+  color: #BCC1CA;
+}
+.fieldItemCard .item .title.tbd {
+  color: var(--fontColor6);
+}
+.fieldBoxCard {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 100%;
+  padding: 16px 14px;
+  border-radius: 8px;
+  border: 1px solid #E4E7EB;
+  background-color: #F5F7F9;
+}
+
+/* fieldsetItems / type : row ========== */
+.fieldsetItems.row {
+  display: flex;
+  gap: 16px;
+}
+
+/* fieldsetItem */
+.fieldsetItem {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 6px;
+}
+.fieldsetItem .divider {
+  height: 10px;
+  border-left: 1px solid var(--divider-border-color);
+}
+.fieldsetItem label.title {
+  margin-right: 2px;
+  font-size: var(--font11);
+  font-weight: 600;
+  color: var(--fontColor6);
+}
+
+
+
+/* fieldBox ============================== */
+/* ==============================
+  *부모가 flex-direction: column; 속성을 가진 경우
+    - .fieldBox 의 flex:1 이 height 값을 무시하게 됨
+    - 이럴경우 flex: 0 0 auto 가 필요함
+============================== */
+
+.fieldBox {
+  flex: 1;
+  position: relative;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+  max-width: 100%;
+  min-width: 0;
+
+  height: var(--field-height-md);
+  border-radius: var(--field-radius-md);
+  border: 1px solid var(--field-border-color);
+  font-size: var(--field-font-size-md);
+  font-weight: var(--fontNormal);
+  color: var(--field-font-color);
+  background-color: var(--field-bg-color);
+}
+
+/* fieldBox / input wrapper (clear 버튼) ========== */
+.fieldBox .inputBox {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  min-width: 0;
+}
+.fieldBox .inputBox:last-child .buttonClear {
+  margin-right: 4px;
+}
+.fieldBox .inputBox .unit {
+  flex: 0 0 auto;
+  margin-right: 8px;
+  font-size: var(--font11);
+  color: var(--fontColor6);
+  text-align: right;
+  white-space: nowrap;
+}
+.fieldBox .inputBox .button.iconOnly {}
+/* 상속 */
+.fieldBox .inputBox .button.iconOnly.buttonCalendar::before {
+  width: 10px;
+  height: 10px;
+}
+/* type : clickable / event */
+.fieldBox .inputBox.clickable input {
+  cursor: pointer;
+}
+.fieldBox .inputBox.clickable [readonly] {
+  background-color: transparent;
+}
+
+/* fieldBox / 상태 ========== */
+.fieldBox.isDisabled,
+.fieldBox.isReadonly {
+  pointer-events: none;
+}
+.fieldBox:has(:focus-visible) {
+  outline: none;
+  border-color: var(--field-border-color-active);
+}
+.fieldBox:has(:disabled),
+.fieldBox.isDisabled {
+  border-color: var(--field-border-color-disabled);
+  color: var(--field-font-color-disabled);
+  background-color: var(--field-bg-color-disabled);
+}
+.fieldBox:has([readonly]),
+.fieldBox.isReadonly {
+  border-color: var(--field-border-color-readonly);
+  color: var(--field-font-color-readonly);
+  background-color: var(--field-bg-color-readonly);
+}
+.fieldBox:has(.isInvalid),
+.fieldBox.isInvalid {
+  border-color: var(--field-border-color-invalid);
+}
+.fieldBox:has(.clickable) {
+  background-color: #FFF;
+}
+
+/*  */
+.fieldBox.isDisabled input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldBox.isDisabled select,
+.fieldBox.isDisabled .dropdown .dropdownButton {
+  color: inherit;
+}
+.fieldBox.isReadonly input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldBox.isReadonly select,
+.fieldBox.isReadonly .dropdown .dropdownButton {
+  color: inherit;
+}
+.fieldBox.isDisabled select,
+.fieldBox.isDisabled .dropdown .dropdownButton {}
+.fieldBox.isReadonly select,
+.fieldBox.isReadonly .dropdown {}
+.fieldBox.isDisabled .dropdownButton::after,
+.fieldBox.isDisabled .sideArea {
+  opacity: .7;
+}
+.fieldBox.isReadonly .dropdownButton::after,
+.fieldBox.isReadonly .sideArea {
+  opacity: .7;
+}
+
+/* 우측 영역 (버튼 등) ========== */
+.fieldBox .sideArea {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-left: auto;
+  gap: calc(var(--field-selectbox-icon-size-md) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-md) / 4);
+}
+/*  */
+.fieldBox.xxl .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-xxl) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-xxl) / 4);
+}
+.fieldBox.xl .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-xl) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-xl) / 4);
+}
+.fieldBox.lg .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-lg) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-lg) / 4);
+}
+.fieldBox.md2 .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-md2) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-md2) / 4);
+}
+.fieldBox.md .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-md) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-md) / 4);
+}
+.fieldBox.sm .sideArea {
+  gap: calc(var(--field-selectbox-icon-size-sm) / 4);
+  padding-right: calc(var(--field-selectbox-icon-size-sm) / 4);
+}
+
+/*  */
+.fieldBox .sideArea .button.iconOnly,
+.fieldBox .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-md) / 2);
+  height: 100%;
+  padding: 0;
+}
+.fieldBox .sideArea .button.iconOnly::before,
+.fieldBox .inputBox .button.iconOnly::before {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+}
+
+/* size */
+.fieldBox.xxl .sideArea .button.iconOnly,
+.fieldBox.xxl .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-xxl) / 2);
+  padding: 0;
+}
+.fieldBox.xl .sideArea .button.iconOnly,
+.fieldBox.xl .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-xl) / 2);
+  padding: 0;
+}
+.fieldBox.lg .sideArea .button.iconOnly,
+.fieldBox.lg .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-lg) / 2);
+  padding: 0;
+}
+.fieldBox.md2 .sideArea .button.iconOnly,
+.fieldBox.md2 .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-md2) / 2);
+  padding: 0;
+}
+.fieldBox.md .sideArea .button.iconOnly,
+.fieldBox.md .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-md) / 2);
+  padding: 0;
+}
+.fieldBox.sm .sideArea .button.iconOnly,
+.fieldBox.sm .inputBox .button.iconOnly {
+  width: calc(var(--field-selectbox-icon-size-sm) / 2);
+  padding: 0;
+}
+
+/* 상속 ========== */
+.fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background-color: transparent;
+}
+.fieldBox .dropdown {
+  flex: 0 1 auto;
+}
+.fieldBox input,
+.fieldBox select,
+.fieldBox textarea,
+.fieldBox .dropdown,
+.fieldBox .dropdown .dropdownButton {
+  height: 100%;
+  font-size: inherit;
+  background-color: transparent;
+}
+.fieldBox input:not(:focus-visible),
+.fieldBox select:not(:focus-visible),
+.fieldBox textarea:not(:focus-visible),
+.fieldBox .dropdown:not(:focus-visible),
+.fieldBox .dropdown .dropdownButton:not(:focus-visible) {
+  border: none;
+}
+.fieldBox input:focus-visible,
+.fieldBox select:focus-visible,
+.fieldBox textarea:focus-visible,
+.fieldBox .dropdown:focus-visible,
+.fieldBox .dropdown .dropdownButton:focus-visible {
+  border: none;
+}
+.fieldBox > .inputBox,
+.fieldBox > .sideArea,
+.fieldBox .button.iconOnly,
+.fieldBox .button.iconOnly::before {
+  height: 100%;
+}
+.fieldBox .button.iconOnly:focus-visible {
+  outline: 0;
+  outline-offset: 0;
+}
+
+/* fieldOver ========== */
+/* 드롭다운의 직접입력 선택시 input 이 시각적으로 드롭다운을 덮어씌움 */
+.fieldBox .fieldOver {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 24px;
+  background-color: #FFF;
+}
+
+/* option : size ========== */
+.fieldBox.xxl,
+.fieldset.xxl .fieldBox {
+  gap: 16px;
+  height: var(--field-height-xxl);
+  border-radius: var(--field-radius-xxl);
+  font-size: var(--field-font-size-xxl);
+}
+.fieldBox.xl,
+.fieldset.xl .fieldBox {
+  gap: 16px;
+  height: var(--field-height-xl);
+  border-radius: var(--field-radius-xl);
+  font-size: var(--field-font-size-xl);
+}
+.fieldBox.lg,
+.fieldset.lg .fieldBox {
+  gap: 12px;
+  height: var(--field-height-lg);
+  border-radius: var(--field-radius-lg);
+  font-size: var(--field-font-size-lg);
+}
+.fieldBox.md2,
+.fieldset.md2 .fieldBox {
+  gap: 12px;
+  height: var(--field-height-md2);
+  border-radius: var(--field-radius-md2);
+  font-size: var(--field-font-size-md2);
+}
+.fieldBox.md,
+.fieldset.md .fieldBox {
+  gap: 8px;
+  height: var(--field-height-md);
+  border-radius: var(--field-radius-md);
+  font-size: var(--field-font-size-md);
+}
+.fieldBox.sm,
+.fieldset.sm .fieldBox {
+  gap: 4px;
+  height: var(--field-height-sm);
+  border-radius: var(--field-radius-sm);
+  font-size: var(--field-font-size-sm);
+}
+
+/*  */
+.fieldBox.xxl input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.xxl .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-xxl);
+}
+.fieldBox.xl input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.xl .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-xl);
+}
+.fieldBox.lg input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.lg .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-lg);
+}
+.fieldBox.md2 input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.md2 .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-md2);
+}
+.fieldBox.md input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.md .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-md);
+}
+.fieldBox.sm input:not([type='radio'], [type='checkbox'], [type="range"]),
+.fieldset.sm .fieldBox input:not([type='radio'], [type='checkbox'], [type="range"]) {
+  padding: 0 var(--field-padding-x-sm);
+}
+
+/*  */
+.fieldBox.xxl select,
+.fieldset.xxl .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-xxl) 0 var(--field-padding-x-xxl);
+}
+.fieldBox.xl select,
+.fieldset.xl .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-xl) 0 var(--field-padding-x-xl);
+}
+.fieldBox.lg select,
+.fieldset.lg .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-lg) 0 var(--field-padding-x-lg);
+}
+.fieldBox.md2 select,
+.fieldset.md2 .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-md2) 0 var(--field-padding-x-md2);
+}
+.fieldBox.md select,
+.fieldset.md .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-md) 0 var(--field-padding-x-md);
+}
+.fieldBox.sm select,
+.fieldset.sm .fieldBox select {
+  padding: 0 var(--field-selectbox-icon-size-sm) 0 var(--field-padding-x-sm);
+}
+
+
+
+/* fieldBox / field 유형 ============================== */
+
+/* textarea ========== */
+.fieldBox.typeTextarea {
+  flex-direction: column;
+  height: auto;
+  padding: 14px 16px;
+}
+.fieldBox.typeTextarea textarea {
+  resize: none;
+  padding: 0;
+}
+.fieldBox.typeTextarea .fieldBoxFooter {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 0 8px;
+  width: 100%;
+}
+.fieldBox.typeTextarea .fieldBoxFooter .note {
+  flex: 1;
+  font-size: var(--font10);
+  font-weight: 400;
+  color: #BCC1CA;
+}
+.fieldBox.typeTextarea .fieldBoxFooter .count {
+  margin-left: auto;
+  font-size: var(--font10);
+  font-weight: 400;
+  color: #BCC1CA;
+}
+.fieldBox.typeTextarea .fieldBoxFooter .count.isValid {
+  color: #6684FF;
+}
+
+/* fieldBox / typeTextarea / size */
+.fieldBox.typeTextarea.xxl,
+.fieldset.xxl .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-xxl) var(--field-padding-x-xxl);
+}
+.fieldBox.typeTextarea.xl,
+.fieldset.xl .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-xl) var(--field-padding-x-xl);
+}
+.fieldBox.typeTextarea.lg,
+.fieldset.lg .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-lg) var(--field-padding-x-lg);
+}
+.fieldBox.typeTextarea.md2,
+.fieldset.md2 .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-md2) var(--field-padding-x-md2);
+}
+.fieldBox.typeTextarea.md,
+.fieldset.md .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-md) var(--field-padding-x-md);
+}
+.fieldBox.typeTextarea.sm,
+.fieldset.sm .fieldBox.typeTextarea {
+  height: auto;
+  padding: var(--field-padding-y-sm) var(--field-padding-x-sm);
+}
+
+/* size */
+.fieldBox.xxl.button.iconOnly {
+  width: var(--button-icononly-width-xxl);
+  height: var(--button-icononly-width-xxl);
+}
+.fieldBox.xl.button.iconOnly {
+  width: var(--button-icononly-width-xl);
+  height: var(--button-icononly-width-xl);
+}
+.fieldBox.lg.button.iconOnly {
+  width: var(--button-icononly-width-lg);
+  height: var(--button-icononly-width-lg);
+}
+.fieldBox.md2.button.iconOnly {
+  width: var(--button-icononly-width-md2);
+  height: var(--button-icononly-width-md2);
+}
+.fieldBox.md.button.iconOnly {
+  width: var(--button-icononly-width-md);
+  height: var(--button-icononly-width-md);
+}
+.fieldBox.sm.button.iconOnly {
+  width: var(--button-icononly-width-sm);
+  height: var(--button-icononly-width-sm);
+}
+.fieldBox.xs.button.iconOnly {
+  width: var(--button-icononly-width-xs);
+  height: var(--button-icononly-width-xs);
+}
+.fieldBox.xxs.button.iconOnly {
+  width: var(--button-icononly-width-xxs);
+  height: var(--button-icononly-width-xxs);
+}
+
+
+
+/* radio, checkbox group ============================== */
+
+/* radioList ========== */
+.radioList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.radioList > li {
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 8px;
+  width: 100%;
+  height: 38px;
+  padding: 0 16px;
+  font-size: var(--font12);
+  font-weight: 400;
+  color: var(--fontColor9);
+}
+.radioList > li.isActive {
+  background-color: #F7F9FF;
+}
+.radioList input {}
+.radioList label {
+  overflow: hidden;
+  flex: 1;
+}
+
+/* radioList / type : row ========== */
+.radioList.row {
+  flex-direction: row;
+}
+.radioList.row > li {}
+.radioList.row.step2 > li {
+  width: 50%;
+}
+.radioList.ellipsis .itemRadio {
+  overflow: hidden;
+}
+.radioList.ellipsis label {
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* radios ========== */
+.radios {
+  display: flex;
+  gap: 12px 16px;
+}
+
+
+
+/* radio ============================== */
+.itemRadio {
+  position: relative;
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.itemRadio input {
+  position: relative;
+  top: 1px;
+  margin-right: 6px;
+}
+.itemRadio label {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.itemRadio label input {}
+.itemRadio input:disabled + label {
+  opacity: .5;
+}
+.itemRadio label:has(input) {
+  cursor: pointer;
+}
+.itemRadio label:has(:disabled) {
+  opacity: .5;
+}
+.itemRadio label:has(:disabled) input {
+  opacity: 1;
+}
+
+/* option : size ========== */
+.radios.md2 .itemRadio label {
+  font-size: var(--font14);
+}
+.radios.md2 .itemRadio input {
+  top: 2px;
+}
+
+/* wrapper / type : typeButton ========== */
+.radios.typeButton {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0;
+  padding: 2px;
+  border-radius: 10px;
+  background-color: #EDF0F3;
+}
+.radios.typeButton .itemRadio {
+  flex: 0 0 auto;
+  min-width: 86px;
+}
+.radios.typeButton .itemRadio label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: var(--font12);
+  font-weight: 600;
+  color: var(--fontColor4);
+}
+.radios.typeButton .itemRadio label:has(:checked) {
+  color: #FFFFFF;
+  background-color: #101828;
+}
+.radios.typeButton .itemRadio input {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* wrapper / type : typeButton2 ========== */
+.radios.typeButton2 {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+}
+.radios.typeButton2 .itemRadio {
+  flex: 0 0 auto;
+}
+.radios.typeButton2 .itemRadio label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #DCE0E5;
+  font-size: var(--font10);
+  font-weight: 500;
+  color: var(--fontColor7);
+  background-color: #FFF;
+}
+.radios.typeButton2 .itemRadio label:has(:checked) {
+  color: var(--fontColorPrimary);
+  border-color: #94ADFF;
+}
+.radios.typeButton2 .itemRadio input {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+/* wrapper / type : typeButton3 ========== */
+.radios.typeButton3 {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.radios.typeButton3 .itemRadio {}
+.radios.typeButton3 .itemRadio label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  padding: 5px 10px;
+  border-radius: 100px;
+  font-size: var(--font12);
+  color: var(--fontColor4);
+  background-color: #F0F3FF;
+}
+.radios.typeButton3 .itemRadio label:has(:checked) {
+  color: #ffffff;
+  background-color: #6684FF;
+}
+.radios.typeButton3 .itemRadio input {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.radios.typeButton3 label .count {
+  margin-left: 4px;
+  font-weight: 600;
+  color: #2E4BE6;
+}
+.radios.typeButton3 label:has(:checked) .count {
+  color: #FFF;
+}
+
+/* option : size */
+.radios.typeButton3.sm .itemRadio label {
+  height: 24px;
+  padding: 0 10px;
+  font-size: var(--font10);
+}
+.radios.typeButton3.md .itemRadio label {
+  height: 28px;
+  padding: 5px 10px;
+  font-size: var(--font12);
+}
+
+/* wrapper / type : typeButton4 ========== */
+.radios.typeButton4 {
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+.radios.typeButton4 .itemRadio {}
+.radios.typeButton4 .itemRadio label {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 28px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  border: 1px solid #E4E7EB;
+  font-size: var(--font12);
+  color: var(--fontColor5);
+  background-color: #FFF;
+}
+.radios.typeButton4 .itemRadio.highlight label {
+  background-color: #F5F7F9;
+}
+.radios.typeButton4 .itemRadio label:has(:checked) {
+  color: #ffffff;
+  border-color: #6684FF;
+  background-color: #6684FF;
+}
+.radios.typeButton4 .itemRadio input {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+.radios.typeButton4 label .count {
+  margin-left: 4px;
+  font-weight: 600;
+  color: #2E4BE6;
+}
+.radios.typeButton4 label:has(:checked) .count {
+  color: #FFF;
+}
+
+/* option : size */
+.radios.typeButton4.sm .itemRadio label {
+  height: 24px;
+  padding: 0 10px;
+  font-size: var(--font10);
+}
+.radios.typeButton4.md .itemRadio label {
+  height: 28px;
+  padding: 5px 10px;
+  font-size: var(--font12);
+}
+
+
+
+/* checkbox ============================== */
+
+/* type : switch ========== */
+.chckboxSwitch {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+.chckboxSwitch .labelText {
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor6);
+  white-space: nowrap;
+}
+.chckboxSwitch input {
+  appearance: none;
+  position: relative;
+  width: 28px;
+  height: 16px;
+  border-radius: 16px;
+  border: none;
+  background-image: none !important;
+  background-color: #BCC1CA;
+}
+.chckboxSwitch input:checked {
+  background-color: #05B088;
+}
+.chckboxSwitch input::after {
+  content: '';
+  transition: all 0.1s ease;
+  position: absolute;
+  left: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #FFF;
+}
+.chckboxSwitch input:checked::after {
+  left: 14px;
+}
+.chckboxSwitch.hiddenLabel .labelText {
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  font-size: 1px;
+  line-height: 1;
+}
+
+
+
+
+/* rangeGroup ============================== */
+.rangeGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+  margin: 0 8px;
+}
+/* rangeItem */
+.rangeItem {}
+.rangeItem .rangeHeader {
+  display: flex;
+  align-items: center;
+}
+.rangeItem .rangeHeader .rangeLabel {
+  display: flex;
+  align-items: center;
+}
+.rangeItem .rangeHeader .titleArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rangeItem .rangeHeader .sideArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.rangeItem .rangeHeader .rangeVal {
+  margin-left: auto;
+  font-size: var(--font13);
+  font-weight: 600;
+}
+.rangeItem .rangeBody {}
+.rangeItem .rangeBody [type="range"] {
+  width: 100%;
+}
+
+/* slider */
+.rangeItem .slider {}
+.rangeItem .slider .sliderHeader {
+  display: flex;
+  align-items: center;
+}
+.rangeItem .slider .sliderHeader .titleArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.rangeItem .slider .sliderHeader .titleArea .rangeLabel {
+  display: flex;
+  align-items: center;
+}
+.rangeItem .slider .sliderHeader .sideArea {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: auto;
+}
+.rangeItem .slider .sliderHeader .sideArea .rangeVal {
+  margin-left: auto;
+  font-size: var(--font13);
+  font-weight: 600;
+}
+
+/* rangeGroup / type : row ========== */
+.rangeGroup.row {
+  flex-direction: row;
+  gap: 40px;
+}
+.rangeGroup.row .rangeItem {
+  flex: 1;
+}
+
+
+
+/* input : range ============================== */
+
+/* ver : pure / test (사용안됨) ========== */
+datalist.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  writing-mode: vertical-lr;
+  width: 200px;
+}
+datalist.test option {
+  padding: 0;
+}
+input[type="range"].test {
+  width: 200px;
+  margin: 0;
+}
+
+/* ver : script ========== */
+.slider {
+  position: relative;
+  width: 320px;
+  user-select: none;
+}
+.slider.is-disabled {}
+.slider__input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+.slider__track {
+  position: relative;
+  height: 6px;
+  margin: 6px 0;
+  background: #E4E7EB;
+  border-radius: 999px;
+}
+.slider__fill {
+  position: absolute;
+  height: 100%;
+  background: #3D63FF;
+  border-radius: 999px;
+  width: 0%;
+}
+.slider__thumb {
+  position: absolute;
+  top: 50%;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  border: 1px solid #CCD1D7;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+.slider.is-disabled .slider__thumb {
+  cursor: not-allowed;
+}
+.slider.is-disabled .slider__fill {
+  opacity: 1;
+  background: #94ADFF;
+}
+.slider__value {
+  font-size: 12px;
+}
+
+
+
+/* input : file ============================== */
+.fileUploaded {
+  position: relative;
+  flex: 0 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
+}
+.fileUploaded > ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-width: 0;
+}
+.fileUploaded > ul > li {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.fileUploaded > ul > li .thumb {
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 104px;
+  height: 104px;
+  min-width: 0;
+  border-radius: 12px;
+  border: 1px solid #E4E7EB;
+  background-color: #FFF;
+  filter : drop-shadow( 0px 10px 80px rgba(15, 23, 42, 0.12));
+}
+.fileUploaded > ul > li .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+.fileUploaded > ul > li .buttonDel {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+}
+.fileUploaded .fileUploadLabel {
+  flex: 0 0 auto;
+  width: 104px;
+}
+.fileUploadLabel {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 104px;
+  border-radius: 12px;
+  border: 1px dashed #C2D1FF;
+  font-size: var(--font13);
+  color: var(--fontColor5);
+  text-align: center;
+  cursor: pointer;
+  background: linear-gradient(
+    160deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(224, 237, 255, 0.4) 30%,
+    rgba(224, 237, 255, 0.4) 100%
+  );
+}
+.fileUploadLabel input[type="file"] {
+  overflow: hidden;
+  visibility: hidden;
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  font-size: 1px;
+  line-height: 1;
+  background: none;
+}
+.fileUploadLabel .labelText {
+  font-size: inherit;
+}
+.fileUploadLabel.icon1:before {
+  content: "";
+  flex: 0 0 auto;
+  display: flex;
+  width: 28px;
+  height: 28px;
+  min-width: 0;
+  margin: 0 auto 4px;
+  background: transparent url('/assets/images/Icon/cloud_Upload.svg') center / cover;
+}
+
+
+
+/* button / group ============================== */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+/* divider */
+.buttons .divider {
+  height: 16px;
+  border-left: 1px solid #EDF0F3;
+}
+/* option: gap */
+.buttons.lg,
+.buttons.lg > .col {
+  gap: 10px;
+}
+.buttons.sm,
+.buttons.sm > .col {
+  gap: 4px;
+}
+/* col / 필수 아님 */
+.buttons > .col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+}
+.buttons > .col::after {
+  content: '';
+  display: block;
+  height: 10px;
+  border-left: 1px solid #EDF0F3;
+}
+.buttons > .col:last-child::after {
+  content: none;
+  margin-right: 0;
+  padding-right: 0;
+}

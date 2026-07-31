@@ -1,0 +1,596 @@
+/**
+ * 공통 디자인 토큰 (CSS variables)
+ * 컴포넌트 module.css에서 var(--ui-*) 로 참고하고, size/variant는 props + [data-*]로 매핑.
+ */
+
+/* 
+여백
+.xl : 32px;
+.lg : 24px;
+.md2 : 16px;
+.md : 12px;
+.sm : 10px;
+.xs : 8px;
+.xxs : 6px;
+.xxxs : 4px;
+*/
+
+
+
+/* Design Guide Color ============================== */
+:root {
+  /* Color Atomic ========== */
+  /* common */
+  --white: #FFFFFF;
+  --black: #000000;
+
+  /* Transparent */
+  --transparentWhite80: rgba(255, 255, 255, 0.8);
+  --transparentWhite60: rgba(255, 255, 255, 0.6);
+  --transparentWhite40: rgba(255, 255, 255, 0.4);
+  --transparentBlack80: rgba(0, 0, 0, 0.8);
+  --transparentBlack60: rgba(0, 0, 0, 0.6);
+  --transparentBlack40: rgba(0, 0, 0, 0.4);
+
+  /* Primary Blue */
+  --PrimaryBlue900: #0B135E;
+  --PrimaryBlue800: #16258F;
+  --PrimaryBlue700: #2136BF;
+  --PrimaryBlue600: #2E4BE6;
+  --PrimaryBlue500: #3D63FF;
+  --PrimaryBlue400: #6684FF;
+  --PrimaryBlue300: #94ADFF;
+  --PrimaryBlue200: #C2D1FF;
+  --PrimaryBlue100: #E0E7FF;
+  --PrimaryBlue50: #F0F3FF;
+  --PrimaryBlue20: #F7F9FF;
+
+  /* Neutral */
+  --neutral900: #101828;
+  --neutral850: #1D2432;
+  --neutral800: #2B313D;
+  --neutral750: #373E4B;
+  --neutral700: #444B59;
+  --neutral650: #515867;
+  --neutral600: #5F6675;
+  --neutral550: #6D7482;
+  --neutral500: #7C8390;
+  --neutral450: #8B929E;
+  --neutral400: #9AA1AD;
+  --neutral350: #ABB1BB;
+  --neutral300: #BCC1CA;
+  --neutral250: #CCD1D7;
+  --neutral200: #DCE0E5;
+  --neutral150: #E4E7EB;
+  --neutral100: #EDF0F3;
+  --neutral80: #F1F3F5;
+  --neutral60: #F3F5F7;
+  --neutral40: #F5F7F9;
+  --neutral20: #F7F8FA;
+  --neutral10: #F9FAFC;
+
+  --blue900: #001842;
+  --blue800: #002B75;
+  --blue700: #003EAB;
+  --blue600: #004ED6;
+  --blue500: #005CFF;
+  --blue400: #3385FF;
+  --blue300: #66A3FF;
+  --blue200: #99C1FF;
+  --blue100: #C2DAFF;
+  --blue50: #E6F1FF;
+  --blue40: #F0F6FF;
+
+  --purple900: #260A4C;
+  --purple800: #3F117F;
+  --purple700: #5917B2;
+  --purple600: #6C1DDA;
+  --purple500: #7F22FE;
+  --purple400: #994EFE;
+  --purple300: #B27AFF;
+  --purple200: #CCA5FF;
+  --purple100: #E5D1FF;
+  --purple50: #F2E9FF;
+  --purple40: #F9F5FF;
+
+  --yellow900: #4C3814;
+  --yellow800: #8E6822;
+  --yellow700: #B58222;
+  --yellow600: #DD9F28;
+  --yellow500: #FFB72D;
+  --yellow400: #FFC557;
+  --yellow300: #FFD481;
+  --yellow200: #FFE2AB;
+  --yellow100: #FFF1D5;
+  --yellow50: #FFF8E9;
+  --yellow40: #FFFCF4;
+
+  --orange900: #6A3F1C;
+  --orange800: #975C47;
+  --orange700: #B58270;
+  --orange600: #D36114;
+  --orange500: #FF7300;
+  --orange400: #FF8F33;
+  --orange300: #FFAB66;
+  --orange200: #FFC799;
+  --orange100: #FFE3CC;
+  --orange50: #FFF1E5;
+  --orange40: #FFF8F2;
+
+  --red900: #6B0D0D;
+  --red800: #921515;
+  --red700: #B81C1C;
+  --red600: #D52525;
+  --red500: #F22F2F;
+  --red400: #F55959;
+  --red300: #F88383;
+  --red200: #FBAEAE;
+  --red100: #FDD8D8;
+  --red50: #FEEDED;
+  --red40: #FFF7F7;
+
+  --green900: #013D2F;
+  --green800: #025E49;
+  --green700: #028164;
+  --green600: #03A27D;
+  --green500: #05B088;
+  --green400: #08BC92;
+  --green300: #49D1B2;
+  --green200: #8BE6D2;
+  --green100: #C9F5EB;
+  --green50: #E6FAF5;
+  --green40: #F2FCFA;
+
+
+
+  /* Color Semantic ========== */
+  /* Primary */
+  --primary500: var(--PrimaryBlue500);
+  --primary700: var(--PrimaryBlue700);
+  --primary800: var(--PrimaryBlue800);
+  --primary300: var(--PrimaryBlue300);
+
+  /* Label */
+  --labelNormal: var(--neutral800);
+  --labelStrong: var(--neutral900);
+  --labelNeutral: var(--neutral700);
+  --labelAlternative: var(--neutral600);
+  --labelAssistive: var(--neutral500);
+  --labelDisable: var(--neutral300);
+
+  
+  /* Status */
+  --statusError: var(--red500);
+  --statusWarning: var(--yellow500);
+  --statusSuccess: var(--green500);
+
+  /* Background */
+  --bgNormal: var(--neutral10);
+  --bgNeutral20: var(--neutral20);
+  --bgStrong: var(--neutral150);
+  --bgHeavy: var(--neutral250);
+  --bgDimmed: var(--transparentBlack40);
+
+  /* Background(Accent) */
+  --bgAccentPrimary: var(--PrimaryBlue20);
+  --bgAccentBlue: var(--blue40);
+  --bgAccentYellow: var(--yellow40);
+  --bgAccentOrange40: var(--orange40);
+  --bgAccentPurple: var(--purple40);
+  --bgAccentred: var(--red40);
+
+  /* Border */
+  --borderNormal: var(--neutral200);
+  --borderStrong: var(--neutral250);
+  --borderHeavy: var(--neutral300);
+  --borderNeutral: var(--neutral150);
+  --borderAssistive: var(--neutral100);
+  --borderAlert: var(--red400);
+  --borderActive: var(--PrimaryBlue400);
+
+  /* Graph */
+  --graphPrimary: var(--PrimaryBlue500);
+  --graphBlue: var(--blue200);
+  --graphLightblue: var(--PrimaryBlue100);
+  --graphPurple: var(--purple100);
+  --graphYellow: var(--yellow300);
+  --graphOrange: var(--orange300);
+  --graphGreen: var(--green300);
+  --graphGray: var(--neutral300);
+  --graphLightgray: var(--neutral200);
+}
+
+
+/* 사용된 
+color: #808FAD; /* 많이 사용되지만 가이드에 없음 /
+color: #6D7482; /* 사용 3 /
+color: #64748b; /* 사용 1 /
+color: #8B929E; /* 사용 2 /
+
+
+border
+border: 1px solid #F9FAFC; --neutral10 / bg /
+border: 1px solid #DFE3EC; /* 많이 사용되지만 가이드에 없음 /
+
+
+table
+#EDF0F3; --neutral100
+#CCD1D7; --neutral250
+
+
+많이 쓰임
+--neutral300: #BCC1CA;
+*/
+
+
+
+/* Atomic / 본문에 직접 사용하지 않음 ============================== */
+:root {
+  /* 미사용 / 정리중 */
+  --bg1: #F4F7FC; /* body */
+
+
+  /* 사용 */
+  --borderColor100: var(--neutral100); /* #EDF0F3; */
+  --borderColor150: var(--neutral150); /* #E4E7EB; */
+  --borderColor200: var(--neutral200); /* #DCE0E5; */
+  --borderColor250: var(--neutral250); /* #CCD1D7; */
+
+  --bgColor10: var(--neutral10); /* #F9FAFC; */
+  --bgColor20: var(--neutral20); /* #F7F8FA; */
+  --bgColor80: var(--neutral80); /* #F1F3F5; */
+  --bgColorBlue20: var(--PrimaryBlue20); /* #F7F9FF; */
+
+  --font10: 0.833333rem;
+  --font11: 0.916666rem;
+  --font12: 1.000000rem;
+  --font13: 1.083333rem;
+  --font14: 1.166666rem;
+  --font15: 1.250000rem;
+  --font16: 1.333333rem;
+  --font18: 1.500000rem;
+  --font20: 1.666666rem;
+  --font24: 2.000000rem;
+
+  --fontThin: 400;
+  --fontNormal: 500;
+  --fontBold: 600;
+  --fontBolder: 700;
+
+  --fontColor9: var(--neutral900); /* #101828; */
+  --fontColor8: var(--neutral800); /* #2B313D; */
+  --fontColor7: var(--neutral700); /* #444B59; */
+  --fontColor6: var(--neutral600); /* #5F6675; */
+  --fontColor5: var(--neutral500); /* #7C8390; */
+  --fontColor4: var(--neutral400); /* #9AA1AD; */
+
+  --fontColorBase: var(--neutral700);
+  --fontColorPrimary: var(--primary500);
+}
+
+
+
+/* 본문에 사용 ============================== */
+:root {
+
+  /*  */
+  --divider-border-color: var(--borderColor200);
+
+  /*  */
+  --card-border-color-1: var(--borderColor100);
+  --card-border-color-2: var(--borderColor150);
+  --card-border-color-3: var(--borderColor200);
+  --card-border-color-4: var(--borderColor250);
+
+  /*  */
+  --cell-border-color-1: var(--borderColor100);
+  --cell-border-color-2: var(--borderColor250);
+
+  /*  */
+  --field-font-color-placeholder: var(--fontColor4);
+
+  --field-font-size-xxl: var(--font16);
+  --field-font-size-xl: var(--font16);
+  --field-font-size-lg: var(--font14);
+  --field-font-size-md2: var(--font14);
+  --field-font-size-md: var(--font11);
+  --field-font-size-sm: var(--font10);
+
+  --field-font-color: var(--fontColor7);
+  --field-font-color-active: var(--fontColor7);
+  --field-font-color-disabled: var(--fontColor4);
+  --field-font-color-readonly: var(--fontColor6);
+  --field-font-color-invalid: var(--fontColor7);
+
+  --field-border-color: var(--neutral150);
+  --field-border-color-active: var(--PrimaryBlue400);
+  --field-border-color-disabled: var(--neutral150);
+  --field-border-color-readonly: var(--neutral150);
+  --field-border-color-invalid: var(--red400);
+
+  --field-bg-color: var(--white);
+  --field-bg-color-active: var(--white);
+  --field-bg-color-disabled: var(--neutral40);
+  --field-bg-color-readonly: var(--neutral40);
+  --field-bg-color-invalid: var(--white);
+
+  --field-height-xxl: 56px;
+  --field-height-xl: 48px;
+  --field-height-lg: 40px;
+  --field-height-md2: 32px;
+  --field-height-md: 28px;
+  --field-height-sm: 24px;
+
+  --field-radius-xxl: 8px;
+  --field-radius-xl: 8px;
+  --field-radius-lg: 6px;
+  --field-radius-md2: 6px;
+  --field-radius-md: 4px;
+  --field-radius-sm: 4px;
+
+  --field-padding-x-xxl: 16px;
+  --field-padding-x-xl: 16px;
+  --field-padding-x-lg: 12px;
+  --field-padding-x-md2: 12px;
+  --field-padding-x-md: 8px;
+  --field-padding-x-sm: 8px;
+
+  --field-padding-y-xxl: 14px;
+  --field-padding-y-xl: 14px;
+  --field-padding-y-lg: 12px;
+  --field-padding-y-md2: 12px;
+  --field-padding-y-md: 8px;
+  --field-padding-y-sm: 8px;
+
+  --field-selectbox-icon-gap-xxl: 8px;
+  --field-selectbox-icon-gap-xl: 8px;
+  --field-selectbox-icon-gap-lg: 6px;
+  --field-selectbox-icon-gap-md2: 6px;
+  --field-selectbox-icon-gap-md: 4px;
+  --field-selectbox-icon-gap-sm: 2px;
+
+  --field-selectbox-icon-size-xxl: var(--field-height-xxl);
+  --field-selectbox-icon-size-xl: var(--field-height-xl);
+  --field-selectbox-icon-size-lg: var(--field-height-lg);
+  --field-selectbox-icon-size-md2: var(--field-height-md2);
+  --field-selectbox-icon-size-md: var(--field-height-md);
+  --field-selectbox-icon-size-sm: var(--field-height-sm);
+
+  --field-selectbox-option-font-color: var(--neutra500);
+  --field-selectbox-option-font-color-actve: var(--neutra700);
+  --field-selectbox-option-font-color-hover: var(--neutra700);
+
+  --field-selectbox-option-bg-color: var(--field-bg-color);
+  --field-selectbox-option-bg-color-active: var(--PrimaryBlue50);
+  --field-selectbox-option-bg-color-hover: var(--PrimaryBlue50);
+
+  --field-selectbox-icon-url: url('/assets/images/Icon/form_selectbox.svg');
+  --field-selectbox-icon-url-lg: url('/assets/images/Icon/form_selectbox_lg.svg');
+  --field-selectbox-option-icon-url: url('/assets/images/Icon/form_option.svg');
+
+  --field-selectbox-icon: var(--field-bg-color) var(--field-selectbox-icon-url) no-repeat center right 9px / 8px;
+  --field-selectbox-icon-lg: var(--field-bg-color) var(--field-selectbox-icon-url-lg) no-repeat center right 16px / 12px;
+
+  --field-dropdown-icon: transparent var(--field-selectbox-icon-url) no-repeat center / 8px;
+  --field-dropdown-icon-lg: transparent var(--field-selectbox-icon-url-lg) no-repeat center / 12px;
+  --field-dropdown-option-icon: transparent var(--field-selectbox-option-icon-url) no-repeat center / 8px;
+
+
+
+
+
+  --button-font-size-xxl: var(--field-font-size-xxl);
+  --button-font-size-xl: var(--field-font-size-xl);
+  --button-font-size-lg: var(--field-font-size-lg);
+  --button-font-size-md2: var(--field-font-size-md2);
+  --button-font-size-md: var(--field-font-size-md);
+  --button-font-size-sm: var(--field-font-size-sm);
+  --button-font-size-xs: var(--field-font-size-sm);
+  --button-font-size-xxs: var(--field-font-size-sm);
+
+  --button-height-xxl: var(--field-height-xxl);
+  --button-height-xl: var(--field-height-xl);
+  --button-height-lg: var(--field-height-lg);
+  --button-height-md2: var(--field-height-md2);
+  --button-height-md: var(--field-height-md);
+  --button-height-sm: var(--field-height-sm);
+  --button-height-xs: 18px;
+  --button-height-xxs: 16px;
+
+  --button-radius-xxl: var(--field-radius-xxl);
+  --button-radius-xl: var(--field-radius-xl);
+  --button-radius-lg: var(--field-radius-lg);
+  --button-radius-md2: var(--field-radius-md2);
+  --button-radius-md: var(--field-radius-md);
+  --button-radius-sm: var(--field-radius-sm);
+  --button-radius-xs: var(--field-radius-sm);
+  --button-radius-xxs: var(--field-radius-sm);
+
+  --button-padding-xxl: 12px 24px;
+  --button-padding-xl: 12px 20px;
+  --button-padding-lg: 12px 16px;
+  --button-padding-md2: 8px 12px;
+  --button-padding-md: 8px 8px;
+  --button-padding-sm: 4px 8px;
+  --button-padding-xs: 2px 4px;
+  --button-padding-xxs: 2px 4px;
+
+  --button-gap-xxl: 10px;
+  --button-gap-xl: 10px;
+  --button-gap-lg: 8px;
+  --button-gap-md2: 8px;
+  --button-gap-md: 6px;
+  --button-gap-sm: 6px;
+  --button-gap-xs: 4px;
+  --button-gap-xxs: 4px;
+
+  --button-icononly-width-xxl: var(--button-height-xxl);
+  --button-icononly-width-xl: var(--button-height-xl);
+  --button-icononly-width-lg: var(--button-height-lg);
+  --button-icononly-width-md2: var(--button-height-md2);
+  --button-icononly-width-md: var(--button-height-md);
+  --button-icononly-width-sm: var(--button-height-sm);
+  --button-icononly-width-xs: var(--button-height-xs);
+  --button-icononly-width-xxs: var(--button-height-xxs);
+
+  --button-icon-pre-size-xxl: 15px;
+  --button-icon-pre-size-xl: 15px;
+  --button-icon-pre-size-lg: 13px;
+  --button-icon-pre-size-md2: 12px;
+  --button-icon-pre-size-md: 10px;
+  --button-icon-pre-size-sm: 10px;
+  --button-icon-pre-size-xs: 8px;
+  --button-icon-pre-size-xxs: 8px;
+
+  --button-icon-only-size-xxl: 30px;
+  --button-icon-only-size-xl: 23px;
+  --button-icon-only-size-lg: 19px;
+  --button-icon-only-size-md2: 15px;
+  --button-icon-only-size-md: 13px;
+  --button-icon-only-size-sm: 10px;
+  --button-icon-only-size-xs: 8px;
+  --button-icon-only-size-xxs: 8px;
+
+  --button-icon-only-transparent-size-xxl: 48px;
+  --button-icon-only-transparent-size-xl: 40px;
+  --button-icon-only-transparent-size-lg: 32px;
+  --button-icon-only-transparent-size-md2: 28px;
+  --button-icon-only-transparent-size-md: 24px;
+  --button-icon-only-transparent-size-sm: 18px;
+  --button-icon-only-transparent-size-xs: 12px;
+  --button-icon-only-transparent-size-xxs: 10px;
+
+  --button-primary-solid-bg-color: var(--primary500);
+  --button-primary-solid-font-color: var(--white);
+  --button-primary-solid-bg-color-hover: var(--PrimaryBlue600);
+  --button-primary-solid-font-color-disabled: var(--neutral400);
+  --button-primary-solid-bg-color-disabled: var(--neutral100);
+
+  --button-primary-outlined-bg-color: var(--white);
+  --button-primary-outlined-border-color: var(--neutral200);
+  --button-primary-outlined-font-color: var(--primary500);
+  --button-primary-outlined-bg-color-hover: var(--PrimaryBlue50);
+  --button-primary-outlined-font-color-disabled: var(--neutral400); /* not guided */
+  --button-primary-outlined-bg-color-disabled: var(--neutral100); /* not guided */
+  
+  --button-assistive-solid-bg-color: var(--neutral200);
+  --button-assistive-solid-font-color: var(--neutral700); /* not guided */
+  --button-assistive-solid-bg-color-hover: var(--neutral300);
+  --button-assistive-solid-font-color-disabled: var(--neutral400); /* not guided */
+  --button-assistive-solid-bg-color-disabled: var(--neutral100); /* not guided */
+
+  --button-assistive-outlined-bg-color: var(--white);
+  --button-assistive-outlined-border-color: var(--neutral200);
+  --button-assistive-outlined-font-color: var(--neutral700);
+  --button-assistive-outlined-font-color-disabled: var(--neutral400); /* not guided */
+  --button-assistive-outlined-bg-color-disabled: var(--neutral100); /* not guided */
+  
+  --button-submit-solid-bg-color: var(--PrimaryBlue900);
+  --button-submit-solid-font-color: var(--white);
+  --button-submit-solid-bg-color-hover: var(--PrimaryBlue800); /* not guided */
+  --button-submit-solid-font-color-disabled: var(--neutral400); /* not guided */
+  --button-submit-solid-bg-color-disabled: var(--neutral100); /* not guided */
+
+  --button-submit-outlined-bg-color: var(--white);
+  --button-submit-outlined-border-color: var(--neutral200);
+  --button-submit-outlined-font-color: var(--PrimaryBlue900);
+  --button-submit-outlined-font-color-disabled: var(--neutral400); /* not guided */
+  --button-submit-outlined-bg-color-disabled: var(--neutral100); /* not guided */
+
+  --button-danger-solid-bg-color: var(--red500);
+  --button-danger-solid-font-color: var(--white);
+  --button-danger-solid-bg-color-hover: var(--red600); /* not guided */
+  --button-danger-solid-font-color-disabled: var(--neutral400); /* not guided */
+  --button-danger-solid-bg-color-disabled: var(--neutral100); /* not guided */
+
+  --button-danger-outlined-bg-color: var(--white);
+  --button-danger-outlined-border-color: var(--neutral200);
+  --button-danger-outlined-font-color: var(--red500);
+  --button-danger-outlined-font-color-disabled: var(--neutral400); /* not guided */
+  --button-danger-outlined-bg-color-disabled: var(--neutral100); /* not guided */
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+:root {
+  /* 간격 (4px 그리드) */
+  --ui-space-0: 0;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-5: 24px;
+  --ui-space-6: 32px;
+
+  /* 모서리 */
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
+
+  /* 본문·컨트롤 타이포 */
+  --ui-font-size-xs: 0.75rem;
+  --ui-font-size-sm: 0.875rem;
+  --ui-font-size-md: 1rem;
+  --ui-line-tight: 1.25;
+  --ui-line-normal: 1.5;
+
+  /* 컨트롤 세로 (sm / md / lg) — props size 와 1:1 */
+  --ui-control-height-sm: 32px;
+  --ui-control-height-md: 40px;
+  --ui-control-height-lg: 48px;
+
+  /* 가로 패딩 (라벨·아이콘 유무에 맞게 컴포넌트에서 조정 가능) */
+  --ui-pad-x-sm: var(--ui-space-3);
+  --ui-pad-x-md: var(--ui-space-4);
+  --ui-pad-x-lg: var(--ui-space-5);
+
+  /* Button (레거시 호출부·기타) */
+  --ui-button-bg: var(--panel);
+  --ui-button-fg: var(--text);
+  --ui-button-border: var(--border);
+  --ui-button-primary-bg: var(--primary);
+  --ui-button-primary-fg: #ffffff;
+  --ui-button-primary-border: var(--primary);
+
+  /* Button — Figma figma-handoff (5종: Primary, Assistive, Assistive danger, Submit, disabled는 상태) */
+  --ui-button-figma-radius: 8px;
+  --ui-button-figma-height: 40px;
+  --ui-button-figma-pad: 3px 8px;
+  --ui-button-figma-primary: #4872ff;
+  --ui-button-figma-assistive-border: #dce0e5;
+  --ui-button-figma-text: #2b313d;
+  --ui-button-figma-text-danger: #d35050;
+  --ui-button-figma-submit: rgba(11, 19, 94, 1);
+  --ui-button-figma-disabled-bg: #f0f1f2;
+  --ui-button-figma-disabled-fg: #9aa1ad;
+  --ui-button-figma-caption: 12px;
+  /* Pretendard 미설치 시 시스템 폰트 */
+  /* --ui-button-figma-font: "Pretendard Variable", "Pretendard", "Segoe UI", system-ui, sans-serif; */
+
+  /* Checkbox — Figma 4상태(미선택·선택·disabled 미선택·disabled 선택) */
+  --ui-checkbox-size: 24px;
+  --ui-checkbox-box: 20px;
+  --ui-checkbox-radius: 6px;
+  --ui-checkbox-border-width: 1.2px;
+  --ui-checkbox-border: #bcc1ca;
+  --ui-checkbox-surface-unchecked: #ffffff;
+  --ui-checkbox-surface-disabled-unchecked: #edf0f3;
+  --ui-checkbox-accent: #4872fe;
+  /* #4872fe @ 30% — 8자리 hex */
+  --ui-checkbox-accent-faded: #4872fe4c;
+}

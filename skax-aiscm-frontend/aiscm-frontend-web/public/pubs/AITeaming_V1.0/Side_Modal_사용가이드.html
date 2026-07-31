@@ -1,0 +1,498 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">타이틀</h2>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    본문
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : ㅇㅇ -->
+                <div class="dimmed">
+                  <div class="modal full">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">Teaming 사용 가이드</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose" data-modal-close="popup1">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mbSm">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab1">PM 가이드</button>
+                            <button class="tabButton" data-tab="tab2">팀장 가이드</button>
+                            <button class="tabButton" data-tab="tab3">용어 정의</button>
+                          </div>
+                          <div class="sideArea">
+                            <div class="buttons">
+                              <button type="button" class="button outlined md assistive iconPre buttonDownload">사용자 매뉴얼 다운로드</button>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 1 -->
+                        <div class="tabContent isActive" data-content="tab1">
+                          <section class="section userGuideSection">
+                            <div class="card pmGuideBox">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h4 class="cmnHeaderTitle md">프로젝트 팀원 선정 단계</h4>
+                                </div>
+                              </div>
+                              <div class="contentArea">
+                                <div class="innerRow">
+                                  <ul class="textList dot">
+                                    <li>프로젝트에 필요한 역할을 추가하고, 역할에 적합한 팀원은 AI로 빠르고 편리하게 추천받을 수 있습니다. </li>
+                                    <li>입찰CP, 계약CP 프로젝트를 제외하고는 선정한 팀원의 소속팀장에게 승인을 받아야 투입이 확정됩니다.</li> 
+                                  </ul>
+                                  <div class="thumbArea">
+                                    <span class="thumb"><img src="/assets/images/page/using_guide_pm_01.png"></span> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="card pmGuideBox">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h4 class="cmnHeaderTitle md">진행상태 변경</h4>
+                                </div>
+                              </div>
+                              <div class="contentArea">
+                                <div class="innerRow">
+                                  <ul class="textList dot">
+                                    <li>역할에 대한 상태 뱃지는 진행 단계에 따라 변경됩니다.</li>
+                                    <li>역할만 추가한 ‘미배정' 상태에서 프로젝트에서 투입 기간이 끝난 ‘투입 종료’까지, 역할별로 상태값을 확인하며 ‘To Do’에 해당하는 조치를 취해주세요.</li> 
+                                  </ul>
+                                  <div class="thumbArea">
+                                    <span class="thumb"><img src="/assets/images/page/using_guide_pm_02.png"></span> 
+                                  </div>
+                                </div>
+                                <div class="innerRow">
+                                  <ul class="textList dot">
+                                    <li>이미 승인받은 ‘투입확정', ‘투입중' 상태의 팀원을 배정 취소하려면 다시 소속팀장의 승인이 필요합니다.</li>
+                                    <li>‘배정취소 승인 요청'을 보낸 후 처리 결과를 기다리세요. 승인 될 경우, 해당 팀원은 역할에서 제거되어 ‘미배정’상태가 되며 반려될 경우는 다시 이전의 상태값으로 돌아가 팀장이 작성한 반려 사유를 보여줍니다. </li> 
+                                  </ul>
+                                  <div class="innerBody">
+                                    <div class="innerCol">
+                                      <div class="cmnHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <h5 class="cmnHeaderTitle sm">투입 확정 → 취소</h5>
+                                        </div>
+                                      </div>
+                                      <div class="thumbArea">
+                                        <span class="thumb"><img src="/assets/images/page/using_guide_pm_03.png"></span> 
+                                      </div>
+                                    </div>
+                                    <div class="innerCol">
+                                      <div class="cmnHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <h5 class="cmnHeaderTitle sm">투입 중 → 취소</h5>
+                                        </div>
+                                      </div>
+                                      <div class="thumbArea">
+                                        <span class="thumb"><img src="/assets/images/page/using_guide_pm_04.png"></span> 
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 -->
+
+                        <!-- tabContent 2 -->
+                        <div class="tabContent" data-content="tab2">
+                          <section class="section userGuideSection">
+                            <div class="card leaderGuideBox">
+                              <div class="thumbArea">
+                                <span class="thumb"><img src="/assets/images/page/using_guide_leader_01.png"></span>
+                              </div>
+                              <div class="contentArea">
+                                <div class="cmnHeader">
+                                  <div class="cmnHeaderTitleArea">
+                                    <h4 class="cmnHeaderTitle md">승인 요청 처리</h4>
+                                  </div>
+                                </div>
+                                <div class="innerBody">
+                                  <ul class="textList dot">
+                                    <li>배정 요청 승인 화면의 ‘승인필요' 탭에서 팀원들에 대한 프로젝트 투입 요청을 확인하고, <strong>승인 또는 반려 처리</strong>해야합니다.</li>
+                                    <li>요청을 반려할 경우, <strong>반려 사유를 필수로 입력</strong>해야 하며 작성한 사유는 프로젝트PM에게 전송됩니다.</li> 
+                                    <li><strong>3일이 경과한 요청건은 자동으로 승인</strong>되므로 주의가 필요합니다.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="card leaderGuideBox">
+                              <div class="thumbArea">
+                                <span class="thumb"><img src="/assets/images/page/using_guide_leader_02.png"></span>
+                              </div>
+                              <div class="contentArea">
+                                <div class="cmnHeader">
+                                  <div class="cmnHeaderTitleArea">
+                                    <h4 class="cmnHeaderTitle md">처리 결과 확인</h4>
+                                  </div>
+                                </div>
+                                <div class="innerBody">
+                                  <ul class="textList dot">
+                                    <li>배정 요청 승인 화면의 ‘처리결과'탭에서 <strong>해당 연도에 처리한 승인 요청건들의 이력을 확인</strong>할 수 있습니다.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="card leaderGuideBox">
+                              <div class="thumbArea">
+                                <span class="thumb"><img src="/assets/images/page/using_guide_leader_03.png"></span>
+                              </div>
+                              <div class="contentArea">
+                                <div class="cmnHeader">
+                                  <div class="cmnHeaderTitleArea">
+                                    <h4 class="cmnHeaderTitle md">팀원 현황 확인</h4>
+                                  </div>
+                                </div>
+                                <div class="innerBody">
+                                  <ul class="textList dot">
+                                    <li>소속팀이 ‘매출귀속조직’으로 설정된 프로젝트 중 <strong>프로젝트 시작일이 2주 이내로 임박한 건들</strong>을 확인할 수 있습니다.</li>
+                                    <li>아직 팀원을 배정하지 못한 <strong>‘미배정'상태의 역할 규모도 파악</strong>할 수 있습니다.</li>
+                                    <li><strong>자세한 배정 상황은 각 프로젝트의 상세화면</strong>으로 들어가서 볼 수 있습니다.</li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 -->
+
+                        <!-- tabContent 3 -->
+                        <div class="tabContent" data-content="tab3">
+                          <section class="section userGuideSection">
+                            <div class="card terminologyGuideBox">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h4 class="cmnHeaderTitle md">진행 상태</h4>
+                                </div>
+                              </div>
+                              <div class="tables">
+                                <table class="table type2">
+                                  <colgroup>
+                                  <col style="width: 40px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: auto;" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">No</th>
+                                      <th scope="col">상태</th>
+                                      <th scope="col">상태 뱃지</th>
+                                      <th scope="col">정의</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>미배정(TBD)</td>
+                                      <td><span class="badge manState case1">미배정</span></td>
+                                      <td class="tal">역할에 특정 인력이 아직 배정되지 않은 상태로, 역할(행) 추가 직후 아직 인력을 배정하지 않은 경우 또는 기 배정된 인력을 삭제한 경우 존재할 수 있는 상태입니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>투입 가능</td>
+                                      <td><span class="badge manState case3">투입가능</span></td>
+                                      <td class="tal">역할에 배정된 인력이 역할에서 요구하는 투입 기간에 투입이 가능한 상태임을 표시합니다. 단, 아직 직책자에게 승인을 요청하지 않은 미확정 단계로 승인 받기 전, 타 프로젝트에서 동일 기간에 대한 투입을 확정할 경우 ‘투입 불가’상태로 변경될 가능성이 존재합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>투입 불가</td>
+                                      <td><span class="badge manState case5">투입불가</span></td>
+                                      <td class="tal">역할에 배정된 인력이 역할에서 요구하는 투입 기간에 이미 타프로젝트 투입이 확정되어 투입이 불가한 상태입을 표시합니다. 투입 불가 상태는 승인 요청을 보낼 수 없으므로, 역할에서 해당 인력을 삭제해야합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>승인대기중</td>
+                                      <td><span class="badge manState case4">승인대기중</span></td>
+                                      <td class="tal">역할에 배정된 인력에 대해 투입 확정하기 위해 직책자(팀장)에게 승인 요청을 보냈으며, 아직 승인 또는 반려 처리를 받지 않아 대기중인 상태를 표시합니다. 승인을 받을 경우 ‘투입확정'으로 상태가 변경되고 반려를 받을 경우 ‘반려'로 상태가 변경됩니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>투입확정</td>
+                                      <td><span class="badge manState case7">투입 확정</span></td>
+                                      <td class="tal">역할에 배정한 인력이 직책자 승인까지 받아서 투입이 확정된 상태를 표시합니다. 투입이 확정된 인력은 역할에서 임의로 삭제할 수 없으며, 배정 취소를 직책자에게 다시 요청해야합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>투입중</td>
+                                      <td><span class="badge manState case8">투입 중</span></td>
+                                      <td class="tal">투입확정 상태에서 ‘PROMIS에 등록 완료 AND 투입 시작일 도래' 조건이 만족될 경우 ‘투입중' 상태로 변경됩니다. 투입중인 인력은 역할에서 임의로 삭제할 수 없으며, 배정 취소를 직책자에게 다시 요청해야합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>반려</td>
+                                      <td>
+                                        <div class="tooltipShowing">
+                                          <div class="tooltip typeText isActive center top">
+                                            <span class="tooltipContent">반려사유가 들어갈<br>예정입니다</span>
+                                          </div>
+                                          <span class="badge manState case6" data-tooltip>반려</span>
+                                        </div>
+                                      </td>
+                                      <td class="tal">역할에 대한 인력 배정 승인 요청을 직책자가 반려 처리한 경우 표시되는 상태입니다. 직책자가 작성한 반려사유가 툴팁에 표시됩니다. 반려상태의 역할은 다시 승인 요청할 수 없으므로, 역할에 배정된 인력을 삭제해야합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>취소대기중</td>
+                                      <td><span class="badge manState case11">취소대기중</span></td>
+                                      <td class="tal">직책자에게 승인 받은 ‘투입확정’, ‘투입중’ 상태의 인력에 대해 배정 취소 요청을 직책자에게 보낸 후 아직 승인받지 못해 대기중인 상태를 표시합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>9</td>
+                                      <td>투입확정(배정취소 반려)</td>
+                                      <td>
+                                        <div class="tooltipShowing">
+                                          <div class="tooltip typeText isActive center top">
+                                            <span class="tooltipContent">배정취소승인요청<br>반려한 사유</span>
+                                          </div>
+                                          <span class="badge manState case7">투입 확정</span>
+                                        </div>
+                                      </td>
+                                      <td class="tal">‘투입확정’상태의 인력에 대해 배정 취소 요청을 직책자에게 보낸 후, 반려를 받은 경우 다시 ‘투입확정'상태로 원상복귀되며 반려 사유가 툴팁으로 표시됩니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>10</td>
+                                      <td>투입중(배정취소 반려)</td>
+                                      <td>
+                                        <div class="tooltipShowing">
+                                          <div class="tooltip typeText isActive center top">
+                                            <span class="tooltipContent">배정취소승인요청<br>반려한 사유</span>
+                                          </div>
+                                          <span class="badge manState case8">투입중</span>
+                                        </div>
+                                      </td>
+                                      <td class="tal">‘투입중’상태의 인력에 대해 배정 취소 요청을 직책자에게 보낸 후, 반려를 받은 경우 다시 ‘투입중'상태로 원상복귀되며 반려 사유가 툴팁으로 표시됩니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>11</td>
+                                      <td>투입종료</td>
+                                      <td><span class="badge manState case1">투입종료</span></td>
+                                      <td class="tal">‘투입중’상태에서 투입종료일이 경과한 경우 투입종료 상태로 변경됩니다</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+
+                            <div class="card terminologyGuideBox">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h4 class="cmnHeaderTitle md">AI 추천 여부</h4>
+                                </div>
+                              </div>
+                              <div class="tables">
+                                <table class="table type2">
+                                  <colgroup>
+                                  <col style="width: 40px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: auto;" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">No</th>
+                                      <th scope="col">상태</th>
+                                      <th scope="col">상태 뱃지</th>
+                                      <th scope="col">정의</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>AI추천</td>
+                                      <td><span class="badge etc aiRecommend">AI</span></td>
+                                      <td class="tal">AI추천 기능을 사용해 배정한 인력의 경우 이름에 ‘AI’뱃지가 표시됩니다.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+
+                            <div class="card terminologyGuideBox">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h4 class="cmnHeaderTitle md">사업단계</h4>
+                                </div>
+                              </div>
+                              <div class="tables">
+                                <table class="table type2">
+                                  <colgroup>
+                                  <col style="width: 40px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: 200px" />
+                                  <col style="width: auto;" />
+                                  </colgroup>
+                                  <thead>
+                                    <tr>
+                                      <th scope="col">No</th>
+                                      <th scope="col">사업단계</th>
+                                      <th scope="col">뱃지</th>
+                                      <th scope="col">정의</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>1</td>
+                                      <td>사전영업(IV Pre-sales)</td>
+                                      <td><span class="badge businessStep md">사전 영업</span></td>
+                                      <td class="tal">영업대표가 팀원을 선정하는 단계</td>
+                                    </tr>
+                                    <tr>
+                                      <td>2</td>
+                                      <td>과제 (IV사내프로젝트)</td>
+                                      <td><span class="badge businessStep md">과제</span></td>
+                                      <td class="tal">IV사내프로젝트</td>
+                                    </tr>
+                                    <tr>
+                                      <td>3</td>
+                                      <td>사내활동관리 (IV사내프로젝트)</td>
+                                      <td><span class="badge businessStep md">사내활동관리</span></td>
+                                      <td class="tal">IV사내프로젝트</td>
+                                    </tr>
+                                    <tr>
+                                      <td>4</td>
+                                      <td>투자-개발 (IV사내프로젝트)</td>
+                                      <td><span class="badge businessStep md">투자-개발</span></td>
+                                      <td class="tal">IV사내프로젝트</td>
+                                    </tr>
+                                    <tr>
+                                      <td>5</td>
+                                      <td>투자-사내IT (IV사내프로젝트)</td>
+                                      <td><span class="badge businessStep md">투자-사내IT</span></td>
+                                      <td class="tal">IV사내프로젝트</td>
+                                    </tr>
+                                    <tr>
+                                      <td>6</td>
+                                      <td>제안PM</td>
+                                      <td><span class="badge businessStep md">제안PM</span></td>
+                                      <td class="tal">영업대표가 제안PM을 선정하는 단계. 사업기회 등록 단계에서 제안프로젝트를 ‘Yes’로 표시한 경우에만 진행합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>7</td>
+                                      <td>본제안</td>
+                                      <td><span class="badge businessStep md">본제안</span></td>
+                                      <td class="tal">제안PM이 팀원을 선정하는 단계.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>8</td>
+                                      <td>입찰CP</td>
+                                      <td><span class="badge businessStep md">입찰CP</span></td>
+                                      <td class="tal">제안PM이 제안 사업비 구성을 위해 팀원을 선정하는 단계</td>
+                                    </tr>
+                                    <tr>
+                                      <td>9</td>
+                                      <td>수행PM</td>
+                                      <td><span class="badge businessStep md">수행PM</span></td>
+                                      <td class="tal">영업대표가 수행PM 선정하는 단계. 제안PM과 수행PM이 다른 경우에만 진행합니다.</td>
+                                    </tr>
+                                    <tr>
+                                      <td>10</td>
+                                      <td>계약CP</td>
+                                      <td><span class="badge businessStep md">계약CP</span></td>
+                                      <td class="tal">수행PM이 실제 사업비 구성을 위해 팀원을 선정하는 단계</td>
+                                    </tr>
+                                    <tr>
+                                      <td>11</td>
+                                      <td>수행Teaming</td>
+                                      <td><span class="badge businessStep md">수행Teaming</span></td>
+                                      <td class="tal">수행PM이 실투입 팀원을 선정하는 단계. PROMIS에서 계약CP내용을 연결합니다.</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                        <!-- //tabContent 3 -->
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+                  </div>
+                </div>
+                <!-- //modal : ㅇㅇ -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.tabs').forEach(tab => {
+    new TabMenu(tab);
+  });
+});
+</script>
+</html>

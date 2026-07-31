@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <button type="button" class="button transparent sm iconOnly buttonBack">뒤로</button>
+                    <h2 class="cmnHeaderTitle lg">Skill-set별 투입 인력 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="itemGroupA">
+                      <span class="item"><strong>전사</strong></span>
+                      <span class="item">26년 4월 5주차 기준</span>
+                    </div>
+                    <button type="button" class="button outlined md assistive iconPre buttonDownload">엑셀 다운로드</button>
+                  </div>
+                </div>
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader sm">
+                      <div class="cmnHeaderTitleArea">
+                        <div class="buttons">
+                          <button type="button" class="button filter2 md isActive">26/05</button>
+                          <button type="button" class="button filter2 md">26/06</button>
+                          <button type="button" class="button filter2 md highlight">26/07</button>
+                          <button type="button" class="button filter2 md">26/08</button>
+                          <button type="button" class="button filter2 md">26/09</button>
+                          <button type="button" class="button filter2 md highlight">26/10</button>
+                          <button type="button" class="button filter2 md">26/11</button>
+                          <button type="button" class="button filter2 md">26/12</button>
+                          <button type="button" class="button filter2 md">27/01</button>
+                          <button type="button" class="button filter2 md">27/02</button>
+                          <button type="button" class="button filter2 md">27/03</button>
+                          <button type="button" class="button filter2 md highlight">27/04</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card type2">
+                      <div class="cards lg">
+                        <div class="card type5 pType1">
+                          <div class="cmnHeader">
+                            <div class="cmnHeaderTitleArea">
+                              <dl class="dlist typeSkill">
+                                <div class="row">
+                                  <dt>조회 Skill-set <span class="count">(1/5)</span></dt>
+                                  <dd>
+                                    <div class="itemDepth skill2 ">
+                                      <span class="item nodata">스킬셋을 선택해주세요 (최대 5개)</span>
+                                    </div>
+                                  </dd>
+                                </div>
+                              </dl>
+                            </div>
+                            <div class="cmnHeaderSideArea">
+                              <button type="button" class="button outlined md assistive">선택</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="nodataBox typeNodata bg">
+                          <div class="innerBody">
+                            <p class="text search">Skill-set을 선택해주세요.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // TableScroller
+  new TableScroller({
+    className: 'tablesScrollX'
+  });
+});
+</script>
+</html>

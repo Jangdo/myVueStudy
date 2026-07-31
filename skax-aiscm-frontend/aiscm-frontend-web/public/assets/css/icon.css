@@ -1,0 +1,216 @@
+
+
+
+/* title preffix ============================== */
+.iconTitle {}
+.iconTitle::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.iconTitle.projectInfo {}
+.iconTitle.projectInfo::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  border-radius: 4px;
+}
+.iconTitle.projectInfo.case1::before {
+  background-image: url('/assets/images/Icon/24_estimated_total.svg');
+}
+.iconTitle.projectInfo.case2::before,
+.iconTitle.projectInfo.case3::before {
+  background-image: url('/assets/images/Icon/24_estimated_functions.svg');
+}
+.iconTitle.projectInfo.case4::before,
+.iconTitle.projectInfo.case5::before {
+  background-image: url('/assets/images/Icon/24_estimated_cost.svg');
+}
+.iconTitle.projectInfo.case6::before,
+.iconTitle.projectInfo.case7::before,
+.iconTitle.projectInfo.case8::before,
+.iconTitle.projectInfo.case9::before {
+  background-image: url('/assets/images/Icon/24_estimated_mm.svg');
+}
+.iconTitle.projectInfo.case10::before {
+  background-image: url('/assets/images/Icon/24_estimated_cardPoint.png');
+}
+.iconTitle.iChatSymbol {
+  position: relative;
+  padding-left: 40px;
+}
+.iconTitle.iChatSymbol::before {
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  background-image: url('/assets/images/Icon/logo_symbol2.svg');
+}
+.iconTitle.iAmount::before {
+  width: 20px;
+  height: 20px;
+  background-image: url('/assets/images/Icon/20_cost.svg');
+}
+.iconTitle.iAi::before {
+  width: 8px;
+  height: 8px;
+  margin-right: 4px;
+  background-image: url('/assets/images/Icon/8_ai_gray.svg');
+}
+.iconTitle.primary {
+  color: var(--fontColorPrimary);
+}
+.iconTitle.primary.iAi::before {
+  background-image: url('/assets/images/Icon/8_ai.svg');
+}
+.iconTitle.primary.iAi12::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  background-image: url('/assets/images/Icon/12_ai.svg');
+}
+.iconTitle.iEstimated {
+  color: #16258F !important;
+}
+.iconTitle.iEstimated::before {
+  width: 16px;
+  height: 16px;
+  color: #16258F;
+  background-image: url('/assets/images/Icon/16_estimated.png');
+}
+
+
+
+/* icon ============================== */
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.icon::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+}
+
+
+
+/*  ============================== */
+.icon.iAi::before {
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/8_ai.svg");
+}
+.icon.iAi2::before {
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/8_ai_gray.svg");
+}
+.icon.iMinus::before {
+  width: 8px;
+  height: 8px;
+  background-image: url("/assets/images/Icon/8_op_minus.svg");
+}
+.icon.iPlus::before {
+  width: 8px;
+  height: 8px;
+  background-image: url("/assets/images/Icon/8_op_plus.svg");
+}
+.icon.iDel::before {
+  width: 12px;
+  height: 12px;
+  background-image: url("/assets/images/Icon/12_del.svg");
+}
+.icon.iClose::before {
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/Icon/20_close.svg");
+}
+.icon.iCost::before {
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/Icon/20_cost.svg");
+}
+.icon.iSearch::before {
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/Icon/20_search.svg");
+}
+.icon.iEstmCost::before {
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/images/Icon/24_estimated_cost.svg");
+}
+.icon.iEstmMm::before {
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/images/Icon/24_estimated_mm.svg");
+}
+.icon.iEstmFuncion::before {
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/images/Icon/24_estimated_functions.svg");
+}
+.icon.iEstmTotal::before {
+  width: 24px;
+  height: 24px;
+  background-image: url("/assets/images/Icon/24_estimated_total.svg");
+}
+
+/*  */
+.icon.iArrow8::before {
+  width: 8px;
+  height: 8px;
+  background-image: url("/assets/images/Icon/accordion_8.svg");
+}
+.icon.iAccordion8::before {
+  width: 8px;
+  height: 8px;
+  background-image: url("/assets/images/Icon/accordion_8.svg");
+}
+.icon.iAccordion10::before {
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/accordion_10.svg");
+}
+
+/*  */
+.icon.iCalendar::before {
+  width: 14px;
+  height: 14px;
+  background-image: url("/assets/images/Icon/form_calendar.svg");
+}
+.icon.iCheckDash::before {
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/form_checkbox_dash.svg");
+}
+.icon.iCheck::before {
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/form_checkbox.svg");
+}
+.icon.iClear::before {
+  width: 20px;
+  height: 20px;
+  background-image: url("/assets/images/Icon/form_clear.svg");
+}
+.icon.iSelectbox::before {
+  width: 8px;
+  height: 8px;
+  background-image: url("/assets/images/Icon/form_selectbox.svg");
+}
+.icon.iLogoSymbol2::before {
+  width: 32px;
+  height: 32px;
+  background-image: url("/assets/images/Icon/logo_symbol2.svg");
+}

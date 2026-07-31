@@ -1,0 +1,49 @@
+<style>
+  
+</style>
+
+<h2 class="l_title">추가 - /pubs/1_guide/lsy.html</h2>
+<div class="l_article">
+  <div class="l_body">
+    <div class="l_row">
+      //
+    </div>
+  </div>
+</div>
+<script>
+async function loadPubLibrary() {
+  const elements = document.querySelectorAll("[data-include]");
+
+  for (const el of elements) {
+    const file = el.dataset.include;
+
+    try {
+      const response = await fetch(file);
+      const html = await response.text();
+
+      // HTML 삽입
+      el.innerHTML = html;
+
+      // script 실행
+      const scripts = el.querySelectorAll("script");
+
+      for (const oldScript of scripts) {
+        const newScript = document.createElement("script");
+
+        // 속성 복사(src, type, async 등)
+        [...oldScript.attributes].forEach(attr => {
+          newScript.setAttribute(attr.name, attr.value);
+        });
+
+        // inline script 복사
+        newScript.textContent = oldScript.textContent;
+
+        // 기존 script 교체 (실행됨)
+        oldScript.parentNode.replaceChild(newScript, oldScript);
+      }
+    } catch (err) {
+      console.error(`Include 실패: ${file}`, err);
+    }
+  }
+}
+</script>

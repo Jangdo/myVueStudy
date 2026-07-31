@@ -1,0 +1,87 @@
+<h2 class="l_title">Function - Scrolling</h2>
+<div class="l_article">
+  <h3 class="l_title">Drag Scrolling</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div data-drag-scroll>
+        <div class="temp_drag_scroll">
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />내용<br />
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+          내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 내용 
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="l_article">
+  <h3 class="l_title">scroll to Anchror</h3>
+  <p class="l_text">해당 드롭다운 메뉴가 display: none 속성 안에 있는 경우 (ex : tab, accordion, modal ...) dropdown 메뉴의 활성 값이 마지막 option 값으로 지정되는 오류가 있을 수 있다.</p>
+  <p class="l_text">이런 경우, display: none 속성을 가지고 있는 부모 태그에 data-anchor-scope 값을 준다.</p>
+  <dl class="l_dlist">
+      <div class="col">
+        <dt>scroll area</dt>
+        <dd>data-anchor-scroll</dd>
+      </div>
+      <div class="col">
+        <dt>상단 고정</dt>
+        <dd>data-anchor-fixed</dd>
+      </div>
+      <div class="col">
+        <dt>버튼</dt>
+        <dd>data-anchor-target</dd>
+      </div>
+      <div class="col">
+        <dt>대상</dt>
+        <dd>data-anchor</dd>
+      </div>
+      <div class="col">
+        <dt>대상의 부모 display: none 인 경우</dt>
+        <dd>data-anchor-scope</dd>
+      </div>
+    </dl>
+  <div class="l_body">
+    <div class="l_row">
+      <section class="temp_anchor">
+        <div class="dropdown xl" data-anchor-dropdown data-anchor-fixed>
+          <button class="dropdownButton">영역 선택</button>
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton" data-anchor-target="anchorArea1">영역1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton" data-anchor-target="anchorArea2">영역2</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton" data-anchor-target="anchorArea3">영역3</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="temp_anchor_targets">
+          <div data-anchor="anchorArea1" class="temp_anchor_target">
+            <div>영역1</div>
+          </div>
+
+          <div data-anchor="anchorArea2" class="temp_anchor_target">
+            <div>영역2</div>
+          </div>
+
+          <div data-anchor="anchorArea3" class="temp_anchor_target">
+            <div>영역3</div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>

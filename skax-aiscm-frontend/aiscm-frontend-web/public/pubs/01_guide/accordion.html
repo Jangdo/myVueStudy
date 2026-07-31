@@ -1,0 +1,415 @@
+<h2 class="l_title">Accordion</h2>
+<div class="l_article">
+  <h3 class="l_title">Dataset (기능만 참고)</h3>
+  <div class="l_body">
+    <h4 class="l_title">구조 : 개별 확장</h4>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>object</dt>
+        <dd>data-ui="accordions"</dd>
+      </div>
+      <div class="col">
+        <dt>버튼</dt>
+        <dd>data-ui="accordionTrigger"</dd>
+      </div>
+      <div class="col">
+        <dt>버튼 hidden label</dt>
+        <dd>data-ui="accordionTriggerLabel"</dd>
+      </div>
+    </dl>
+    <div class="l_row">
+      <div class="accordions" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목1
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용1
+          </div>
+        </div>
+        <div class="accordion ">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목2
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용2
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">구조 : toggleAll</h4>
+    <p class="l_text">option : .toggleAll</p>
+    <div class="l_row">
+      <div class="accordions toggleAll" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목1
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용1
+          </div>
+        </div>
+        <div class="accordion ">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목2
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용2
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">기본 스타일</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="accordions type1" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목1
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용1
+          </div>
+        </div>
+        <div class="accordion">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목2
+            </div>
+            <div class="sideArea">
+              <label class="chckboxSwitch">
+                <span class="labelText">하위 조직 정보 펼치기</span>
+                <span class="labelText" data-ui="accordionTriggerLabel"></span>
+                <input type="checkbox" data-ui="accordionTrigger" />
+              </label>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용2
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="accordions type1 border" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목1
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용1
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="accordions type1 bg" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              제목1
+            </div>
+            <div class="sideArea">
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            내용1
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">사례</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="accordions type1 border typeActionItem" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              <strong class="title">AT서비스 부문</strong>
+              <span class="badge actionItem3 case4">수정됨</span>
+            </div>
+            <div class="sideArea">
+              <div class="cardInfor typeBrData row">
+                <div class="itemBody">
+                  <div class="dataArea">
+                    <dl class="dlist">
+                      <div class="row">
+                        <dt>계획비</dt>
+                        <dd><span class="rateIndex isUp">2%</span></dd>
+                      </div>
+                      <div class="row">
+                        <dt>전년비</dt>
+                        <dd><span class="rateIndex isUp">2%</span></dd>
+                      </div>
+                      <div class="row">
+                        <dt>전월비</dt>
+                        <dd><span class="rateIndex isDown">2%</span></dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="totalArea">
+                    <dl class="dlist">
+                      <div class="row total">
+                        <dt class="blind">연간 추정</dt>
+                        <dd><span class="val"><strong>80.3</strong>%</span></dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            <div class="innerBox">
+              <strong class="title">현황 요약</strong>
+              <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="l_row">
+      <div class="accordions type1 border typeActionItem">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              <strong class="title">AT서비스 부문</strong>
+              <span class="badge actionItem3 case4">수정됨</span>
+            </div>
+            <div class="sideArea">
+              <div class="cardInfor typeBrData row">
+                <div class="itemBody">
+                  <div class="dataArea">
+                    <dl class="dlist">
+                      <div class="row">
+                        <dt>계획비</dt>
+                        <dd><span class="rateIndex isUp">2%</span></dd>
+                      </div>
+                      <div class="row">
+                        <dt>전년비</dt>
+                        <dd><span class="rateIndex isUp">2%</span></dd>
+                      </div>
+                      <div class="row">
+                        <dt>전월비</dt>
+                        <dd><span class="rateIndex isDown">2%</span></dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="totalArea">
+                    <dl class="dlist">
+                      <div class="row total">
+                        <dt class="blind">연간 추정</dt>
+                        <dd><span class="val"><strong>80.3</strong>%</span></dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordionBody">
+            <div class="innerBox">
+              <strong class="title">현황 요약</strong>
+              <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="accordions type1 projectInfor" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader cmnHeader">
+            <div class="cmnHeaderTitleArea">
+              <span class="badge businessStep">수행 Teaming</span>
+              <h3 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h3>
+            </div>
+            <div class="cmnHeaderSideArea">
+              <button type="button" class="buttonAccordion" data-ui="accordionTrigger"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            <dl class="dlist type1c">
+              <div class="row">
+                <dt>투자기간</dt>
+                <dd>2026.09.01~2027.08.31</dd>
+              </div>
+              <div class="row">
+                <dt>요청부서</dt>
+                <dd>금융사업개발1팀/금융사업본부</dd>
+              </div>
+              <div class="row">
+                <dt>책임부서(매출귀속조직)</dt>
+                <dd>금융사업개발1팀/금융사업본부</dd>
+              </div>
+              <div class="row">
+                <dt>수행PM</dt>
+                <dd>김영업 매니저</dd>
+              </div>
+              <div class="row">
+                <dt>총 투자비용</dt>
+                <dd>1,000,000,000원</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="accordions type1 typeTeamProject" data-ui="accordions">
+        <!--
+          #accordion class 상태 설명
+            - 닫힘 : .accordion
+            - 열림 : .accordion.isExpand
+        -->
+        <div class="accordion">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              <span class="badge businessStep">사전 영업</span>
+              <strong class="title">NH투자증권 고객관리 시스템 개선 A프로젝트 </strong>
+            </div>
+            <div class="sideArea">
+              <span class="countNumber type2 blue"><strong class="number">12</strong>건</span>
+              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+            </div>
+          </div>
+          <div class="accordionBody">
+            <div class="dlists type1 bg">
+              <dl class="dlist type9">
+                <div class="row">
+                  <dt>투자기간</dt>
+                  <dd>2026.09.01~2026.12.01</dd>
+                </div>
+                <div class="row">
+                  <dt>수행PM</dt>
+                  <dd>김영업 매니저</dd>
+                </div>
+                <div class="row">
+                  <dt>책임부서(매출귀속조직)</dt>
+                  <dd>금융사업개발1팀/금융사업본부</dd>
+                </div>
+                <div class="row">
+                  <dt>요청부서</dt>
+                  <dd>금융사업개발1팀/금융사업본부</dd>
+                </div>
+                <div class="row">
+                  <dt>총 투자비용</dt>
+                  <dd>1,000,000,000원</dd>
+                </div>
+                <div class="row">
+                  <dt>매출귀속조직(팀/본부)</dt>
+                  <dd>서비스 2팀/B서비스 본부</dd>
+                </div>
+                <div class="row">
+                  <dt>수주목표금액</dt>
+                  <dd>1,000,000,000원</dd>
+                </div>
+              </dl>
+              <div class="sideArea">
+                <a href="#none" class="buttonLink">프로젝트 상세 보기</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="accordions type1 typeProject" data-ui="accordions">
+        <div class="accordion isExpand">
+          <div class="accordionHeader">
+            <div class="titleArea">
+              <div class="assignInfoSummary column">
+                <div class="row">
+                  <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                </div>
+                <div class="row">
+                  <span class="badge manState case8">투입중</span>
+                  <span class="text person sm">PM 홍길동</span>
+                  <span class="text period sm">26.08.21-26.12.20</span>
+                  <span class="text time sm">Part Time · 0.4MM</span>
+                  <span class="text time sm">수주 목표액 1,000억원</span>
+                </div>
+              </div>
+            </div>
+            <div class="sideArea">
+              <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                <span class="textCount">+3</span>
+                <span class="labelText" data-ui="accordionTriggerLabel"></span>
+              </button>
+            </div>
+            
+          </div>
+          <div class="accordionBody">
+            <div class="assignInfoSummarys">
+              <div class="assignInfoSummary column">
+                <div class="row">
+                  <span class="project">A은행 역외 원화결제시스템 어드민 구축 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트</span>
+                </div>
+                <div class="row">
+                  <span class="badge manState case8">투입중</span>
+                  <span class="text person sm">PM 홍길동</span>
+                  <span class="text period sm">26.08.21-26.12.20</span>
+                  <span class="text time sm">Part Time · 0.4MM</span>
+                  <span class="text time sm">수주 목표액 1,000억원</span>
+                </div>
+              </div>
+              <div class="assignInfoSummary column">
+                <div class="row">
+                  <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                </div>
+                <div class="row">
+                  <span class="badge manState case8">투입중</span>
+                  <span class="text person sm">PM 홍길동</span>
+                  <span class="text period sm">26.08.21-26.12.20</span>
+                  <span class="text time sm">Part Time · 0.4MM</span>
+                  <span class="text time sm">수주 목표액 1,000억원</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

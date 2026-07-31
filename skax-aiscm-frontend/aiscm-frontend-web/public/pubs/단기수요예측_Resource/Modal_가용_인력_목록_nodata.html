@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 필터 설정 -->
+                <div class="dimmed">
+                  <div class="modal lg">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">가용 인력 목록</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <dl class="dlist type1c">
+                        <div class="row">
+                          <dt>Skill-set</dt>
+                          <dd>
+                            <div class="itemDepth skill lg">
+                              <span class="item">Software Development</span>
+                              <span class="item"><strong>Front-end Development</strong></span>
+                            </div>
+                          </dd>
+                        </div>
+                        <div class="row">
+                          <dt>가용 가능 일자</dt>
+                          <dd>2026.05.30 ~ 2028.05.30</dd>
+                        </div>
+                      </dl>
+                      <div class="nodataBox typeNodata bg">
+                        <div class="innerBody">
+                          <p class="text search">조건에 일치하는 인력이 없습니다.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                  </div>
+                </div>
+                <!-- //modal : 필터 설정 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <div class="panel right panelChat">
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">AI추천 전체보기</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panelBody">
+          panel
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+.root {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* font-family: var(--ui-button-figma-font, "Pretendard Variable", system-ui, sans-serif); */
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 8px;
+}
+
+.unitTitle {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #101828;
+  line-height: 1.3;
+}
+
+.unitCode {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #8b929e;
+}
+
+.kpiGrid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 24px;
+  background: #f9fafc;
+  border-radius: 12px;
+  padding: 14px 20px;
+}
+
+@media (max-width: 900px) {
+  .kpiGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.kpiItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  justify-content: center;
+  min-width: 0;
+}
+
+.kpiLabel {
+  margin: 0;
+  font-size: 11px;
+  font-weight: 500;
+  color: #808fad;
+  line-height: 1.5;
+}
+
+.kpiValue {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #101828;
+  line-height: 1.5;
+  white-space: nowrap;
+}

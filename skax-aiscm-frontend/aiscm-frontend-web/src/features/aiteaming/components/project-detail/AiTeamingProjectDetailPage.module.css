@@ -1,0 +1,107 @@
+/* 창 높이(동적 뷰포트 포함)에 맞춰 하단 flex 체인이 재계산되도록 단일 루트 제공 */
+.viewportFill {
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Frame 2116933313 내부 — Figma 탭 Result 상단 y=20, 좌 x=40 */
+.root {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.tabRail {
+  flex-shrink: 0;
+  width: calc(100% + 1px);
+  min-height: 51px;
+  background: linear-gradient(180deg, #eef2f7 0%, #e9eef5 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 0;
+  box-sizing: border-box;
+  margin-left: -1px;
+  overflow-x: auto;
+  overflow-y: visible;
+  gap: 0;
+}
+
+.tabRailPlaceholder {
+  flex: 1;
+  min-height: 51px;
+  min-width: 120px;
+  border-radius: 24px 24px 0 0;
+  background: transparent;
+}
+
+.tabRailEmpty {
+  min-height: 51px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  color: #64748b;
+  font-size: 13px;
+}
+
+.bodyPanel {
+  flex: 1;
+  min-height: 0;
+  background: #fff;
+  padding: 24px 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+  overflow: visible;
+}
+
+/* 사업기회 카드·구분선은 줄어들지 않음 */
+.stack > section {
+  flex-shrink: 0;
+}
+
+.dividerGap {
+  margin: 32px 0 12px;
+  flex-shrink: 0;
+}
+
+/* 팀 표는 스크롤, 인건비 푸터는 항상 카드 하단(표 아래) 고정 */
+.card {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  overflow: visible;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid #dfe3ec;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.emptyPanel {
+  flex: 1;
+  min-height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #d0d7e2;
+  border-radius: 12px;
+  color: #64748b;
+  font-size: 14px;
+  background: #fff;
+}

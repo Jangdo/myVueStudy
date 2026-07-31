@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 검색하기 -->
+                <div class="dimmed">
+                  <div class="modal md hgtMd2">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">입력하기</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="searchFilter">
+                        <div class="row">
+                          <div class="fieldBox lg">
+                            <div class="dropdown">
+                              <button class="dropdownButton">전사</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="inputBox">
+                              <input type="text" placeholder="이름 또는 사번을 입력하세요." />
+                              <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                            </div>
+                            <div class="sideArea">
+                              <button type="button" class="button iconOnly buttonSearch">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="tables flex1">
+                        <div class="cmnHeader md">
+                          <div class="cmnHeaderTitleArea">
+                            <h2 class="cmnHeaderTitle sm">검색결과<span class="cmnHeaderCount"><strong class="cmnHeaderCountNumber2">(56건)</strong></span></h2>
+                          </div>
+                        </div>
+                        
+                        <!-- case : 검색결과 / O -->
+                        <table class="table type2">
+                          <!-- ==============================
+                            # tr 상태 클래스
+                              - 선택됨 : tr.isSelected
+                              - 비활성 : tr.isDisabled
+                          ============================== -->
+                          <colgroup>
+                            <col style="width: 40px" />
+                            <col style="width: 80px" />
+                            <col style="width: 160px" />
+                            <col style="width: auto" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>선택</th>
+                              <th>상태</th>
+                              <th>프로필</th>
+                              <th>프로젝트 수행경험</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="radio" /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion isExpand">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                      
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="isSelected">
+                              <td><input type="radio" checked /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트 긴텍스트</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr class="isDisabled">
+                              <td><input type="radio" disabled /></td>
+                              <td><span class="badge manState case9">가용</span></td>
+                              <td>
+                                <div class="infoMemberBasic sm">
+                                  <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                  <div class="infos">
+                                    <div class="row">
+                                      <span class="userName">김프로</span>
+                                      <span class="grade">P4</span>
+                                    </div>
+                                    <div class="row">
+                                      <a href="#none" class="buttonLink idNumber">1324234</a>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>
+                                <div class="accordions type1 typeProject" data-ui="accordions">
+                                  <div class="accordion">
+                                    <div class="accordionHeader">
+                                      <div class="titleArea">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                              <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="sideArea">
+                                        <button type="button" class="buttonAccordion" data-ui="accordionTrigger">
+                                          <span class="textCount">+3</span>
+                                          <span class="buttonLabel">접기</span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="accordionBody">
+                                      <div class="assignInfoSummarys">
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                        <div class="assignInfoSummary column">
+                                          <div class="row">
+                                            <span class="project">A은행 역외 원화결제시스템 어드민 구축</span>
+                                          </div>
+                                          <div class="row">
+                                            <span class="badge manState case8">투입중</span>
+                                            <span class="text person sm">PM 홍길동</span>
+                                            <span class="text period sm">26.08.21-26.12.20</span>
+                                            <span class="text time sm">Part Time · 0.4MM</span>
+                                            <span class="text time sm">수주 목표액 1,000억원</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- //case : 검색결과 / O -->
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">역할 배정</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 검색하기 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Accordion
+  Accordion.init();
+  
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

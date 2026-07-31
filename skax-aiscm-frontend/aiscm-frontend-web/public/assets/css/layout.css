@@ -1,0 +1,738 @@
+
+/* ==============================
+  레이아웃 컴포넌트에 적용되어 있는 스타일 속성
+  컴포넌트 스타일에 반영해야 함
+============================== */
+/*  */
+
+.innerOpen {
+  overflow-y: auto;
+}
+.mainFrame {
+  border: 1px solid rgba(255, 255, 255, .1);
+  box-shadow:
+    0 10px 80px rgba(15, 23, 42, 0.12),
+    inset 0 4px 10px rgba(15, 23, 42, 0.04);
+}
+.root {
+  position: relative;
+  padding: 8px;
+  border-radius: 24px;
+  background-color: #FFF;
+}
+.bodyPanel {
+  overflow-x: auto;
+  padding: 16px 32px;
+  background-color: transparent;
+  /* background: #f1f5f9; */
+}
+.stack {
+  flex: 1;
+  min-width: 1100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==============================
+  추가 : lnb
+============================== */
+
+/* lnb ============================== */
+
+/* wrapper ========== */
+.lnbMenuSection {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.lnbMenuHeader {
+  display: flex;
+  align-items: center;
+}
+.lnbMenuHeader .titleArea {
+  display: flex;
+  align-items: center;
+}
+.lnbMenuHeader .titleArea .title {}
+.lnbMenuHeader .titleArea .title.iconTitle {
+  display: inline-flex;
+  align-items: center;
+  font-size: var(--font14);
+  font-weight: 600;
+  color: var(--fontColor9);
+}
+.lnbMenuHeader .titleArea .title.iconTitle::before {
+  margin-right: 6px;
+}
+.lnbMenuHeader .sideArea {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+.lnbMenuBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lnbInnerBox {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #EDF0F3;
+}
+
+
+
+/* lnbOutterBox ============================== */
+.lnbOutterBox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid #FFF;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+  background-color: #FCFDFF;
+}
+.lnbOutterBoxHeader {
+  display: flex;
+  flex-direction: column;
+}
+.lnbOutterBoxHeader .titleStatus {
+  margin-bottom: 4px;
+  font-size: var(--font10);
+  font-weight: 500;
+  color: #004ED6;
+}
+.lnbOutterBoxHeader .topButton {
+  overflow: hidden;
+  position: relative;
+  display: block;
+  width: 100%;
+  padding-right: 16px;
+  border: none;
+  font-size: var(--font14);
+  font-weight: 600;
+  color: var(--fontColor8);
+  text-align: left;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  background-color: transparent;
+}
+.lnbOutterBoxHeader .topButton::after {
+  content: '';
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 10px;
+  height: 10px;
+  background-image: url("/assets/images/Icon/arrow_10_normal.svg");
+}
+.lnbOutterBoxBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.lnbOutterBoxFooter {}
+
+
+
+/* lnbDlMenu ============================== */
+.lnbDlMenu {}
+.lnbDlMenu.type1 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.lnbDlMenu.type1 > .row {
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+}
+.lnbDlMenu.type1 > .row dt {
+  font-size: var(--font12);
+  font-weight: 400;
+  color: var(--fontColor5);
+}
+.lnbDlMenu.type1 > .row dd {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: auto;
+}
+.lnbDlMenu.type1 .count {
+  flex: 0 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: var(--font10);
+  font-weight: 500;
+  color: var(--fontColor5);
+  background-color: #F1F3F5;
+}
+.lnbDlMenu.type1 > .row.total {}
+.lnbDlMenu.type1 > .row.total dt {
+  font-weight: 500;
+  color: #16258F;
+}
+.lnbDlMenu.type1 > .row.total dd {}
+.lnbDlMenu.type1 > .row.total .count {}
+.lnbDlMenu.type1 > .row.total + .row {
+  padding-top: 8px;
+  border-top: 1px solid #EDF0F3;
+}
+
+
+
+/* lnbDlMenu ============================== */
+.lnbMenu {}
+
+/* lnbMenuFooter ========== */
+.lnbMenuFooter {}
+
+/* lnbMenu / type : type1 ========== */
+.lnbMenu.type1 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.lnbMenu.type1 > li {}
+.lnbMenu.type1 > li .lnbMenuButton {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 28px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor6);
+  background-color: transparent;
+}
+.lnbMenu.type1 > li .lnbMenuButton.isActive {
+  border-color: #E0E7FF;
+  color: var(--fontColor8);
+  background-color: #F0F3FF;
+}
+
+
+
+/* lnbCollapseMenu ============================== */
+.lnbCollapseMenu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 12px;
+  border-radius: 12px;
+  border: 1px solid #FFF;
+  box-shadow: 0 10px 20px rgba(15, 23, 42, 0.04);
+  background-color: #FCFDFF;
+}
+.lnbCollapseMenuHeader {
+  display: flex;
+  flex-direction: column;
+}
+.lnbCollapseMenuBody {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+.lnbCollapseMenuFooter {}
+.lnbCollapseMenu .menuCount {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 100%;
+  font-size: var(--font10);
+  font-weight: 700;
+  color: var(--fontColorPrimary);
+  background-color: #E0E7FF;
+}
+
+
+
+/* lnbDlMenu / type : lnbCategory ============================== */
+.lnbDlMenu.lnbCategory.case1 > .row.total dt {
+  color: #16258F;
+}
+.lnbDlMenu.lnbCategory.case1 > .row.total .count,
+.lnbCollapseMenu .menuCount.lnbCategory.case1 {
+  color: var(--fontColorPrimary);
+  background-color: #E0E7FF;
+}
+.lnbDlMenu.lnbCategory.case2 > .row.total dt {
+  color: #5917B2;
+}
+.lnbDlMenu.lnbCategory.case2 > .row.total .count,
+.lnbCollapseMenu .menuCount.lnbCategory.case2 {
+  color: #7F22FE;
+  background-color: #E1D0FF;
+}
+.lnbDlMenu.lnbCategory.case3 > .row.total dt {
+  color: #4C3814;
+}
+.lnbDlMenu.lnbCategory.case3 > .row.total .count,
+.lnbCollapseMenu .menuCount.lnbCategory.case3 {
+  color: #8E6822;
+  background-color: #FFE2AB;
+}
+.lnbDlMenu > .row.total .count.lnbCategory.case1,
+.lnbCollapseMenu .menuCount.lnbCategory.case1 {
+  color: var(--fontColorPrimary);
+  background-color: #E0E7FF;
+}
+.lnbDlMenu > .row.total .count.lnbCategory.case2,
+.lnbCollapseMenu .menuCount.lnbCategory.case2 {
+  color: #7F22FE;
+  background-color: #E1D0FF;
+}
+.lnbDlMenu > .row.total .count.lnbCategory.case3,
+.lnbCollapseMenu .menuCount.lnbCategory.case3 {
+  color: #8E6822;
+  background-color: #FFE2AB;
+}
+
+/*  */
+.icon {}
+.icon.lnbIcon {}
+.icon.lnbIcon.snop {}
+.lnbIcon.snop::before {
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/Icon/lnb_snop.svg');
+}
+.lnbIcon.aiteaming::before {
+  width: 16px;
+  height: 16px;
+  background-image: url('/assets/images/Icon/lnb_aiteaming.svg');
+}
+
+
+
+/* ==============================
+  본문
+============================== */
+
+/* 본문 ============================== */
+.bodyContents {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 40px 0;
+}
+.section {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.section + .section {}
+
+
+
+/* floatingArea ============================== */
+.floatingArea {
+  position: sticky;
+  z-index: 90;
+  background-color: #FFF;
+}
+
+/* floatingArea / type : bottom ========== */
+.floatingArea.bottom {
+  left: 0;
+  right: 0;
+  bottom: 16px;
+  margin: 24px 0 0;
+}
+.floatingArea.bottom {
+  border-radius: 16px;
+  background-color: transparent;
+}
+.floatingArea.bottom::before,
+.floatingArea.bottom::after {
+  content: '';
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0006F7, #23ACFA, #23ACFA, #0006F7);
+}
+.floatingArea.bottom > .inner {
+  position: relative;
+  z-index: 1;
+  padding: 10px 32px 12px;
+  background-color: transparent;
+}
+.floatingArea.bottom > .inner::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 1px;
+  border-radius: 14px;
+  background: #FFF;
+  box-shadow: 0 6px 24px rgba(35, 172, 250, 0.16);
+}
+
+/* floatingArea / type : totalAmount ========== */
+.floatingArea.totalAmount {
+  border-radius: 16px;
+  background-color: transparent;
+}
+.floatingArea.totalAmount::before,
+.floatingArea.totalAmount::after {
+  content: '';
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #0006F7, #23ACFA, #23ACFA, #0006F7);
+}
+.floatingArea.totalAmount .cmnHeader {
+  position: relative;
+  z-index: 1;
+  padding: 10px 32px 12px;
+  background-color: transparent;
+}
+.floatingArea.totalAmount .cmnHeader::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 1px;
+  border-radius: 14px;
+  background: #FFF;
+  box-shadow: 0 6px 24px rgba(35, 172, 250, 0.16);
+}
+
+
+
+/* panel ============================== */
+.panel {
+  /* transition: all 0.3s ease; */
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+}
+
+/* panel / type : right ========== */
+.panel.right {
+  transition: all .3s ease;
+  overflow: hidden;
+  position: relative;
+  flex: 0 0 auto;
+  /* display: none; */
+  width: 0;
+  height: 100%;
+  padding: 36px 0;
+  border-radius: 24px;
+  border: none;
+}
+.panel.right.isClose {
+  width: 60px;
+  padding: 20px 8px;
+}
+.panel.right.isOpen {
+  overflow: visible;
+  display: flex;
+  width: 512px;
+  /* min-width: 512px; */
+  max-width: 800px;
+  padding: 36px 8px;
+  border: 1px solid #c2c8fa;
+}
+.panel.right .panelHeader {
+  flex-wrap: nowrap;
+}
+.panel.right .panelBody {
+  min-width: 496px; /* 512 - (8*2) */
+}
+.panelHeader {
+  margin: 0 16px;
+}
+.panelHeader.cmnHeader {
+  width: auto;
+}
+.panelHeader .button.buttonClose {}
+.panelBody {
+  overflow-y: auto;
+  padding: 10px 16px 0;
+}
+
+/* panel / resize handle ========== */
+.resizeHandle {
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  bottom: 20px;
+  left: -6px;
+  width: 6px;
+  cursor: col-resize;
+  background: transparent;
+}
+.resizeHandle::after {
+  content: '';
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: -4px;
+  width: 6px;
+  height: 80px;
+  border-radius: 24px;
+  background-color: #FFF;
+}
+.resizeHandle:hover {
+  background: rgba(0, 0, 0, 0.04);
+}
+.isResizing {
+  user-select: none;
+  cursor: col-resize;
+}
+
+
+
+/* ==============================
+  popup
+    - 기존 레이아웃의 팝업을 사용함
+    - 팝업 본문 영역만 참고
+============================== */
+
+/* popup : dimmed ============================== */
+.dimmed {
+  overflow-y: auto;
+  position: absolute;
+  z-index: 1000;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* popup : modal ============================== */
+
+/* modal / 공통 ========== */
+.modal {
+  transform: translateY(-50%);
+  position: fixed;
+  top: 50%;
+  flex: 0 0 auto;
+  /* display: none; */
+  display: flex;
+  flex-direction: column;
+  max-height: 80%;
+  padding: 20px 8px 20px;
+  border-radius: 20px;
+  background-color: #FFF;
+}
+.modal.isActive {
+  display: flex;
+}
+/* modal header */
+.modalHeader {
+  padding: 4px 16px 16px;
+}
+.modalHeader .cmnHeaderTitle {
+  overflow: hidden;
+  display: block;
+  font-size: var(--font18);
+  font-weight: 700;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.modalHeader .button.buttonClose {
+  /* position: absolute;
+  z-index: 1;
+  top: 18px;
+  right: 18px; */
+  position: relative;
+  top: -8px;
+  right: -8px;
+  flex: 0 0 auto;
+  display: block;
+  width: 28px;
+  min-width: 0;
+  height: 28px;
+  margin: 0;
+  padding: 0;
+}
+.modalHeader .button.buttonClose::before {
+  width: 100%;
+  height: 100%;
+  background: transparent url('/assets/images/Icon/14_close.svg') no-repeat center / 14px;
+}
+.modalBody {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px 0;
+  padding: 4px 16px 20px;
+}
+.modalFooter {
+  padding: 4px 16px;
+}
+.modalFooter .buttons {
+  justify-content: center;
+}
+.modalFooter .buttons .button {
+  flex: 0 0 auto;
+  min-width: 152px;
+}
+
+/* modal / option : size width ========== */
+.modal.xl {
+  width: 1600px;
+}
+.modal.lg {
+  width: 1200px;
+}
+.modal.md {
+  width: 800px;
+}
+.modal.sm {
+  width: 640px;
+}
+.modal.xs {
+  width: 480px;
+}
+.modal.xxs {
+  width: 360px;
+}
+
+/* modal / option : size height ========== */
+.modal.mdH {
+  height: 650px;
+}
+.modal.hgtMd2 {
+  height: 688px;
+}
+.modal.hgtMd {
+  height: 648px;
+}
+.modal.hgtSm {
+  height: 520px;
+}
+
+/* modal / option : moreMask ========== */
+/* modal 하단에 목록이 길이질 경우 그라데이션 효과 */
+.modal.moreMask {
+  padding-bottom:24px;
+}
+.modal.moreMask:after {
+  display: block;
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 48px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 68.75%);
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* modal / option : ofv ========== */
+/* ==============================
+  - modal 본문에 dropdown 메뉴 하나만 존재하는 경우
+  - modal 의 overflow hidden 값으로 드롭다운 메뉴의 옵션이 짤려보임
+  - 이런 경우에만 사용
+============================== */
+.modal.ofv .modalBody {
+  overflow-y: visible;
+}
+
+
+
+/* modal / type : left ============================== */
+/* 본문 좌측, lnb 옆으로 위치하는 팝업 */
+.modal.left {
+  transform: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-height: 100%;
+  padding: 24px 8px 0;
+  border-radius: 0 12px 12px 0;
+  background-color: #FFF;
+}
+
+
+
+/* modal / type : full ============================== */
+.modal.full {
+  transform: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  max-height: none;
+}
+.modal.full .modalHeader,
+.modal.full .modalBody {
+  padding-right: 48px;
+  padding-left: 48px;
+}
+.modal.full .modalHeader .button.buttonClose {
+  right: -40px;
+}
+
+
+
+/* modal / type : alert ============================== */
+/* .modal.xxs 와 사이즈는 같으나, 구분하여 사용 */
+.modal.alert {
+  width: 360px;
+}
+.modal.alert .modalHeader .cmnHeaderTitle {
+  font-size: var(--font20);
+}
+.modal .alertMessage {
+  font-size: var(--font16);
+  font-weight: 400;
+  color: var(--fontColor7);
+}
+.modal.alert .modalFooter {
+  padding-top: 10px;
+}
+.modal.alert .modalFooter .button {
+  flex: 1;
+  min-width: auto;
+}
+.modal.alert .modalFooter.highlight .button.primary {
+  flex: 3;
+}

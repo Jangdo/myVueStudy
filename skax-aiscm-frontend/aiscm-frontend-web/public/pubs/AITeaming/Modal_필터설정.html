@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 필터 설정 -->
+                <div class="dimmed">
+                  <div class="modal md">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">필터 설정</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="setItemList">
+                        <div class="setItemListHeader">
+                          <strong class="setItemListHeaderTitle">조직 선택</strong>
+                        </div>
+                        <div class="setItemListBody">
+                          <div class="itemListWrap">
+                            <!-- ==============================
+                              #상태 클래스 설명
+                                - li.isActive : 하위 메뉴 활성
+                            ==============================-->
+                            <div class="itemList flex1">
+                              <ul class="radioList ellipsis">
+                                <li class="isActive">
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>AT서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray dash"/>
+                                    <label>Cloud 부문 Cloud 부문 Cloud 부문 Cloud 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>제조서비스 부문</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="itemList flex1">
+                              <ul class="radioList ellipsis">
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>AT서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li class="isActive">
+                                  <input type="checkbox" class="gray"/>
+                                  <label>Cloud 부문</label>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>제조서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>AT서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>Cloud 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>제조서비스 부문</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="itemList flex2">
+                              <ul class="radioList row step2 ellipsis">
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>AT서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>Cloud 부문 Cloud 부문 Cloud 부문 Cloud 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>제조서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>AT서비스 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>Cloud 부문</label>
+                                  </span>
+                                </li>
+                                <li>
+                                  <span class="itemRadio">
+                                    <input type="checkbox" class="gray"/>
+                                    <label>제조서비스 부문</label>
+                                  </span>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="setItemSelected">
+                          <span class="itemSelected">AT서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                          <span class="itemSelected">제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                          <span class="itemSelected">AT서비스 제조서비스 제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                        </div>
+                      </div>
+                      <div class="card type4">
+                        <dl class="dlist type3">
+                          <div class="row">
+                            <dt>예산</dt>
+                            <dd>
+                              <div class="buttons sm">
+                                <button type="button" class="button assistive outlined sm">CP 인건비 무관</button>
+                                <button type="button" class="button primary outlined sm">CP 인건비 미만</button>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="row">
+                            <dt>가용 여부</dt>
+                            <dd>
+                              <div class="buttons sm">
+                                <button type="button" class="button assistive outlined sm">전체 보기</button>
+                                <button type="button" class="button primary outlined sm">가용 인력만 보기</button>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">완료</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 필터 설정 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+</html>

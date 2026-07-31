@@ -1,0 +1,140 @@
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 0 8px;
+  margin-bottom: 16px;
+}
+
+.cardContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  padding-right: 56px;
+}
+
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.message {
+  margin: 2px 0 0 0;
+  white-space: pre-line;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #444B59
+}
+
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid #dfe3ec;
+  background: #ffffff;
+}
+
+.contentTitle {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  color: #101828;
+}
+
+.tableMock {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.tableMock th,
+.tableMock td {
+  border: 1px solid #e5e7eb;
+  padding: 4px 6px;
+  text-align: left;
+  font-size: 10px;
+  font-weight: 500;
+  color: #475569;
+}
+
+.buttonsRow {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 6px;
+}
+
+.timeText {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #64748b;
+}
+
+.primaryActionRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+
+
+.cardGroup {
+  display: flex;
+  gap: 12px;
+}
+
+.cardWrap {
+  display: flex;
+  flex-direction: column;
+  min-width: 162px;
+}
+
+.cardHeader {
+  margin-bottom: 8px;
+}
+
+.cardHeader .title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.dlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.dlist > .row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dlist > .row > dt {
+  font-size: 11px;
+  font-weight: 500;
+  color: #9AA1AD;
+}
+
+.dlist > .row > dd {
+  font-size: 12px;
+  font-weight: 500;
+  color: #101828;
+}
+
+.card2 {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  border-radius: 8px;
+  background: #F9FAFC;
+}

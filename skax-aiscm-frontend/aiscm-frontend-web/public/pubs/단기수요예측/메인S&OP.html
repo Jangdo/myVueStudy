@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">S&amp;OP</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="buttons">
+                      <div class="dropdown md">
+                        <button class="dropdownButton" data-tooltip="매주 목요일 업데이트 됩니다">26년 5월 1주차</button>
+                        <!-- root menu -->
+                        <div class="dropdownMenu">
+                          <ul class="dropdownMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">26년 5월 1주차</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">26년 5월 2주차</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">26년 5월 3주차</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <!-- tabs -->
+                  <div class="tabs">
+                    <div class="tabButtons type1 lg">
+                      <div class="buttons">
+                        <button class="tabButton isActive" data-tab="tab1">AT서비스 부문 <span class="count">90</span></button>
+                        <button class="tabButton" data-tab="tab2">제조서비스 부문 <span class="count">90</span></button>
+                        <button class="tabButton" data-tab="tab3">Enterprise서비스 부문 <span class="count">90</span></button>
+                        <button class="tabButton" data-tab="tab3">Cloud서비스 부문 <span class="count">90</span></button>
+                        <button class="tabButton" data-tab="tab3">CAIO <span class="count">90</span></button>
+                        <button class="tabButton" data-tab="tab3">애커튼 <span class="count">90</span></button>
+                      </div>
+                    </div>
+
+                    <!-- tabContent 1 -->
+                    <div class="tabContent isActive" data-content="tab1">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab1Inner1">전체</button>
+                            <button class="tabButton" data-tab="tab1Inner2">A 본부 <span class="count">90</span></button>
+                            <button class="tabButton" data-tab="tab1Inner3">B 본부 <span class="count">200</span></button>
+                          </div>
+                          <div class="sideArea">
+                            <div class="fieldsetItem">
+                              <label class="title">유형</label>
+                              <div class="dropdown md">
+                                <button class="dropdownButton">BR</button>
+                                <!-- root menu -->
+                                <div class="dropdownMenu">
+                                  <ul class="dropdownMenuInner">
+                                    <li class="menuItem">
+                                      <button class="menuButton">옵션1</button>
+                                    </li>
+                                    <li class="menuItem">
+                                      <button class="menuButton">옵션 옵션 옵션2 옵션 옵션 옵션2</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 1 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab1Inner1">
+                          <section class="section">
+                            <!-- case : data -->
+                            <ul class="cmnItemList type2 lg">
+                              <li class="cmnItemListItem">
+                                <a href="#none" class="cmnItemListLink">
+                                  <div class="card type1">
+                                    <div class="actionItemSummary">
+                                      <div class="cmnHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <strong class="cmnHeaderTitle">Action Item명</strong>
+                                          <span class="badge actionItem ai">AI생성</span>
+                                          <span class="badge actionItem snop">S&OP</span>
+                                          <span class="badge actionItem manual">수동 생성</span>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="buttons">
+                                            <button type="button" class="button assistive outlined md">삭제</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="actionItemSummaryBody">
+                                        <dl class="dlist">
+                                          <div class="row">
+                                            <dt>생성일</dt>
+                                            <dd><em>26.04.13</em></dd>
+                                            <dt>유형</dt>
+                                            <dd><em>BR</em></dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd><em>AT서비스 부분</em></dd>
+                                            <dt>귀속 연월</dt>
+                                            <dd><em>26년 8월</em></dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>원인</dt>
+                                            <dd>A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다.</dd>
+                                          </div>
+                                          <div class="row solution">
+                                            <dt class="iconTitle primary iAi">해소 방안</dt>
+                                            <dd>연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </a>
+                              </li>
+                              <li class="divider"></li> <!-- 조직구분 divider -->
+                              <li class="cmnItemListItem">
+                                <a href="#none" class="cmnItemListLink">
+                                  <!-- case : action item / 방안 등록 필요 -->
+                                  <div class="card type1">
+                                    <div class="actionItemSummary">
+                                      <div class="cmnHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <strong class="cmnHeaderTitle">Action Item명</strong>
+                                          <span class="badge actionItem ai">AI생성</span>
+                                          <span class="badge actionItem manual">수동 생성</span>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="buttons">
+                                            <button type="button" class="button assistive outlined md">삭제</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="actionItemSummaryBody">
+                                        <dl class="dlist">
+                                          <div class="row">
+                                            <dt>생성일</dt>
+                                            <dd><em>26.04.13</em></dd>
+                                            <dt>유형</dt>
+                                            <dd><em>BR</em></dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd><em>AT서비스 부분</em></dd>
+                                            <dt>귀속 연월</dt>
+                                            <dd><em>26년 8월</em></dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>원인</dt>
+                                            <dd>A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- //case : action item / 방안 등록 필요 -->
+                                </a>
+                              </li>
+                              <li class="cmnItemListItem">
+                                <a href="#none" class="cmnItemListLink">
+                                  <!-- case : action item / S&OP 등록 -->
+                                  <!-- ==============================
+                                    #클래스 안내
+                                      -.isActionItemReg
+                                  ============================== -->
+                                  <div class="card type1 isActionItemReg">
+                                    <div class="actionItemSummary">
+                                      <div class="cmnHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <strong class="cmnHeaderTitle">Action Item명</strong>
+                                          <span class="badge actionItem ai">AI생성</span>
+                                          <span class="badge actionItem snop">S&OP</span>
+                                          <span class="badge actionItem manual">수동 생성</span>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="buttons">
+                                            <button type="button" class="button assistive outlined md">삭제</button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="actionItemSummaryBody">
+                                        <dl class="dlist">
+                                          <div class="row">
+                                            <dt>생성일</dt>
+                                            <dd><em>26.04.13</em></dd>
+                                            <dt>유형</dt>
+                                            <dd><em>BR</em></dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd><em>AT서비스 부분</em></dd>
+                                            <dt>귀속 연월</dt>
+                                            <dd><em>26년 8월</em></dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>원인</dt>
+                                            <dd>A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다. A조직 파이프라인 실주로 인해서 기존 00.00%로 예측되던 BR이 00.00%로 0.5% 하락하였습니다.</dd>
+                                          </div>
+                                          <div class="row solution">
+                                            <dt class="iconTitle primary iAi">해소 방안</dt>
+                                            <dd>연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달 연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연,투자 확대로 연간 BR 61%, 계획비 12% 미달</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!-- //case : action item / S&OP 등록 -->
+                                </a>
+                              </li>
+                            </ul>
+                            <!-- //case : data -->
+                          </section>
+                        </div>
+
+                        <!-- tabContent 1 > inner 2 -->
+                        <div class="tabContent" data-content="tab1Inner2">
+                          <section class="section">
+                            <!-- case : nodata -->
+                            <div class="nodataBox typeNodata bg">
+                              <div class="innerBody">
+                                <p class="text search">등록된 S&OP가 없습니다.</p>
+                              </div>
+                            </div>
+                            <!-- //case : nodata -->
+                          </section>
+                        </div>
+
+                        <!-- tabContent 1 > inner 3 -->
+                        <div class="tabContent" data-content="tab1Inner3">
+                          <section class="section">
+                            1-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 1 -->
+
+                    <!-- tabContent 2 -->
+                    <div class="tabContent" data-content="tab2">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <button class="tabButton isActive" data-tab="tab2Inner1">전체</button>
+                          <button class="tabButton" data-tab="tab2Inner2">A 본부 <span class="count">90</span></button>
+                          <button class="tabButton" data-tab="tab2Inner3">B 본부 <span class="count">200</span></button></button>
+                        </div>
+
+                        <!-- tabContent 2 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab2Inner1">
+                          <section class="section">
+                            2-1
+                          </section>
+                        </div>
+
+                        <!-- tabContent 2 > inner 2 -->
+                        <div class="tabContent" data-content="tab2Inner2">
+                          <section class="section">
+                            2-2
+                          </section>
+                        </div>
+
+                        <!-- tabContent 2 > inner 3 -->
+                        <div class="tabContent" data-content="tab2Inner3">
+                          <section class="section">
+                            2-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 2 -->
+
+                    <!-- tabContent 3 -->
+                    <div class="tabContent" data-content="tab3">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <button class="tabButton isActive" data-tab="tab3Inner1">전체</button>
+                          <button class="tabButton" data-tab="tab3Inner2">A 본부 <span class="count">90</span></button>
+                          <button class="tabButton" data-tab="tab3Inner3">B 본부 <span class="count">200</span></button></button>
+                        </div>
+
+                        <!-- tabContent 3 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab3Inner1">
+                          <section class="section">
+                            3-1
+                          </section>
+                        </div>
+
+                        <!-- tabContent 3 > inner 2 -->
+                        <div class="tabContent" data-content="tab3Inner2">
+                          <section class="section">
+                            3-2
+                          </section>
+                        </div>
+
+                        <!-- tabContent 3 > inner 3 -->
+                        <div class="tabContent" data-content="tab3Inner3">
+                          <section class="section">
+                            3-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 3 -->
+
+                    <!-- tabContent 4 -->
+                    <div class="tabContent" data-content="tab4">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <button class="tabButton isActive" data-tab="tab4Inner1">전체</button>
+                          <button class="tabButton" data-tab="tab4Inner2">A 본부 <span class="count">90</span></button>
+                          <button class="tabButton" data-tab="tab4Inner3">B 본부 <span class="count">200</span></button></button>
+                        </div>
+
+                        <!-- tabContent 4 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab4Inner1">
+                          <section class="section">
+                            4-1
+                          </section>
+                        </div>
+
+                        <!-- tabContent 4 > inner 2 -->
+                        <div class="tabContent" data-content="tab4Inner2">
+                          <section class="section">
+                            4-2
+                          </section>
+                        </div>
+
+                        <!-- tabContent 4 > inner 3 -->
+                        <div class="tabContent" data-content="tab4Inner3">
+                          <section class="section">
+                            4-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 4 -->
+
+                    <!-- tabContent 5 -->
+                    <div class="tabContent" data-content="tab5">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <button class="tabButton isActive" data-tab="tab5Inner1">전체</button>
+                          <button class="tabButton" data-tab="tab5Inner2">A 본부 <span class="count">90</span></button>
+                          <button class="tabButton" data-tab="tab5Inner3">B 본부 <span class="count">200</span></button></button>
+                        </div>
+
+                        <!-- tabContent 5 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab5Inner1">
+                          <section class="section">
+                            5-1
+                          </section>
+                        </div>
+
+                        <!-- tabContent 5 > inner 2 -->
+                        <div class="tabContent" data-content="tab5Inner2">
+                          <section class="section">
+                            5-2
+                          </section>
+                        </div>
+
+                        <!-- tabContent 5 > inner 3 -->
+                        <div class="tabContent" data-content="tab5Inner3">
+                          <section class="section">
+                            5-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 5 -->
+
+                    <!-- tabContent 6 -->
+                    <div class="tabContent" data-content="tab6">
+                      <div class="tabs">
+                        <div class="tabButtons type2">
+                          <button class="tabButton isActive" data-tab="tab6Inner1">전체</button>
+                          <button class="tabButton" data-tab="tab6Inner2">A 본부 <span class="count">90</span></button>
+                          <button class="tabButton" data-tab="tab6Inner3">B 본부 <span class="count">200</span></button></button>
+                        </div>
+
+                        <!-- tabContent 4 > inner 1 -->
+                        <div class="tabContent isActive" data-content="tab6Inner1">
+                          <section class="section">
+                            6-1
+                          </section>
+                        </div>
+
+                        <!-- tabContent 4 > inner 2 -->
+                        <div class="tabContent" data-content="tab6Inner2">
+                          <section class="section">
+                            6-2
+                          </section>
+                        </div>
+
+                        <!-- tabContent 4 > inner 3 -->
+                        <div class="tabContent" data-content="tab6Inner3">
+                          <section class="section">
+                            6-3
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //tabContent 6 -->
+                  </div>
+                  <!-- //tabs -->
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // panel size 조절
+  new flexablePanel();
+
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

@@ -1,0 +1,42 @@
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.badgeGreen {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.badgeGray {
+  color: #475569;
+  background: #f1f5f9;
+}
+
+.badgeBlue {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.badgeOrange {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.badgeRed {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.badgeTeal {
+  color: #0f766e;
+  background: #ccfbf1;
+}

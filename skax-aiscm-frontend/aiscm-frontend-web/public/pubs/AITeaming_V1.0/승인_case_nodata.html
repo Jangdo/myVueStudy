@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <!-- tabs -->
+                  <div class="tabs">
+                    <div class="cmnHeader lg">
+                      <div class="cmnHeaderTitleArea">
+                        <h2 class="cmnHeaderTitle lg">승인</h2>
+                      </div>
+                    </div>
+                    <div class="tabButtons type3 rightTop">
+                      <div class="buttons">
+                        <button class="tabButton isActive" data-tab="tab1">팀원별 보기</button>
+                        <button class="tabButton" data-tab="tab2">프로젝트별 보기</button>
+                      </div>
+                    </div>
+
+                    <!-- tabContent 1 : 팀원별 보기 -->
+                    <div class="tabContent isActive" data-content="tab1">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab1Inner1">승인 필요</button>
+                            <button class="tabButton" data-tab="tab1Inner2">처리 결과</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 1 inner 1 : 승인 필요 -->
+                        <div class="tabContent isActive" data-content="tab1Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <input type="checkbox" />
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="buttons">
+                                  <button type="button" class="button primary outlined md">선택 승인</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- case : 목록 / nodata -->
+                            <div class="nodataBox typeReg icon2 bg border">
+                              <div class="innerBody">
+                                <p class="text search">승인 대기 중인 요청이 없어요.</p>
+                              </div>
+                            </div>
+                            <!-- //case : 목록 / nodata -->
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 1 : 승인 필요 -->
+
+                        <!-- tabContent 1 inner 2 : 처리 결과 -->
+                        <div class="tabContent " data-content="tab1Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <input type="checkbox" />
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="buttons">
+                                  <button type="button" class="button primary outlined md">선택 승인</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!-- case : 목록 / nodata -->
+                            <div class="nodataBox typeReg icon2 bg border">
+                              <div class="innerBody">
+                                <p class="text search">처리 결과가 없어요.</p>
+                              </div>
+                            </div>
+                            <!-- //case : 목록 / nodata -->
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 2 : 처리 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 1 : 팀원별 보기 -->
+
+                    <!-- tabContent 2 : 프로젝트별 보기 -->
+                    <div class="tabContent " data-content="tab2">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab2Inner1">승인 필요</button>
+                            <button class="tabButton" data-tab="tab2Inner2">처리 결과</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 2 inner 1 : 승인 필요 -->
+                        <div class="tabContent isActive" data-content="tab2Inner1">
+                          <section class="section">
+                            
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 1 : 승인 필요 -->
+
+                        <!-- tabContent 2 inner 2 : 처리 결과 -->
+                        <div class="tabContent " data-content="tab2Inner1">
+                          <section class="section">
+                            
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 2 : 처리 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 2 : 프로젝트별 보기 -->
+                  </div>
+                  <!-- //tabs -->
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+
+
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Accordion
+  Accordion.init();
+
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

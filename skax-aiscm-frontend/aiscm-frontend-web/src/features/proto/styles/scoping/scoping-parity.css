@@ -1,0 +1,22 @@
+.scoping-crosslink {
+  margin: 0;
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.5;
+}
+.scoping-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+.scoping-feedback {
+  margin-top: 0.75rem;
+}
+
+.teaming-proto .two-col > div:first-child .proj-selector {
+  width: 100%;
+  min-width: 0;
+}
+
+.teaming-proto .two-col > div:first-child .proj-dropdown {
+  width: 100%;
+}

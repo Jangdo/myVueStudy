@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">팝업 : Modal</h2>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <div class="buttons">
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'full');">full</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'xl');">xl</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'lg');">lg</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'md');">md</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'sm');">sm</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'xs');">xs</button>
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup1', 'xxs');">xxs</button>
+                  </div>
+                  <div class="buttons">
+                    <button type="button" class="button outlined md assistive" onclick="modalOpen('popup2', 'xxs');">left</button>
+                  </div>
+                  <div style="height: 2000px;"></div>
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- ==============================
+                  #Modal 
+                    - .stack 내부 하단에 위치
+                    - modal open 시 배경 dimmed 처리됨
+                    - dimmed 영역은 화면 전체가 아니라, 본문 영역 (.stack) 에만 처리됨
+                    - modal size : full, xl, lg, md, sm, xs, xxs
+                ============================== -->
+                <!-- modal : ㅇㅇ -->
+                <div class="dimmed" style="display: none;">
+                  <div class="modal md" id="popup1" style="display: none;">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">타이틀</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose" data-modal-close="popup1">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <section class="section">
+                        <div style="height: 300px; background-color: #AAA;"></div>
+                        <div style="height: 900px; background-color: #EEE;"></div>
+                      </section>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button assistive outlined xl">취소</button>
+                        <button type="button" class="button primary solid xl">확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : ㅇㅇ -->
+
+                <!-- modal : -->
+                <div class="dimmed" style="display: none;">
+                  <div class="modal xxs left" id="popup2" style="display: none;">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">알림</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose" data-modal-close="popup2">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      본문
+                    </div>
+                    <!-- //modalBody : 본문 -->
+                  </div>
+                </div>
+                <!-- //modal : -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+const modalSizes = ['full', 'xl', 'lg', 'md', 'sm', 'xs', 'xxs'];
+
+// modalOpen
+const modalOpen = (id, size = 'md') => {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  const dimmed = modal.closest('.dimmed');
+
+  if (![...document.querySelectorAll('.dimmed')].some(el => el.style.display === 'flex'))
+    dimmed.style.display = 'flex';
+
+  modal.style.display = 'flex';
+  modal.classList.remove(...modalSizes);
+  modal.classList.add(size);
+};
+
+// modalClose
+const modalClose = id => {
+  const modal = document.getElementById(id);
+  if (!modal) return;
+
+  const dimmed = modal.closest('.dimmed');
+
+  modal.style.display = 'none';
+  modal.classList.remove(...modalSizes);
+
+  if (![...dimmed.querySelectorAll('.modal')].some(el => el.style.display === 'flex'))
+    dimmed.style.display = 'none';
+};
+
+// 
+document.addEventListener('click', e => {
+  const btn = e.target.closest('[data-modal-close]');
+  if (btn) modalClose(btn.dataset.modalClose);
+});
+</script>
+</html>

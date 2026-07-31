@@ -1,0 +1,311 @@
+
+/* badge ============================== */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  height: 18px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: var(--font10);
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+}
+
+/* option : size ========== */
+.badge.sm {
+  height: 18px;
+}
+.badge.md {
+  height: 26px !important;
+  font-size: var(--font12) !important;
+}
+.badge.lg {
+  height: 32px;
+}
+.badge.gray {
+  padding: 2px 6px;
+  font-weight: 500;
+  color: #7C8390;;
+  background-color: #F1F3F5;
+}
+
+/* badge / type : 사업단계 ========== */
+.badge.businessStep {
+  height: 22px;
+  padding: 0px 8px;
+  border-radius: 22px;
+  line-height: 22px;
+  color: #004ED6;
+  white-space: nowrap;
+  background-color: #E0EDFF;
+}
+
+/* badge / type : 인력상태 ========== */
+.badge.manState.case1 {
+  color: #9AA1AD;
+  background-color: #E4E7EB;
+}
+.badge.manState.case2 {
+  color: #FFFFFF;
+  background-color: #6684FF;
+}
+.badge.manState.case3 {
+  color: #3D63FF;
+  background-color: #F0F3FF;
+}
+.badge.manState.case4 {
+  color: #FF7300;
+  background-color: #FFF1E5;
+}
+.badge.manState.case5 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+.badge.manState.case6 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+.badge.manState.case6[data-tooltip]::after {
+  content: '';
+  display: inline-flex;
+  width: 8px;
+  height: 8px;
+  background: transparent url('/assets/images/Icon/8_caution_red.png') no-repeat 0 0;
+}
+.badge.manState.case7 {
+  color: #6C1DDA;
+  background-color: #F2E9FF;
+}
+.badge.manState.case8 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+.badge.manState.case9 {
+  color: #3D63FF;
+  background-color: #F0F3FF;
+}
+.badge.manState.case10 {
+  color: #3385FF;
+  background-color: #E0EDFF;
+}
+.badge.manState.case11 {
+  color: #D36114;
+  background-color: #FFF1E5;
+}
+
+/* badge / type : actionItem ========== */
+.badge.actionItem {}
+.badge.actionItem.ai {
+  color: #3D63FF;
+  background-color: #E0E7FF;
+}
+.badge.actionItem.ai::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/images/Icon/8_ai.svg');
+}
+.badge.actionItem.snop {
+  color: #6C1DDA;
+  background-color: #F2E9FF;
+}
+.badge.actionItem.manual {
+  color: #7C8390;;
+  background-color: #F1F3F5;
+}
+
+/* badge / type : 영업단계 ========== */
+.badge.sales {}
+.badge.sales.case1 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+.badge.sales.case2 {
+  color: #3D63FF;
+  background-color: #F0F3FF;
+}
+.badge.sales.case3 {
+  color: #FF7300;
+  background-color: #FFF1E5;
+}
+.badge.sales.case4 {
+  color: #6C1DDA;
+  background-color: #F2E9FF;
+}
+.badge.sales.case5 {
+  color: #3385FF;
+  background-color: #E0EDFF;
+}
+.badge.sales.case6 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+
+/* badge / type : assign ========== */
+.badge.assign.case1 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+.badge.assign.case2 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+
+/* badge / type : workState ========== */
+.badge.workState.case1 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+.badge.workState.case2 {
+  color: #9AA1AD;
+  background-color: #E4E7EB;
+}
+.badge.workState.case3 {
+  color: #9AA1AD;
+  background-color: #E4E7EB;
+}
+
+/* badge / type : supply ========== */
+.badge.supply.case1 {
+  color: #3D63FF;
+  background-color: #F0F3FF;
+}
+.badge.supply.case2 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+
+/* badge / type : actionItem2 ========== */
+.badge.actionItem2.case1 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+.badge.actionItem2.case2 {
+  color: #3D63FF;
+  background-color: #F0F3FF;
+}
+.badge.actionItem2.case3 {
+  color: #F22F2F;
+  background-color: #FEEDED;
+}
+
+/* badge / type : actionItem3 ========== */
+.badge.actionItem3.case1 {
+  color: #3D63FF;
+  background-color: #E0E7FF;
+}
+.badge.actionItem3.case1::before {
+  content: "";
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 8px;
+  height: 8px;
+  margin-right: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('/assets/images/Icon/8_ai.svg');
+}
+.badge.actionItem3.case2 {
+  color: #6C1DDA;
+  background-color: #F2E9FF;
+}
+.badge.actionItem3.case3 {
+  color: #7C8390;;
+  background-color: #F1F3F5;
+}
+.badge.actionItem3.case4 {
+  color: #03A27D;
+  background-color: #E6FAF5;
+}
+.badge.actionItem3.case5 {
+  color: #7C8390;;
+  background-color: #F1F3F5;
+}
+
+/* badge / type : role ========== */
+.badge.role {
+  color: #7C8390;;
+  background-color: #F1F3F5;
+}
+
+/* badge / type : etc ========== */
+.badge.etc.aiRecommend {
+  color: #FFFFFF;
+  background-color: #6684FF;
+}
+.badge.etc.aiRecommend::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: transparent url(/assets/images/Icon/8_ai_white.png) no-repeat center center / 100%;
+}
+
+/* badge / type : cmnCount ========== */
+.badge.cmnCount {
+  height: 18px;
+  padding: 0px 6px;
+  border-radius: 4px;
+  line-height: 18px;
+  white-space: nowrap;
+  font-size: var(--font10);
+  color: #FFFFFF;
+  background-color: #6684FF;
+}
+
+
+
+/* badgeAi ============================== */
+.badgeAi {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  border-radius: 24px;
+}
+.badgeAi::before,
+.badgeAi::after {
+  content: '';
+  overflow: hidden;
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  background: linear-gradient(90deg, #0006F7, #23ACFA, #23ACFA, #0006F7);
+}
+.badgeAi > .inner {
+  z-index: 1;
+  background-color: transparent;
+}
+.badgeAi > .inner::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 1px;
+  border-radius: 24px;
+  background: #FFF;
+}
+.badgeAi .text {
+  display: inline-flex;
+  align-items: center;
+  height: 100%;
+  padding: 4px 8px;
+  font-size: var(--font12);
+  font-weight: 600;
+  color: #2E4BE6;
+  white-space: nowrap;
+}
+.badgeAi .text.icon::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 2px;
+  background-image: url('/assets/images/Icon/12_ai.svg');
+}

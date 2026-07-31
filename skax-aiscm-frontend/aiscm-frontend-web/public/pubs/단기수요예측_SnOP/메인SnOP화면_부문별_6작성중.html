@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel" data-anchor-scroll>
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">S&amp;OP 관리</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="fieldsetItem">
+                      <label class="title">S&amp;OP 버전</label>
+                      <div class="dropdown md">
+                        <button class="dropdownButton">26년도 6월</button>
+                        <!-- root menu -->
+                        <div class="dropdownMenu">
+                          <ul class="dropdownMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">26년도 6월</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">26년도 6월</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <button type="button" class="button primary outlined md" disabled>월마감</button>
+                      <button type="button" class="button assistive outlined md">월마감 취소</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <!-- tabs -->
+                  <div class="tabs hideScroll">
+                    <div class="tabButtons type1 md2" data-drag-scroll>
+                      <div class="buttons">
+                        <button class="tabButton" data-tab="tab1">전사 <span class="state">미작성</span></button>
+                        <button class="tabButton isActive" data-tab="tab2">AT서비스 부문 <span class="state">미작성</span></button>
+                        <button class="tabButton" data-tab="tab3">제조서비스 부문 <span class="state">미작성</span></button>
+                        <button class="tabButton" data-tab="tab4">Enterprise서비스 부문 <span class="state">미작성</span></button>
+                        <button class="tabButton" data-tab="tab5">Cloud서비스 부문 <span class="state">미작성</span></button>
+                        <button class="tabButton" data-tab="tab6">CAIO <span class="state">미작성</span></button>
+                        <button class="tabButton" data-tab="tab7">애커튼 <span class="state">미작성</span></button>
+                      </div>
+                    </div>
+
+                    <!-- tabContent : 전사 -->
+                    <div class="tabContent " data-content="tab1" data-anchor-scope>
+                      전사
+                    </div>
+                    <!-- //tabContent : 전사 -->
+
+                    <!-- tabContent : AT서비스 부문 -->
+                    <div class="tabContent isActive" data-content="tab2" data-anchor-scope>
+                      <section class="manageSnOp">
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <div class="fieldsetItem">
+                              <label class="title">버전</label>
+                              <div class="dropdown md">
+                                <button class="dropdownButton">v0.5 · 26.05.05 · 민병관</button>
+                                <!-- root menu -->
+                                <div class="dropdownMenu">
+                                  <ul class="dropdownMenuInner">
+                                    <li class="menuItem">
+                                      <button class="menuButton isSelected">v0.4 · 26.05.05 · 민병관</button>
+                                    </li>
+                                    <li class="menuItem">
+                                      <button class="menuButton">옵션 2</button>
+                                    </li>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <span class="cmnHeaderText3">기준 버전 : v0.1 · 26.05.05 · 민병관</span>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <div class="buttons">
+                              <button type="button" class="button assistive outlined md">버전 생성</button>
+                              <button type="button" class="button assistive outlined md">최종 확정</button>
+                              <!-- 월마감 클릭 후 -->
+                              <button type="button" class="button assistive outlined md" disabled>버전 생성</button>
+                              <button type="button" class="button assistive outlined md" disabled data-tooltip="월마감 이후 최종 버전 수정 불가|AI SCM팀에 마감 취소 요청 후 재시도해주세요.">최종 확정 취소</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="dropdownAnchorWrapper" data-anchor-fixed>
+                          <div class="dropdown xxl" data-anchor-dropdown>
+                            <button class="dropdownButton">AI Factory CoE 인력 전환 계획 (5월 S&OP Recap.)</button>
+                            <!-- root menu -->
+                            <div class="dropdownMenu">
+                              <ul class="dropdownMenuInner">
+                                <li class="menuItem">
+                                  <button class="menuButton isSelected" data-anchor-target="anchorArea1">AI Factory CoE 인력 전환 계획 (5월 S&OP Recap.)</button>
+                                </li>
+                                <li class="menuItem">
+                                  <button class="menuButton" data-anchor-target="anchorArea2">M+2 추정구간 내 Risk Pipeline 점검</button>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="manageSnOpBody">
+                          <div class="sectionRow" data-anchor="anchorArea1">
+                            <div class="cmnHeader">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">AI Factory CoE 인력 전환 계획 (5월 S&OP Recap.)</strong>
+                              </div>
+                            </div>
+                            <div class="accordions type1 border typeActionItem">
+                              <!-- accordion :  -->
+                              <div class="accordion isExpand">
+                                <div class="accordionHeader">
+                                  <div class="cardInfor typeActionItem2">
+                                    <div class="titleArea">
+                                      <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                      <span class="badge actionItem ai">AI생성</span>
+                                      <span class="badge actionItem3 case3">수동 생성</span>
+                                      <span class="badge actionItem3 case4">수정됨</span>
+                                    </div>
+                                    <div class="bottomArea">
+                                      <div class="itemSummaryInfor">
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>생성일</dt>
+                                            <dd>26.04.13</dd>
+                                            <dt>유형</dt>
+                                            <dd>BR</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>귀속 연월</dt>
+                                            <dd>26년 8월</dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd>Enterprise서비스 부문</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeColumn ellipsis">
+                                          <dl class="dlist">
+                                            <dt>원인</dt>
+                                            <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordionBody">
+                                  <div class="actionItemInfor">
+                                    <div class="innerBox">
+                                      <strong class="title">현황 요약</strong>
+                                      <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                      <div class="thumbArea">
+                                        <span class=""><img src="/assets/images/temp/actionItem_1.jpg" class="" /></span><!-- sample 이미지 -->
+                                        <div class="downloadArea">
+                                          <button type="button" class="button outlined md assistive iconPre buttonDownload">다운로드</button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="innerBox">
+                                      <strong class="title">현황 요약</strong>
+                                      <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- //accordion :  -->
+
+                              <!-- accordion :  -->
+                              <div class="accordion isExpand">
+                                <div class="accordionHeader">
+                                  <div class="cardInfor typeActionItem2">
+                                    <div class="titleArea">
+                                      <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                      <span class="badge actionItem ai">AI생성</span>
+                                    </div>
+                                    <div class="bottomArea">
+                                      <div class="itemSummaryInfor">
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>생성일</dt>
+                                            <dd>26.04.13</dd>
+                                            <dt>유형</dt>
+                                            <dd>BR</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>귀속 연월</dt>
+                                            <dd>26년 8월</dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd>Enterprise서비스 부문</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeColumn ellipsis">
+                                          <dl class="dlist">
+                                            <dt>원인</dt>
+                                            <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordionBody">
+                                  <div class="actionItemInfor">
+                                    <div class="innerBox">
+                                      <strong class="title">현황 요약</strong>
+                                      <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- //accordion :  -->
+                            </div>
+                          </div>
+
+                          <div class="sectionRow" data-anchor="anchorArea2">
+                            <div class="cmnHeader">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">M+2 추정구간 내 Risk Pipeline 점검</strong>
+                              </div>
+                            </div>
+                            <div class="accordions type1 border typeActionItem">
+                              <!-- accordion :  -->
+                              <div class="accordion isExpand">
+                                <div class="accordionHeader">
+                                  <div class="cardInfor typeActionItem2">
+                                    <div class="titleArea">
+                                      <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                      <span class="badge actionItem ai">AI생성</span>
+                                    </div>
+                                    <div class="bottomArea">
+                                      <div class="itemSummaryInfor">
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>생성일</dt>
+                                            <dd>26.04.13</dd>
+                                            <dt>유형</dt>
+                                            <dd>BR</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>귀속 연월</dt>
+                                            <dd>26년 8월</dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd>Enterprise서비스 부문</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeColumn ellipsis">
+                                          <dl class="dlist">
+                                            <dt>원인</dt>
+                                            <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordionBody">
+                                  <div class="actionItemInfor">
+                                    <div class="innerBox">
+                                      <strong class="title">현황 요약</strong>
+                                      <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- //accordion :  -->
+
+                              <!-- accordion :  -->
+                              <div class="accordion isExpand">
+                                <div class="accordionHeader">
+                                  <div class="cardInfor typeActionItem2">
+                                    <div class="titleArea">
+                                      <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                      <span class="badge actionItem ai">AI생성</span>
+                                    </div>
+                                    <div class="bottomArea">
+                                      <div class="itemSummaryInfor">
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>생성일</dt>
+                                            <dd>26.04.13</dd>
+                                            <dt>유형</dt>
+                                            <dd>BR</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeRow">
+                                          <dl class="dlist">
+                                            <dt>귀속 연월</dt>
+                                            <dd>26년 8월</dd>
+                                            <dt>귀속 조직</dt>
+                                            <dd>Enterprise서비스 부문</dd>
+                                          </dl>
+                                        </div>
+                                        <div class="col typeColumn ellipsis">
+                                          <dl class="dlist">
+                                            <dt>원인</dt>
+                                            <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                          </dl>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="accordionBody">
+                                  <div class="actionItemInfor">
+                                    <div class="innerBox">
+                                      <strong class="title">현황 요약</strong>
+                                      <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <!-- //accordion :  -->
+                            </div>
+                          </div>
+\\
+                        </div>
+                      </section>
+                    </div>
+                    <!-- //tabContent : AT서비스 부문 -->
+
+                    <!-- tabContent : 제조서비스 부문 -->
+                    <div class="tabContent " data-content="tab3" data-anchor-scope>
+                      제조서비스 부문
+                    </div>
+                    <!-- //tabContent : 제조서비스 부문 -->
+
+                    <!-- tabContent : Enterprise서비스 부문 -->
+                    <div class="tabContent " data-content="tab4" data-anchor-scope>
+                      Enterprise서비스 부문
+                    </div>
+                    <!-- //tabContent : Enterprise서비스 부문 -->
+
+                    <!-- tabContent : Cloud서비스 부문 -->
+                    <div class="tabContent " data-content="tab5" data-anchor-scope>
+                      Cloud서비스 부문
+                    </div>
+                    <!-- //tabContent : Cloud서비스 부문 -->
+
+                    <!-- tabContent : CAIO -->
+                    <div class="tabContent " data-content="tab6" data-anchor-scope>
+                      CAIO
+                    </div>
+                    <!-- //tabContent : CAIO -->
+
+                    <!-- tabContent : 애커튼 -->
+                    <div class="tabContent " data-content="tab7" data-anchor-scope>
+                      애커튼
+                    </div>
+                    <!-- //tabContent : 애커튼 -->
+                  </div>
+                  <!-- //tabs -->
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // panel size 조절
+  new flexablePanel();
+
+  // Tooltip
+  new Tooltip();
+
+  // DragScroll
+  DragScroll.init();
+  
+  // Dropdown
+  Dropdown.initAll();
+
+  // Accordion
+  Accordion.init();
+
+  // DropdownAnchorPlugin
+  new DropdownAnchorPlugin({
+    selector: '[data-anchor-dropdown]',
+    offset: 20,
+    duration: 400
+  });
+});
+</script>
+</html>

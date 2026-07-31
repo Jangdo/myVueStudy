@@ -1,0 +1,251 @@
+/* prototype `inbox.css` 정합 — 토큰은 `.proto-parity-scope` */
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.countBadge {
+  background: var(--color-orange);
+  color: #fff;
+  font-size: 10px;
+  padding: 1px 7px;
+  border-radius: 10px;
+  font-weight: 700;
+  margin-left: 0;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.hint {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.err {
+  color: var(--color-danger);
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.empty {
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  padding: 20px;
+  color: var(--color-text-muted);
+  text-align: center;
+}
+
+.sectionLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0 0 10px;
+  letter-spacing: 0.04em;
+}
+
+.sectionLabelAfterPm {
+  margin: 16px 0 10px;
+}
+
+.list {
+  display: grid;
+  gap: 12px;
+}
+
+.card {
+  background: var(--color-bg-elevated);
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  transition: border-color 0.15s ease;
+}
+
+.card:hover {
+  border-color: var(--color-border-strong);
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.pjt {
+  flex: 1;
+  min-width: 0;
+}
+
+.pjtTitleRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.pjtName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.pjtJob {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: var(--color-bg-muted);
+  border: 1px solid var(--color-border);
+  max-width: min(260px, 46vw);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.riskBadge {
+  display: inline-flex;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--color-bg-muted);
+  color: var(--color-text-secondary);
+}
+
+.pjtMeta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.meta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 4px;
+}
+
+.person {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  background: color-mix(in srgb, var(--color-primary) 12%, var(--color-bg-surface));
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.candName {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.cl {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-left: 6px;
+}
+
+.candRole {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.scoreCol {
+  flex-shrink: 0;
+  text-align: right;
+}
+
+.scoreLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.scoreVal {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.btnApprove {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--color-success);
+  color: #fff;
+}
+
+.btnApprove:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btnReject {
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-strong);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+}
+
+.btnReject:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.riskInline {
+  font-size: 11px;
+  color: var(--color-danger);
+  flex: 1 1 100%;
+}

@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal :  -->
+                <div class="dimmed">
+                  <div class="modal xs">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">시스템 점검 공지</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="noticeWrap type1">
+                        <div class="noticeBody">
+                          <p class="text">안정적인 서비스 이용을 위해 아래와 같이 시스템 점검을 실시합니다.</p>
+                          <dl class="dlist dot">
+                            <div class="row">
+                              <dt>점검 일시</dt>
+                              <dd>202X.XX.XX(X) 02:00 ~ 06:00</dd>
+                            </div>
+                            <div class="row">
+                              <dt>작업 내용</dt>
+                              <dd>서버 점검 및 업데이트</dd>
+                            </div>
+                            <div class="row">
+                              <dt>참고 사항</dt>
+                              <dd>점검 시간 내 접속 불가</dd>
+                            </div>
+                          </dl>
+                          <p class="text">이용에 불편을 드려 죄송합니다.<br />최대한 빠르게 작업을 마무리하겠습니다.</p>
+                        </div>
+                        <div class="noticeFooter">
+                          <div class="sideArea">
+                            <div class="radios">
+                              <span class="itemRadio">
+                                <label><input type="checkbox">오늘 하루 보지 않기</label>
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal :  -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+</html>

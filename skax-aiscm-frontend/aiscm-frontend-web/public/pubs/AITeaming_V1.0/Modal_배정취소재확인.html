@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <div style="height: 2000px;"></div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- ==============================
+                  #Modal 
+                    - .stack 내부 하단에 위치
+                    - modal open 시 배경 dimmed 처리됨
+                    - dimmed 영역은 화면 전체가 아니라, 본문 영역 (.stack) 에만 처리됨
+                    - modal size : xs, sm, md, lg, xl
+                    - aler size : xs (480px)
+                ============================== -->
+
+                <!-- modal : alert -->
+                <div class="dimmed">
+                  <div class="modal xs">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">배정 취소 재확인</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <p class="alertMessage">역할에 배정된 인력을 삭제할까요?<br />배정된 인력 정보가 삭제되며, 미배정 상태로 전환됩니다.<br />승인 대기중일 경우, 결제자에게 전송된 승인 요청도 함께 삭제됩니다.</p>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button assistive outlined xl">취소</button>
+                        <button type="button" class="button primary solid xl">배정 취소</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : alert -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+</html>

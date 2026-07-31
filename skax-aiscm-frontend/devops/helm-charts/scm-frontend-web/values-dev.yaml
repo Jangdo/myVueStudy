@@ -1,0 +1,88 @@
+replicaCount: 1
+
+# Service metadata.name (HTTPRoute backendRefs 등)과 일치해야 함
+fullnameOverride: "scm-frontend-web"
+
+service:
+  type: ClusterIP
+  port: 3000
+
+startupProbe:
+  httpGet:
+    path: /health
+    port: http
+    scheme: HTTP
+  failureThreshold: 12
+  periodSeconds: 5
+
+livenessProbe: 
+  httpGet:
+    path: /health
+    port: http
+    scheme: HTTP
+  initialDelaySeconds: 0
+  periodSeconds: 10
+  failureThreshold: 5
+  successThreshold: 1
+  timeoutSeconds: 3
+
+readinessProbe: 
+  httpGet:
+    path: /health
+    port: http
+    scheme: HTTP
+  initialDelaySeconds: 0
+  periodSeconds: 10
+  failureThreshold: 3
+  successThreshold: 1
+  timeoutSeconds: 3
+
+resources: 
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 256Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 3
+  targetCPUUtilizationPercentage: 70
+
+config: {}
+  #NEXT_PUBLIC_API_BASE_URL: "http://aiscm.skax.local"
+
+# nginx-user uid=1001 (Dockerfile 기준)
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1001
+  fsGroup: 1001
+
+securityContext:
+  allowPrivilegeEscalation: false
+  capabilities:
+    drop: ["ALL"]
+
+nodeSelector:
+  role: scm
+
+tolerations:
+  - key: "scm"
+    operator: "Equal"
+    value: "true"
+    effect: "NoSchedule"
+
+affinity:
+  podAntiAffinity:
+    preferredDuringSchedulingIgnoredDuringExecution:
+      - weight: 100
+        podAffinityTerm:
+          labelSelector:
+            matchExpressions:
+              - key: app.kubernetes.io/name
+                operator: In
+                values:
+                  - scm-frontend-web
+          topologyKey: topology.kubernetes.io/zone

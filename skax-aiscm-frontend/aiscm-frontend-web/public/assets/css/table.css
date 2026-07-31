@@ -1,0 +1,557 @@
+
+/* table ============================== */
+
+/* wrapper ========== */
+.tables {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* tables / option / scroll */
+.tables.scroll {
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+/*  */
+.tables .table ~ .setItemSelected {
+  margin-top: 10px;
+}
+.tables .nodataBox.typeNodata {
+  height: 100%;
+}
+.tables tr .button {
+  vertical-align: middle;
+}
+
+/* table ============================== */
+
+/* ========== */
+.table .pV0 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.table .pSm {
+  padding: 6px;
+}
+.table .pVSm {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.table .pHSm {
+  padding-right: 6px;
+  padding-left: 6px;
+}
+
+.table.data th > span .badge,
+.table.data td > span .badge {
+  margin-top: -1px;
+  vertical-align: middle;
+}
+.table.data .button.transparent  {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+.table.data .textBold {
+  font-weight: 600;
+  color: var(--fontColor7);
+}
+.table.data .tal {
+  padding-left: 16px;
+}
+.ellipsisWrap {
+  display: flex;
+  align-items: center;
+}
+.ellipsisWrap .ellipsis {
+  flex: 1;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* table / 공통 ========== */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.table thead th {
+  padding: 7px 8px;
+  border-bottom: 1px solid #CCD1D7;
+  font-size: var(--font12);
+  font-weight: 500;
+  color: var(--fontColor7);
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: #E4E7EB;
+}
+.table thead th:first-child,
+.table tbody th:first-child,
+.table tbody td:first-child,
+.table tfoot th:first-child,
+.table tfoot td:first-child {
+  border-left: none;
+}
+.table thead th:last-child,
+.table tbody th:last-child,
+.table tbody td:last-child,
+.table tfoot th:last-child,
+.table tfoot td:last-child {
+  border-right: none;
+}
+.table tbody th,
+.table tbody td,
+.table tfoot th,
+.table tfoot td {
+  padding: 12px 8px;
+  border-bottom: 1px solid #EDF0F3;
+  border-right: 1px solid #EDF0F3;
+  border: 1px solid #EDF0F3;
+  font-size: var(--font13);
+  font-weight: 400;
+  color: var(--fontColor6);
+  text-align: center;
+  vertical-align: middle;
+  background-color: #ffffff;
+}
+
+/* table / type : type2 ========== */
+.table.type2 thead th {
+  height: 28px;
+  padding: 4px;
+}
+.table.type2 tbody th,
+.table.type2 tbody td {
+  padding: 12px 8px;
+}
+.table.type2 tbody th,
+.table.type2 tbody td,
+.table.type2 tfoot th,
+.table.type2 tfoot td {
+  border-right: 0;
+  border-left: 0;
+}
+
+/* table / option : sm ========== */
+.table.sm {}
+.table.sm thead th {
+  height: 28px;
+  padding: 5px 4px;
+}
+.table.sm tbody th,
+.table.sm tbody td {
+  height: 36px;
+  padding: 7px 4px;
+}
+.table.sm:not(.border) tbody th,
+.table.sm:not(.border) tbody td {
+  border-right: none;
+}
+
+/* table / option : stripe */
+.table.stripe tbody tr:nth-child(even) th,
+.table.stripe tbody tr:nth-child(even) td {
+  background-color: #F9FAFC;
+}
+.table.stripe tbody th.noStripe,
+.table.stripe tbody td.noStripe {
+  background-color: #FFF !important;
+}
+
+/* table / option : thBorder */
+.table.thBorder thead th {
+  border-right: 1px solid #CCD1D7;
+}
+.table.thBorder thead th:last-child {
+  border-right: 0;
+}
+
+/* table / option : border */
+.table.border thead th[colspan]:not(:last-child),
+.table.border thead th[rowspan]:not(:last-child) {
+  /* border-right: 1px solid #CCD1D7; */
+}
+.table.border tbody th:not(:last-child),
+.table.border tbody td:not(:last-child) {
+  border-right: 1px solid #EDF0F3;
+}
+
+/* 상태 / tr */
+.table tr.isClickable {
+  cursor: pointer;
+}
+.table tr.isDisabled {
+  opacity: 0.6;
+}
+.table tr.isSelected th,
+.table tr.isSelected td {
+  background-color: #F9FAFC;
+}
+
+/* tooltip / isActive / 스크립트에서 사용 */
+.table th.isTooltipActive,
+.table td.isTooltipActive {
+  background-color: #6684FF14 !important;
+}
+
+/* cell option : hover */
+.table td.hover:hover {
+  background-color: rgba(102, 132, 255, 0.08);
+}
+/* cell option : border-right */
+.table thead th.borderRight {
+  border-right: 1px solid #CCD1D7;
+}
+.table tbody th.borderRight,
+.table tbody td.borderRight {
+  border-right: 1px solid #EDF0F3;
+}
+
+/* cell option : bg1 */
+.table thead th.bg1 {
+  background-color: #CCD1D7;
+}
+
+/* table / data ========== */
+.table.data {
+  border-collapse: separate;
+}
+.table.data thead th {
+  height: 28px;
+  padding: 5px 4px;
+}
+.table.data tbody th,
+.table.data tbody td,
+.table.data tfoot th,
+.table.data tfoot td {
+  height: 36px;
+  padding: 7px 4px;
+  font-weight: 400;
+  color: var(--fontColor7);
+  border-width: 0 1px 1px 0;
+}
+.table.data:not(.border) tbody th,
+.table.data:not(.border) tbody td,
+.table.data:not(.border) tfoot th,
+.table.data:not(.border) tfoot td {
+  border-right: none;
+}
+.table.data tbody th > span,
+.table.data tbody td > span,
+.table.data tfoot th > span,
+.table.data tfoot td > span {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+}
+
+/* cell / 상태 ========== */
+
+/* isPlan */
+.table.data td.isPlan.case1 {
+  color: #004ED6;
+  background-color: #FFF;
+}
+.table.data td.isPlan.case2 {
+  color: #003EAB;
+  background-color: #C2DAFF;
+}
+.table.data td.isPlan.case3 {
+  color: #001842;
+  background-color: #99C1FF;
+}
+/* isLastYear */
+.table.data td.isLastYear.case1 {
+  color: #D52525;
+  background-color: #FFF;
+}
+.table.data td.isLastYear.case2 {
+  color: #B81C1C;
+  background-color: #FDD8D8;
+}
+.table.data td.isLastYear.case3 {
+  color: #6B0D0D;
+  background-color: #FBAEAE;
+}
+/* isLastMonth */
+.table.data td.isLastMonth.case1 {
+  color: #B58222;
+  background-color: #FFF;
+}
+.table.data td.isLastMonth.case2 {
+  color: #4C3814;
+  background-color: #FFF1D5;
+}
+.table.data td.isLastMonth.case3 {
+  color: #4C3814;
+  background-color: #FFE2AB;
+}
+/* 상태 : 실적 / 누적 실적 */
+.table.data td.isPerformance {
+  color: #ABB1BB;
+  font-weight: 500;
+  background-color: #F9FAFC;
+}
+.table.data td.isPerformance .textBold {
+  color: inherit
+}
+/* 상태 : 추정 / 전체 추정 실적 달성 */
+.table.data td.isEstimate {
+  
+}
+/* 상태 : 경고 / 전체 추정 실적 미달 */
+.table.data td.isWarning {
+  font-weight: 500;
+  color: #D52525;
+  cursor: pointer;
+  background-color: #FEEDED;
+}
+/* 상태 : 주의 / 하위 부서 추정 실적 미달 */
+.table.data td.isCaution {
+  cursor: pointer;
+}
+.table.data td.isCaution span::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #FF7300;
+}
+/*  */
+.table.data td.isActive {
+  border: 2px solid #6684FF !important;
+}
+/*  */
+.table.data td.isAvailable {background-color:#F9FAFC !important;}
+
+
+/* table / type : data / 상태 ========== */
+.table.data tbody tr.isRowAdd th,
+.table.data tbody tr.isRowAdd td,
+.table.data.stripe tbody tr.isRowAdd th,
+.table.data.stripe tbody tr.isRowAdd td {
+  background-color: #FFFCF4;
+}
+.table.data tbody tr.isRowDelete th,
+.table.data tbody tr.isRowDelete td,
+.table.data.stripe tbody tr.isRowDelete th,
+.table.data.stripe tbody tr.isRowDelete td {
+  background-color: #FEEDED;
+}
+.table.data tbody tr.isRowModify th,
+.table.data tbody tr.isRowModify td,
+.table.data.stripe tbody tr.isRowModify th,
+.table.data.stripe tbody tr.isRowModify td {
+  background-color: #F0F3FF;
+}
+/*  */
+.table.data tbody tr.isAiAssign th,
+.table.data tbody tr.isAiAssign td,
+.table.data.stripe tbody tr.isAiAssign th,
+.table.data.stripe tbody tr.isAiAssign td {
+  background-color: #F0F3FF;
+}
+
+/* ========== */
+.table.data tbody.total th,
+.table.data tbody.total td {
+  background-color: #F3F5F7;
+}
+
+/* table / total ========== */
+.table.total {}
+.table.total thead tr th {
+  font-size: var(--font11);
+  background-color: #F0F6FF;
+}
+.table.total tbody th,
+.table.total tbody td {
+  border: none;
+}
+.table.total tbody + tbody th,
+.table.total tbody + tbody td {
+  border-top: 1px solid #EDF0F3;
+}
+.table.total tfoot th,
+.table.total tfoot td {
+  border-top: 1px solid #C2D1FF;
+}
+.table.total tfoot.total .fontPrimary {
+  color: #2136BF !important;
+}
+.table.total tr.bg th,
+.table.total tr.bg td {
+  background-color: #F9FAFC;
+}
+.table.total:not(.border) tr.bg th,
+.table.total:not(.border) tr.bg td {
+  border-top: 1px solid #FFF;
+}
+
+/* table / option ============================== */
+
+/* table / wrapper / container */
+.scrollContainer {
+  overflow: hidden;
+}
+/* table / wrapper / drag scroll */
+.tablesScrollX {
+  user-select: none;
+  overflow-x: auto;
+  cursor: grab;
+}
+.tablesScrollX:active {
+  cursor: grabbing;
+}
+.tablesScrollX .table {
+  table-layout: fixed;
+}
+
+
+
+/* 스크롤시 특정 cell 고정  */
+.tablesScrollX .table .fixedCell {
+  position: sticky;
+  z-index: 9;
+}
+.tablesScrollX .table .fixedCell.left1 {
+  left: 0;
+}
+.tablesScrollX .table .fixedCell.right1 {
+  right: 0;
+}
+.table.data tbody .cellDepth1,
+.table.data tbody .cellDepth2,
+.table.data tbody .cellDepth3 {
+  font-size: inherit;
+  font-weight: 500;
+  color: var(--fontColor9);
+  text-align: left;
+}
+.table.data tbody .fixedCell.cellDepth1 {
+  padding-left: 8px;
+}
+.table.data tbody .fixedCell.cellDepth2 {
+  padding-left: 20px;
+}
+.table.data tbody .fixedCell.cellDepth3 {
+  padding-left: 44px;
+}
+
+/* table > accordion / type : trAccordion ========== */
+.table tbody tr.trAccordionHeader.bg th,
+.table tbody tr.trAccordionHeader.bg td {
+  text-align: left;
+  background-color: #F3F5F7;
+}
+tr.trAccordionBody {
+  display: none;
+}
+/* accordion / 활성 */
+tr.trAccordionHeader.isActive td {
+  border-bottom: none;
+}
+tr.trAccordionBody.isActive {
+  display: table-row;
+}
+
+/* table > accordion / type : accordionTr ========== */
+.table .accordionTrHeader {}
+
+.table .accordionTrHeader > tr > th,
+.table .accordionTrHeader > tr > td,
+.table .accordionTrFooter > tr > th,
+.table .accordionTrFooter > tr > td {
+  border-bottom: none;
+  background-color: #F3F5F7;
+}
+.table .accordionTrHeaderInner,
+.table .accordionTrFooterInner {
+  display: flex;
+  flex-direction: column;
+}
+.table .accordionTrHeaderInner > .row,
+.table .accordionTrFooterInner > .row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.table .accordionTrHeader.depth1 .accordionTrHeaderInner {}
+.table .accordionTrHeader.depth2 .accordionTrHeaderInner {
+  padding-left: 10px;
+}
+.table .accordionTrHeader.depth3 .accordionTrHeaderInner {
+  padding-left: 20px;
+}
+.table .accordionTrHeader.depth4 .accordionTrHeaderInner {
+  padding-left: 30px;
+}
+.table .accordionTrHeader.depth5 .accordionTrHeaderInner {
+  padding-left: 40px;
+}
+.table .accordionTrHeaderTitle,
+.table .accordionTrFooterTitle {
+  padding-left: 5px;
+  font-size: var(--font12);
+  font-weight: 600;
+  color: var(--fontColor7);
+}
+/* accordionTrBody */
+.table .accordionTrBody {}
+.table .accordionTrBody tr:first-child th,
+.table .accordionTrBody tr:first-child td {
+  /* border-top: none; 이 값이 들어가면 cell 선택된 isAcitve 의 border 값이 안먹음 */
+}
+.table .accordionTrBody.isExpand {
+  display: table-row-group;
+}
+.table .accordionTrBody.isCollapse {
+  display: none;
+}
+.table .accordionTrBody > .inner {}
+/* accordionTrFooter */
+.table .accordionTrFooter {}
+.table .accordionTrFooter  > tr > th, 
+.table .accordionTrFooter  > tr > td,
+.table .accordionTrFooter td.isPerformance {
+  background-color: #EDF0F3;
+}
+.table .accordionTrFooter > tr > th,
+.table .accordionTrFooter > tr > td {
+  border-bottom: 1px solid #CCD1D7;
+}
+.table tfoot .accordionTrFooterTitle {
+  color: #2136BF;
+}
+.table tfoot.accordionTrFooter th, 
+.table tfoot.accordionTrFooter td,
+.table tfoot.accordionTrFooter td.isPerformance {
+  font-weight: 600;
+  color: #2136BF;
+  background-color: #F0F3FF;
+}
+.table .accordionTrHeader td.isPerformance,
+.table .accordionTrFooter td.isPerformance {
+  background-color: #F3F5F7;
+}
+
+/* tablesScrollX 상속 ========== */
+.tablesScrollX .table .accordionTrHeader th {
+  border-top: none;
+}
+.tablesScrollX .table .accordionTrBody {
+  border-bottom: 1px solid #EDF0F3;
+}

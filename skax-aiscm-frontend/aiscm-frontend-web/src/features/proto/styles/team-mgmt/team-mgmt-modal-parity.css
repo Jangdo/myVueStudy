@@ -1,0 +1,62 @@
+/* prototype `shared/ui/modal.css` — `/proto` 팀관리 모달 정합 */
+.tm-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(14, 15, 23, 0.72);
+  display: grid;
+  place-items: center;
+  z-index: 700;
+}
+
+.proto-parity-scope[data-proto-theme="light"] .tm-modal-backdrop {
+  background: rgba(15, 23, 42, 0.45);
+}
+
+.tm-modal-box {
+  background: var(--color-bg-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  min-width: 280px;
+  max-width: 90vw;
+  box-shadow: var(--shadow-popover);
+  color: var(--color-text);
+}
+
+.tm-modal-box--wide {
+  max-width: min(920px, 96vw);
+  width: 100%;
+}
+
+.tm-modal-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--color-text);
+}
+
+.tm-modal-body {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  max-height: min(72vh, 760px);
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.tm-modal-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tm-modal-actions__prefix {
+  min-width: 0;
+  flex: 1;
+}
+
+.tm-modal-actions__buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-left: auto;
+}

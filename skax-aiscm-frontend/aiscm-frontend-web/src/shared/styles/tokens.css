@@ -1,0 +1,80 @@
+/**
+ * 공통 디자인 토큰 (CSS variables)
+ * 컴포넌트 module.css에서 var(--ui-*) 로 참고하고, size/variant는 props + [data-*]로 매핑.
+ */
+
+ :root {
+  --bg: #f8fafc;
+  --panel: #ffffff;
+  --text: #0f172a;
+  --primary: #2563eb;
+  --border: #e2e8f0;
+}
+
+:root {
+  /* 간격 (4px 그리드) */
+  --ui-space-0: 0;
+  --ui-space-1: 4px;
+  --ui-space-2: 8px;
+  --ui-space-3: 12px;
+  --ui-space-4: 16px;
+  --ui-space-5: 24px;
+  --ui-space-6: 32px;
+
+  /* 모서리 */
+  --ui-radius-sm: 4px;
+  --ui-radius-md: 8px;
+  --ui-radius-lg: 12px;
+
+  /* 본문·컨트롤 타이포 */
+  --ui-font-size-xs: 0.75rem;
+  --ui-font-size-sm: 0.875rem;
+  --ui-font-size-md: 1rem;
+  --ui-line-tight: 1.25;
+  --ui-line-normal: 1.5;
+
+  /* 컨트롤 세로 (sm / md / lg) — props size 와 1:1 */
+  --ui-control-height-sm: 32px;
+  --ui-control-height-md: 40px;
+  --ui-control-height-lg: 48px;
+
+  /* 가로 패딩 (라벨·아이콘 유무에 맞게 컴포넌트에서 조정 가능) */
+  --ui-pad-x-sm: var(--ui-space-3);
+  --ui-pad-x-md: var(--ui-space-4);
+  --ui-pad-x-lg: var(--ui-space-5);
+
+  /* Button (레거시 호출부·기타) */
+  --ui-button-bg: var(--panel);
+  --ui-button-fg: var(--text);
+  --ui-button-border: var(--border);
+  --ui-button-primary-bg: var(--primary);
+  --ui-button-primary-fg: #ffffff;
+  --ui-button-primary-border: var(--primary);
+
+  /* Button — Figma figma-handoff (5종: Primary, Assistive, Assistive danger, Submit, disabled는 상태) */
+  --ui-button-figma-radius: 8px;
+  --ui-button-figma-height: 40px;
+  --ui-button-figma-pad: 3px 8px;
+  --ui-button-figma-primary: #4872ff;
+  --ui-button-figma-assistive-border: #dce0e5;
+  --ui-button-figma-text: #2b313d;
+  --ui-button-figma-text-danger: #d35050;
+  --ui-button-figma-submit: rgba(11, 19, 94, 1);
+  --ui-button-figma-disabled-bg: #f0f1f2;
+  --ui-button-figma-disabled-fg: #9aa1ad;
+  --ui-button-figma-caption: 12px;
+  /* Pretendard 미설치 시 시스템 폰트 */
+  /* --ui-button-figma-font: "Pretendard Variable", "Pretendard", "Segoe UI", system-ui, sans-serif; */
+
+  /* Checkbox — Figma 4상태(미선택·선택·disabled 미선택·disabled 선택) */
+  --ui-checkbox-size: 24px;
+  --ui-checkbox-box: 20px;
+  --ui-checkbox-radius: 6px;
+  --ui-checkbox-border-width: 1.2px;
+  --ui-checkbox-border: #bcc1ca;
+  --ui-checkbox-surface-unchecked: #ffffff;
+  --ui-checkbox-surface-disabled-unchecked: #edf0f3;
+  --ui-checkbox-accent: #4872fe;
+  /* #4872fe @ 30% — 8자리 hex */
+  --ui-checkbox-accent-faded: #4872fe4c;
+}

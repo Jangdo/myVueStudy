@@ -1,0 +1,53 @@
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+
+.required {
+  margin-left: 4px;
+  color: #ff4d4f;
+}
+
+.control {
+  display: flex;
+  width: 100%;
+}
+
+.helper {
+  font-size: 12px;
+  color: #888;
+}
+
+.error {
+  font-size: 12px;
+  color: #ff4d4f;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.size-sm {
+}
+
+.size-md {
+}
+
+.size-lg {
+}
+
+.label-sm {
+}
+
+.label-md {
+}
+
+.label-lg {
+}

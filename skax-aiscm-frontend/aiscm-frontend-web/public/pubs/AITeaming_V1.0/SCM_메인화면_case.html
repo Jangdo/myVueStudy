@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root mainPage">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <div class="aiteamingMainPage">
+                    <div class="mainPageHeader icon">
+                      <p class="text">안녕하세요, 홍길동님.</p>
+                      <p class="title">진행중인 프로젝트와 소속팀의 현황을 확인하세요.</p><!-- 수정 : v1.3 / 요건변경 / 텍스트 변경 -->
+                      <div class="buttons">
+                        <button type="button" class="button outlined round lg assistive iconSuf arrowLink8 normal">우리팀 인력 투입현황 보기</button>
+                      </div>
+                    </div>
+                    <div class="mainPageBody">
+                      <div class="rowGroups type1">
+                        <div class="rowGroup">
+                          <div class="rowHeader">
+                            <div class="titleArea">
+                              <strong class="title">프로젝트 Task</strong><!-- 수정 : v1.3 / 요건변경 / 텍스트 변경 -->
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col1">
+                              <div class="colHeader">
+                                <div class="titleArea">
+                                  <span class="badge businessStep">사전 영업</span>
+                                  <strong class="title">NH투자증권 고객관리 시스템 개선 프로젝트</strong>
+                                </div>
+                              </div>
+                              <div class="colBody">
+                                <div class="nodataBox typeNodata dash">
+                                  <div class="innerBody">
+                                    <p class="text search">현재 대기중인 우선 업무가 없어요.</p><!-- 수정 : v1.3 / 요건변경 / 텍스트 변경 -->
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="rowGroup">
+                          <div class="rowHeader">
+                            <div class="titleArea">
+                              <strong class="title">팀 Task</strong><!-- 수정 : v1.3 / 요건변경 / 텍스트 변경 -->
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col2">
+                              <div class="colHeader">
+                                <div class="titleArea">
+                                  <strong class="title">팀원 배정 승인 요청</strong>
+                                </div>
+                              </div>
+                              <div class="colBody">
+                                <div class="nodataBox typeNodata dash">
+                                  <div class="innerBody">
+                                    <p class="text search">대기중인 요청이 없어요.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col col2">
+                              <div class="colHeader">
+                                <div class="titleArea">
+                                  <strong class="title">팀원 배정 취소 요청</strong>
+                                </div>
+                              </div>
+                              <div class="colBody">
+                                <div class="nodataBox typeNodata dash">
+                                  <div class="innerBody">
+                                    <p class="text search">대기중인 요청이 없어요.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col col1">
+                              <div class="colHeader">
+                                <div class="titleArea">
+                                  <strong class="title">NOVA개발1팀 현황</strong>
+                                </div>
+                              </div>
+                              <div class="colBody">
+                                <div class="nodataBox typeNodata dash">
+                                  <div class="innerBody">
+                                    <p class="text search">대기중인 요청이 없어요.</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+  const swiperA = new Swiper('.swiperA', {
+    direction: "vertical",
+    pagination: {
+      el: ".swiperA-pagination",
+      clickable: true,
+      dynamicBullets: false
+    }
+  });
+
+  const swiperAinner1 = new Swiper('.swiperAinner1', {
+    loop: false,
+    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerGroup: 4,
+    pagination: {
+      el: ".swiper-pagination-issue-inner",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-issue-inner',
+      prevEl: '.swiper-button-prev-issue-inner',
+    },
+  });
+
+  const swiperB = new Swiper('.swiperB', {
+    direction: "vertical",
+    pagination: {
+      el: ".swiperB-pagination",
+      clickable: true,
+      dynamicBullets: false
+    }
+  });
+
+  const swiperBinner1 = new Swiper('.swiperBinner1', {
+    loop: false,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    pagination: {
+      el: ".swiper-pagination-issue-inner",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-issue-inner',
+      prevEl: '.swiper-button-prev-issue-inner',
+    },
+  });
+
+  const swiperC = new Swiper('.swiperC', {
+    direction: "vertical",
+    pagination: {
+      el: ".swiperC-pagination",
+      clickable: true,
+      dynamicBullets: false
+    }
+  });
+
+  const swiperCinner1 = new Swiper('.swiperCinner1', {
+    loop: false,
+    slidesPerView: 4,
+    spaceBetween: 10,
+    slidesPerGroup: 4,
+    pagination: {
+      el: ".swiper-pagination-issue-inner",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-issue-inner',
+      prevEl: '.swiper-button-prev-issue-inner',
+    },
+  });
+
+  const swiperD = new Swiper('.swiperD', {
+    direction: "vertical",
+    pagination: {
+      el: ".swiperD-pagination",
+      clickable: true,
+      dynamicBullets: false
+    }
+  });
+
+  const swiperDinner1 = new Swiper('.swiperDinner1', {
+    loop: false,
+    slidesPerView: 2,
+    spaceBetween: 10,
+    slidesPerGroup: 2,
+    pagination: {
+      el: ".swiper-pagination-issue-inner",
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next-issue-inner',
+      prevEl: '.swiper-button-prev-issue-inner',
+    },
+  });
+
+</script>
+</html>

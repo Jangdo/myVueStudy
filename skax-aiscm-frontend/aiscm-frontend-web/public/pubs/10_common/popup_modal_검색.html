@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 검색하기 -->
+                <div class="dimmed">
+                  <div class="modal sm hgtMd">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">대무자 설정</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="searchFilter">
+                        <div class="row">
+                          <div class="fieldBox lg">
+                            <div class="dropdown">
+                              <button class="dropdownButton">전사</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="inputBox">
+                              <input type="text" placeholder="이름 또는 소속을 입력하세요." />
+                              <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                            </div>
+                            <div class="sideArea">
+                              <button type="button" class="button iconOnly buttonSearch">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="tables flex1">
+                        <div class="cmnHeader sm">
+                          <div class="cmnHeaderTitleArea">
+                            <span class="cmnHeaderCount">대무자 목록 <strong class="cmnHeaderCountNumber2">(총 3명)</strong></span>
+                          </div>
+                        </div>
+                        
+                        <!-- case : 검색결과 -->
+                        <table class="table type2">
+                          <colgroup>
+                            <col style="width: 40px" />
+                            <col style="width: 140px" />
+                            <col style="width: 140px" />
+                            <col style="width: 140px" />
+                            <col style="width: auto" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>선택</th>
+                              <th>프로필</th>
+                              <th>소속부문</th>
+                              <th>소속본부</th>
+                              <th>소속팀</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr class="isSelected">
+                              <td><input type="radio" checked /></td>
+                              <td>
+                                <div class="personLabel xs">
+                                  <div class="infors">
+                                    <span class="name">홍수진</span>
+                                    <span class="role"><button type="button" class="button transparent buttonLink normal">NOVA 개발2팀 팀장</button></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>AT서비스 부문</td>
+                              <td>NOVA 추진 본부</td>
+                              <td>NOVA 개발1팀</td>
+                            </tr>
+
+                            <tr>
+                              <td><input type="radio"  /></td>
+                              <td>
+                                <div class="personLabel xs">
+                                  <div class="infors">
+                                    <span class="name">홍수진</span>
+                                    <span class="role"><button type="button" class="button transparent buttonLink normal">NOVA 개발2팀 팀장</button></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>AT서비스 부문</td>
+                              <td>NOVA 추진 본부</td>
+                              <td>NOVA 개발1팀</td>
+                            </tr>
+                            <tr>
+                              <td><input type="radio"  /></td>
+                              <td>
+                                <div class="personLabel xs">
+                                  <div class="infors">
+                                    <span class="name">홍수진</span>
+                                    <span class="role"><button type="button" class="button transparent buttonLink normal">NOVA 개발2팀 팀장</button></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>AT서비스 부문</td>
+                              <td>NOVA 추진 본부</td>
+                              <td>NOVA 개발1팀</td>
+                            </tr>
+                            <tr>
+                              <td><input type="radio"  /></td>
+                              <td>
+                                <div class="personLabel xs">
+                                  <div class="infors">
+                                    <span class="name">홍수진</span>
+                                    <span class="role"><button type="button" class="button transparent buttonLink normal">NOVA 개발2팀 팀장</button></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td>AT서비스 부문</td>
+                              <td>NOVA 추진 본부</td>
+                              <td>NOVA 개발1팀</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- //case : 검색결과 -->
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 검색하기 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>
+

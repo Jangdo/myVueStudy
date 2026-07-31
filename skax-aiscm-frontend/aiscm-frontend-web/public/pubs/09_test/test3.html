@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<title>Multi Depth Dropdown</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+<style>
+.tables.scroll {
+  height: 300px;
+  overflow: auto;
+  border: 1px solid #ddd;
+}
+
+.tables.scroll table {
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 1200px;
+}
+
+.tables.scroll th,
+.tables.scroll td {
+  min-width: 150px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+/* 헤더 고정 */
+.tables.scroll thead th {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  background: #f5f5f5;
+}
+
+/* 첫 번째 컬럼 고정 */
+.tables.scroll .col1 {
+  position: sticky;
+  left: 0;
+  z-index: 20;
+  background: #fff;
+  min-width: 150px;
+}
+
+/* 두 번째 컬럼 고정 */
+.tables.scroll .col2 {
+  position: sticky;
+  left: 150px; /* col1 너비와 동일 */
+  z-index: 20;
+  background: #fff;
+  min-width: 150px;
+}
+
+/* 헤더 + 고정컬럼이 겹치는 부분 */
+.tables.scroll thead .col1,
+.tables.scroll thead .col2 {
+  z-index: 40;
+  background: #f5f5f5;
+}
+</style>
+</head>
+
+<body>
+<div class="ddd" style="height: 100px;">
+  
+</div>
+<div class="tables scroll">
+  <table>
+    <thead>
+      <tr>
+        <th class="fixed col1">제목1</th>
+        <th class="fixed col2">제목2</th>
+        <th>제목3</th>
+        <th>제목4</th>
+        <th>제목5</th>
+        <th>제목6</th>
+        <th>제목7</th>
+        <th>제목8</th>
+        <th>제목9</th>
+        <th>제목10</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+
+      <!-- 반복 -->
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+      <tr>
+        <td class="fixed col1">내용1</td>
+        <td class="fixed col2">내용2</td>
+        <td>내용3</td>
+        <td>내용4</td>
+        <td>내용5</td>
+        <td>내용6</td>
+        <td>내용7</td>
+        <td>내용8</td>
+        <td>내용9</td>
+        <td>내용10</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+</body>
+
+<script>
+ 
+
+</script>
+</html>

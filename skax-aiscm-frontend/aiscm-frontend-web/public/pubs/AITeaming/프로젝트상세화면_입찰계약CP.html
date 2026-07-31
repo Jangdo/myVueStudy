@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <span class="badge businessStep">입찰 CP</span>
+                    <h2 class="cmnHeaderTitle lg">프로젝트명</h2>
+                    <span class="cmnHeaderText">프로젝트 번호</span>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cards full">
+                      <div class="row">
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case1">수행기간</dt>
+                              <dd>2026.09.01~2027.08.31</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case2">프로젝트타입</dt>
+                              <dd>SI-AD</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case3">고객사</dt>
+                              <dd>고객사 이름</dd>
+                            </div>
+                          </dl>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case4">총사업예산</dt>
+                              <dd>
+                                <span class="amount"><span class="number lg violet">9,990,000</span><span class="unit sm">원</span></span>
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case5">수주목표금액</dt>
+                              <dd>
+                                <span class="amount"><span class="number lg violet">9,990,000</span><span class="unit sm">원</span></span>
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case6">수주귀속조직</dt>
+                              <dd>금융사업부금융사업부<br />금융사업개발1팀</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case7">영업대표</dt>
+                              <dd>이영업 매니저</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case8">매출귀속조직</dt>
+                              <dd>B서비스 본부<br />서비스2팀</dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case9">사업 PM</dt>
+                              <dd>홍길동</dd>
+                            </div>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="section flex1"><!-- 수정 : 클래스 추가 -->
+                    <div class="cmnHeader md">
+                      <div class="cmnHeaderTitleArea">
+                        <strong class="cmnHeaderTitle">담당 팀원</strong>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button primary outlined sm iconPre buttonAi">AI 추천 조건 설정</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card type2 flex1"><!-- 수정 : 클래스 추가 -->
+                      <div class="inner flex1"><!-- 수정 : 클래스 추가 -->
+                        <!-- case - table : data, loading -->
+                        <div class="cmnHeader sm">
+                          <div class="cmnHeaderTitleArea">
+                            <!-- ==============================
+                              #클래스 설명
+                                - 활성 : .button.filter + .isActive
+                            ============================== -->
+                            
+                            <div class="buttons sm">
+                              <button type="button" class="button filter sm isActive">전체</button>
+                              <button type="button" class="button filter sm">미배정</button>
+                            </div>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <div class="buttons">
+                              <button type="button" class="button assistive outlined sm">배정취소</button>
+                              <button type="button" class="button assistive outlined sm" disabled>역할 정보 수정</button>
+                              <button type="button" class="button assistive outlined sm iconOnly buttonPlus" disabled>추가</button>
+                              <button type="button" class="button assistive outlined sm iconOnly buttonMinus" disabled>삭제</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tables scroll">
+                          <table class="table" style="min-width: 1100px;">
+                            <colgroup>
+                              <col style="width: 40px" />
+                              <col style="width: 80px" />
+                              <col style="width: 10%" />
+                              <col style="width: 18%" />
+                              <col style="width: 10%" />
+                              <col style="width: 15%" />
+                              <col style="width: 15%" />
+                              <col style="width: 15%" />
+                              <col style="width: 25%" />
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th><input type="checkbox" /></th>
+                                <th>진행상태</th>
+                                <th>역할</th>
+                                <th>필요 직무/Skill-set</th>
+                                <th>등급</th>
+                                <th>배정 인력</th>
+                                <th>투입기간</th>
+                                <th>금액</th>
+                                <th>추천 사유</th>
+                              </tr>
+                            </thead>
+                            <!-- case - table : loading -->
+                            <!-- ==============================
+                              #설명
+                                - loading 시에는 table 에 들어간 min-width: 1100px 값 삭제
+                            ============================== -->
+                            <tbody>
+                              <tr>
+                                <td colspan="10">
+                                  <div class="nodataBox typeLoading">
+                                    <div class="innerBody">
+                                      <i class="spinner"></i>
+                                      <span class="title">문서 로드</span>
+                                      <span class="text">어떤 프로젝트인지 먼저 확인하겠습니다.</span>
+                                    </div>
+                                  </div>
+                                </td>
+                              </tr>
+                            </tbody>
+                            <!-- //case - table : loading -->
+
+                            <!-- case - table : data -->
+                            <tbody>
+                              <tr>
+                                <td><input type="checkbox" /></td>
+                                <td><span class="badge manState case9">가용</span></td>
+                                <td>PM</td>
+                                <td>
+                                  <div class="infoMember job">
+                                    <span class="job">Software Development</span>
+                                    <span class="skill">Front-end Development</span>
+                                  </div>
+                                </td>
+                                <td>P4</td>
+                                <td>
+                                  <div class="infoMemberBasic tbd sm">
+                                    <!-- <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span> -->
+                                    <span class="thumb"><img src="/assets/images/temp/profile.jpg" /></span>
+                                    <div class="infos">
+                                      <div class="row">
+                                        <span class="userName">TBD</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="buttons sm mt8">
+                                    <button type="button" class="button outlined sm assistive iconPre buttonAi">AI추천내역</button>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember period">
+                                    <span class="date">26.04.01 - 26.07.31</span>
+                                    <span class="sum">Full Time · 4MM</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember amount">
+                                    <span class="price">81,896,805</span>
+                                    <span class="sum">M/M  l  16,379,361</span>
+                                  </div>
+                                </td>
+                                <td class="tal"></td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" /></td>
+                                <td><span class="badge manState case9">가용</span></td>
+                                <td>PM</td>
+                                <td>
+                                  <div class="infoMember job">
+                                    <span class="job">Software Development</span>
+                                    <span class="skill">Front-end Development</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <select class="sm">
+                                    <option>등급</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <div class="infoMemberBasic sm">
+                                    <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                    <div class="infos">
+                                      <div class="row">
+                                        <span class="userName">김프로</span>
+                                      </div>
+                                      <div class="row">
+                                        <a href="#none" class="buttonLink idNumber">1324234</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="buttons sm mt8">
+                                    <button type="button" class="button primary outlined sm iconPre buttonAi">AI추천</button>
+                                    <button type="button" class="button assistive outlined sm">직접검색</button>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember period">
+                                    <span class="date">26.04.01 - 26.07.31</span>
+                                    <span class="sum">Full Time · 4MM</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember amount">
+                                    <span class="price">81,896,805</span>
+                                    <span class="sum">M/M  l  16,379,361</span>
+                                  </div>
+                                </td>
+                                <td class="tal">AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 </td>
+                              </tr>
+                              <tr>
+                                <td><input type="checkbox" /></td>
+                                <td><span class="badge manState case5">투입불가</span></td>
+                                <td>PM</td>
+                                <td>
+                                  <div class="infoMember job">
+                                    <span class="job">Software Development</span>
+                                    <span class="skill">Front-end Development</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <select class="sm">
+                                    <option>등급</option>
+                                  </select>
+                                </td>
+                                <td>
+                                  <div class="infoMemberBasic sm">
+                                    <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                    <div class="infos">
+                                      <div class="row">
+                                        <span class="userName">김프로</span>
+                                      </div>
+                                      <div class="row">
+                                        <a href="#none" class="buttonLink idNumber">1324234</a>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember period">
+                                    <span class="date">26.04.01 - 26.07.31</span>
+                                    <span class="sum">Full Time · 4MM</span>
+                                  </div>
+                                </td>
+                                <td>
+                                  <div class="infoMember amount">
+                                    <span class="price lineThrough">81,896,805</span>
+                                    <span class="sum">M/M  l  <span class="lineThrough">16,379,361</span></span>
+                                  </div>
+                                </td>
+                                <td class="tal">AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 AI추천 사유 </td>
+                              </tr>
+                            </tbody>
+                            <!-- //case - table : data -->
+                          </table>
+                        </div>
+                        <!-- //case - table : data, loading -->
+
+                        <!-- case - table : no data -->
+                        <!-- 
+                        <div class="nodataBox typeNodata dashed">
+                          <div class="innerBody">
+                            <p class="text addItem">역할 추가하기</p>
+                          </div>
+                        </div>
+                        -->
+                        <!-- //case - table : no data (임시, 기획 없음) -->
+                      </div>
+
+                      <!-- floatingArea -->
+                      <div class="floatingArea bottom totalAmount">
+                        <!-- case - floatingArea : 인건비 한도 X -->
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <span class="text">현재 투입 가능 인력과 미배정된 인건비 한도를 합산한 금액입니다.</span>
+                            <div class="amounts">
+                              <span class="amount"><span class="number xl primary">9,990,000</span><span class="unit xl primary">원</span></span>
+                            </div>
+                            <div class="buttons lg">
+                              <button type="button" class="button assistive outlined md2">임시저장</button>
+                              <button type="button" class="button submit solid md2">Teaming 완료</button>
+                            </div>
+                          </div>
+                        </div>
+      
+                        <!-- case - floatingArea : 인건비 한도 O -->
+                        <!-- 
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                            <span class="cmnHeaderText type2">인건비 한도</span>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <span class="text">현재 투입 가능 인력과 미배정된 인건비 한도를 합산한 금액입니다.</span>
+                            <div class="amounts">
+                              <span class="amount"><span class="number xl primary">9,990,000</span><span class="unit xl primary">원</span></span>
+                              <span class="amount"><span class="number xl gray">9,990,000</span><span class="unit xl gray">원</span></span>
+                            </div>
+                            <div class="buttons lg">
+                              <button type="button" class="button assistive outlined md2">임시저장</button>
+                              <button type="button" class="button submit solid md2">AI PMO 보내기</button>
+                            </div>
+                          </div>
+                        </div>
+                        -->
+      
+                        <!-- case - floatingArea : 한도 초과 -->
+                        <!-- 
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle sm iconTitle iAmount">총 인건비</strong>
+                            <span class="cmnHeaderText type2">인건비 한도</span>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <span class="text">현재 투입 가능 인력과 미배정된 인건비 한도를 합산한 금액입니다.</span>
+                            <div class="amounts">
+                              <span class="amount"><span class="number xl danger">9,990,000</span><span class="unit xl danger">원</span></span>
+                              <span class="amount"><span class="number xl gray">9,990,000</span><span class="unit xl gray">원</span></span>
+                            </div>
+                            <div class="buttons lg">
+                              <button type="button" class="button assistive outlined md2">임시저장</button>
+                              <button type="button" class="button submit solid md2">AI PMO 보내기</button>
+                            </div>
+                          </div>
+                        </div>
+                        -->
+                      </div>
+                      <!-- //floatingArea -->
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat isOpen">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Tooltip
+  new Tooltip();
+  
+  // panel size 조절
+  new flexablePanel();
+});
+</script>
+</html>

@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <div class="" style="height: 2000px;"></div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 프로필 상세 -->
+                <div class="dimmed">
+                  <div class="modal md mdH">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">프로필 상세</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="card type2">
+                        <div class="profileDetail">
+                          <div class="profileArea">
+                            <div class="infoMemberBasic md">
+                              <span class="thumb"><img src="/assets/images/temp/profile_64.png" width="64" /></span>
+                              <div class="infos">
+                                <div class="row">
+                                  <span class="userName">김프로</span>
+                                </div>
+                                <div class="row">
+                                  <span class="text idNumber">1324234</span>
+                                  <span class="text grade2">P4</span>
+                                </div>
+                                <div class="row">
+                                  <span class="text teamName">AI SCM팀</span>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="detailArea">
+                            <!-- ==============================
+                              #상태
+                                - 아코디언 펼침 : 
+                                  .infoJobSkill + .isExpand
+                                  .buttonAccordion + .isExpand
+                                - 아코디언 접음 :
+                                  .infoJobSkill + .isCollapse
+                                  .buttonAccordion + .isCollapse
+                            ============================== -->
+                            <div class="detailHeader">
+                              <strong class="detailTitle">직무 및 스킬</strong>
+                              <div class="sideArea">
+                                <button type="button" class="button xs iconOnly buttonAccordion triangle10 isExpand">펼침</button>
+                                <!-- <button type="button" class="button iconOnly buttonAccordion isCollapse">접음</button> -->
+                              </div>
+                            </div>
+                            <div class="detailbody">
+                              <div class="infoJobSkill isExpand">
+                                <div class="row">
+                                  <div class="infoHeader">
+                                    <span class="job">Software Development<span class="lebel">Master</span></span>
+                                  </div>
+                                  <div class="infoBody">
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">ERP_SCM (LV.4)</span>
+                                  </div>
+                                </div>
+    
+                                <div class="row">
+                                  <div class="infoHeader">
+                                    <span class="job">Factory AX Engineering<span class="lebel">Pro</span></span>
+                                  </div>
+                                  <div class="infoBody">
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">ERP_SCM (LV.4)</span>
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">Development (LV.1)</span>
+                                  </div>
+                                </div>
+    
+                                <div class="row">
+                                  <div class="infoHeader">
+                                    <span class="job">Development<span class="lebel">Master</span></span>
+                                  </div>
+                                  <div class="infoBody">
+                                    <span class="skill">ERP_SCM (LV.4)</span>
+                                  </div>
+                                </div>
+
+                                <div class="row">
+                                  <div class="infoHeader">
+                                    <span class="job">Factory AX Engineering<span class="lebel">Pro</span></span>
+                                  </div>
+                                  <div class="infoBody">
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">ERP_SCM (LV.4)</span>
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">Development (LV.1)</span>
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                    <span class="skill">Front-end Development (LV.4)</span>
+                                  </div>
+                                </div>
+    
+                                <div class="row">
+                                  <div class="infoHeader">
+                                    <span class="job">Development<span class="lebel">Master</span></span>
+                                  </div>
+                                  <div class="infoBody">
+                                    <span class="skill">ERP_SCM (LV.4)</span>
+                                  </div>
+                                </div>
+                                
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <section class="section">
+                        <div class="cmnHeader sm">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle sm">프로젝트 투입 현황</strong>
+                          </div>
+                        </div>
+
+                        <div class="tabs">
+                          <div class="tabButtons typeFilter">
+                            <button class="tabButton button filter md isActive" data-tab="tabFilter1">투입중 <strong class="count">4</strong></button>
+                            <button class="tabButton button filter md" data-tab="tabFilter2">투입 예약 <strong class="count">4</strong></button>
+                            <button class="tabButton button filter md" data-tab="tabFilter3">투입 종료 <strong class="count">4</strong></button>
+                            <button class="tabButton button filter md" data-tab="tabFilter3">교육/휴가/휴직 <strong class="count">4</strong></button>
+                          </div>
+
+                          <!-- tabContent 1 -->
+                          <div class="tabContent isActive" data-content="tabFilter1">
+                            <div class="card type3 scroll">
+                              <ul class="cmnItemList type1">
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름 프로젝트 이름 프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름 프로젝트 이름 프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름 프로젝트 이름 프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름 프로젝트 이름 프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li>
+                                  <div class="assignInfoSummary row">
+                                    <div class="badgeArea">
+                                      <span class="badge manState case8">투입중</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="project">프로젝트 이름</span>
+                                    </div>
+                                    <div class="row">
+                                      <span class="text person">PM 홍길동</span>
+                                      <span class="text period">26.08.21-26.12.20</span>
+                                      <span class="text time">Part Time · 0.4MM</span>
+                                    </div>
+                                  </div>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <!-- tabContent 2 -->
+                          <div class="tabContent" data-content="tabFilter2">
+                            2 번째 탭 내용입니다.
+                          </div>
+
+                          <!-- tabContent 3 -->
+                          <div class="tabContent" data-content="tabFilter3">
+                            3 번째 탭 내용입니다.
+                          </div>
+
+                          <!-- tabContent 4 -->
+                          <div class="tabContent" data-content="tabFilter4">
+                            4 번째 탭 내용입니다.
+                          </div>
+                        </div>
+                      </section>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+                    
+                  </div>
+                </div>
+                <!-- //modal : 프로필 상세 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// Accordion
+new AccordionJob('.buttonAccordion');
+
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+</script>
+</html>

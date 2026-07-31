@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+  <style>
+    .dummyBox {
+      margin: 40px 0;
+      background:#eee;
+    }
+  </style>
+</head>
+
+<body>
+<div class="viewportFill">
+  <div class="workspace">
+    <!-- layout : main -->
+    <div class="mainColumn">
+      <div class="mainFrame">
+        <!-- root -->
+        <div class="root">
+          <div class="bodyPanel" data-anchor-scroll>
+            <div class="stack">
+              <div class="bodyContents">
+                <div style="height: 100px; background-color: bisque;"></div>
+
+                <section>
+                  <div class="dropdown xl" data-anchor-dropdown data-anchor-fixed>
+                    <button class="dropdownButton">영역 선택</button>
+                    <div class="dropdownMenu">
+                      <ul class="dropdownMenuInner">
+                        <li class="menuItem">
+                          <button class="menuButton" data-anchor-target="anchorArea1">영역1</button>
+                        </li>
+                        <li class="menuItem">
+                          <button class="menuButton" data-anchor-target="anchorArea2">영역2</button>
+                        </li>
+                        <li class="menuItem">
+                          <button class="menuButton" data-anchor-target="anchorArea3">영역3</button>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div>
+                    <div data-anchor="anchorArea1">
+                      <div class="dummyBox" style="height: 1200px;">영역1</div>
+                    </div>
+
+                    <div data-anchor="anchorArea2">
+                      <div class="dummyBox" style="height: 800px;">영역2</div>
+                    </div>
+
+                    <div data-anchor="anchorArea3">
+                      <div class="dummyBox" style="height: 1600px;">영역3</div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+
+  // Dropdown / DropdownAnchorPlugin
+  /* ==============================
+    - Dropdown.initAll(); 이 후에 실행
+    - scroll 영역 (.bodyPanel)에 data-anchor-scroll 추가
+  ============================== */
+  new DropdownAnchorPlugin({
+    selector: '[data-anchor-dropdown]',
+    duration: 400,
+    offset: 40,
+    activeOffset: 60,
+  });
+});
+</script>
+</body>
+</html>

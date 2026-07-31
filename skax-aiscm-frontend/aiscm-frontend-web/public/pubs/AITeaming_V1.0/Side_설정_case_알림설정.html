@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">NOVA 개발 1팀 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="buttons">
+                      <a href="#none" class="buttonLink">우리팀 인력 투입현황 보기</a>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="asidePageSetting">
+                      <div class="cardGroup">
+                        <div class="card type2">
+                          <div class="cmnHeader">
+                            <div class="cmnHeaderTitleArea">
+                              <strong class="cmnHeaderTitle">알림 설정</strong>
+                            </div>
+                          </div>
+                          <!-- case / 알림 설정 : 사용자: 영업대표/PM AND 직책자(팀장) -->
+                          <dl class="dlist type8">
+                            <div class="row strong">
+                              <dt>
+                                <strong class="title"><label for="">전체 알림 받기</label></strong>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">전체 공지</label></strong>
+                                <span class="text">시스템 점검 예정 일정 등 전체 공지를 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">프로젝트 관리 알림</label></strong>
+                                <span class="text">승인완료, 반려, 인력 배정 필요 건 등 프로젝트 진행상황을 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">팀원 관리 알림</label></strong>
+                                <span class="text">팀원 별 프로젝트 투입 요청 내역을 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                          </dl>
+                          <!-- //case / 알림 설정 : 사용자: 영업대표/PM AND 직책자(팀장) -->
+                          
+                          <!-- case / 알림 설정 : 사용자: 직책자(팀장) -->
+                          <dl class="dlist type8">
+                            <div class="row strong">
+                              <dt>
+                                <strong class="title"><label for="">전체 알림 받기</label></strong>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">전체 공지</label></strong>
+                                <span class="text">시스템 점검 예정 일정 등 전체 공지를 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">팀원 관리 알림</label></strong>
+                                <span class="text">팀원 별 프로젝트 투입 요청 내역을 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                          </dl>
+                          <!-- //case / 알림 설정 : 사용자: 직책자(팀장) -->
+
+                          <!-- case / 알림 설정 : 사용자: 영업대표/PM -->
+                          <dl class="dlist type8">
+                            <div class="row strong">
+                              <dt>
+                                <strong class="title"><label for="">전체 알림 받기</label></strong>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">전체 공지</label></strong>
+                                <span class="text">시스템 점검 예정 일정 등 전체 공지를 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                            <div class="row">
+                              <dt>
+                                <strong class="title"><label for="">프로젝트 관리 알림</label></strong>
+                                <span class="text">승인완료, 반려, 인력 배정 필요 건 등 프로젝트 진행상황을 알립니다.</span>
+                              </dt>
+                              <dd>
+                                <span class="chckboxSwitch"><input type="checkbox" /></span>
+                              </dd>
+                            </div>
+                          </dl>
+                          <!-- //case / 알림 설정 : 사용자: 영업대표/PM -->
+
+                        </div>
+                      </div>
+
+                      <div class="cardGroup">
+                        <div class="card type2">
+                          <div class="cmnHeader">
+                            <div class="cmnHeaderTitleArea">
+                              <strong class="cmnHeaderTitle">대무자 설정</strong>
+                            </div>
+                          </div>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+</html>
+

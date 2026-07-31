@@ -1,0 +1,2324 @@
+<h2 class="l_title">Form</h2>
+<div class="l_article">
+  <h3 class="l_title">input : 입력</h3>
+  <div class="l_body">
+    <h4 class="l_title">input text</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <input type="text" />
+        <input type="text" placeholder="이름을 입력하세요" />
+        <input type="text" value="차은우" placeholder="이름을 입력하세요" />
+        <input type="text" value="차은우" placeholder="이름을 입력하세요" class="isInvalid" />
+        <input type="text" value="차은우" placeholder="이름을 입력하세요" disabled />
+        <input type="text" value="차은우" placeholder="이름을 입력하세요" readonly />
+      </div>
+    </div>
+    <h4 class="l_title">input password</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <input type="password" />
+        <input type="password" placeholder="비밀번호를 입력하세요" />
+        <input type="password" value="password" placeholder="비밀번호를 입력하세요" />
+        <input type="password" value="password" placeholder="비밀번호를 입력하세요" class="isInvalid" />
+        <input type="password" value="password" placeholder="비밀번호를 입력하세요" disabled />
+        <input type="password" value="password" placeholder="비밀번호를 입력하세요" readonly />
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">옵션</h3>
+  <div class="l_body">
+    <h4 class="l_title">size</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <input type="text" class="xxl" placeholder="이름을 입력하세요" />
+        <input type="text" class="xl" placeholder="이름을 입력하세요" />
+        <input type="text" class="lg" placeholder="이름을 입력하세요" />
+        <input type="text" class="md2" placeholder="이름을 입력하세요" />
+        <input type="text" class="md" placeholder="이름을 입력하세요" />
+        <input type="text" class="sm" placeholder="이름을 입력하세요" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <div class="l_header">
+    <h3 class="l_title">input wrapper : .fieldBox</h3>
+    <p class="l_title">.fieldBox > input : 이 방식은 사용을 지양하고</p>
+    <p class="l_title">.fieldBox > .inputBox > input : 이 방식을 사용</p>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">.fieldBox</h4>
+    <div class="l_row">
+      <div class="fieldBox">
+        <input type="text" placeholder="부서 입력" value="차은우" />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isInvalid">
+        <input type="text" placeholder="부서 입력" value="차은우" />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isDisabled">
+        <input type="text" placeholder="부서 입력" value="차은우" />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isReadonly">
+        <input type="text" placeholder="부서 입력" value="차은우" />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">input wrapper : .fieldBox > .inputBox</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style</h4>
+    <div class="l_row">
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" placeholder="yyyy.mm.dd">
+          <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="yyyy.mm.dd">
+          <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">상태 (has)</h4>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>invalid</dt>
+        <dd>has .isInvalid</dd>
+      </div>
+      <div class="col">
+        <dt>비활성</dt>
+        <dd>has :disabled</dd>
+      </div>
+      <div class="col">
+        <dt>readonly</dt>
+        <dd>has :readonly</dd>
+      </div>
+    </dl>
+    <div class="l_row">
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" class="isInvalid" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" disabled />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch" disabled>검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" readonly />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">상태 (class)</h4>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>invalid</dt>
+        <dd>.isInvalid</dd>
+      </div>
+      <div class="col">
+        <dt>비활성</dt>
+        <dd>.isDisabled</dd>
+      </div>
+      <div class="col">
+        <dt>readonly</dt>
+        <dd>.isReadonly</dd>
+      </div>
+    </dl>
+    <div class="l_row">
+      <div class="fieldBox isInvalid">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isDisabled">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isReadonly">
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">Mix</h4>
+    <div class="l_row">
+      <div class="fieldBox">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <select>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox">
+        <select>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" class="isInvalid" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <select disabled>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton" disabled>메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" disabled />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch" disabled>검색</button>
+        </div>
+      </div>
+      <div class="fieldBox">
+        <select disabled>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown isReadonly">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input type="text" placeholder="부서 입력" value="차은우" readonly />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox isInvalid">
+        <select>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isDisabled">
+        <select>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" value="차은우" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+      <div class="fieldBox isReadonly">
+        <select>
+          <option value="">옵션1</option>
+          <option value="" selected>옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton isSelected">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <input type="text" placeholder="부서 입력" value="차은우" />
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">option</h3>
+  <div class="l_body">
+    <h4 class="l_title">size</h4>
+    <p class="l_text">option : xx., xl, lg, md2, md, sm</p>
+    <div class="l_row">
+      <div class="fieldBox xxl">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox xl">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox lg">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox md2">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox md">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="fieldBox sm">
+        <select>
+          <option value="">옵션1</option>
+          <option value="">옵션2</option>
+        </select>
+        <div class="dropdown">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem">
+                <button class="menuButton">옵션1</button>
+              </li>
+              <li class="menuItem">
+                <button class="menuButton">옵션2</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="inputBox">
+          <input type="text" placeholder="부서 입력" />
+          <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+        </div>
+        <div class="sideArea">
+          <button type="button" class="button iconOnly buttonSearch">검색</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">textarea : .typeTextarea</h4>
+    <p class="l_text">option : .isValid</p>
+    <div class="l_row">
+      <div class="fieldBox md typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count ">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요.">홍길동</textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md typeTextarea isInvalid">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요.">홍길동</textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요." disabled>홍길동</textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요." readonly>홍길동</textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">Size</h4>
+    <div class="l_row">
+      <div class="fieldBox xxl typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count ">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox xl typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count ">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox lg typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md2 typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox md typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+      <div class="fieldBox sm typeTextarea">
+        <textarea cols="50" rows="3" placeholder="반려 사유를 작성해주세요."></textarea>
+        <div class="fieldBoxFooter">
+          <span class="note">10자 이상</span>
+          <span class="count isValid">12/10</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">select</h3>
+  <p class="l_text">본문에서는 .dropdown을 사용하고 selectbox는 아직 사용되지 않음.</p>
+  <div class="l_body">
+    <h4 class="l_title">style</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <select>
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select>
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option selected>선택 2</option>
+        </select>
+        <select disabled>
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">option</h3>
+  <div class="l_body">
+    <h4 class="l_title">size</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <select class="xxl">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select class="xl">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select class="lg">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select class="md2">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select class="md">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+        <select class="sm">
+          <option>선택하세요</option>
+          <option>선택 1</option>
+          <option>선택 2</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">Dropdown</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style</h4>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>선택 된</dt>
+        <dd>.isSelected</dd>
+      </div>
+      <div class="col">
+        <dt>invalid</dt>
+        <dd>.isInvalid</dd>
+      </div>
+      <div class="col">
+        <dt>비활성</dt>
+        <dd>:disabled, .isDisabled</dd>
+      </div>
+    </dl>
+    <div class="l_row">
+      <div class="dropdown">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3 긴텍스트 긴텍스트 긴텍스트</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton isSelected">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3 긴텍스트 긴텍스트 긴텍스트</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md isInvalid">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton isSelected">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3 긴텍스트 긴텍스트 긴텍스트</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md">
+        <button class="dropdownButton" disabled>메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md isDisabled">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+      <div class="dropdown md isReadonly">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">transparent</h4>
+    <div class="l_row">
+      <div class="dropdown md transparent">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3 긴텍스트 긴텍스트 긴텍스트</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">tooltip</h4>
+    <div class="l_row">
+      <div class="dropdown md">
+        <button class="dropdownButton" data-tooltip="매주 목요일 업데이트 됩니다">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">Option divider</h4>
+    <div class="l_row">
+      <div class="dropdown md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+            <li class="menuItemDivider"></li>
+            <li class="menuItem"><button class="menuButton">옵션4</button></li>
+            <li class="menuItem"><button class="menuButton">옵션5</button></li>
+            <li class="menuItemDivider"></li>
+            <li class="menuItem"><button class="menuButton">옵션6</button></li>
+            <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            <li class="menuItem"><button class="menuButton">옵션8</button></li>
+            <li class="menuItem"><button class="menuButton">옵션9</button></li>
+            <li class="menuItem"><button class="menuButton">옵션10</button></li>
+            <li class="menuItemDivider"></li>
+            <li class="menuItem"><button class="menuButton">옵션11</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">Dropdown Multiple</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style</h4>
+    <div class="l_row">
+      <div class="dropdown multiple md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem">
+              <button class="menuButton">Dashboard</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard2</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard3</button>
+            </li>
+            <!-- submenu -->
+            <li class="menuItem hasSubmenu">
+              <button class="menuButton">Products</button>
+              <div class="subMenu">
+                <ul class="subMenuInner">
+                  <li class="menuItem">
+                    <button class="menuButton">Phone</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Tablet</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Watch</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Airpods</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">TV</button>
+                  </li>
+                  <!-- submenu -->
+                  <li class="menuItem hasSubmenu">
+                    <button class="menuButton">Laptop</button>
+                    <div class="subMenu">
+                      <ul class="subMenuInner">
+                        <li class="menuItem">
+                          <button class="menuButton">Macbook</button>
+                        </li>
+                        <li class="menuItem">
+                          <button class="menuButton">Windows</button>
+                        </li>
+                        <!-- submenu -->
+                        <li class="menuItem hasSubmenu">
+                          <button class="menuButton">Gaming</button>
+                          <div class="subMenu">
+                            <ul class="subMenuInner">
+                              <li class="menuItem">
+                                <button class="menuButton">ASUS</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">MSI</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Alienware</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">RTX Series</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Water Cooling</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Settings</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">상단 정렬</h4>
+    <div class="l_row">
+      <div class="dropdown multiple top md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem">
+              <button class="menuButton">Dashboard</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard2</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard3</button>
+            </li>
+            <!-- submenu -->
+            <li class="menuItem hasSubmenu">
+              <button class="menuButton">Products</button>
+              <div class="subMenu">
+                <ul class="subMenuInner">
+                  <li class="menuItem">
+                    <button class="menuButton">Phone</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Tablet</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Watch</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Airpods</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">TV</button>
+                  </li>
+                  <!-- submenu -->
+                  <li class="menuItem hasSubmenu">
+                    <button class="menuButton">Laptop</button>
+                    <div class="subMenu">
+                      <ul class="subMenuInner">
+                        <li class="menuItem">
+                          <button class="menuButton">Macbook</button>
+                        </li>
+                        <li class="menuItem">
+                          <button class="menuButton">Windows</button>
+                        </li>
+                        <!-- submenu -->
+                        <li class="menuItem hasSubmenu">
+                          <button class="menuButton">Gaming</button>
+                          <div class="subMenu">
+                            <ul class="subMenuInner">
+                              <li class="menuItem">
+                                <button class="menuButton">ASUS</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">MSI</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Alienware</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">RTX Series</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Water Cooling</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Settings</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">scroll</h4>
+    <div class="l_row">
+      <div class="dropdown multiple scroll md">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem">
+              <button class="menuButton">Dashboard</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard2</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Dashboard3</button>
+            </li>
+            <!-- submenu -->
+            <li class="menuItem hasSubmenu">
+              <button class="menuButton">Products</button>
+              <div class="subMenu">
+                <ul class="subMenuInner">
+                  <li class="menuItem">
+                    <button class="menuButton">Phone</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Tablet</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Watch</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">Airpods</button>
+                  </li>
+                  <li class="menuItem">
+                    <button class="menuButton">TV</button>
+                  </li>
+                  <!-- submenu -->
+                  <li class="menuItem hasSubmenu">
+                    <button class="menuButton">Laptop</button>
+                    <div class="subMenu">
+                      <ul class="subMenuInner">
+                        <li class="menuItem">
+                          <button class="menuButton">Macbook</button>
+                        </li>
+                        <li class="menuItem">
+                          <button class="menuButton">Windows</button>
+                        </li>
+                        <!-- submenu -->
+                        <li class="menuItem hasSubmenu">
+                          <button class="menuButton">Gaming</button>
+                          <div class="subMenu">
+                            <ul class="subMenuInner">
+                              <li class="menuItem">
+                                <button class="menuButton">ASUS</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">MSI</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Alienware</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">RTX Series</button>
+                              </li>
+                              <li class="menuItem">
+                                <button class="menuButton">Water Cooling</button>
+                              </li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Settings</button>
+            </li>
+            <li class="menuItem">
+              <button class="menuButton">Logout</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">Option</h3>
+  <div class="l_body">
+    <h4 class="l_title">Size</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <div class="dropdown xxl">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown xl">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown lg">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown md2">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown md">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown sm">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+          <div class="dropdownMenu">
+            <ul class="dropdownMenuInner">
+              <li class="menuItem"><button class="menuButton">옵션1</button></li>
+              <li class="menuItem"><button class="menuButton">옵션2</button></li>
+              <li class="menuItem"><button class="menuButton">옵션3</button></li>
+              <li class="menuItem"><button class="menuButton">옵션4</button></li>
+              <li class="menuItem"><button class="menuButton">옵션5</button></li>
+              <li class="menuItem"><button class="menuButton">옵션6</button></li>
+              <li class="menuItem"><button class="menuButton">옵션7</button></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">Size : multiple</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <div class="dropdown multiple xxl">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown multiple xl">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown multiple lg">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown multiple md2">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown multiple md">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+      <div class="l_col">
+        <div class="dropdown multiple sm">
+          <button class="dropdownButton">메뉴 선택</button>
+          <!-- root menu -->
+            <div class="dropdownMenu">
+              <ul class="dropdownMenuInner">
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard2</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Dashboard3</button>
+                </li>
+                <!-- submenu -->
+                <li class="menuItem hasSubmenu">
+                  <button class="menuButton">Products</button>
+                  <div class="subMenu">
+                    <ul class="subMenuInner">
+                      <li class="menuItem">
+                        <button class="menuButton">Phone</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Tablet</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Watch</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">Airpods</button>
+                      </li>
+                      <li class="menuItem">
+                        <button class="menuButton">TV</button>
+                      </li>
+                      <!-- submenu -->
+                      <li class="menuItem hasSubmenu">
+                        <button class="menuButton">Laptop</button>
+                        <div class="subMenu">
+                          <ul class="subMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton">Macbook</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton">Windows</button>
+                            </li>
+                            <!-- submenu -->
+                            <li class="menuItem hasSubmenu">
+                              <button class="menuButton">Gaming</button>
+                              <div class="subMenu">
+                                <ul class="subMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">ASUS</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">MSI</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Alienware</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">RTX Series</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">Water Cooling</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Settings</button>
+                </li>
+                <li class="menuItem">
+                  <button class="menuButton">Logout</button>
+                </li>
+              </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">동적</h3>
+  <div class="l_body">
+    <h4 class="l_title">slected 무효, 이벤트</h4>
+    <div class="l_row">
+      <div class="dropdown md dropdownSet">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton isSelected">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <h4 class="l_title">옵션 리스트 동적 추가</h4>
+    <div class="l_row">
+      <div class="dropdown md dropdownNewMenu">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="dropdown md dropdownNewMenu2">
+        <button class="dropdownButton">메뉴 선택</button>
+        <!-- root menu -->
+        <div class="dropdownMenu">
+          <ul class="dropdownMenuInner">
+            <li class="menuItem"><button class="menuButton">옵션1</button></li>
+            <li class="menuItem"><button class="menuButton">옵션2</button></li>
+            <li class="menuItem"><button class="menuButton">옵션3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">input checkbox</h3>
+  <div class="l_body">
+    <h4 class="l_title">style</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <input type="checkbox" />
+        <input type="checkbox" checked />
+        <input type="checkbox" disabled />
+        <input type="checkbox" checked disabled />
+        <input type="checkbox" class="dash" />
+      </div>
+      <div class="l_col">
+        <input type="checkbox" class="primary" />
+        <input type="checkbox" class="primary" checked />
+        <input type="checkbox" class="primary" disabled />
+        <input type="checkbox" class="primary" checked disabled />
+        <input type="checkbox" class="primary dash" />
+      </div>
+      <div class="l_col">
+        <input type="checkbox" class="gray" />
+        <input type="checkbox" class="gray" checked />
+        <input type="checkbox" class="gray" disabled />
+        <input type="checkbox" class="gray" checked disabled />
+        <input type="checkbox" class="gray dash" />
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">Group</h3>
+  <div class="l_body">
+    <h4 class="l_title">input + label</h4>
+    <div class="l_row">
+      <div class="radios">
+        <span class="itemRadio">
+          <input type="checkbox" />
+          <label>선택1</label>
+        </span>
+        <span class="itemRadio">
+          <input type="checkbox" />
+          <label>선택2</label>
+        </span>
+        <span class="itemRadio">
+          <input type="checkbox" />
+          <label>선택3<br />긴텍스트 긴텍스트(br 사용)</label>
+        </span>
+        <span class="itemRadio">
+          <input type="checkbox" />
+          <label>선택4 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <input type="checkbox" disabled />
+          <label>선택5</label>
+        </span>
+      </div>
+    </div>
+    <h4 class="l_title">label > input</h4>
+    <div class="l_row">
+      <div class="radios">
+        <span class="itemRadio">
+          <label><input type="checkbox" />선택1</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="checkbox" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="checkbox" />선택3<br />긴텍스트 긴텍스트(br 사용)</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="checkbox" />선택4 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="checkbox" disabled />선택5</label>
+        </span>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">Switch</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style</h4>
+    <div class="l_row">
+      <label class="chckboxSwitch">
+        <span class="labelText">월별 BR 펼치기</span>
+        <input type="checkbox" />
+      </label>
+      <label class="chckboxSwitch">
+        <span class="labelText">월별 BR 펼치기</span>
+        <input type="checkbox" checked />
+      </label>
+      <label class="chckboxSwitch">
+        <span class="labelText">월별 BR 펼치기</span>
+        <input type="checkbox" disabled />
+      </label>
+      <label class="chckboxSwitch">
+        <span class="labelText">월별 BR 펼치기</span>
+        <input type="checkbox" disabled checked />
+      </label>
+    </div>
+    <h4 class="l_title">No label</h4>
+    <p class="l_text">두 가지 경우 : label 값을 hidden 하는 경우, 실제 label 값이 없는 경우</p>
+    <div class="l_row">
+      <div class="l_col">
+        <label class="chckboxSwitch hiddenLabel">
+          <span class="labelText">월별 BR 펼치기</span>
+          <input type="checkbox" />
+        </label>
+      </div>
+      <div class="l_col">
+        <span class="chckboxSwitch"><input type="checkbox" /></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">input radio</h3>
+  <div class="l_body">
+    <h4 class="l_title">Style </h4>
+    <div class="l_row">
+      <input type="radio" />
+      <input type="radio" checked />
+      <input type="radio" disabled />
+      <input type="radio" checked disabled />
+    </div>
+  </div>
+  <h3 class="l_title">Group</h3>
+  <div class="l_body">
+    <h4 class="l_title">input + label</h4>
+    <div class="l_row">
+      <div class="radios">
+        <span class="itemRadio">
+          <input type="radio" />
+          <label>선택1</label>
+        </span>
+        <span class="itemRadio">
+          <input type="radio" />
+          <label>선택2</label>
+        </span>
+        <span class="itemRadio">
+          <input type="radio" />
+          <label>선택3<br />긴텍스트 긴텍스트(br 사용)</label>
+        </span>
+        <span class="itemRadio">
+          <input type="radio" />
+          <label>선택4 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <input type="radio" disabled />
+          <label>선택5</label>
+        </span>
+      </div>
+    </div>
+    <h4 class="l_title">label > input</h4>
+    <div class="l_row">
+      <div class="l_col">
+        <div class="radios">
+          <span class="itemRadio">
+            <label><input type="radio" />선택1</label>
+          </span>
+          <span class="itemRadio">
+            <label><input type="radio" />선택2</label>
+          </span>
+          <span class="itemRadio">
+            <label><input type="radio" />선택3<br />긴텍스트 긴텍스트(br 사용)</label>
+          </span>
+          <span class="itemRadio">
+            <label><input type="radio" />선택4 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+          </span>
+          <span class="itemRadio">
+            <label><input type="radio" disabled />선택5</label>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">radioList</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <ul class="radioList ellipsis">
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>AT서비스 부문</label>
+          </span>
+        </li>
+        <li class="isActive">
+          <input type="checkbox" class="gray"/>
+          <label>Cloud 부문</label>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>제조서비스 부문</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>AT서비스 부문</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>Cloud 부문 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>제조서비스 부문</label>
+          </span>
+        </li>
+      </ul>
+    </div>
+    <div class="l_row">
+      <ul class="radioList ellipsis row step2">
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>AT서비스 부문</label>
+          </span>
+        </li>
+        <li class="isActive">
+          <input type="checkbox" class="gray"/>
+          <label>Cloud 부문</label>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>제조서비스 부문</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>AT서비스 부문</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>Cloud 부문 긴텍스트 긴텍스트 긴텍스트 긴텍스트</label>
+          </span>
+        </li>
+        <li>
+          <span class="itemRadio">
+            <input type="checkbox" class="gray"/>
+            <label>제조서비스 부문</label>
+          </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="l_title">Button Type</h3>
+  <div class="l_body">
+    <h4 class="l_title">.typeButton</h4>
+    <div class="l_row">
+      <div class="radios typeButton">
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButtonA" />선택1</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButtonA" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButtonA" checked/>선택3 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButtonA" />선택4</label>
+        </span>
+      </div>
+    </div>
+    <h4 class="l_title">.typeButton2</h4>
+    <div class="l_row">
+      <div class="radios typeButton2">
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton2A" />선택1</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton2A" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton2A" checked/>선택3 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton2A" />선택4</label>
+        </span>
+      </div>
+    </div>
+    <h4 class="l_title">.typeButton3</h4>
+    <div class="l_row">
+      <div class="radios typeButton3 sm">
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3A" />선택1</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3A" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3A" checked/>선택3 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3A" />선택4</label>
+        </span>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="radios typeButton3 md">
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3B" />선택1</label>
+        </span>
+        <span class="itemRadio highlight">
+          <label><input type="radio" name="radioButton3B" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3B" checked/>선택3 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3B" />선택4</label>
+        </span>
+      </div>
+    </div>
+    <h4 class="l_title">.typeButton4</h4>
+    <div class="l_row">
+      <div class="radios typeButton4">
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3C" />선택1</label>
+        </span>
+        <span class="itemRadio highlight">
+          <label><input type="radio" name="radioButton3C" />선택2</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3C" checked/>선택3 긴텍스트 긴텍스트</label>
+        </span>
+        <span class="itemRadio">
+          <label><input type="radio" name="radioButton3C" />선택4</label>
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <div class="l_header">
+    <h3 class="l_title">input Range</h3>
+    <p class="l_text">script 사용</p>
+    <dl class="l_dlist">
+      <div class="col">
+        <dt>value</dt>
+        <dd>data-value</dd>
+      </div>
+      <div class="col">
+        <dt>disabled</dt>
+        <dd>data-disabled="true"</dd>
+      </div>
+    </dl>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">style</h4>
+    <div class="l_row">
+      <div class="slider" data-min="0" data-max="100" data-value="40" data-disabled="false">
+        <input type="range" class="slider__input" />
+        <div class="slider__track">
+          <div class="slider__fill"></div>
+          <div class="slider__thumb"></div>
+        </div>
+        <div class="slider__value"></div>
+      </div>
+      <div class="slider" data-min="0" data-max="100" data-value="80" data-disabled="true">
+        <input class="slider__input" type="range" />
+        <div class="slider__track">
+          <div class="slider__fill"></div>
+          <div class="slider__thumb"></div>
+        </div>
+        <div class="slider__value"></div>
+      </div>
+    </div>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">적용 사례</h4>
+    <div class="l_row">
+      <div class="rangeItem">
+        <div class="slider" data-min="0" data-max="100" data-value="10" data-disabled="false">
+          <div class="sliderHeader">
+            <div class="titleArea">
+              <label class="rangeLabel">역할</label>
+              <button class="button iconOnly buttonTooltip3" data-tooltip="해당 역할에 대한 경험을 측정합니다.">툴팁</button>
+            </div>
+            <div class="sideArea">
+              <button class="button transparent xs iconOnly buttonLock">잠금</button>
+              <div class="rangeVal slider__value"></div>
+            </div>
+          </div>
+          <div class="sliderBody">
+            <input type="range" class="slider__input" />
+            <div class="slider__track">
+              <div class="slider__fill"></div>
+              <div class="slider__thumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rangeItem">
+        <div class="slider" data-min="0" data-max="100" data-value="10" data-disabled="true">
+          <div class="sliderHeader">
+            <div class="titleArea">
+              <label class="rangeLabel">역할</label>
+              <button class="button iconOnly buttonTooltip3" data-tooltip="해당 역할에 대한 경험을 측정합니다.">툴팁</button>
+            </div>
+            <div class="sideArea">
+              <button class="button transparent xs iconOnly buttonLock isActive">잠금</button>
+              <div class="rangeVal slider__value"></div>
+            </div>
+          </div>
+          <div class="sliderBody">
+            <input type="range" class="slider__input" />
+            <div class="slider__track">
+              <div class="slider__fill"></div>
+              <div class="slider__thumb"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="l_article">
+  <h3 class="l_title">파일 업로드</h3>
+  <div class="l_body">
+    <h4 class="l_title">input file</h4>
+    <div class="l_row">
+      <label class="fileUploadLabel icon1">
+        <input type="file">
+        <span class="labelText">파일을 드래그하거나 클릭하여 업로드 하세요.</span>
+      </label>
+    </div>
+    <div class="l_row">
+      <div class="fileUploaded">
+        <ul>
+          <li>
+            <span class="thumb"><img src="/assets/images/temp/actionItem_1.jpg"></span>
+            <button type="button" class="button transparent iconOnly sm buttonDel">삭제</button>
+          </li>
+          <li>
+            <span class="thumb"><img src="/assets/images/temp/actionItem_1.jpg" style="transform: rotate(90deg);"></span>
+            <button type="button" class="button transparent iconOnly sm buttonDel">삭제</button>
+          </li>
+          <li>
+            <span class="thumb"><img src="/assets/images/temp/actionItem_1.jpg"></span>
+            <button type="button" class="button transparent iconOnly sm buttonDel">삭제</button>
+          </li>
+          <li>
+            <span class="thumb"><img src="/assets/images/temp/actionItem_1.jpg"></span>
+            <button type="button" class="button transparent iconOnly sm buttonDel">삭제</button>
+          </li>
+        </ul>
+        <label class="fileUploadLabel icon1">
+          <input type="file">
+          <span class="labelText">이미지 업로드</span>
+        </label>
+      </div>
+    </div>
+  </div>
+  <div class="l_body">
+    <h4 class="l_title">button</h4>
+    <div class="l_row">
+      <div class="fileUploadBox">
+        <div class="innerHeader">
+          <strong class="innerTitle">파일 첨부</strong>
+          <span class="innerText">엑셀(.xlsx, .xls) 파일만 업로드 가능합니다. 최대 10MB.</span>
+        </div>
+        <div class="innerBody">
+          <button type="button" class="buttonUploadBox">파일을 드래그하거나 클릭하여 업로드 하세요.</button>
+        </div>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="itemFileBox mono">
+          <span class="itemFile mono xlsx">AI index 2025 주요내용과 시사점을 담은 Report</span>
+          <button type="button" class="button transparent xs iconOnly buttonDelete8">삭제</button>
+        </div>
+    </div>
+    <div class="l_row">
+      <span class="itemFile basic xlsx">AI index 2025 주요내용과 시사점을 담은 Report</span>
+    </div>
+  </div>
+</div>

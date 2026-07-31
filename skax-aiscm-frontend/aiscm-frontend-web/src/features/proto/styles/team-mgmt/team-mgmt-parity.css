@@ -1,0 +1,232 @@
+.team-mgmt__pre {
+  margin: 0;
+  max-height: 20rem;
+  overflow: auto;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  padding: 0.75rem;
+  background: var(--color-surface-muted, #f4f4f5);
+  border-radius: 6px;
+}
+
+.team-mgmt__table-wrap {
+  overflow-x: auto;
+}
+
+.team-mgmt__row-btns {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: flex-end;
+}
+
+.team-mgmt__name-cell {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.team-mgmt__badge {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  background: var(--color-info-bg, #e0f2fe);
+  color: var(--color-text, #0f172a);
+}
+
+.team-mgmt__hint {
+  line-height: 1.45;
+}
+
+.team-mgmt__summary {
+  line-height: 1.5;
+}
+
+.team-mgmt__grid {
+  align-items: stretch;
+}
+
+.team-mgmt__err {
+  color: var(--color-danger);
+  font-size: 12px;
+  margin: 8px 0 0;
+}
+
+.team-mgmt__busy {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 4px 0 0;
+}
+
+.team-mgmt-modal-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.team-mgmt-match-modal {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+}
+
+.team-mgmt-match-modal__summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.team-mgmt-match-modal__eyebrow {
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.team-mgmt-match-modal__title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 2px;
+}
+
+.team-mgmt-match-modal__meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+.team-mgmt-match-modal__weights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-elevated);
+}
+
+.team-mgmt-match-modal__hint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.team-mgmt-match-modal__empty {
+  padding: 20px;
+  text-align: center;
+  border: 1px dashed var(--color-border);
+  border-radius: 10px;
+  color: var(--color-text-muted);
+  background: var(--color-bg-elevated);
+}
+
+.team-mgmt-match-modal__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.team-mgmt-match-modal__footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 12px;
+  margin-top: 4px;
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-surface);
+}
+
+.team-mgmt-match-modal__footer-meta {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.team-mgmt-match-card__toggle {
+  border: 0;
+  background: transparent;
+  color: var(--color-text-muted);
+  cursor: pointer;
+  font-size: 11px;
+}
+
+.team-mgmt-match-card__blocked {
+  font-size: 10px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  background: var(--red-light);
+  color: var(--red);
+  font-weight: 700;
+}
+
+.team-mgmt-match-card__risk {
+  margin-top: 6px;
+  padding: 6px 10px;
+  background: var(--red-light);
+  border: 1px solid color-mix(in srgb, var(--red) 30%, transparent);
+  border-radius: 6px;
+  font-size: 11px;
+  color: var(--red);
+}
+
+.team-mgmt-match-card__meta {
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text3);
+}
+
+.team-mgmt-confirm {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.team-mgmt-confirm__title {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.team-mgmt-confirm__meta,
+.team-mgmt-confirm__body {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.team-mgmt-confirm__scores {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.team-mgmt-confirm__scores span {
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: var(--color-primary-soft);
+  color: var(--color-text);
+  font-size: 12px;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .team-mgmt-match-modal__summary {
+    flex-direction: column;
+  }
+
+  .team-mgmt-match-modal__weights {
+    grid-template-columns: 1fr;
+  }
+
+  .team-mgmt-match-modal__footer {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

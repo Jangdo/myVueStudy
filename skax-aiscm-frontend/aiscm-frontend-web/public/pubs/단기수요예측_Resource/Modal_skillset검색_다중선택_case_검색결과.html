@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 검색하기 -->
+                <div class="dimmed">
+                  <div class="modal sm hgtMd">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">Skill-set 검색</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="searchFilter">
+                        <div class="row">
+                          <div class="fieldBox lg">
+                            <div class="dropdown">
+                              <button class="dropdownButton">Skill-set명</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="inputBox">
+                              <input type="text" placeholder="검색어 입력" />
+                              <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                            </div>
+                            <div class="sideArea">
+                              <button type="button" class="button iconOnly buttonSearch">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="tables flex1">
+                        <div class="cmnHeader md">
+                          <div class="cmnHeaderTitleArea">
+                            <h2 class="cmnHeaderTitle sm">Skill-set 목록<span class="cmnHeaderCount"><strong class="cmnHeaderCountNumber2">(56건)</strong></span></h2>
+                          </div>
+                        </div>
+                        
+                        <!-- case : 검색결과 -->
+                        <table class="table type2 stripe">
+                          <colgroup>
+                            <col style="width: 40px" />
+                            <col style="width: 60px" />
+                            <col style="width: 50%" />
+                            <col style="width: 50%" />
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>선택</th>
+                              <th>No</th>
+                              <th>직무</th>
+                              <th>Skill-set</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td><input type="checkbox" checked /></td>
+                              <td>9000</td>
+                              <td>Software Development</td>
+                              <td>Front-end Developmen</td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" /></td>
+                              <td>9000</td>
+                              <td>Software Development</td>
+                              <td>Front-end Developmen</td>
+                            </tr>
+                            <tr>
+                              <td><input type="checkbox" /></td>
+                              <td>9000</td>
+                              <td>Software Development</td>
+                              <td>Front-end Developmen</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <!-- //case : 검색결과 -->
+
+                        <div class="setItemSelected">
+                          <span class="itemSelected">AT서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                          <span class="itemSelected">제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                          <span class="itemSelected">AT서비스 제조서비스 제조서비스 부문<button type="button" class="button iconOnly buttonDelete">삭제</button></span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button assistive outlined xl">취소</button>
+                        <button type="button" class="button primary solid xl">선택</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 검색하기 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

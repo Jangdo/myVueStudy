@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+<style>
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+}
+.drops {
+  display: flex;
+  gap: 20px;
+}
+.drags {
+  display: flex;
+  gap: 20px;
+}
+.dropArea,
+.dragArea {
+  width: 400px;
+  min-height: 500px;
+}
+h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+/*
+==========================
+Drop Area
+==========================
+*/
+.dropTarget {
+  min-height: 400px;
+  padding: 20px;
+  border: 2px dashed #aaa;
+  background: #fff;
+}
+.dropTarget.drag-over {
+  border-color: #3182ce;
+  background: #ebf8ff;
+  border: 2px solid red;
+}
+.emptyMessage {
+  color: #999;
+  text-align: center;
+}
+
+/*
+==========================
+Drag Item
+==========================
+*/
+.dragTarget {
+  margin-bottom: 15px;
+  cursor: default;
+}
+.dragTarget.dragging {
+  opacity: .5;
+  border: 2px solid blue;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.08);
+  overflow: hidden;
+}
+.cardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 15px;
+  background: #2d3748;
+  color: white;
+}
+.cardBody {
+  padding: 20px;
+  color: #333;
+}
+
+/*
+==========================
+Buttons
+==========================
+*/
+button {
+  border: 0;
+  cursor: pointer;
+}
+.dragButton {
+  width: 32px;
+  height: 28px;
+  background: rgba(255,255,255,.15);
+  color:white;
+  border-radius:4px;
+}
+.dragButton:hover {
+  background: rgba(255,255,255,.3);
+}
+.dragDeleteButton {
+  margin-left:auto;
+  padding:5px 10px;
+  border-radius:4px;
+  background:#e53e3e;
+  color:white;
+}
+.dragDeleteButton:hover {
+  background:#c53030;
+}
+
+/*
+==========================
+Sort Placeholder
+==========================
+*/
+.drag-placeholder {
+  height:80px;
+  margin-bottom:15px;
+  border:2px dashed #3182ce;
+  background:#ebf8ff;
+}
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="drops">
+    <div class="dropContainer" data-dropContainer data-group="todo">
+      <!-- Drop Area -->
+      <section class="dropArea">
+        <h2>Drop Area</h2>
+        <div class="dropTarget" data-dropTarget>
+          <div class="emptyArea" data-emptyArea>
+            <p class="emptyMessage">여기에 드롭하세요.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="dropContainer" data-dropContainer data-group="progress">
+      <!-- Drop Area -->
+      <section class="dropArea">
+        <h2>Drop Area</h2>
+        <div class="dropTarget" data-dropTarget>
+          <div class="emptyArea" data-emptyArea>
+            <p class="emptyMessage">여기에 드롭하세요.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    
+    <div class="dropContainer" data-dropContainer data-group="done">
+      <!-- Drop Area -->
+      <section class="dropArea">
+        <h2>Drop Area</h2>
+        <div class="dropTarget" data-dropTarget>
+          <div class="emptyArea" data-emptyArea>
+            <p class="emptyMessage">여기에 드롭하세요.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <div class="drags">
+    <!-- Drag Area -->
+    <section class="dragArea">
+      <h2>Drag Area</h2>
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton> ☰</button>
+            <span>제목 1</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+              내용 1
+          </div>
+        </div>
+      </div>
+    
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton>☰</button>
+            <span>제목 2</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+            내용 2
+          </div>
+        </div>
+      </div>
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton> ☰</button>
+            <span>제목 3</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+            내용 3
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Drag Area -->
+    <section class="dragArea">
+      <h2>Drag Area</h2>
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton> ☰</button>
+            <span>제목 1</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+              내용 1
+          </div>
+        </div>
+      </div>
+    
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton>☰</button>
+            <span>제목 2</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+            내용 2
+          </div>
+        </div>
+      </div>
+      <div class="dragTarget" data-dragTarget>
+        <div class="card">
+          <div class="cardHeader">
+            <button type="button" class="dragButton" data-dragButton> ☰</button>
+            <span>제목 3</span>
+            <button type="button" class="dragDeleteButton" data-dragDeleteButton>삭제</button>
+          </div>
+          <div class="cardBody">
+            내용 3
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+</section>
+
+<script>
+function saveComplete(){
+  console.log('save');
+}
+const dragDrop = new DragDrop({
+  dragSelector: '[data-dragTarget]',
+  dropSelector: '[data-dropTarget]',
+  containerSelector: '[data-dropContainer]',
+  handleSelector: '[data-dragButton]',
+  deleteSelector: '[data-dragDeleteButton]'
+});
+
+// Drop 완료
+dragDrop.on('drop', ({dragItem, dropTarget, dropContainer, group, count}) => {
+  console.log('drop');
+  console.log(count);
+  console.log(dropContainer.dataset.id);
+
+  updateEmptyState(dropContainer, count);
+
+  if(group === 'todo') {
+    const count = dropTarget.children.length;
+    if(count > 5){
+      alert('Todo는 최대 5개입니다.');
+
+      return;
+    }
+  }
+
+  if(group === 'done'){
+    saveComplete(dragItem.dataset.id);
+  }
+});
+
+// 순서 변경
+dragDrop.on('sort', ({item}) => {console.log('sort', item);});
+dragDrop.on('sort', ({group})=>{console.log('정렬 그룹:', group);});
+
+// 삭제
+dragDrop.on('delete', ({item, group, dropContainer,  count}) => {
+  console.log('delete', item, group, count);
+  if(!dropContainer) return;
+  updateEmptyState(dropContainer, count);
+});
+
+function updateEmptyState(dropContainer, count){
+  const emptyArea = dropContainer.querySelector('[data-emptyArea]');
+  emptyArea.style.display = count === 0 ? 'block' : 'none';
+}
+</script>
+</body>
+</html>

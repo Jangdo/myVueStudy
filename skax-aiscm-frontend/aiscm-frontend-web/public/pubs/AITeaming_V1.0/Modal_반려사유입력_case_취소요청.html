@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal :  -->
+                <div class="dimmed">
+                  <div class="modal xs ofv">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">반려 사유 입력</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="fieldsets">
+                        <dl class="fieldset type1 lg">
+                          <div class="col typeReturnReason">
+                            <dt><label>반려 사유</label></dt>
+                            <dd>
+                              <div class="fieldBox md2 typeTextarea lg">
+                                <textarea cols="50" rows="2" placeholder="반려 사유를 10자 이상 입력해주세요."></textarea>
+                                <div class="fieldBoxFooter">
+                                  <!-- 상태 설명 ==============================
+                                    - invalid : .count
+                                    - valid : .count + .isValid
+                                  ============================== -->
+                                  <span class="count isValid">12/10</span>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                      </div>
+                      
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button assistive outlined xl">취소</button>
+                        <button type="button" class="button primary solid xl" disabled>반려</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal :  -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

@@ -1,0 +1,29 @@
+.card {
+  border: 1px solid #dfe3ec;
+  border-radius: 10px;
+  background: #ffffff;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #101828;
+  line-height: 1.4;
+}
+
+.body {
+  min-height: 40px;
+  border-radius: 8px;
+  background: #f8fafc;
+  border: 1px dashed #d0d7e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 12px;
+}

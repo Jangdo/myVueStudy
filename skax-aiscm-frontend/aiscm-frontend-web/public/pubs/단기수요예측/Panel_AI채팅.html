@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <button type="button" class="button primary outlined sm iconPre buttonAi" onclick="openPanel('panelChat')">AI 브리핑 보기</button>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat isOpen">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panelBody">
+          <section class="chatWrap">
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">올해 예상 BR 분석을 시작합니다. </p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="nodataBox typeLoading">
+                    <div class="innerBody">
+                      <i class="spinner"></i>
+                      <span class="title">실적 데이터 확인</span>
+                      <span class="text">지금까지의 BR 데이터를 확인합니다.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+            
+            <!-- case1 : 당해년 AI 브리핑 -->
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">올해 예상 BR은 79%입니다.<br />해당 지표는 계획 대비 <span class="rateIndex isDown">2%</span>, 전년 대비 <span class="rateIndex isDown">0.3%</span> 하회하며 목표 수치와의 격차가 발생하고 있습니다. 계획비 비교 분석을 보시겠습니까?</p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">보기</button>
+                    <button type="button" class="button assistive outlined md round">전년비 비교분석 보기</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+              <div class="chatFooter">
+                <div class="chatMessage">
+                  <span class="chatMessageText">보기</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">올해 예상 BR은 79%입니다.<br />해당 지표는 계획 대비 <span class="rateIndex isUp">2%</span>, 전년 대비 <span class="rateIndex isUp">0.3%</span> 상회하고 있습니다.<br />상세 Action Item 확인을 위해서 S&OP로 이동하시겠어요?</p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">이동</button>
+                    <button type="button" class="button assistive outlined md round">닫기</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+              <div class="chatFooter">
+                <div class="chatMessage">
+                  <span class="chatMessageText">보기</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">현 예상 BR은 당초 계획비인 81%에서 2% 부족한 지표입니다.</p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="card type2">
+                    <div class="brDataSummary mb10">
+                      <div class="objHeader">
+                        <div class="titleArea">
+                          <strong class="objTitle lg">계획비 미달</strong>
+                        </div>
+                      </div>
+                      <div class="objBody">
+                        <div class="row">
+                          <div class="col">
+                            <dl class="dlist">
+                              <div class="row">
+                                <dt>계획비</dt>
+                                <dd><span class="objVal isDown">2.0%</span></dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chartArea">
+                      <span class="tempImg sample"><img src="/assets/images/temp/graph2.jpg" class="" /></span><!-- sample 이미지 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">데이터 심층 분석 결과, 2개의 부문에서 Action Item이 생성되었습니다.</p>
+                </div>
+                <div class="row">
+                  <div class="card type2 flex1">
+                    <dl class="dlist type6">
+                      <div class="row">
+                        <dt>AT서비스 부문</dt>
+                        <dd>올해 8월 BR 예상치가 계획치인 81%에서 <strong class="fontPrimary underline">2% 하락한 79%로 산정</strong>되었습니다.<br />OO 프로젝트 실주가 원인으로 예상됩니다. </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="card type2 flex1">
+                    <dl class="dlist type6">
+                      <div class="row">
+                        <dt>제조서비스 부문</dt>
+                        <dd>올해 8월 BR 예상치가 계획치인 81%에서 <strong class="fontPrimary underline">2% 하락한 79%로 산정</strong>되었습니다.<br />OO프로젝트를 위한 Front-end Development 스킬셋의 인력 부족이 예상됩니다. </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">전년비 비교 분석을 보시겠습니까?</p>
+                </div>
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">보기</button>
+                    <button type="button" class="button assistive outlined md round">S&OP 확인하기</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+              <div class="chatFooter">
+                <div class="chatMessage">
+                  <span class="chatMessageText">보기</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">현 예상 BR은 전년도 실적인 79.3%에서 0.3% 부족한 지표입니다. </p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="card type2">
+                    <div class="brDataSummary mb10">
+                      <div class="objHeader">
+                        <div class="titleArea">
+                          <strong class="objTitle lg">전년 실적 대비 미달</strong>
+                        </div>
+                      </div>
+                      <div class="objBody">
+                        <div class="row">
+                          <div class="col">
+                            <dl class="dlist">
+                              <div class="row">
+                                <dt>전년비</dt>
+                                <dd><span class="objVal isDown">2.0%</span></dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chartArea">
+                      <span class="tempImg sample"><img src="/assets/images/temp/graph2.jpg" class="" /></span><!-- sample 이미지 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">데이터 심층 분석 결과, 2개의 부문에서 Action Item이 생성되었습니다. </p>
+                </div>
+                <div class="row">
+                  <div class="card type2 flex1">
+                    <dl class="dlist type6">
+                      <div class="row">
+                        <dt>AT서비스 부문</dt>
+                        <dd>올해 8월 BR 예상치가 계획치인 81%에서 <strong class="fontPrimary underline">2% 하락한 79%로 산정</strong>되었습니다.<br />OO 프로젝트 실주가 원인으로 예상됩니다. </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">S&OP 확인하기</button>
+                    <button type="button" class="button assistive outlined md round">완료</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+            <!-- //case1 : 당해년 AI 브리핑 -->
+            
+
+            <!-- case3 : M+12 AI 브리핑 -->
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">향후 11개월의 BR을 분석한 결과 26년 8월, 11월의 데이터가 전달보다 2% 하락될 것으로 예상됩니다. 관련한 S&OP를 확인하시겠어요?</p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="card type2">
+                    <div class="brDataSummary mb10">
+                      <div class="objHeader">
+                        <div class="titleArea">
+                          <strong class="objTitle lg">8월 추정 BR</strong>
+                        </div>
+                      </div>
+                      <div class="objBody">
+                        <div class="row">
+                          <div class="col">
+                            <dl class="dlist">
+                              <div class="row">
+                                <dt>전월비</dt>
+                                <dd><span class="objVal isDown">2.0%</span></dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chartArea">
+                      <span class="tempImg sample"><img src="/assets/images/temp/graph2.jpg" class="" /></span><!-- sample 이미지 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="card type2">
+                    <div class="brDataSummary mb10">
+                      <div class="objHeader">
+                        <div class="titleArea">
+                          <strong class="objTitle lg">11월 추정 BR</strong>
+                        </div>
+                      </div>
+                      <div class="objBody">
+                        <div class="row">
+                          <div class="col">
+                            <dl class="dlist">
+                              <div class="row">
+                                <dt>전월비</dt>
+                                <dd><span class="objVal isDown">2.0%</span></dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chartArea">
+                      <span class="tempImg sample"><img src="/assets/images/temp/graph2.jpg" class="" /></span><!-- sample 이미지 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">데이터 심층 분석 결과, 2개의 부문에서 Action Item이 생성되었습니다.</p>
+                </div>
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">S&OP 확인하기</button>
+                    <button type="button" class="button assistive outlined md round">닫기</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+            <!-- //case3 : M+12 AI 브리핑 -->
+
+            <!-- case4 : BR/UR 현황표 경고 선택시 -->
+            <!-- chatGroup -->
+            <div class="chats">
+              <div class="chatHeader">
+                <p class="chatTitle iconTitle iChatSymbol">올해 8월 BR이 전달에 비해 <span class="rateIndex isDown">2%</span> 하락될 것으로 예상됩니다.</p>
+              </div>
+              <div class="chatBody">
+                <div class="row">
+                  <div class="card type2">
+                    <div class="brDataSummary mb10">
+                      <div class="objHeader">
+                        <div class="titleArea">
+                          <strong class="objTitle lg">8월 예상 BR 증감</strong>
+                        </div>
+                      </div>
+                      <div class="objBody">
+                        <div class="row">
+                          <div class="col">
+                            <dl class="dlist">
+                              <div class="row">
+                                <dt>전월비</dt>
+                                <dd><span class="objVal isDown">2.0%</span></dd>
+                              </div>
+                            </dl>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="chartArea">
+                      <span class="tempImg sample"><img src="/assets/images/temp/graph2.jpg" class="" /></span><!-- sample 이미지 -->
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">이를 해결하기 위해서는 다음 부문의 이슈 해결이 필요합니다.</p>
+                </div>
+                <div class="row">
+                  <div class="card type2 flex1">
+                    <dl class="dlist type6">
+                      <div class="row">
+                        <dt>AT서비스 부문</dt>
+                        <dd>올해 8월 BR 예상치가 계획치인 81%에서 <strong class="fontPrimary underline">2% 하락한 79%로 산정</strong>되었습니다.<br />OO 프로젝트 실주가 원인으로 예상됩니다. </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="card type2 flex1">
+                    <dl class="dlist type6">
+                      <div class="row">
+                        <dt>제조서비스 부문</dt>
+                        <dd>올해 8월 BR 예상치가 계획치인 81%에서 <strong class="fontPrimary underline">2% 하락한 79%로 산정</strong>되었습니다.<br />OO프로젝트를 위한 Front-end Development 스킬셋의 인력 부족이 예상됩니다. </dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+                <div class="row">
+                  <p class="chatParagraph md2">추가로 전월비 하락이 예상되는 월입니다. 확인을 하고자 하는 월을 선택해주세요.</p>
+                </div>
+                <div class="row">
+                  <div class="buttons">
+                    <button type="button" class="button assistive outlined md round">11월</button>
+                    <button type="button" class="button assistive outlined md round">12월</button>
+                    <button type="button" class="button assistive outlined md round">S&OP 확인하기</button>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="time">오후 04:46</span>
+                </div>
+              </div>
+              <div class="chatFooter">
+                <div class="chatMessage">
+                  <span class="chatMessageText">11월</span>
+                </div>
+              </div>
+            </div>
+            <!-- //chatGroup -->
+            <!-- //case4 : BR/UR 현황표 경고 선택시 -->
+
+          </section>
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// panel size 조절
+new flexablePanel();
+</script>
+</html>

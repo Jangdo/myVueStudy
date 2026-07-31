@@ -1,0 +1,67 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 23, 42, 0.22);
+}
+
+.overlayCard {
+  min-width: 280px;
+  max-width: 420px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #d8dee8;
+  background: #ffffff;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+  color: #0f172a;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  border: 2px solid #dbe4f0;
+  border-top-color: #2563eb;
+  animation: spin 0.9s linear infinite;
+  flex-shrink: 0;
+}
+
+.message {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.errorCard {
+  min-width: 320px;
+  max-width: 460px;
+  padding: 18px 20px;
+  border-radius: 12px;
+  border: 1px solid #f3c6c6;
+  background: #fff8f8;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.15);
+}
+
+.errorTitle {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 700;
+  color: #b42318;
+}
+
+.errorMessage {
+  margin: 6px 0 0;
+  font-size: 13px;
+  color: #7a271a;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

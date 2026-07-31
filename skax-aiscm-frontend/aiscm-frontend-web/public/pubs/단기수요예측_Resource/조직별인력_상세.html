@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <button type="button" class="button transparent sm iconOnly buttonBack">뒤로</button>
+                    <h2 class="cmnHeaderTitle lg">조직별 인력 상세</h2>
+                  </div>
+                  <div class="itemDepth skill2">
+                    <span class="item">부문 1</span>
+                    <span class="item">본부 1</span>
+                    <span class="item"><strong>팀 1</strong></span>
+                  </div>
+                </div>
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader sm">
+                      <div class="cmnHeaderTitleArea">
+                        <div class="buttons">
+                          <button type="button" class="button filter2 md isActive">26/05</button>
+                          <button type="button" class="button filter2 md">26/06</button>
+                          <button type="button" class="button filter2 md highlight">26/07</button>
+                          <button type="button" class="button filter2 md">26/08</button>
+                          <button type="button" class="button filter2 md">26/09</button>
+                          <button type="button" class="button filter2 md highlight">26/10</button>
+                          <button type="button" class="button filter2 md">26/11</button>
+                          <button type="button" class="button filter2 md">26/12</button>
+                          <button type="button" class="button filter2 md">27/01</button>
+                          <button type="button" class="button filter2 md">27/02</button>
+                          <button type="button" class="button filter2 md">27/03</button>
+                          <button type="button" class="button filter2 md highlight">27/04</button>
+                        </div>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <button type="button" class="button inputBtn iconSearch">조직을 선택하세요.</button>
+                      </div>
+                    </div>
+                    <div class="card type2">
+                      <div class="cards lg">
+                        <div class="chartArea">
+                          <span class="tempImg sample"><img src="/assets/images/temp/graph.jpg" class=""></span><!-- sample 이미지 -->
+                        </div>
+                        <div class="tables">
+                          <table class="table data border">
+                            <colgroup>
+                              <col style="width: auto;">
+                              <col style="width: 135px;">
+                              <col style="width: 135px;">
+                              <col style="width: 135px;">
+                              <col style="width: 135px;">
+                              <col style="width: 135px;">
+                            </colgroup>
+                            <thead>
+                              <tr>
+                                <th scope="col"><span>Skill-set</span></th>
+                                <th scope="col"><span>Lv.1</span></th>
+                                <th scope="col"><span>Lv.2</span></th>
+                                <th scope="col"><span>Lv.3</span></th>
+                                <th scope="col"><span>Lv.4</span></th>
+                                <th scope="col"><span>총 인원</span></th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr class="trAccordionHeader bg">
+                                <th colspan="6" class="cellDepth1">
+                                  <span>
+                                    <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-1', 'table-row')">Software Development</button>
+                                  </span>
+                                </th>
+                              </tr>
+                              <tr data-toggleGroup="groupA-1">
+                                <td><span>Front-end Development</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                              <tr data-toggleGroup="groupA-1">
+                                <td><span>Back-end Development</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                              <tr data-toggleGroup="groupA-1">
+                                <td><span>Mobile Development</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                              <tr class="trAccordionHeader bg">
+                                <th colspan="6" class="cellDepth1">
+                                  <span>
+                                    <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-2', 'table-row')">Factory AX Engineering</button>
+                                  </span>
+                                </th>
+                              </tr>
+                              <tr data-toggleGroup="groupA-2">
+                                <td><span>Simulation</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                              <tr data-toggleGroup="groupA-2">
+                                <td><span>기구설계</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                              <tr data-toggleGroup="groupA-2">
+                                <td><span>전장/제어</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                                <td><span>00</span></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <div class="panel right panelChat">
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">인력 투입 현황</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panelBody">
+          panel
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // switch toggle
+  initCheckToggleItems();
+});
+</script>
+</html>

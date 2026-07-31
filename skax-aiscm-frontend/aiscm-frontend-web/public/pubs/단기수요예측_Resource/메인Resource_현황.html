@@ -1,0 +1,2212 @@
+<!doctype html>
+<html lang="kor">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader xl">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">Resource 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <span class="cmnHeaderText2">26년 4월 5주차 기준</span>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader md">
+                      <div class="cmnHeaderTitleArea">
+                        <button class="button buttonTitle h2">전사</button>
+                      </div>
+                    </div>
+                    <div class="cards xxl">
+                      <div class="card type2 gapMd2">
+                        <div class="accordions type1 typeMemberUseStatus" data-ui="accordions">
+                          <div class="accordion">
+                            <div class="accordionHeader">
+                              <div class="cmnHeader">
+                                <div class="cmnHeaderTitleArea">
+                                  <h3 class="cmnHeaderTitle">인력 활용 현황</h3>
+                                  <label class="chckboxSwitch">
+                                    <span class="labelText show">하위 조직 정보 펼치기</span>
+                                    <span class="labelText" data-ui="accordionTriggerLabel"></span>
+                                    <input type="checkbox" data-ui="accordionTrigger" />
+                                  </label>
+                                </div>
+                                <div class="cmnHeaderSideArea">
+                                  <a href="#none" class="buttonLink normal">Skill-set별 투입 인력 현황</a>
+                                  <a href="#none" class="buttonLink normal">팀별 투입 인력 현황</a>
+                                </div>
+                              </div>
+                              <div class="memberUseStatus">
+                                <!-- graph -->
+                                <div class="chartArea">
+                                  <span class="tempImg sample"><img src="/assets/images/temp/graph_donut1.jpg" class="" /></span><!-- sample 이미지 -->
+                                </div>
+                                <div class="statusGroup">
+                                  <div class="cardInfor typeMemberUseStatus bg">
+                                    <div class="itemHeader">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt class="remark case1">B</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                    <div class="itemBody">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt>확보 B</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                  <div class="cardInfor typeMemberUseStatus bg">
+                                    <div class="itemHeader">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt class="remark case2">U</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                    <div class="itemBody">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt>Pre-sales</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>과제</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>투자</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>제안</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                  <div class="cardInfor typeMemberUseStatus bg">
+                                    <div class="itemHeader">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt class="remark case3"><button type="button" class="button transparent buttonLink normal">NU</button></dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                    <div class="itemBody">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt>1달 이내</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>2달 이내</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>2달 이상</dt>
+                                          <dd>
+                                            <span class="text rate">14%</span>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                  <div class="cardInfor typeMemberUseStatus bg">
+                                    <div class="itemHeader">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt class="remark case4">제외</dt>
+                                          <dd>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                    <div class="itemBody">
+                                      <dl class="dlist">
+                                        <div class="row">
+                                          <dt>휴직</dt>
+                                          <dd>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>촉탁해지</dt>
+                                          <dd>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                        <div class="row">
+                                          <dt>파견(풀타임)</dt>
+                                          <dd>
+                                            <span class="text count">1,392명</span>
+                                          </dd>
+                                        </div>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="accordionBody">
+                              <!-- table area -->
+                              <div class="scrollContainer">
+                                <div class="cmnHeader sm">
+                                  <div class="cmnHeaderSideArea">
+                                    <span class="text">단위 : 명</span>
+                                  </div>
+                                </div>
+                                <div class="tables tablesScrollX caseResourceStatus">
+                                  <table class="table data border thBorder"><!-- 수정 : 클래스 추가 -->
+                                    <thead>
+                                      <tr>
+                                        <th rowspan="2" class="fixedCell left1 cellDepth1"><span>조직</span></th>
+                                        <th rowspan="2"><span>총원</span></th>
+                                        <th><span>B</span></th>
+                                        <th colspan="4"><span>U</span></th>
+                                        <th colspan="3"><span>NU</span></th>
+                                        <th colspan="3"><span>제외</span></th>
+                                      </tr>
+                                      <tr>
+                                        <th><span>확보 B</span></th>
+                                        <!-- th group : U -->
+                                        <th><span>사업개발</span></th>
+                                        <th><span>과제</span></th>
+                                        <th><span>영업지원</span></th>
+                                        <th><span>제안</span></th>
+    
+                                        <!-- th group : NU -->
+                                        <th><span>1달 이내</span></th>
+                                        <th><span>2달 이내</span></th>
+                                        <th><span>2달 이상</span></th>
+    
+                                        <!-- th group : 제외 -->
+                                        <th><span>휴직</span></th>
+                                        <th><span>촉탁 해지</span></th>
+                                        <th><span>파견(풀타임)</span></th>
+                                      </tr>
+                                    </thead>
+    
+                                    <!-- tbody : groupA-Depth1 -->
+                                    <tbody>
+                                      <tr>
+                                        <th class="fixedCell left1 cellDepth1"><span>전사</span></th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                    </tbody>
+    
+                                    <!-- toggleGroup : 부문1 -->
+                                    <tbody>
+                                      <tr>
+                                        <th class="fixedCell left1 cellDepth1">
+                                          <span>
+                                            <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1', 'table-row-group')">부문 1</button>
+                                          </span>
+                                        </th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                    </tbody>
+                                    <tbody data-toggleGroup="groupA-Depth1">
+                                      <!-- toggleGroup : 부문1 > 본부1 -->
+                                      <tr>
+                                        <th class="fixedCell left1 cellDepth2">
+                                          <span>
+                                            <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1-inner1', 'table-row')">본부 1</button>
+                                          </span>
+                                        </th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <tr data-toggleGroup="groupA-Depth1-inner1">
+                                        <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <tr data-toggleGroup="groupA-Depth1-inner1">
+                                        <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <!-- toggleGroup : 부문1 > 본부1 -->
+    
+                                      <!-- toggleGroup : 부문1 > 본부2 -->
+                                      <tr>
+                                        <th class="fixedCell left1 cellDepth2">
+                                          <span>
+                                            <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1-inner2', 'table-row')">본부 2</button>
+                                          </span>
+                                        </th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <tr data-toggleGroup="groupA-Depth1-inner2">
+                                        <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <tr data-toggleGroup="groupA-Depth1-inner2">
+                                        <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                        <td><span>3,021</span></td>
+                                        <td><span>192</span></td>
+                                        
+                                        <!-- th group : U -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                        <td><span>1,594</span></td>
+    
+                                        <!-- th group : NU -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+    
+                                        <!-- th group : 제외 -->
+                                        <td><span>1,554</span></td>
+                                        <td><span>354</span></td>
+                                        <td><span>1,134</span></td>
+                                      </tr>
+                                      <!-- toggleGroup : 부문1 > 본부2 -->
+                                    </tbody>
+                                    <!-- //toggleGroup : 부문1 -->
+                                  </table>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+    
+                      <div class="card type2 gapMd2">
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle md">Skill-set 기준 수요 공급 예상</strong>
+                            <button class="button iconOnly buttonTooltip4" role="tooltip" data-tooltip="선택한 월 1일의 과부족인원(MM)을 | 기준으로 오름차순 정렬됩니다.">툴팁</button>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <a href="#none" class="buttonLink normal">상세 보기</a>
+                          </div>
+                        </div>
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <div class="buttons">
+                              <button type="button" class="button filter2 ">26/05</button>
+                              <button type="button" class="button filter2">26/06</button>
+                              <button type="button" class="button filter2 highlight">26/07</button>
+                              <button type="button" class="button filter2">26/08</button>
+                              <button type="button" class="button filter2 isActive">26/09</button>
+                              <button type="button" class="button filter2 highlight">26/10</button>
+                              <button type="button" class="button filter2">26/11</button>
+                              <button type="button" class="button filter2">26/12</button>
+                              <button type="button" class="button filter2">27/01</button>
+                              <button type="button" class="button filter2">27/02</button>
+                              <button type="button" class="button filter2">27/03</button>
+                              <button type="button" class="button filter2 highlight">27/04</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="summaryInforLists">
+                          <ul class="cmnEventList scrollX summaryInforList">
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton isActive">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <span class="text">Software Development</span>
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- graph -->
+                        <div class="chartArea">
+                          <span class="tempImg sample"><img src="/assets/images/temp/graph3.jpg" class="" /></span><!-- sample 이미지 -->
+                        </div>
+
+                        <!-- table area -->
+                        <div class="scrollContainer">
+                          <div class="tables tablesScrollX caseResourceStatus">
+                            <table class="table data border">
+                              <thead>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>구분</span></th>
+                                  <th><span>5월</span></th>
+                                  <th><span>6월</span></th>
+                                  <th><span>7월</span></th>
+                                  <th><span>8월</span></th>
+                                  <th><span>9월</span></th>
+                                  <th><span>10월</span></th>
+                                  <th><span>11월</span></th>
+                                  <th><span>12월</span></th>
+                                  <th><span>27년 1월</span></th>
+                                  <th><span>2월</span></th>
+                                  <th><span>3월</span></th>
+                                  <th><span>4월</span></th>
+                                </tr>
+                              </thead>
+                              <!-- toggleGroup : 부문1 -->
+                              <tbody>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1">
+                                    <span>
+                                      <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupB-Depth1', 'table-row-group')">Pipeline (억원)</button>
+                                    </span>
+                                  </th>
+                                  <td><span>3,021</span></td>
+                                  <td><span>192</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,594</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                </tr>
+                              </tbody>
+                              <!-- toggleGroup -->
+                              <tbody data-toggleGroup="groupB-Depth1">
+                                <tr data-toggleGroup="groupB-Depth1-inner1">
+                                  <th class="fixedCell left1 cellDepth2"><span>인력 배정</span></th>
+                                  <td><span>3,021</span></td>
+                                  <td><span>192</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,594</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                </tr>
+                                <tr data-toggleGroup="groupB-Depth1-inner1">
+                                  <th class="fixedCell left1 cellDepth2"><span>인력 미배정</span></th>
+                                  <td><span>3,021</span></td>
+                                  <td><span>192</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,594</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                </tr>
+                              </tbody>
+                              <!-- toggleGroup -->
+                              <tbody>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>수요 (명)</span></th>
+                                  <td><span>3,021</span></td>
+                                  <td><span>192</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,594</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                </tr>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>공급 (명)</span></th>
+                                  <td><span>3,021</span></td>
+                                  <td><span>192</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,594</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                  <td><span>1,554</span></td>
+                                  <td><span>354</span></td>
+                                  <td><span>1,134</span></td>
+                                </tr>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>과부족인력 (명)</span></th>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isUp">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                  <td><span><span class="rateIndex isDown">2%</span></span></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+     
+                      <div class="card type2 gapMd2">
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle md">조직별 상세 현황</strong>
+                            <button class="button iconOnly buttonTooltip4" role="tooltip" data-tooltip="조직별로 부족 혹은 초과 예상 인력을 기준으로 내림차순 정렬됩니다.">툴팁</button>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <a href="#none" class="buttonLink normal">상세 보기</a>
+                          </div>
+                        </div>
+    
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <div class="buttons">
+                              <button type="button" class="button filter2 ">26/05</button>
+                              <button type="button" class="button filter2">26/06</button>
+                              <button type="button" class="button filter2 highlight">26/07</button>
+                              <button type="button" class="button filter2">26/08</button>
+                              <button type="button" class="button filter2 isActive">26/09</button>
+                              <button type="button" class="button filter2 highlight">26/10</button>
+                              <button type="button" class="button filter2">26/11</button>
+                              <button type="button" class="button filter2">26/12</button>
+                              <button type="button" class="button filter2">27/01</button>
+                              <button type="button" class="button filter2">27/02</button>
+                              <button type="button" class="button filter2">27/03</button>
+                              <button type="button" class="button filter2 highlight">27/04</button>
+                            </div>
+                          </div>
+                          <div class="cmnHeaderSideArea">
+                            <label class="chckboxSwitch">
+                              <span class="labelText">가용 인력 기준으로 보기</span>
+                              <input type="checkbox" />
+                            </label>
+                          </div>
+                        </div>
+                        
+                        <div class="summaryInforLists">
+                          <ul class="cmnEventList scrollX summaryInforList">
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton isActive">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeSkillStatus bg">
+                                  <div class="itemHeader">
+                                    <strong class="title">Front-end Development</strong>
+                                  </div>
+                                  <div class="itemBody">
+                                    <dl class="dlist type9">
+                                      <div class="row">
+                                        <dt>부족인력</dt>
+                                        <dd><span class="rateIndex isDown">2명</span></dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>가용인력</dt>
+                                        <dd><span class="rateIndex isUp">2명</span></dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+
+                        <!-- graph -->
+                        <div class="chartArea">
+                          <span class="tempImg sample"><img src="/assets/images/temp/graph4.jpg" class="" /></span><!-- sample 이미지 -->
+                        </div>
+
+                        <!-- graph -->
+                        <div class="chartArea">
+                          <span class="tempImg sample"><img src="/assets/images/temp/graph5.jpg" class="" /></span><!-- sample 이미지 -->
+                        </div>
+                      </div>
+
+                      <div class="card type2 gapMd2">
+                        <div class="cmnHeader">
+                          <div class="cmnHeaderTitleArea">
+                            <strong class="cmnHeaderTitle md">총원 계획</strong>
+                          </div>
+                        </div>
+                        <div class="memberPeriodPlan">
+                          <div class="cardInfor typePeriodPlan bg">
+                            <div class="itemHeader">
+                              <strong class="title">연초</strong>
+                            </div>
+                            <div class="itemBody">
+                              <strong class="total">410명</strong>
+                            </div>
+                          </div>
+                          <div class="cardInfor typePeriodPlan bg">
+                            <div class="itemHeader">
+                              <a href="#none" class="buttonLink normal">누적 (1~4월)</a>
+                            </div>
+                            <div class="itemBody">
+                              <dl class="dlist type9">
+                                <div class="row">
+                                  <dt>채용</dt>
+                                  <dd>30</dd>
+                                </div>
+                                <div class="row">
+                                  <dt>퇴사</dt>
+                                  <dd>900</dd>
+                                </div>
+                                <div class="row">
+                                  <dt>이동</dt>
+                                  <dd>0</dd>
+                                </div>
+                              </dl>
+                            </div>
+                          </div>
+                          <div class="cardInfor typePeriodPlan bg isCurrent">
+                            <div class="itemHeader">
+                              <strong class="title">연초</strong>
+                            </div>
+                            <div class="itemBody">
+                              <span class="badge cmnCount">+5명</span>
+                              <strong class="total">410명</strong>
+                            </div>
+                          </div>
+                          <div class="cardInfor typePeriodPlan bg">
+                            <div class="itemHeader">
+                              <a href="#none" class="buttonLink normal">예상 (5월~12월)</a>
+                            </div>
+                            <div class="itemBody">
+                              <dl class="dlist type9">
+                                <div class="row">
+                                  <dt>채용</dt>
+                                  <dd>30</dd>
+                                </div>
+                                <div class="row">
+                                  <dt>퇴사</dt>
+                                  <dd>900</dd>
+                                </div>
+                                <div class="row">
+                                  <dt>이동</dt>
+                                  <dd>0</dd>
+                                </div>
+                              </dl>
+                            </div>
+                          </div>
+                          <div class="cardInfor typePeriodPlan bg">
+                            <div class="itemHeader">
+                              <strong class="title">연말 (추정)</strong>
+                            </div>
+                            <div class="itemBody">
+                              <span class="badge cmnCount">+5명</span>
+                              <strong class="total">410명</strong>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <!-- table area -->
+                        <div class="scrollContainer">
+                          <div class="cmnHeader md">
+                            <div class="cmnHeaderTitleArea">
+                              <strong class="cmnHeaderTitle sm">조직별/월별 상세</strong>
+                            </div>
+                            <div class="cmnHeaderSideArea">
+                              <label class="chckboxSwitch">
+                                <span class="labelText">증감량 보기</span>
+                                <input type="checkbox" />
+                              </label>
+                            </div>
+                          </div>
+                          <div class="tables tablesScrollX caseResourceStatus">
+                            <table class="table data border">
+                              <thead>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>조직</span></th>
+                                  <th><span>1월</span></th>
+                                  <th><span>2월</span></th>
+                                  <th><span>3월</span></th>
+                                  <th><span>4월</span></th>
+                                  <th><span>5월</span></th>
+                                  <th><span>6월</span></th>
+                                  <th><span>7월</span></th>
+                                  <th><span>8월</span></th>
+                                  <th><span>9월</span></th>
+                                  <th><span>10월</span></th>
+                                  <th><span>11월</span></th>
+                                  <th><span>12월</span></th>
+                                </tr>
+                              </thead>
+    
+                              <!-- tbody : groupA-Depth1 -->
+                              <tbody>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1"><span>전사</span></th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"500"},
+                                      {"name":"퇴사", "status":"up", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"100"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+    
+                              <!-- toggleGroup : 부문1 -->
+                              <tbody>
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth1">
+                                    <span>
+                                      <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupC-Depth1', 'table-row-group')">부문 1</button>
+                                    </span>
+                                  </th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                              <tbody data-toggleGroup="groupC-Depth1">
+                                <!-- toggleGroup : 부문1 > 본부1 -->
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth2">
+                                    <span>
+                                      <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupC-Depth1-inner1', 'table-row')">본부 1</button>
+                                    </span>
+                                  </th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <tr data-toggleGroup="groupC-Depth1-inner1">
+                                  <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <tr data-toggleGroup="groupC-Depth1-inner1">
+                                  <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <!-- toggleGroup : 부문1 > 본부1 -->
+    
+                                <!-- toggleGroup : 부문1 > 본부2 -->
+                                <tr>
+                                  <th class="fixedCell left1 cellDepth2">
+                                    <span>
+                                      <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupC-Depth1-inner2', 'table-row')">본부 2</button>
+                                    </span>
+                                  </th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <tr data-toggleGroup="groupC-Depth1-inner2">
+                                  <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <tr data-toggleGroup="groupC-Depth1-inner2">
+                                  <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>3,021</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>192</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,594</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,554</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>354</span>
+                                  </td>
+                                  <td
+                                    role="tooltip"
+                                    data-tooltip-class="tooltip typeArr1"
+                                    data-tooltip-arr='[
+                                      {"name":"채용", "status":"up", "value":"5"},
+                                      {"name":"퇴사", "status":"down", "value":"200"},
+                                      {"name":"이동", "status":"up", "value":"0"}
+                                    ]'
+                                  >
+                                    <span>1,134</span>
+                                  </td>
+                                </tr>
+                                <!-- toggleGroup : 부문1 > 본부2 -->
+                              </tbody>
+                              <!-- //toggleGroup : 부문1 -->
+                            </table>
+                          </div>
+                        </div>
+                        <!-- //table area -->
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Tooltip
+  new Tooltip();
+  new TooltipArray();
+
+  // Accordion
+  Accordion.init();
+
+  // TableScroller
+  new TableScroller({
+    className: 'tablesScrollX'
+  });
+
+  // switch toggle
+  initCheckToggleItems();
+});
+</script>
+</html>

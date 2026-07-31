@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 필터 설정 -->
+                <div class="dimmed">
+                  <div class="modal md">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">조직 선택</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="setItemList">
+                        <div class="setItemListHeader">
+                          <strong class="setItemListHeaderTitle">조직 선택</strong>
+                          <div class="setItemListHeaderSideArea">
+                            <div class="fieldBox">
+                              <div class="inputBox"><!-- 수정 : 태그 추가 -->
+                                <input type="text" placeholder="부서 입력" />
+                                <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                              </div>
+                              <div class="sideArea">
+                                <button type="button" class="button iconOnly buttonSearch">검색</button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- case : 검색 결과 O ============================== -->
+                        <div class="setItemListBody">
+                          <div class="searchResultListWrap">
+                            <ul class="searchResultList">
+                              <li><span class="itemText">SK주식회사<span class="isActive">AX</span></span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> 혁신부문</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                              <li><span class="itemText"><span class="isActive">AX</span> Hi-Tech 1사업본부</span></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <!-- case : 검색 결과 O ============================== -->
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl">선택 적용</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 필터 설정 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+</html>

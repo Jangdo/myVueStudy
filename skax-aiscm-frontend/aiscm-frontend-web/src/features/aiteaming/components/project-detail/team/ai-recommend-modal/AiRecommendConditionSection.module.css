@@ -1,0 +1,113 @@
+.configCard {
+  flex-shrink: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  background-image:
+    linear-gradient(#fff, #fff),
+    linear-gradient(0deg, #8ba2fd 0%, #676cfa 50%, #7bcdfc 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+.configInner {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  padding: 16px;
+}
+
+.configTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 12px;
+}
+
+.configTitleLeft {
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.slidersIcon {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: #101828;
+}
+
+.configTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #101828;
+}
+
+.configRoleTag {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #7c8390;
+  padding-bottom: 1px;
+}
+
+.chevBtn {
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+  color: #5f6675;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.chevBtn:hover {
+  color: #101828;
+}
+
+.configMeta {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.metaBlock {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.metaLabel {
+  font-weight: 600;
+  color: #101828;
+  white-space: nowrap;
+}
+
+.metaValue {
+  font-weight: 400;
+  color: #444b59;
+}
+
+.metaDivider {
+  width: 1px;
+  height: 10px;
+  background: #ccd1d7;
+  flex-shrink: 0;
+  margin-top: 3px;
+}

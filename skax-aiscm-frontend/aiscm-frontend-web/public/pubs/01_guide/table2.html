@@ -1,0 +1,370 @@
+<h2 class="l_title">기타</h2>
+<div class="l_article">
+  <h3 class="l_title">Table > accordion</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="tables">
+        <table class="table data border">
+          <colgroup>
+            <col style="width: auto;">
+            <col style="width: 135px;">
+            <col style="width: 135px;">
+            <col style="width: 135px;">
+            <col style="width: 135px;">
+            <col style="width: 135px;">
+          </colgroup>
+          <thead>
+            <tr>
+              <th scope="col"><span>Skill-set</span></th>
+              <th scope="col"><span>Lv.1</span></th>
+              <th scope="col"><span>Lv.2</span></th>
+              <th scope="col"><span>Lv.3</span></th>
+              <th scope="col"><span>Lv.4</span></th>
+              <th scope="col"><span>총 인원</span></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="trAccordionHeader bg">
+              <th colspan="6" class="cellDepth1">
+                <span>
+                  <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-1', 'table-row')">Software Development</button>
+                </span>
+              </th>
+            </tr>
+            <tr data-toggleGroup="groupA-1">
+              <td><span>Front-end Development</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+              <td><span>00</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="l_row">
+      <div class="tables tablesScrollX caseResourceStatus">
+        <table class="table data border">
+          <thead>
+            <tr>
+              <th rowspan="2" class="fixedCell left1 cellDepth1 borderRight"><span>조직</span></th>
+              <th rowspan="2" class="borderRight"><span>총원</span></th>
+              <th class="borderRight"><span>B</span></th>
+              <th colspan="4" class="borderRight"><span>U</span></th>
+              <th colspan="3" class="borderRight"><span>NU</span></th>
+              <th colspan="3"><span>제외</span></th>
+            </tr>
+            <tr>
+              <th><span>확보 B</span></th>
+              <!-- th group : U -->
+              <th><span>사업개발</span></th>
+              <th><span>과제</span></th>
+              <th><span>영업지원</span></th>
+              <th class="borderRight"><span>제안</span></th>
+
+              <!-- th group : NU -->
+              <th><span>1달 이내</span></th>
+              <th><span>2달 이내</span></th>
+              <th class="borderRight"><span>2달 이상</span></th>
+
+              <!-- th group : 제외 -->
+              <th><span>휴직</span></th>
+              <th><span>촉탁 해지</span></th>
+              <th><span>파견(풀타임)</span></th>
+            </tr>
+          </thead>
+
+          <!-- tbody : groupA-Depth1 -->
+          <tbody>
+            <tr>
+              <th class="fixedCell left1 cellDepth1"><span>전사</span></th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+          </tbody>
+
+          <!-- toggleGroup : 부문1 -->
+          <tbody>
+            <tr>
+              <th class="fixedCell left1 cellDepth1">
+                <span>
+                  <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1', 'table-row-group')">부문 1</button>
+                </span>
+              </th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+          </tbody>
+          <tbody data-toggleGroup="groupA-Depth1">
+            <!-- toggleGroup : 부문1 > 본부1 -->
+            <tr>
+              <th class="fixedCell left1 cellDepth2">
+                <span>
+                  <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1-inner1', 'table-row')">본부 1</button>
+                </span>
+              </th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <tr data-toggleGroup="groupA-Depth1-inner1">
+              <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <tr data-toggleGroup="groupA-Depth1-inner1">
+              <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <!-- toggleGroup : 부문1 > 본부1 -->
+
+            <!-- toggleGroup : 부문1 > 본부2 -->
+            <tr>
+              <th class="fixedCell left1 cellDepth2">
+                <span>
+                  <button type="button" class="button transparent xs iconPre buttonAccordion triangle10 isExpand" onclick="toggleGroup(this, 'groupA-Depth1-inner2', 'table-row')">본부 2</button>
+                </span>
+              </th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <tr data-toggleGroup="groupA-Depth1-inner2">
+              <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <tr data-toggleGroup="groupA-Depth1-inner2">
+              <th class="fixedCell left1 cellDepth3"><span>팀 1</span></th>
+              <td><span>3,021</span></td>
+              <td><span>192</span></td>
+              
+              <!-- th group : U -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+              <td><span>1,594</span></td>
+
+              <!-- th group : NU -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+
+              <!-- th group : 제외 -->
+              <td><span>1,554</span></td>
+              <td><span>354</span></td>
+              <td><span>1,134</span></td>
+            </tr>
+            <!-- toggleGroup : 부문1 > 본부2 -->
+          </tbody>
+          <!-- //toggleGroup : 부문1 -->
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="l_article">
+  <h3 class="l_title">Table > 영역 고정</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="scrollContainer">
+        <div class="tables tablesScrollX case1">
+          <table class="table data border" style="min-width:1100px;">
+            <colgroup>
+            <col style="width: 145px;" />
+            <col style="width: 180px;" />
+            <col style="width: 70px;" />
+            <col style="width: 80px;" />
+            <col style="width: 275px;" />
+            <col style="width: 160px;" />
+            <col style="width: 180px;" />
+            <col style="width: 64px;" />
+            <col style="width: 80px;" />
+            <col style="width: 275px;" />
+            <col style="width: 160px;" />
+            </colgroup>
+            <thead>
+              <tr>
+                <th class="fixedCell left1">A</th>
+                <th>Skill-set</th>
+                <th>레벨</th>
+                <th>유형</th>
+                <th>프로젝트 명</th>
+                <th class="borderRight">기간</th>
+                <th>Skill-set</th>
+                <th>레벨</th>
+                <th>유형</th>
+                <th>프로젝트 명</th>
+                <th class="fixedCell right1">기간</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="fixedCell left1 tac">
+                  <div class="infoMemberBasic sm">
+                    <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                    <div class="infos">
+                      <div class="row">
+                        <span class="userName">김프로</span>
+                      </div>
+                      <div class="row">
+                        <a href="#none" class="buttonLink idNumber">1324234</a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><span>Front-end Development</span></td>
+                <td><span>4</span></td>
+                <td><span>AI</span></td>
+                <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                <td><span>26.05.30~28.05.30</span></td>
+                <td><span>Front-end Development</span></td>
+                <td><span>1</span></td>
+                <td><span>AI</span></td>
+                <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                <td class="fixedCell right1"><span>26.05.30~28.05.30</span></td>
+              </tr>
+              <tr>
+                <td class="fixedCell left1 tac">
+                  <div class="infoMemberBasic sm">
+                    <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                    <div class="infos">
+                      <div class="row">
+                        <span class="userName">김프로</span>
+                      </div>
+                      <div class="row">
+                        <a href="#none" class="buttonLink idNumber">1324234</a>
+                      </div>
+                    </div>
+                  </div>
+                </td>
+                <td><span>Front-end Development</span></td>
+                <td><span>4</span></td>
+                <td><span>AI</span></td>
+                <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                <td><span>26.05.30~28.05.30</span></td>
+                <td><span>Front-end Development</span></td>
+                <td><span>1</span></td>
+                <td><span>AI</span></td>
+                <td><span>NH투자증권 고객관리 시스템 개선 프로젝트</span></td>
+                <td class="fixedCell right1"><span>26.05.30~28.05.30</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

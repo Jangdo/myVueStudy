@@ -1,0 +1,115 @@
+/* prototype `ProtoDashboardPanel.wrap` — 본문 패딩과 이중 여백 방지 */
+.pageWrap {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: transparent;
+  border: none;
+  border-radius: 0;
+}
+
+/* ProtoDashboardPanel.stackLg 와 동일 — 요약 바 ↔ 3열 그리드 간 세로 간격 */
+.stackLg {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+/* app-shell__main 좌우 패딩 상쇄 — 요약 바를 메인 열 가로 전체에 맞춤(요약보드 KPI 행과 동일 효과) */
+.summaryBleed {
+  /* app-shell__main padding 과 동일해야 좌우가 딱 맞음 */
+  --proto-main-inline-pad: var(--space-4);
+  width: calc(100% + 2 * var(--proto-main-inline-pad));
+  max-width: none;
+  margin-left: calc(-1 * var(--proto-main-inline-pad));
+  margin-right: calc(-1 * var(--proto-main-inline-pad));
+  box-sizing: border-box;
+}
+
+/* 프로토타입 TeamMatchingPanel 상단 요약 바 — 구역은 동일, 가로 폭은 100% */
+.summaryBar {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  white-space: nowrap;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.summaryMain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 0;
+  min-width: max-content;
+}
+
+.summaryTech {
+  min-width: 260px;
+  max-width: 420px;
+  padding-left: 20px;
+  border-left: 1px solid var(--border);
+}
+
+.summaryTechLabel {
+  font-size: 10px;
+  color: var(--text3);
+  margin-bottom: 5px;
+}
+
+.summaryTechTags {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding-bottom: 2px;
+  max-width: 100%;
+}
+
+.summaryTechTags :global(.tag) {
+  flex-shrink: 0;
+}
+
+.summaryTechEmpty {
+  font-size: 11px;
+  color: var(--text3);
+}
+
+/* 3열 그리드 행 — 가로 폭 100% */
+.threeCol {
+  width: 100%;
+}
+
+/* 오픈 역할 목록: 프로토타입과 동일 — 마지막 행 하단 여백 제거 */
+.openRolesBody :global(.role-item:last-child) {
+  margin-bottom: 0;
+}
+
+/* 3열 중 우측: 가중치 + 인건비 스택 */
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+/* 그리드 열: 좁은 열에서 내용 넘침 방지 */
+.col {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+<title>AI SCM 퍼블리싱</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  overflow: hidden;
+  font-family: sans-serif;
+}
+
+.wrap {
+  display: flex;
+  height: 100%;
+  min-width: 1400px;
+}
+
+/* -----------------------
+  LNB
+----------------------- */
+.lnb {
+  flex: 0 0 auto;
+  width: 100px;
+  transition: width 0.25s ease;
+  border-right: 1px solid #ccc;
+  background: #eee;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.lnb.isActive {
+  width: 300px;
+}
+
+/* -----------------------
+  MAIN
+----------------------- */
+.main {
+  flex: 1 1 auto;
+  min-width: 1000px;
+  padding: 30px;
+  overflow: auto;
+  background: #fff;
+}
+
+/* -----------------------
+  ASIDE
+----------------------- */
+.aside {
+  position: relative;
+  flex: 0 0 auto;
+  width: 300px;
+  min-width: 200px;
+  max-width: 800px;
+  border-left: 1px solid #ccc;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+/* 드래그 핸들 */
+.resizeHandle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 100%;
+  cursor: col-resize;
+  background: transparent;
+}
+
+.resizeHandle:hover {
+  background: rgba(0, 0, 0, 0.08);
+}
+
+.buttonLnbToggle,
+.buttonResize {
+  margin-bottom: 20px;
+}
+
+.isResizing {
+  user-select: none;
+  cursor: col-resize;
+}
+</style>
+</head>
+
+<body>
+ <div class="wrap">
+  <div class="lnb">
+    <button class="buttonLnbToggle">메뉴 열기/닫기</button>
+    <div>lnb</div>
+  </div>
+
+  <div class="main">
+    <h1>main</h1>
+    <p>
+      main 영역은 최소 1000px 이하로 줄어들지 않습니다.
+    </p>
+  </div>
+
+  <div class="aside">
+    <div class="resizeHandle"></div>
+
+    <button class="buttonResize">
+      사이즈 조절
+    </button>
+
+    <div>aside</div>
+  </div>
+</div>
+
+<script>
+class LayoutUI {
+  constructor() {
+    // element
+    this.wrap = document.querySelector('.wrap');
+    this.lnb = document.querySelector('.lnb');
+    this.main = document.querySelector('.main');
+    this.aside = document.querySelector('.aside');
+
+    this.buttonLnbToggle = document.querySelector('.buttonLnbToggle');
+    this.buttonResize = document.querySelector('.buttonResize');
+    this.resizeHandle = document.querySelector('.resizeHandle');
+
+    // state
+    this.isResizing = false;
+
+    // option
+    this.MAIN_MIN_WIDTH = 1000;
+    this.ASIDE_MIN_WIDTH = 200;
+    this.ASIDE_MAX_WIDTH = 800;
+
+    // bind
+    this.handleResize = this.handleResize.bind(this);
+    this.stopResize = this.stopResize.bind(this);
+
+    // init
+    this.init();
+  }
+
+  init() {
+    this.bindEvents();
+  }
+
+  bindEvents() {
+    // lnb toggle
+    this.buttonLnbToggle.addEventListener('click', () => {
+      this.toggleLnb();
+    });
+
+    // resize handle
+    this.resizeHandle.addEventListener('mousedown', (e) => {
+      this.startResize(e);
+    });
+
+    // resize button
+    this.buttonResize.addEventListener('mousedown', (e) => {
+      e.preventDefault();
+      this.startResize(e);
+    });
+  }
+
+  toggleLnb() {
+    this.lnb.classList.toggle('isActive');
+  }
+
+  startResize() {
+    this.isResizing = true;
+
+    document.body.classList.add('isResizing');
+
+    document.addEventListener('mousemove', this.handleResize);
+    document.addEventListener('mouseup', this.stopResize);
+  }
+
+  handleResize(e) {
+    if (!this.isResizing) return;
+
+    const wrapRect = this.wrap.getBoundingClientRect();
+
+    const lnbWidth = this.lnb.offsetWidth;
+
+    // 현재 마우스 위치 기준 aside width 계산
+    let newAsideWidth = wrapRect.right - e.clientX;
+
+    // main 최소 width 고려
+    const maxAllowedAside =
+      wrapRect.width -
+      lnbWidth -
+      this.MAIN_MIN_WIDTH;
+
+    // 최종 최대값 계산
+    const finalMaxAside = Math.min(
+      this.ASIDE_MAX_WIDTH,
+      maxAllowedAside
+    );
+
+    // clamp
+    newAsideWidth = Math.max(
+      this.ASIDE_MIN_WIDTH,
+      Math.min(finalMaxAside, newAsideWidth)
+    );
+
+    this.aside.style.width = `${newAsideWidth}px`;
+  }
+
+  stopResize() {
+    this.isResizing = false;
+
+    document.body.classList.remove('isResizing');
+
+    document.removeEventListener('mousemove', this.handleResize);
+    document.removeEventListener('mouseup', this.stopResize);
+  }
+}
+
+// 실행
+new LayoutUI();
+</script>
+</body>
+</html>

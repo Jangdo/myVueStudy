@@ -1,0 +1,91 @@
+<h2 class="l_title">Function - Drag Drop</h2>
+<div class="l_article">
+  <h3 class="l_title">Dataset - 기능만 참고</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="dragDropArea">
+        <div>
+          <!-- Drop Area 1 -->
+          <section >
+            <div data-ddm-drop="selected">
+              <div data-ddm-list></div>
+              <div data-empy-area>
+                  Drop Item Here
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Original List -->
+        <section class="ddm-section">
+          <h2>Original List</h2>
+          <div data-ddm-list>
+            <div data-ddm-item data-ddm-id="item-a">
+                <span data-ddm-handle>☰</span>
+                <span>Item A</span>
+                <button data-ddm-delete>삭제</button>
+            </div>
+            <div data-ddm-item data-ddm-id="item-b">
+                <span data-ddm-handle>☰</span>
+                <span>Item B</span>
+                <button data-ddm-delete>삭제</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <h3 class="l_title">예제</h3>
+  <div class="l_body">
+    <div class="l_row">
+      <div class="dragDropArea typeEx">
+        <div class="container">
+          <!-- Drop Area 1 -->
+          <section class="ddm-section">
+            <h2>Selected Area</h2>
+            <div class="ddm-drop" data-ddm-drop="selected">
+              <div class="ddm-list" data-ddm-list></div>
+              <div class="ddm-empty" data-empy-area>
+                  Drop Item Here
+              </div>
+            </div>
+          </section>
+        
+          <!-- Drop Area 2 -->
+          <section class="ddm-section">
+            <h2>Favorite Area</h2>
+            <div class="ddm-drop" data-ddm-drop="favorite">
+              <div class="ddm-list" data-ddm-list></div>
+              <div class="ddm-empty" data-empy-area>
+                  Empty
+              </div>
+            </div>
+          </section>
+        </div>
+
+
+        <!-- Original List -->
+        <section class="ddm-section">
+          <h2>Original List</h2>
+          <div class="ddm-list" data-ddm-list>
+            <div class="ddm-item" data-ddm-item data-ddm-id="item-a">
+                <span data-ddm-handle>☰</span>
+                <span>Item A</span>
+                <button data-ddm-delete>삭제</button>
+            </div>
+            <div class="ddm-item" data-ddm-item data-ddm-id="item-b">
+                <span data-ddm-handle>☰</span>
+                <span>Item B</span>
+                <button data-ddm-delete>삭제</button>
+            </div>
+            <div class="ddm-item" data-ddm-item data-ddm-id="item-c">
+                <span data-ddm-handle>☰</span>
+                <span>Item C</span>
+                <button data-ddm-delete>삭제</button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,708 @@
+
+/* ==============================
+  page : 단기수요예측 / 메인BR화면
+  page : 단기수요예측 / Skillset별_투입인력_현황
+============================== */
+
+/* tablesScrollX / case1 ============================== */
+.tablesScrollX.case1 .table th,
+.tablesScrollX.case1 .table td {
+  width: 90px;
+}
+.tablesScrollX.case1 .table .fixedCell.left1 {
+  width: 110px;
+}
+.tablesScrollX.case1 .table .fixedCell.right2 {
+  right: 90px;
+}
+
+
+
+/* ==============================
+  page : 단기수요예측 / Pipeline별인력배치현황
+============================== */
+
+/* tablesScrollX / case2 ============================== */
+.tablesScrollX.case2 .table th,
+.tablesScrollX.case2 .table td {
+  width: 54px;
+}
+
+@media (max-width: 1400px) {
+  .tablesScrollX.case2 .table .fixedCell.left1 {
+    width: 190px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left2 {
+    left: 190px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left3 {
+    left: 340px;
+    width: 74px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left4 {
+    left: 414px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left5 {
+    left: 564px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left6 {
+    left: 714px;
+    width: 54px;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .tablesScrollX.case2 .table .fixedCell.left1 {
+    width: 480px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left2 {
+    left: 480px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left3 {
+    left: 630px;
+    width: 74px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left4 {
+    left: 704px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left5 {
+    left: 854px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left6 {
+    left: 1004px;
+    width: 54px;
+  }
+}
+
+@media (min-width: 1600px) {
+  /* 단기수요예측 / pipline별 인력 배치 현황 */
+  .tablesScrollX.case2 .table .fixedCell.left1 {
+    width: 540px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left2 {
+    left: 540px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left3 {
+    left: 690px;
+    width: 74px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left4 {
+    left: 764px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left5 {
+    left: 914px;
+    width: 150px;
+  }
+  .tablesScrollX.case2 .table .fixedCell.left6 {
+    left: 1064px;
+    width: 54px;
+  }
+}
+
+/* 임시클래스 : radio / show hide ============================== */
+.caseA,
+.caseB {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+/* 메인페이지 / 본문 영역에 여백 없음 ============================== */
+.root.mainPage {
+  padding: 0;
+}
+.root.mainPage .bodyPanel {
+  padding: 0;
+}
+.root.mainPage .stack {}
+
+
+
+/* ==============================
+  page : AI Teaming > SCM_메인화면
+============================== */
+
+/* 메인페이지 ============================== */
+.aiteamingMainPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 52px 20px;
+  background: url('/assets/images/page/bg_aiteaming_1.png') no-repeat center bottom;
+}
+.aiteamingMainPage .mainPageHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.aiteamingMainPage .mainPageHeader.icon {}
+.aiteamingMainPage .mainPageHeader.icon::before {
+  content: '';
+  display: block;
+  width: 36px;
+  height: 36px;
+  margin-bottom: 16px;
+  background: url('/assets/images/Icon/logo_symbol3.svg') no-repeat center;
+}
+.aiteamingMainPage .mainPageHeader .text {
+  margin-bottom: 8px;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--fontColor9);
+}
+.aiteamingMainPage .mainPageHeader .title {
+  font-size: 36px;
+  font-weight: 700;
+  background-image: linear-gradient(90deg, #101828 30%, #0066FF, #23ACFA);
+  -webkit-background-clip: text; /* 글자 영역에만 배경을 표시(크롬 등에서 필요) */
+  background-clip: text;
+  color: transparent; /* 글자색을 투명하게 해 배경이 보이게 함 */
+}
+.aiteamingMainPage .mainPageHeader .buttons {
+  margin-top: 20px;
+}
+.aiteamingMainPage .mainPageHeader .standard {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin-top: 24px;
+  padding: 4px 12px;
+  border-radius: 30px;
+  font-size: var(--font14);
+  font-weight: 500;
+  color: #808FAD;
+  background-color: #F1F3F5;
+}
+.aiteamingMainPage .mainPageBody {}
+.aiteamingMainPage .rowGroups {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px 0;
+  width: 1112px;
+}
+.aiteamingMainPage .rowGroups .rowGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+}
+.aiteamingMainPage .rowGroups .rowGroup > .row {
+  display: flex;
+  gap: 14px;
+}
+.aiteamingMainPage .rowGroups .rowGroup .row > .col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 10px 40px rgba(15, 23, 42, 0.06);
+  background-color: rgba(250, 252, 255, 0.8);
+}
+.aiteamingMainPage .rowGroups .rowGroup .row > .col.col1 {
+  flex: 0 0 auto;
+  width: 100%;
+}
+.aiteamingMainPage .rowGroups .rowGroup .row > .col.col2 {
+  flex: 0 0 auto;
+  width: calc(50% - 7px);
+}
+.aiteamingMainPage .rowGroups .rowHeader {
+  display: flex;
+}
+.aiteamingMainPage .rowGroups .rowHeader .titleArea {}
+.aiteamingMainPage .rowGroups .rowHeader {}
+.aiteamingMainPage .rowGroups .rowHeader .titleArea {}
+.aiteamingMainPage .rowGroups .rowHeader .titleArea .title {
+  font-size: var(--font16);
+  font-weight: 600;
+  color: #2136BF;
+}
+.aiteamingMainPage .rowGroups .rowHeader .sideArea {}
+.aiteamingMainPage .rowGroups .colHeader {
+  position: relative;
+  display: inline-flex;
+}
+.aiteamingMainPage .rowGroups .colHeader .titleArea {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.aiteamingMainPage .rowGroups .colHeader .titleArea.column {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.aiteamingMainPage .rowGroups .colHeader .titleArea .title {
+  font-size: var(--font16);
+  font-weight: 700;
+  color: var(--fontColor7);
+}
+.aiteamingMainPage .rowGroups .colHeader .sideArea {
+  margin-left: auto;
+}
+.aiteamingMainPage .rowGroups .colHeader .sideArea .buttonDetail {
+  font-size: var(--font12);
+  color: #808FAD;
+}
+.aiteamingMainPage .rowGroups .colHeader .sideArea .buttonDetail:after {
+  width: 8px;
+  height: 8px;
+  background-image: url(/assets/images/Icon/arrow_8_deep.svg);
+}
+.aiteamingMainPage .rowGroups .colBody {
+  position: relative;
+  flex: 1;
+  margin-top: 16px;
+}
+.aiteamingMainPage .rowGroups .colBody + .colBody {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #EDF0F3;
+}
+.aiteamingMainPage .rowGroups .colBody .typeSkillApply > li:first-child {
+  padding-top: 0;
+}
+.aiteamingMainPage .rowGroups .colBody .typeSkillApply > li:last-child {
+  padding-bottom: 0;
+}
+.aiteamingMainPage .rowGroups .colBody .swiperWrap {
+  position: relative;
+}
+.aiteamingMainPage .rowGroups .nodataBox.typeNodata {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: auto;
+  padding: 10px;
+}
+
+
+
+/* swiper ============================== */
+.swiper .card.typeIssue {
+  overflow: hidden;
+}
+.swiper.swiperIssueCardOutter {
+  width: 100%;
+  height: calc(114px + 20px);
+}
+.swiper.swiperIssueCardInner {
+  width: 100%;
+  height: calc(114px + 20px);
+}
+
+/*  */
+.swiperIssueCard {}
+.swiperIssueCard.swiper {}
+.swiperIssueCard .swiper-slide {
+  padding: 0;
+}
+
+/* swiperOutter ========== */
+.swiperOutterHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.swiperOutterHeader .swiper-pagination-bullets {}
+.swiperOutterHeader .swiper-pagination-bullet {
+  opacity: 1;
+  width: 10px;
+  height: 10px;
+  border: 1px solid #C2D1FF;
+  background-color: #FFF;
+}
+.swiperOutterHeader .swiper-pagination-bullet-active {
+  border: none;
+  background-color: #6684FF;
+}
+.swiperOutterHeader .swiper-button-prev-issue-outter,
+.swiperOutterHeader .swiper-button-next-issue-outter {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background: transparent url('/assets/images/Icon/swiper_nav.svg') no-repeat center;
+}
+.swiperOutterHeader .swiper-button-prev-issue-outter {
+  transform: rotate(90deg);
+}
+.swiperOutterHeader .swiper-button-next-issue-outter {
+  transform: rotate(-90deg);
+}
+.swiperOutterHeader .swiper-button-disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+/* swiperInner ========== */
+.swiperInnerHeader {
+  display: flex;
+  align-items: center;
+  height: 20px;
+  margin-bottom: 20px;
+}
+.swiperInnerHeader .swiperSideArea {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+/* bullet */
+.swiperInnerHeader .swiper-pagination-bullets {
+  transform: none !important;
+  display: flex;
+  align-items: center;
+  margin: 0 8px;
+}
+.swiperInnerHeader .swiper-pagination-bullet {
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px !important;
+  background-color: #BCC1CA;
+}
+.swiperInnerHeader .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 6px;
+  background-color: #2B313D;
+}
+.swiperInnerHeader .swiper-button-prev-issue-inner,
+.swiperInnerHeader .swiper-button-next-issue-inner {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background: transparent url('/assets/images/Icon/swiper_nav.svg') no-repeat center;
+}
+.swiperInnerHeader .swiper-button-prev-issue-inner {
+  transform: rotate(180deg);
+}
+.swiperInnerHeader .swiper-button-disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+/*  */
+.swiperIssueCardinner .swiperFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 14px;
+  margin: 12px auto 0;
+  text-align: center;
+}
+
+/*  */
+.swiperIssueCardinner .swiper-pagination-bullets {
+  transform: none !important;
+  margin: 0 auto;
+}
+.swiperIssueCardinner .swiper-pagination-bullet {
+  opacity: 1;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px !important;
+  background-color: #BCC1CA;
+}
+.swiperIssueCardinner .swiper-pagination-bullet-active {
+  width: 20px;
+  border-radius: 6px;
+  background-color: #2B313D;
+}
+.swiperIssueCardinner .swiper-button-prev,
+.swiperIssueCardinner .swiper-button-next {
+  flex: 0 0 auto;
+  width: 20px;
+  height: 20px;
+  background: transparent url('/assets/images/Icon/swiper_nav.svg') no-repeat center;
+}
+.swiperIssueCardinner .swiper-button-prev {
+  transform: rotate(180deg);
+}
+.swiperIssueCardinner .swiper-button-disabled {
+  opacity: .3;
+  cursor: default;
+}
+
+
+
+/* ==============================
+  page : AI Teaming > 프로젝트상세화면
+============================== */
+
+/* card / 담당 팀원 상단 ========== */
+.projectInforTeamMemeber {
+  flex: 1;
+  gap: 16px 0;
+}
+
+/* badge wrapper ========== */
+.aiRecommendBox {
+  position: relative;
+}
+.aiRecommendBox .badge.aiRecommend {
+  transform: translateY(-50%);
+  position: absolute;
+  top: 50%;
+  left: 0;
+}
+
+
+
+/* ==============================
+  page : LNB > 설정
+============================== */
+
+/* asidePageSetting ============================== */
+.asidePageSetting {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.asidePageSetting .cardGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.asidePageSetting .card.type2 {
+  gap: 16px;
+}
+.asidePageSetting .card.type2 .cmnHeader {}
+.asidePageSetting > .card .cmnHeaderTitle {
+  font-size: var(--font16);
+  font-weight: 600;
+}
+
+
+
+/* ==============================
+  page : 단기수요현황 > 메인Resource_현황
+============================== */
+
+/* tablesScrollX / caseResourceStatus ============================== */
+.tablesScrollX.caseResourceStatus .table th:not([colspan]),
+.tablesScrollX.caseResourceStatus .table td {
+  width: 10%;
+}
+.tablesScrollX.caseResourceStatus .table .fixedCell.left1 {
+  width: 120px;
+}
+
+/* accordions / type : typeMemberUseStatus ============================== */
+.accordions.typeMemberUseStatus {}
+.accordions.typeMemberUseStatus .accordionHeader {
+  display: flex;
+  flex-direction: column;
+}
+.accordions.typeMemberUseStatus .accordionHeader .cmnHeader {
+  margin-bottom: 24px;
+}
+.accordions.typeMemberUseStatus .isExpand .accordionBody {
+  margin-top: 24px;
+}
+
+
+
+/* ==============================
+  page : 반려사유입력
+============================== */
+
+/* typeReturnReason */
+.fieldset .col.typeReturnReason {
+  min-height: 194px;
+}
+.fieldset > .col.typeReturnReason > dt {
+  flex: 0 0 auto;
+}
+.fieldset > .col.typeReturnReason > dd {
+  flex: 0 0 auto;
+  align-items: flex-start;
+}
+.fieldset > .col.typeReturnReason > dd:has(.typeTextarea) {
+  flex: 1;
+}
+.fieldset > .col.typeReturnReason .typeTextarea {
+  height: 100%;
+}
+
+
+
+/* ==============================
+  page : AI Teaming > 사용 가이드
+============================== */
+
+/* 사용 가이드 ============================== */
+.userGuideSection {
+  gap: 16px;
+}
+.userGuideSection .thumbArea {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+.userGuideSection .thumbArea .thumb {
+  display: inline-flex;
+  min-width: 0;
+}
+.userGuideSection .pmGuideBox {
+  display: flex;
+  flex-direction: column;
+}
+.userGuideSection .pmGuideBox.card {
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #F9FAFC;
+}
+.userGuideSection .pmGuideBox > .cmnHeader {
+  margin-bottom: 12px;
+}
+.userGuideSection .pmGuideBox .contentArea {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.userGuideSection .pmGuideBox .innerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.userGuideSection .pmGuideBox .innerBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+}
+.userGuideSection .pmGuideBox .innerRow .innerCol {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 16px;
+  border-radius: 12px;
+  background-color: #fff;
+}
+.userGuideSection .pmGuideBox .innerRow .innerCol > .cmnHeader {
+  margin-bottom: 16px;
+}
+.userGuideSection .pmGuideBox .thumbArea {
+  padding: 16px;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/*  */
+.userGuideSection .leaderGuideBox {
+  position: relative;
+  display:flex;
+  flex-direction: row;
+  gap: 24px;
+}
+.userGuideSection .leaderGuideBox.card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #DFE3EC;
+  background-color: #FFF;
+}
+.userGuideSection .leaderGuideBox  .thumbArea {
+  flex: 0 0 auto;
+  min-width: 0;
+}
+.userGuideSection .leaderGuideBox .contentArea {
+  position:relative;
+  display:flex;
+  flex-direction: column;
+  min-width: 0;
+}
+.userGuideSection .leaderGuideBox .contentArea > .cmnHeader {
+  margin-bottom: 12px;
+}
+.userGuideSection .leaderGuideBox .contentArea .innerBody {}
+
+/*  */
+.userGuideSection .terminologyGuideBox {}
+.userGuideSection .terminologyGuideBox.card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #DFE3EC;
+  background-color: #FFF;
+}
+.userGuideSection .terminologyGuideBox > .cmnHeader {
+  margin-bottom: 16px;
+}
+
+
+
+/* ==============================
+  page : 단기수요예측 > 메인SnOP화면
+============================== */
+
+/* manageSnOp ============================== */
+.manageSnOp {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  width: 100%;
+}
+.manageSnOpHeader {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px 0;
+  width: 100%;
+}
+.manageSnOpBody {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.manageSnOpBody:not(:first-child) {
+  margin-top: 16px;
+}
+.manageSnOpBody > .sectionRow {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+.manageSnOpBody > .sectionRow + .sectionRow {
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #EDF0F3;
+}
+
+/* manageSnOpHeader / typeBrData */
+.manageSnOpHeader .cardInfor.typeBrData .itemHeader .titleArea .title {
+  font-size: var(--font14);
+  color: #808FAD;
+}
+.manageSnOpHeader .cardInfor.typeBrData .itemBody .totalArea .dlist > .row.total > dd .val strong {
+  font-size: var(--font20);
+}
+.manageSnOpBody .cardInfor.typeBrData .itemBody .dataArea .dlist > .row > dt {
+  font-size: var(--font10);
+}

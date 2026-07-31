@@ -1,0 +1,51 @@
+.section {
+  margin-top: var(--ui-space-5, 24px);
+  padding: var(--ui-space-4, 16px);
+  background: var(--panel, #fff);
+  border: 1px solid var(--border, #e2e8f0);
+  border-radius: 10px;
+}
+
+.section:first-child {
+  margin-top: 10px;
+}
+
+.header {
+
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px 0;
+}
+
+.sectionTitle {
+  margin: 0 0 var(--ui-space-2, 8px);
+  font-size: 14px;
+}
+
+.headerText,
+.sectionHint {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.title {
+  margin: 20px 0 0;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.tempClass {
+  border: 1px solid red;
+}

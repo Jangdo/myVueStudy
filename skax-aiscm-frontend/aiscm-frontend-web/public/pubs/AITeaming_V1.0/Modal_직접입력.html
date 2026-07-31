@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                본문
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+
+                <!-- modal : 검색하기 -->
+                <div class="dimmed">
+                  <div class="modal md hgtMd2">
+                    <div class="cmnHeader modalHeader">
+                      <div class="cmnHeaderTitleArea">
+                        <h1 class="cmnHeaderTitle">입력하기</h1>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button iconOnly buttonClose">팝업 닫기</button>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <!-- modalBody : 본문 -->
+                    <div class="modalBody">
+                      <div class="searchFilter">
+                        <div class="row">
+                          <div class="fieldBox lg">
+                            <div class="dropdown">
+                              <button class="dropdownButton">전사</button>
+                              <!-- root menu -->
+                              <div class="dropdownMenu">
+                                <ul class="dropdownMenuInner">
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션1</button>
+                                  </li>
+                                  <li class="menuItem">
+                                    <button class="menuButton">옵션2</button>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="inputBox">
+                              <input type="text" placeholder="이름 또는 사번을 입력하세요." />
+                              <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                            </div>
+                            <div class="sideArea">
+                              <button type="button" class="button iconOnly buttonSearch">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div class="tables flex1">
+                        <div class="cmnHeader md">
+                          <div class="cmnHeaderTitleArea">
+                            <h2 class="cmnHeaderTitle sm">검색결과<span class="cmnHeaderCount"><strong class="cmnHeaderCountNumber2">(56건)</strong></span></h2>
+                          </div>
+                        </div>
+
+                        <!-- case : 검색결과 / X -->
+                        <div class="nodataBox typeNodata bg flex1">
+                          <div class="innerBody">
+                            <p class="text search">검색 결과가 없습니다.</p>
+                          </div>
+                        </div>
+                        <!-- //case : 검색결과 / X -->
+                      </div>
+                    </div>
+                    <!-- //modalBody : 본문 -->
+
+                    <div class="modalFooter">
+                      <div class="buttons">
+                        <button type="button" class="button primary solid xl" disabled>역할 배정</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- //modal : 검색하기 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Accordion
+  Accordion.init();
+  
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

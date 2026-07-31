@@ -1,0 +1,14 @@
+
+.icon {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.icon.logoSymbol {
+  width: 32px;
+  height: 32px;
+  background-image: url('../Images/Icon/logo_chat.svg');
+}

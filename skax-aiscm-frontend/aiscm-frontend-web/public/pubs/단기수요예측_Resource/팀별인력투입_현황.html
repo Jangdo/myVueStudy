@@ -1,0 +1,1381 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader xl">
+                  <div class="cmnHeaderTitlePreArea">
+                    <button type="button" class="button transparent md iconOnly buttonBack">뒤로</button>
+                  </div>
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">팀별 인력 투입 현황</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <span class="cmnHeaderText2">26.05.01 기준</span>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader md">
+                      <div class="cmnHeaderTitleArea">
+                        <button class="button buttonTitle h2">전사</button>
+                      </div>
+                    </div>
+                    <div class="cards full">
+                      <div class="row">
+                        <div class="card type1 shadow flex2">
+                          <dl class="dlist type1b">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case10">인력 (단위: 명)</dt>
+                              <dd>
+                                <div class="sideArea">
+                                  <dl class="dlist type9 case2">
+                                    <div class="row">
+                                      <dt>프로젝트</dt>
+                                      <dd>700</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>제안/투자/과제</dt>
+                                      <dd>제안</dd>
+                                    </div>
+                                    <div class="row">
+                                      <dt>Bench</dt>
+                                      <dd>20</dd>
+                                    </div>
+                                  </dl>
+                                </div>
+                                <div class="mainArea">
+                                  <span class="countNumber type1">총원<strong class="number">12</strong></span>
+                                </div>
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1b">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case10">BR</dt>
+                              <dd>
+                                <div class="sideArea">
+                                  <span class="date">26년 5월 1주차 기준</span>
+                                </div>
+                                <div class="mainArea">
+                                  <span class="countNumber type1"><strong class="number">12</strong>%</span>
+                                </div>
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                        <div class="card type1 shadow">
+                          <dl class="dlist type1b">
+                            <div class="row">
+                              <dt class="iconTitle projectInfo case10">UR</dt>
+                              <dd>
+                                <div class="sideArea">
+                                  <span class="date">26년 5월 1주차 기준</span>
+                                </div>
+                                <div class="mainArea">
+                                  <span class="countNumber type1 violet"><strong class="number">12</strong>%</span>
+                                </div>
+                              </dd>
+                            </div>
+                          </dl>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                  <section class="section">
+                    <!-- tabs -->
+                    <div class="tabs gapMd">
+                      <div class="tabButtons type1 md2">
+                        <div class="buttons">
+                          <button class="tabButton isActive" data-tab="tab1">인력 투입 현황</button>
+                          <button class="tabButton" data-tab="tab2">교육/휴가/휴직</button>
+                        </div>
+                      </div>
+
+                      <!-- tabContent 1 -->
+                      <div class="tabContent isActive" data-content="tab1">
+                        <div class="tabUpperArea md2">
+                          <ul class="remarkList">
+                            <li><span class="remark xs assign ing">투입중</span></li>
+                            <li><span class="remark xs assign fit">투입확정</span></li>
+                            <li><span class="remark xs assign res">투입예약</span></li>
+                            <li><span class="remark xs assign rec">AI추천</span></li>
+                            <li><span class="remark xs assign tbd">TBD</span></li>
+                            <li><span class="remark xs assign ben">Bench</span></li>
+                          </ul>
+                        </div>
+                        <div class="cards xl mt8">
+                          <div class="card type2 flex1">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">투입 중 프로젝트</strong>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="fieldBox md">
+                                  <div class="inputBox">
+                                    <input type="text" placeholder="프로젝트명 혹은 팀원을 입력하세요.">
+                                    <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table type2">
+                                <colgroup>
+                                  <col style="width: 60%"/>
+                                  <col style="width: 180px"/>
+                                  <col style="width: 80%"/>
+                                  <col style="width: 80px"/>
+                                  <col style="width: 50px"/>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>프로젝트명</th>
+                                    <th>기간</th>
+                                    <th>팀 소속 투입 인원</th>
+                                    <th>투입 인원수</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5" class="p0">
+                                      <div class="accordions type1 typeAssigningProject" data-ui="accordions">
+                                        <!-- ==============================
+                                          #accordion class 상태 설명
+                                            - 닫힘 : .accordion
+                                            - 열림 : .accordion.isExpand
+                                        ============================== -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <!-- 설명 ==============================
+                                                  #인력 투입 상태
+                                                    - .assign + .ing : 투입중
+                                                    - .assign + .fit : 투입확정
+                                                    - .assign + .res : 투입예약
+                                                    - .assign + .rec : AI추천
+                                                    - .assign + .tbd : TBD
+                                                    - .assign + .ben : Bench
+                                                ============================== -->
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign fit">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign res">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign res">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign res">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign rec">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign rec">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign rec">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign tbd">TBD*12</span></button></li>
+                                                <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                         <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="card type2 flex1">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">투입 예정 프로젝트</strong>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="fieldBox md">
+                                  <div class="inputBox">
+                                    <input type="text" placeholder="프로젝트명 혹은 팀원을 입력하세요.">
+                                    <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table type2">
+                                <colgroup>
+                                  <col style="width: 60%"/>
+                                  <col style="width: 180px"/>
+                                  <col style="width: 80%"/>
+                                  <col style="width: 80px"/>
+                                  <col style="width: 50px"/>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>프로젝트명</th>
+                                    <th>기간</th>
+                                    <th>팀 소속 투입 인원</th>
+                                    <th>투입 인원수</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5" class="p0">
+                                      <div class="accordions type1 typeAssigningProject" data-ui="accordions">
+                                        <!-- ==============================
+                                          #accordion class 상태 설명
+                                            - 닫힘 : .accordion
+                                            - 열림 : .accordion.isExpand
+                                        ============================== -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign fit">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign res">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign res">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign res">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign rec">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign rec">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign rec">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign tbd">TBD*12</span></button></li>
+                                                <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                         <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="card type2 flex1">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">미확보 프로젝트</strong>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="fieldBox md">
+                                  <div class="inputBox">
+                                    <input type="text" placeholder="프로젝트명 혹은 팀원을 입력하세요.">
+                                    <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table type2">
+                                <colgroup>
+                                  <col style="width: 60%"/>
+                                  <col style="width: 180px"/>
+                                  <col style="width: 80%"/>
+                                  <col style="width: 80px"/>
+                                  <col style="width: 50px"/>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>프로젝트명</th>
+                                    <th>기간</th>
+                                    <th>팀 소속 투입 인원</th>
+                                    <th>투입 인원수</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5" class="p0">
+                                      <div class="accordions type1 typeAssigningProject" data-ui="accordions">
+                                        <!-- ==============================
+                                          #accordion class 상태 설명
+                                            - 닫힘 : .accordion
+                                            - 열림 : .accordion.isExpand
+                                        ============================== -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign fit">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign res">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign res">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign res">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign rec">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign rec">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign rec">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign tbd">TBD*12</span></button></li>
+                                                <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                         <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>사업규모(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="card type2 flex1">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">제안/투자/과제</strong>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="fieldBox md">
+                                  <div class="inputBox">
+                                    <input type="text" placeholder="프로젝트명 혹은 팀원을 입력하세요.">
+                                    <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table type2">
+                                <colgroup>
+                                  <col style="width: 60%"/>
+                                  <col style="width: 180px"/>
+                                  <col style="width: 80%"/>
+                                  <col style="width: 80px"/>
+                                  <col style="width: 50px"/>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>프로젝트명</th>
+                                    <th>기간</th>
+                                    <th>팀 소속 투입 인원</th>
+                                    <th>투입 인원수</th>
+                                    <th></th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td colspan="5" class="p0">
+                                      <div class="accordions type1 typeAssigningProject" data-ui="accordions">
+                                        <!-- ==============================
+                                          #accordion class 상태 설명
+                                            - 닫힘 : .accordion
+                                            - 열림 : .accordion.isExpand
+                                        ============================== -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트 NH투자증권 고객관리 시스템 개선 A프로젝트</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign fit">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign fit">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign res">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign res">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign res">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign rec">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign rec">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign rec">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign tbd">TBD*12</span></button></li>
+                                                <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>원가(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                        <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리 NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>원가(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                         <!-- accordion -->
+                                        <div class="accordion">
+                                          <div class="accordionHeader">
+                                            <div class="itemArea titleArea">
+                                              <strong class="text title">NH투자증권 고객관리</strong>
+                                            </div>
+                                            <div class="itemArea dateArea">
+                                              <span class="text date">26.05.10~26.10.31</span>
+                                            </div>
+                                            <div class="itemArea memberArea">
+                                              <ul class="memberSimpleList type2 md">
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">차은우</span></button></li>
+                                                <li><button type="button"><span class="assign ing">김수현</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                                <li><button type="button"><span class="assign ing">박보검</span></button></li>
+                                              </ul>
+                                            </div>
+                                            <div class="itemArea countArea">
+                                              <span class="text count">13</span>
+                                            </div>
+                                            <div class="itemArea sideArea">
+                                              <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                            </div>
+                                          </div>
+                                          <div class="accordionBody">
+                                            <div class="dlists type1 bg">
+                                              <dl class="dlist type9">
+                                                <div class="row">
+                                                  <dt>프로젝트 코드</dt>
+                                                  <dd>P1000XXX</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>원가(억원)</dt>
+                                                  <dd>300</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>프로젝트 유형</dt>
+                                                  <dd>SI-AD</dd>
+                                                </div>
+                                                <div class="row">
+                                                  <dt>매출귀속조직</dt>
+                                                  <dd>NOVA 개발 1팀</dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                        <!-- //accordion -->
+                                      </div>
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+
+                          <div class="card type2 flex1">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <strong class="cmnHeaderTitle">Bench</strong>
+                              </div>
+                            </div>
+                            <div class="tables">
+                              <table class="table type2">
+                                <colgroup>
+                                  <col style="width: 160px"/>
+                                  <col style="width: auto"/>
+                                  <col style="width: 100px"/>
+                                </colgroup>
+                                <thead>
+                                  <tr>
+                                    <th>대기기간</th>
+                                    <th>가용 가능 인원</th>
+                                    <th>인원수</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td><span class="projectText waiting">1주 이내</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="projectText waiting">1주 이상</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="projectText waiting">2주 이상</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="projectText waiting">1개월 이상</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="projectText waiting">2개월 이상</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                  <tr>
+                                    <td><span class="projectText waiting">3개월 이상</span></td>
+                                    <td>
+                                      <ul class="memberSimpleList type2 md">
+                                        <li><button type="button"><span class="assign ben">김수현</span></button></li>
+                                        <li><button type="button"><span class="assign ben">박보검</span></button></li>
+                                        <li><button type="button"><span class="assign ben">차은우</span></button></li>
+                                      </ul>
+                                    </td>
+                                    <td><span class="projectText count">6</span></td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //tabContent 1 -->
+
+                      <!-- tabContent 2 -->
+                      <div class="tabContent " data-content="tab2">
+                        <div class="tabUpperArea md2">
+                          <div class="fieldBox md">
+                            <div class="inputBox">
+                              <input type="text" placeholder="팀원을 입력하세요.">
+                              <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                            </div>
+                            <div class="sideArea">
+                              <button type="button" class="button iconOnly buttonSearch">검색</button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="lists lg">
+                          <div class="cmnHeader">
+                            <div class="cmnHeaderTitleArea">
+                              <div class="radios typeButton3 md">
+                                <span class="itemRadio">
+                                  <label><input type="radio" name="radioButton3A" checked />전체<strong class="count">2</strong></label>
+                                </span>
+                                <span class="itemRadio">
+                                  <label><input type="radio" name="radioButton3A" />교육<strong class="count">2</strong></label>
+                                </span>
+                                <span class="itemRadio">
+                                  <label><input type="radio" name="radioButton3A" />휴가<strong class="count">2</strong></label>
+                                </span>
+                                <span class="itemRadio">
+                                  <label><input type="radio" name="radioButton3A" />휴직<strong class="count">2</strong></label>
+                                </span>
+                              </div>
+                            </div>
+                            <div class="cmnHeaderSideArea">
+                              <span class="text">프로젝트 수행 중인 인력은 BR로 산성됩니다. </span>
+                            </div>
+                          </div>
+                          <ul class="cmnEventList memberWorkStateList step4">
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeProfile bg">
+                                  <div class="itemHeader">
+                                    <div class="infoMemberBasic">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="40"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <span class="text idNumber">1324234</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="itemBody">
+                                    <div class="itemGroupA">
+                                      <span class="item"><span class="badge workState case1">교육</span></span>
+                                      <span class="item">Manager(P8)</span>
+                                      <span class="item">26.05.01 ~ 26.10.01</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeProfile bg">
+                                  <div class="itemHeader">
+                                    <div class="infoMemberBasic">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="40"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <span class="text idNumber">1324234</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="itemBody">
+                                    <div class="itemGroupA">
+                                      <span class="item"><span class="badge workState case1">교육</span></span>
+                                      <span class="item">Manager(P8)</span>
+                                      <span class="item">26.05.01 ~ 26.10.01</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeProfile bg">
+                                  <div class="itemHeader">
+                                    <div class="infoMemberBasic">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="40"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <span class="text idNumber">1324234</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="itemBody">
+                                    <div class="itemGroupA">
+                                      <span class="item"><span class="badge workState case1">교육</span></span>
+                                      <span class="item">26.05.01 ~ 26.10.01</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeProfile bg">
+                                  <div class="itemHeader">
+                                    <div class="infoMemberBasic">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="40"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <span class="text idNumber">1324234</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="itemBody">
+                                    <div class="itemGroupA">
+                                      <span class="item"><span class="badge workState case1">교육</span></span>
+                                      <span class="item">Manager(P8)</span>
+                                      <span class="item">26.05.01 ~ 26.10.01</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button" class="cmnEventListButton">
+                                <div class="cardInfor typeProfile bg">
+                                  <div class="itemHeader">
+                                    <div class="infoMemberBasic">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="40"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                        </div>
+                                        <div class="row">
+                                          <span class="text idNumber">1324234</span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="itemBody">
+                                    <div class="itemGroupA">
+                                      <span class="item"><span class="badge workState case1">교육</span></span>
+                                      <span class="item">Manager(P8)</span>
+                                      <span class="item">26.05.01 ~ 26.10.01</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <!-- //tabContent 2 -->
+                    </div>
+                    <!-- //tabs -->
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Accordion
+  Accordion.init();
+});
+</script>
+</html>

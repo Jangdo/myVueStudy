@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    "Segoe UI",
+    system-ui,
+    sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+/* test1: bodyPanel 영역과 우측 패널 폭 변화를 확인하는 퍼블리싱 샘플 */
+.aiteaming-test1 {
+  display: flex;
+  gap: 16px;
+  min-height: 100vh;
+  padding: 16px;
+  overflow: hidden;
+  background: #eceff4;
+  color: #172033;
+}
+
+.aiteaming-test1__left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 280px;
+  min-height: 0;
+  border-radius: 16px;
+  background: #dbe2ec;
+  color: #475569;
+}
+
+.aiteaming-test1__placeholder {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.aiteaming-test1__main {
+  display: flex;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+}
+
+.aiteaming-test1__frame {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  background: #f1f5f9;
+}
+
+.aiteaming-test1__tab {
+  display: flex;
+  align-items: center;
+  flex: 0 0 51px;
+  padding: 0 20px;
+  border-bottom: 1px solid #dfe3ec;
+}
+
+.aiteaming-test1__tab-label {
+  color: #1f2937;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.aiteaming-test1__body {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  min-height: 0;
+  padding: 24px;
+  border: 2px dashed #2b6eea;
+  background: #ffffff;
+  transition: border-color 0.22s ease;
+}
+
+.aiteaming-test1__hint {
+  margin: 0;
+  max-width: 520px;
+  color: #334155;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.aiteaming-test1__hint strong {
+  color: #2b6eea;
+}
+
+.aiteaming-test1__right {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: flex-end;
+  min-height: 0;
+  transition:
+    width 0.22s ease,
+    padding 0.22s ease;
+}
+
+.aiteaming-test1__right[data-open="false"] {
+  width: 56px;
+  padding: 16px 8px 16px 0;
+}
+
+.aiteaming-test1__right[data-open="true"] {
+  width: 616px;
+  padding: 16px 32px;
+}
+
+.aiteaming-test1__toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 36px;
+  border: 1px solid #dfe3ec;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #191b1e;
+  cursor: pointer;
+}
+
+.aiteaming-test1__toggle:hover {
+  background: #f8fafc;
+}
+
+/* test2: 퍼블리싱 샘플 안내 페이지 */
+.aiteaming-test2 {
+  min-height: 100vh;
+  padding: 64px;
+  background:
+    radial-gradient(circle at top left, rgba(66, 133, 244, 0.18), transparent 32%),
+    linear-gradient(135deg, #111827 0%, #1f2937 100%);
+  color: #ffffff;
+}
+
+.aiteaming-test2__panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 0.8fr);
+  gap: 48px;
+  align-items: start;
+  max-width: 1080px;
+  padding: 52px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(16px);
+}
+
+.aiteaming-test2__label {
+  margin: 0 0 16px;
+  color: #93c5fd;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.aiteaming-test2__panel h1 {
+  margin: 0;
+  font-size: 48px;
+  line-height: 1.15;
+}
+
+.aiteaming-test2__panel p {
+  max-width: 620px;
+  margin: 22px 0 0;
+  color: #dbeafe;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.aiteaming-test2__summary {
+  display: grid;
+  gap: 16px;
+  margin: 0;
+}
+
+.aiteaming-test2__summary div {
+  padding: 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.aiteaming-test2__summary dt {
+  margin-bottom: 8px;
+  color: #bfdbfe;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.aiteaming-test2__summary dd {
+  margin: 0;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media (max-width: 900px) {
+  .aiteaming-test1 {
+    flex-direction: column;
+  }
+
+  .aiteaming-test1__left {
+    flex-basis: 80px;
+  }
+
+  .aiteaming-test1__right[data-open="false"],
+  .aiteaming-test1__right[data-open="true"] {
+    width: 100%;
+    padding: 16px 0 0;
+  }
+
+  .aiteaming-test2 {
+    padding: 32px;
+  }
+
+  .aiteaming-test2__panel {
+    grid-template-columns: 1fr;
+    padding: 32px;
+  }
+}

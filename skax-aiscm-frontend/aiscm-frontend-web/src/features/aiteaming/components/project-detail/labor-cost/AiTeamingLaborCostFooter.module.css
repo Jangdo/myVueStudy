@@ -1,0 +1,165 @@
+.root {
+  margin-top: 16px;
+  padding: 12px 32px;
+  /* 로딩·줄바꿈 변화 시 카드 하단이 출렁이지 않도록 높이 예약 */
+  min-height: 92px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1.5px solid #0006f7;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 6, 247, 0.04), 0 6px 30px rgba(35, 172, 250, 0.16);
+
+  font-family: var(--ui-button-figma-font, "Pretendard Variable", system-ui, sans-serif);
+  flex-shrink: 0;
+
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  min-height: 56px;
+}
+
+.buttonArea {
+  display: flex;
+  gap: 10px;
+}
+
+.editBtn,
+.btnPrimary {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.editBtn {
+  border: 1px solid #DCE0E5;
+  background: #fff;
+  color: #444b59;
+}
+
+.btnPrimary {
+  border: none;
+  background: #0b135e;
+  color: #fff;
+}
+
+.topRow {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: nowrap;
+}
+
+.bottomRow {
+  margin-top: 12px;
+}
+
+.chartWrap {
+  position: relative;
+  height: 8px;
+  border-radius: 8px;
+  background: #DCE0E5;
+}
+
+.bar {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  border-radius: 8px;
+  background:  #3D63FF;
+
+}
+
+.titleRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.title {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #101828;
+  line-height: 1.3;
+}
+
+.titleMuted {
+  color: #7c8390;
+  font-weight: 600;
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  margin-left: auto;
+  min-height: calc(12px * 1.5 * 2);
+}
+
+.hint {
+  margin: 0;
+  font-size: 12px;
+  font-weight: 500;
+  color: #9aa1ad;
+  text-align: right;
+  max-width: min(520px, 36vw);
+  line-height: 1.5;
+  /* 한 줄 ↔ 두 줄 전환 시 푸터 높이 튐 완화 */
+  min-height: 3em;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pricePrimary {
+  color: #005cff;
+  line-height: 1.3;
+  font-variant-numeric: tabular-nums;
+}
+
+.priceSep,
+.priceLimit {
+  color: #7c8390;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+@media (max-width: 1100px) {
+  .topRow {
+    flex-wrap: wrap;
+    row-gap: 12px;
+  }
+
+  .right {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-left: 0;
+    width: 100%;
+    min-height: unset;
+  }
+
+  .hint {
+    max-width: none;
+    text-align: left;
+    flex: 1 1 220px;
+    min-width: 0;
+  }
+}

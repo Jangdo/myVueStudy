@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <button type="button" class="button transparent sm iconOnly buttonBack">뒤로</button>
+                    <h2 class="cmnHeaderTitle lg">Action Item 상세</h2>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section">
+                    <div class="cmnHeader lg">
+                      <div class="cmnHeaderTitleArea">
+                        <strong class="cmnHeaderTitle md2">A조직 계획비 0.5% 감소 (기존 현황 정보)</strong>
+                        <span class="badge actionItem ai">AI생성</span>
+                        <span class="badge actionItem snop">S&amp;OP</span>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button assistive outlined md">수정</button>
+                          <button type="button" class="button assistive outlined md">삭제</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="fieldsets xl">
+                      <dl class="fieldset type1">
+                        <div class="col">
+                          <dt>생성일</dt>
+                          <dd>26.04.13</dd>
+                        </div>
+                        <div class="col">
+                          <dt>유형</dt>
+                          <dd>BR</dd>
+                        </div>
+                        <div class="col">
+                          <dt>귀속 조직</dt>
+                          <dd>AT서비스 부분 > NOVA 추진 본부</dd>
+                        </div>
+                        <div class="col">
+                          <dt>귀속 연월</dt>
+                          <dd>26년 8월</dd>
+                        </div>
+                        <div class="col">
+                          <dt>원인</dt>
+                          <dd>연간 UR 00% 수준으로 전체 가동 중이나, 1분기 계약 지연, 투자 확대로 연간 BR 61%, 계획비 12% 미달</dd>
+                        </div>
+                        <div class="col">
+                          <dt>해소 방안</dt>
+                          <dd>신규 프로젝트를 진행, BR 2% 개선 예정. 및 해소 방안 해소 방안 해소 방안 해소 방안 신규 프로젝트를 진행, BR 2% 개선 예정. 및 해소 방안 해소 방안 해소 방안 해소 방안 <br />신규 프로젝트를 진행, BR 2% 개선 예정. 및 해소 방안 해소 방안 해소 방안 해소 방안</dd>
+                        </div>
+                        <div class="col">
+                          <dt><label>해소 방안</label></dt>
+                          <dd>
+                            <textarea cols="50" rows="3" class="xl" placeholder="해소 방안을 작성해주세요"></textarea>
+                            <div class="floatingArea rightTop">
+                              <div class="buttons">
+                                <button type="button" class="button outlined sm assistive">임시 저장</button>
+                                <button type="button" class="button outlined sm primary">등록</button>
+                              </div>
+                            </div>
+                          </dd>
+                        </div>
+                      </dl>
+                      <div class="buttons footer">
+                        <button type="button" class="button solid submit xl">S&OP 등록</button>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

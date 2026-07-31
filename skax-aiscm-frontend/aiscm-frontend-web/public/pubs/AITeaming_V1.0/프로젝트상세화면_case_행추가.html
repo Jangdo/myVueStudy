@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <h2 class="cmnHeaderTitle lg">프로젝트 정보</h2>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="section flex1">
+                    <div class="cmnHeader md">
+                      <div class="cmnHeaderTitleArea">
+                        <strong class="cmnHeaderTitle">담당 팀원</strong>
+                      </div>
+                      <div class="cmnHeaderSideArea">
+                        <div class="buttons">
+                          <button type="button" class="button outlined assistive md iconPre buttonUpload">PROMIS 보내기</button>
+                          <button type="button" class="button outlined assistive md iconPre buttonDownload">엑셀 다운로드</button>
+                          <button type="button" class="button outlined primary md iconPre buttonAi">AI 추천 조건 설정</button>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- card -->
+                    <div class="card type2 projectInforTeamMemeber">
+                      <div class="cmnHeader">
+                        <div class="cmnHeaderTitleArea">
+                          <!-- ==============================
+                            #클래스 설명
+                              - 활성 : .button.filter + .isActive
+                          ============================== -->
+                          
+                          <div class="buttons sm">
+                            <button type="button" class="button filter sm isActive">전체</button>
+                            <button type="button" class="button filter sm">미배정</button>
+                          </div>
+                          <div class="radios">
+                            <label class="chckboxSwitch">
+                              <span class="labelText">Skill-set 펼치기</span>
+                              <input type="checkbox" data-check-toggle-item-button="skill" data-display="table-cell" />
+                            </label>
+                            <label class="chckboxSwitch">
+                              <span class="labelText">월별 MM 펼치기</span>
+                              <input type="checkbox" data-check-toggle-item-button="mtm" data-display="table-cell" />
+                            </label>
+                          </div>
+                        </div>
+                        <div class="cmnHeaderSideArea">
+                          <div class="buttons sm">
+                            <div class="col">
+                              <button type="button" class="button assistive outlined sm">행 추가</button>
+                              <button type="button" class="button assistive outlined sm">행 삭제</button>
+                              <button type="button" class="button assistive outlined sm">행 복사</button>
+                            </div>
+                            <div class="col">
+                              <button type="button" class="button primary solid sm">승인 요청</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <!-- case / 행추가 / 기본 구성 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">단위업무</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">직접입력</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <input type="text" class="fieldOver" placeholder="직접입력" style="display: none;" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="inputBox clickable" role="button">
+                                    <input type="text" placeholder="역할명 검색" readonly />
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                              <button class="button iconOnly buttonTooltip3" data-tooltip="금액은 'step3 인력배정을 완료하면 입력됩니다">툴팁</button>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">Assign type</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">M/M</span>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">금액(KRW)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                              <div class="sideArea">
+                                <span class="text">*인력 배정 조건을 입력해 주세요.</span>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBoxCard">
+                                  <div class="fieldBox">
+                                    <div class="dropdown flex1">
+                                      <button class="dropdownButton">P레벨</button>
+                                      <!-- root menu -->
+                                      <div class="dropdownMenu">
+                                        <ul class="dropdownMenuInner">
+                                          <li class="menuItem">
+                                            <button class="menuButton">옵션1</button>
+                                          </li>
+                                          <li class="menuItem">
+                                            <button class="menuButton">옵션2</button>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="button outlined md primary">Skill-set 검색</button>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 기본 구성 -->
+
+                      <hr />
+
+                      <!-- case / 행추가 / 1단위업무선택 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">단위업무</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">직접입력</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <input type="text" class="fieldOver" placeholder="직접입력" style="display: none;" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="inputBox clickable" role="button">
+                                    <input type="text" placeholder="역할명 검색" readonly />
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 1단위업무선택 -->
+
+                      <!-- case / 행추가 / 1단위업무선택 : 직접입력 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">단위업무</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">직접입력</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                  <input type="text" class="fieldOver" placeholder="직접입력" style="display: block;" >
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox">
+                                  <div class="inputBox clickable" role="button">
+                                    <input type="text" placeholder="역할명 검색" readonly />
+                                  </div>
+                                  <div class="sideArea">
+                                    <button type="button" class="button iconOnly buttonSearch">검색</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 1단위업무선택 : 직접입력 -->
+
+                      <hr />
+
+                      <!-- case / 행추가 / 2투입정보 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                              <button class="button iconOnly buttonTooltip3" data-tooltip="금액은 'step3 인력배정을 완료하면 입력됩니다">툴팁</button>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">Assign type</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="inputBox">
+                                    <input type="text" />
+                                    <span class="unit">M/H</span>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex2">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">M/M</span>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">금액(KRW)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 2투입정보 -->
+
+                      <!-- case / 행추가 / 2투입정보 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                              <button class="button iconOnly buttonTooltip3" data-tooltip="금액은 'step3 인력배정을 완료하면 입력됩니다">툴팁</button>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="dropdown flex1">
+                                    <button class="dropdownButton">Assign type</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                  <div class="inputBox ">
+                                    <input type="text" placeholder="yyyy.mm.dd" />
+                                    <button type="button" class="button iconOnly buttonCalendar">입력 삭제</button>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="fieldBox flex2">
+                                  <div class="inputBox">
+                                    <input type="text" />
+                                    <span class="unit">M/H</span>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex2">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">M/M</span>
+                                  </div>
+                                </div>
+                                <div class="fieldBox flex3">
+                                  <div class="inputBox">
+                                    <input type="text" readonly />
+                                    <span class="unit">금액(KRW)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 2투입정보 -->
+
+                      <hr />
+
+                      <!-- case / 행추가 / 3인력배정 : 인력 미배정 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                              <div class="sideArea">
+                                <span class="text">*인력 배정 조건을 입력해 주세요.</span>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldBoxCard">
+                                  <div class="fieldBox">
+                                    <div class="dropdown flex1">
+                                      <button class="dropdownButton">P레벨</button>
+                                      <!-- root menu -->
+                                      <div class="dropdownMenu">
+                                        <ul class="dropdownMenuInner">
+                                          <li class="menuItem">
+                                            <button class="menuButton">옵션1</button>
+                                          </li>
+                                          <li class="menuItem">
+                                            <button class="menuButton">옵션2</button>
+                                          </li>
+                                        </ul>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <button type="button" class="button outlined md primary">Skill-set 검색</button>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 3인력배정 : 인력 미배정 -->
+
+                      <!-- case / 행추가 / 3인력배정 : 인력 배정 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldItemCard">
+                                  <div class="item">
+                                    <span class="title tbd">TBD (P1) Software Development | Front-end Development(3)</span>
+                                    <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">역할추가</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 3인력배정 : 인력 배정 -->
+                      
+                      <!-- case / 행추가 / 3인력배정 : 인력 배정 후 승인 전 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                              <div class="sideArea">
+                                <span class="text">*특정 구성원이 선택된 상태에서는 step1,2 를 수정할 수 없습니다.</span>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldItemCard">
+                                  <div class="item">
+                                    <span class="title">홍길동 (P1) Software Development | Front-end Development(3)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">취소</button>
+                            <button type="button" class="button primary solid md">인력 배정 취소</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 3인력배정 : 인력 배정 후 승인 전 -->
+
+                      <!-- case / 행추가 / 3인력배정 : 인력 배정 후 승인 완료 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                              <div class="sideArea">
+                                <span class="text">*투입중, 투입확정 상태의 역할은 배정 취소 후 수정이 가능합니다. </span>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldItemCard">
+                                  <div class="item">
+                                    <span class="title">홍길동 (P1) Software Development | Front-end Development(3)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">닫기</button>
+                            <button type="button" class="button primary solid md">배정 취소 승인 요청</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 3인력배정 : 인력 배정 후 승인 전 -->
+
+                      <!-- case / 행추가 / 3인력배정 : 인력 배정 후 취소 대기중 -->
+                      <div class="fieldsets bg row">
+                        <dl class="fieldset type2">
+                          <div class="col flex2">
+                            <dt>
+                              <label><strong class="fontPrimary">1</strong>단위업무 선택</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex5">
+                            <dt>
+                              <label><strong class="fontPrimary">2</strong>투입 정보</label>
+                            </dt>
+                            <dd></dd>
+                          </div>
+                          <div class="col flex6">
+                            <dt>
+                              <label><strong class="fontPrimary">3</strong>인력 배정</label>
+                              <div class="sideArea">
+                                <span class="text">*배정 취소 승인 대기중입니다. </span>
+                              </div>
+                            </dt>
+                            <dd>
+                              <div class="row">
+                                <div class="fieldItemCard">
+                                  <div class="item">
+                                    <span class="title">홍길동 (P1) Software Development | Front-end Development(3)</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </dd>
+                          </div>
+                        </dl>
+                        <div class="fieldsetFooter">
+                          <div class="buttons">
+                            <button type="button" class="button assistive outlined md">닫기</button>
+                            <button type="button" class="button primary solid md">승인 요청 취소</button>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- //case / 행추가 / 3인력배정 : 인력 배정 후 취소 대기중 -->
+                    </div>
+                    <!-- //card -->
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        우측 영역
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Tooltip
+  new Tooltip();
+
+  // panel size 조절
+  new flexablePanel();
+
+  // table x scroll
+  new TableScroller({
+    className: 'tablesScrollX'
+  });
+
+  // switch toggle
+  initCheckToggleItems();
+
+  // Accordion
+  Accordion.init();
+
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

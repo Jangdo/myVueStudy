@@ -1,0 +1,656 @@
+/* prototype `dashboard.css` + PageSection — 셸 본문과 이중 카드 방지 */
+
+.wrap {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  background: transparent;
+}
+
+/* prototype `Stack` gap="lg" — KPI · Task · 하단 · 각주 간 세로 여백 */
+.stackLg {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* prototype `layout-grid--kpi`: 행을 균등 분할해 카드가 가로 폭을 꽉 채움 */
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 0;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.grid button {
+  font: inherit;
+  text-align: inherit;
+  width: 100%;
+  min-width: 0;
+}
+
+/* prototype `.kpi-card` — 배경 단일 톤, 숫자만 톤 컬러 */
+.kpi {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px 16px;
+  background: var(--color-bg-surface);
+  text-align: left;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.kpiClickable {
+  cursor: pointer;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.kpiClickable:hover {
+  border-color: var(--color-border-strong);
+}
+
+.kpiLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0 0 4px;
+}
+
+.kpiSub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin: 4px 0 0;
+}
+
+.kpiValue {
+  margin: 0;
+  font-size: 22px;
+  line-height: 1;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.kpiGreen .kpiValue {
+  color: var(--color-success);
+}
+.kpiAccent .kpiValue {
+  color: var(--color-accent-2);
+}
+.kpiOrange .kpiValue {
+  color: var(--color-orange);
+}
+.kpiYellow .kpiValue {
+  color: var(--color-warning);
+}
+
+.hint {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.refreshing {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 8px;
+}
+
+.busyRoot {
+  position: relative;
+  min-height: 160px;
+}
+
+.loadingOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(248, 250, 252, 0.92);
+  border-radius: 12px;
+}
+
+.loadingText {
+  margin: 0;
+  font-size: 14px;
+  color: #475569;
+}
+
+.taskAlert {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 0;
+  padding: 10px 16px;
+  border: 1px solid rgba(225, 112, 85, 0.35);
+  border-radius: 10px;
+  background: rgba(225, 112, 85, 0.15);
+}
+
+.taskAlert > div:last-child {
+  flex: 1;
+  min-width: 0;
+}
+
+.taskAlertIcon {
+  font-size: 15px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.taskAlertTitle {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-orange);
+  margin-bottom: 6px;
+}
+
+.taskAlertItems {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.taskItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 7px;
+  border: 1px solid rgba(225, 112, 85, 0.25);
+  background: rgba(225, 112, 85, 0.12);
+  cursor: pointer;
+  text-align: left;
+  font: inherit;
+  color: var(--color-text);
+}
+
+.taskItem:hover {
+  border-color: rgba(225, 112, 85, 0.45);
+}
+
+.taskArrow {
+  color: var(--color-orange);
+  font-size: 11px;
+}
+
+.taskText {
+  flex: 1;
+  font-size: 12px;
+  max-width: 420px;
+  text-align: left;
+}
+
+.taskMeta {
+  font-size: 10px;
+  color: var(--color-text-muted);
+  border-left: 1px solid var(--color-border);
+  padding-left: 8px;
+}
+
+.taskEmpty {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.bottom {
+  margin-top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* 좌·우 하단 패널: 본문 스크롤(app-shell__main)로 일원화 */
+.bottomColLeft,
+.bottomColRight {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  min-width: 0;
+}
+
+.bottomColScroll {
+  flex: 1;
+  min-height: 0;
+  overflow: visible;
+  padding-right: 0;
+}
+
+@media (max-width: 899px) {
+  .bottomColScroll {
+    max-height: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .bottomColLeft,
+  .bottomColRight {
+    max-height: none;
+  }
+}
+
+.sectionHead {
+  margin-bottom: 10px;
+}
+
+.sectionHeadRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.sectionTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.sectionSub {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.stageStack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stagePanel {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-bg-surface);
+  overflow: hidden;
+}
+
+.stageHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.stageBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 22px;
+  height: 22px;
+  padding: 0 6px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.stageBadgeOrange {
+  background: color-mix(in srgb, var(--color-orange) 20%, transparent);
+  color: var(--color-orange);
+}
+
+.stageBadgeYellow {
+  background: color-mix(in srgb, var(--color-warning) 24%, transparent);
+  color: var(--color-warning);
+}
+
+.stageBadgeGreen {
+  background: color-mix(in srgb, var(--color-success) 20%, transparent);
+  color: var(--color-success);
+}
+
+.stageBody {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.stageEmpty {
+  text-align: center;
+  padding: 10px;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}
+
+.pjtCard {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 10px;
+  background: var(--color-bg-elevated);
+  transition: border-color 0.15s ease;
+}
+
+.pjtCardClick {
+  cursor: pointer;
+}
+
+.pjtCardClick:hover {
+  border-color: var(--color-border-strong);
+}
+
+.pjtRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.pjtWin {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.pjtWinOrange {
+  background: color-mix(in srgb, var(--color-orange) 20%, transparent);
+  color: var(--color-orange);
+}
+
+.pjtWinYellow {
+  background: color-mix(in srgb, var(--color-warning) 24%, transparent);
+  color: var(--color-warning);
+}
+
+.pjtWinGreen {
+  background: color-mix(in srgb, var(--color-success) 20%, transparent);
+  color: var(--color-success);
+}
+
+.pjtName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+  line-height: 1.35;
+}
+
+.pjtClient {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.pjtAmount {
+  font-size: 11px;
+  color: var(--color-text);
+  margin-bottom: 6px;
+}
+
+.pjtProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.progWrap {
+  flex: 1;
+}
+
+/* Pipeline 카드 내 진행 막대 (prototype `.pjt-prog-bar`) */
+.pjtProgBar {
+  height: 4px;
+  margin: 0;
+  border-radius: 999px;
+}
+
+.pjtProgressRow .progBar {
+  height: 4px;
+}
+
+.progBar {
+  width: 100%;
+  background: var(--color-bg-muted);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progFill {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent-2), var(--color-success));
+  border-radius: 999px;
+}
+
+.pjtPct {
+  font-size: 10px;
+  font-weight: 600;
+  min-width: 32px;
+  text-align: right;
+}
+
+.pctComplete {
+  color: var(--color-success);
+}
+
+.pctMid {
+  color: var(--color-warning);
+}
+
+.pctLow {
+  color: var(--color-orange);
+}
+
+.tag {
+  display: inline-block;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
+
+.tagGreen {
+  background: color-mix(in srgb, var(--color-success) 20%, transparent);
+  color: var(--color-success);
+}
+
+.tagOrange {
+  background: color-mix(in srgb, var(--color-orange) 20%, transparent);
+  color: var(--color-orange);
+}
+
+.tagNeutral {
+  background: var(--color-bg-muted);
+  color: var(--color-text-muted);
+}
+
+.pjtCard .btnSolid,
+.pjtCard .btnOutline {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btnSolid {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: none;
+  background: var(--color-primary);
+  color: #fff;
+  cursor: pointer;
+}
+
+.btnSolid:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btnOutline {
+  margin-top: 8px;
+  padding: 6px 12px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+}
+
+.btnOutlineSm {
+  padding: 6px 10px;
+  font-size: 11px;
+  border-radius: 6px;
+  border: 1px solid var(--color-border-strong);
+  background: var(--color-bg-surface);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.ongoingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.activeCard {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 14px;
+  background: var(--color-bg-surface);
+  transition: border-color 0.15s ease;
+}
+
+.activeCardClick {
+  cursor: pointer;
+}
+
+.activeCardClick:hover {
+  border-color: var(--color-success);
+}
+
+.activeCardTop {
+  margin-bottom: 8px;
+}
+
+.chipOngoing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-success) 20%, transparent);
+  color: var(--color-success);
+  margin-bottom: 6px;
+}
+
+.chipReady {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--color-blue) 20%, transparent);
+  color: var(--color-blue);
+  margin-bottom: 6px;
+}
+
+.activeName {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-top: 4px;
+  line-height: 1.35;
+}
+
+.activeMeta {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-top: 2px;
+}
+
+.activeProgressRow {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.activeProgressMain {
+  flex: 1;
+}
+
+.progressLabel {
+  font-size: 11px;
+  color: var(--color-text-muted);
+  margin-bottom: 4px;
+}
+
+/* prototype `.active-card .prog-bar` — 얇은 막대 + 단색 채움 */
+.activeProgTrack {
+  width: 100%;
+  height: 3px;
+  margin: 4px 0 0;
+  border-radius: 2px;
+  background: var(--color-bg-elevated);
+  overflow: hidden;
+}
+
+.activeProgFill {
+  display: block;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--color-success);
+}
+
+.activePct {
+  font-size: 13px;
+  font-weight: 700;
+  min-width: 40px;
+  text-align: right;
+}
+
+.activeTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.activeBtnWrap {
+  margin-top: 10px;
+}
+
+.activeBtnWrap .btnSolid {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.emptyState {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.footnote {
+  margin-top: 0;
+  font-size: 11px;
+  color: var(--color-text-muted);
+}

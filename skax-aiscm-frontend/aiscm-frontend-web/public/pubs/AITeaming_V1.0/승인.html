@@ -1,0 +1,1707 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel">
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <!-- tabs -->
+                  <div class="tabs">
+                    <div class="cmnHeader lg">
+                      <div class="cmnHeaderTitleArea">
+                        <h2 class="cmnHeaderTitle lg">승인</h2>
+                      </div>
+                    </div>
+                    <div class="tabButtons type3 rightTop">
+                      <div class="buttons">
+                        <button class="tabButton isActive" data-tab="tab1">팀원별 보기</button>
+                        <button class="tabButton" data-tab="tab2">프로젝트별 보기</button>
+                      </div>
+                    </div>
+
+                    <!-- tabContent 1 : 팀원별 보기 -->
+                    <div class="tabContent isActive" data-content="tab1">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab1Inner1">승인 필요</button>
+                            <button class="tabButton" data-tab="tab1Inner2">처리 결과</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 1 inner 1 : 승인 필요 -->
+                        <div class="tabContent isActive" data-content="tab1Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <input type="checkbox" />
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="buttons">
+                                  <button type="button" class="button primary outlined md">선택 승인</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="cmnItemList type3 applyRequestProjectList">
+                              <li>
+                                <div class="cmnHeader md2">
+                                  <div class="cmnHeaderTitleArea">
+                                    <div class="infoMemberBasic sm2">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                          <span class="grade">P4</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <ul class="applyRequestItemList cmnEventList step1 accordions type1" data-ui="accordions">
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button outlined sm assistive">반려</button>
+                                                <button type="button" class="button solid sm submit">승인</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button outlined sm assistive">반려</button>
+                                                <button type="button" class="button solid sm submit">승인</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <div class="cmnHeader md2">
+                                  <div class="cmnHeaderTitleArea">
+                                    <div class="infoMemberBasic sm2">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                          <span class="grade">P4</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <ul class="applyRequestItemList cmnEventList step1 accordions type1" data-ui="accordions">
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button outlined sm assistive">반려</button>
+                                                <button type="button" class="button solid sm submit">승인</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button outlined sm assistive">반려</button>
+                                                <button type="button" class="button solid sm submit">승인</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 1 : 승인 필요 -->
+
+                        <!-- tabContent 1 inner 2 : 처리 결과 -->
+                        <div class="tabContent " data-content="tab1Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="cmnItemList type3 applyRequestProjectList">
+                              <li>
+                                <div class="cmnHeader md2">
+                                  <div class="cmnHeaderTitleArea">
+                                    <div class="infoMemberBasic sm2">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                          <span class="grade">P4</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <ul class="applyRequestItemList cmnEventList step1 accordions type1" data-ui="accordions">
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <span class="applyReturnReasonText">사유 : 타 프로젝트 투입</span>
+                                              <div class="buttons">
+                                                <button type="button" class="button solid sm submit" disabled>반려</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button solid sm submit" disabled>승인 완료</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                              <li>
+                                <div class="cmnHeader md2">
+                                  <div class="cmnHeaderTitleArea">
+                                    <div class="infoMemberBasic sm2">
+                                      <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30"></span>
+                                      <div class="infos">
+                                        <div class="row">
+                                          <span class="userName">김프로</span>
+                                          <span class="grade">P4</span>
+                                        </div>
+                                        <div class="row">
+                                          <a href="#none" class="buttonLink idNumber">1324234</a>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                <ul class="applyRequestItemList cmnEventList step1 accordions type1" data-ui="accordions">
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <span class="applyReturnReasonText">사유 : 타 프로젝트 투입</span>
+                                              <div class="buttons">
+                                                <button type="button" class="button solid sm submit" disabled>반려</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                  <li class="applyRequestItemListLi">
+                                    <div class="applyRequestItem border accordion cmnEventListCardLabel">
+                                      <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                        <div class="cmnHeaderTitleArea">
+                                          <input type="checkbox" class="primary cmnEventListCardInput" />
+                                          <span class="badge businessStep">수행PM</span>
+                                          <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                        </div>
+                                        <div class="cmnHeaderSideArea">
+                                          <div class="itemGroupA md2">
+                                            <span class="item">
+                                               <span class="badge assign case1">배정 요청</span>
+                                               <span class="badge assign case2">배정 취소 요청</span>
+                                            </span>
+                                            <span class="item">
+                                              <div class="buttons">
+                                                <button type="button" class="button solid sm submit" disabled>승인 완료</button>
+                                              </div>
+                                            </span>
+                                          </div>
+                                          <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                        </div>
+                                      </div>
+                                      <div class="applyRequestItemBody accordionBody">
+                                        <dl class="dlist type1c step4">
+                                          <div class="row">
+                                            <dt>수행기간</dt>
+                                            <dd>2026.09.01~2027.08.31</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>프로젝트타입</dt>
+                                            <dd>SI-AD</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>고객사</dt>
+                                            <dd>SK하이닉스</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>총사업예산</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주귀속조직(팀/본부)</dt>
+                                            <dd>금융사업개발1팀/금융사업본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>영업대표</dt>
+                                            <dd>김영업 매니저</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>매출귀속조직(팀/본부)</dt>
+                                            <dd>서비스 2팀/B서비스 본부</dd>
+                                          </div>
+                                          <div class="row">
+                                            <dt>수주목표금액</dt>
+                                            <dd>1,000,000,000원</dd>
+                                          </div>
+                                        </dl>
+                                      </div>
+                                      <div class="applyRequestItemBody">
+                                        <div class="setConditionSumary">
+                                          <div class="conditionGroup">
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입역할</dt>
+                                                  <dd><strong>개발 PL</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>직무/스킬셋</dt>
+                                                  <dd>
+                                                    <div class="setItemSelected type2 xxs">
+                                                      <span class="itemSelected">Cloud</span>
+                                                      <span class="itemSelected">Infra Engineering</span>
+                                                      <span class="itemSelected">Middleware</span>
+                                                      <span class="itemSelected">Database Engineering</span>
+                                                    </div>
+                                                  </dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                            <div class="group">
+                                              <dl class="dlist">
+                                                <div class="row">
+                                                  <dt>투입기간</dt>
+                                                  <dd><strong>2026.04.01 ~ 2026.07.31 · Full Time · 4MM</strong></dd>
+                                                </div>
+                                              </dl>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                        <!-- //tabContent 1 inner 2 : 처리 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 1 : 팀원별 보기 -->
+
+                    <!-- tabContent 2 : 프로젝트별 보기 -->
+                    <div class="tabContent " data-content="tab2">
+                      <div class="tabs">
+                        <div class="tabButtons type1 md2 mb2">
+                          <div class="buttons">
+                            <button class="tabButton isActive" data-tab="tab2Inner1">승인 필요</button>
+                            <button class="tabButton" data-tab="tab2Inner2">처리 결과</button>
+                          </div>
+                        </div>
+
+                        <!-- tabContent 2 inner 1 : 승인 필요 -->
+                        <div class="tabContent isActive" data-content="tab2Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <input type="checkbox" />
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="cmnHeaderSideArea">
+                                <div class="buttons">
+                                  <button type="button" class="button primary outlined md">선택 승인</button>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="applyRequestItemList accordions type1" data-ui="accordions">
+                              <li class="applyRequestItemListLi">
+                                <div class="applyRequestItem border accordion">
+                                  <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                    <div class="cmnHeaderTitleArea">
+                                      <span class="badge businessStep">수행PM</span>
+                                      <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                    </div>
+                                    <div class="cmnHeaderSideArea">
+                                      <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                    </div>
+                                  </div>
+                                  <div class="applyRequestItemBody accordionBody">
+                                    <dl class="dlist type1c step4">
+                                      <div class="row">
+                                        <dt>수행기간</dt>
+                                        <dd>2026.09.01~2027.08.31</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>프로젝트타입</dt>
+                                        <dd>SI-AD</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>고객사</dt>
+                                        <dd>SK하이닉스</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>총사업예산</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주귀속조직(팀/본부)</dt>
+                                        <dd>금융사업개발1팀/금융사업본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>영업대표</dt>
+                                        <dd>김영업 매니저</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>매출귀속조직(팀/본부)</dt>
+                                        <dd>서비스 2팀/B서비스 본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주목표금액</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                  <div class="applyRequestItemBody">
+                                    <div class="tables mt12">
+                                      <div class="cmnHeader md">
+                                        <div class="cmnHeaderTitleArea">
+                                          <h6 class="cmnHeaderTitle sm">팀원 목록</h6>
+                                        </div>
+                                      </div>
+
+                                      <table class="table type2">
+                                        <!-- ==============================
+                                          # tr 상태 클래스
+                                            - 선택됨 : tr.isSelected
+                                        ============================== -->
+                                        <colgroup>
+                                          <col style="width: 40px" />
+                                          <col style="width: 130px" />
+                                          <col style="width: 150px" />
+                                          <col style="width: auto" />
+                                          <col style="width: 240px" />
+                                          <col style="width: 140px" />
+                                          <col style="width: 140px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th>프로필</th>
+                                            <th>투입역할</th>
+                                            <th>직무/Skill-set</th>
+                                            <th>투입기간</th>
+                                            <th>요청 구분</th>
+                                            <th>승인 처리</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="isSelected">
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="applyRequestItemListLi">
+                                <div class="applyRequestItem border accordion">
+                                  <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                    <div class="cmnHeaderTitleArea">
+                                      <span class="badge businessStep">수행PM</span>
+                                      <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                    </div>
+                                    <div class="cmnHeaderSideArea">
+                                      <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                    </div>
+                                  </div>
+                                  <div class="applyRequestItemBody accordionBody">
+                                    <dl class="dlist type1c step4">
+                                      <div class="row">
+                                        <dt>수행기간</dt>
+                                        <dd>2026.09.01~2027.08.31</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>프로젝트타입</dt>
+                                        <dd>SI-AD</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>고객사</dt>
+                                        <dd>SK하이닉스</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>총사업예산</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주귀속조직(팀/본부)</dt>
+                                        <dd>금융사업개발1팀/금융사업본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>영업대표</dt>
+                                        <dd>김영업 매니저</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>매출귀속조직(팀/본부)</dt>
+                                        <dd>서비스 2팀/B서비스 본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주목표금액</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                  <div class="applyRequestItemBody">
+                                    <div class="tables mt12">
+                                      <div class="cmnHeader md">
+                                        <div class="cmnHeaderTitleArea">
+                                          <h6 class="cmnHeaderTitle sm">팀원 목록</h6>
+                                        </div>
+                                      </div>
+
+                                      <table class="table type2">
+                                        <!-- ==============================
+                                          # tr 상태 클래스
+                                            - 선택됨 : tr.isSelected
+                                        ============================== -->
+                                        <colgroup>
+                                          <col style="width: 40px" />
+                                          <col style="width: 130px" />
+                                          <col style="width: 150px" />
+                                          <col style="width: auto" />
+                                          <col style="width: 240px" />
+                                          <col style="width: 140px" />
+                                          <col style="width: 140px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th><input type="checkbox" /></th>
+                                            <th>프로필</th>
+                                            <th>투입역할</th>
+                                            <th>직무/Skill-set</th>
+                                            <th>투입기간</th>
+                                            <th>요청 구분</th>
+                                            <th>승인 처리</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr class="isSelected">
+                                            <td><input type="checkbox" checked /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                          <tr>
+                                            <td><input type="checkbox" /></td>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button outlined sm assistive">반려</button>
+                                              <button type="button" class="button solid sm submit">승인</button>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 1 : 승인 필요 -->
+
+                        <!-- tabContent 2 inner 2 : 처리 결과 -->
+                        <div class="tabContent " data-content="tab2Inner1">
+                          <section class="section">
+                            <div class="cmnHeader md">
+                              <div class="cmnHeaderTitleArea">
+                                <div class="buttons">
+                                  <div class="dropdown md">
+                                    <button class="dropdownButton">전체</button>
+                                    <!-- root menu -->
+                                    <div class="dropdownMenu">
+                                      <ul class="dropdownMenuInner">
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션1</button>
+                                        </li>
+                                        <li class="menuItem">
+                                          <button class="menuButton">옵션2</button>
+                                        </li>
+                                      </ul>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <ul class="applyRequestItemList accordions type1" data-ui="accordions">
+                              <li class="applyRequestItemListLi">
+                                <div class="applyRequestItem border accordion">
+                                  <div class="applyRequestItemHeader cmnHeader accordionHeader">
+                                    <div class="cmnHeaderTitleArea">
+                                      <span class="badge businessStep">수행PM</span>
+                                      <h5 class="cmnHeaderTitle">(프로젝트 번호) 프로젝트 정보</h5>
+                                    </div>
+                                    <div class="cmnHeaderSideArea">
+                                      <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                    </div>
+                                  </div>
+                                  <div class="applyRequestItemBody accordionBody">
+                                    <dl class="dlist type1c step4">
+                                      <div class="row">
+                                        <dt>수행기간</dt>
+                                        <dd>2026.09.01~2027.08.31</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>프로젝트타입</dt>
+                                        <dd>SI-AD</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>고객사</dt>
+                                        <dd>SK하이닉스</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>총사업예산</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주귀속조직(팀/본부)</dt>
+                                        <dd>금융사업개발1팀/금융사업본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>영업대표</dt>
+                                        <dd>김영업 매니저</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>매출귀속조직(팀/본부)</dt>
+                                        <dd>서비스 2팀/B서비스 본부</dd>
+                                      </div>
+                                      <div class="row">
+                                        <dt>수주목표금액</dt>
+                                        <dd>1,000,000,000원</dd>
+                                      </div>
+                                    </dl>
+                                  </div>
+                                  <div class="applyRequestItemBody">
+                                    <div class="tables mt12">
+                                      <div class="cmnHeader md">
+                                        <div class="cmnHeaderTitleArea">
+                                          <h6 class="cmnHeaderTitle sm">팀원 목록</h6>
+                                        </div>
+                                      </div>
+                                      <table class="table type2">
+                                        <colgroup>
+                                          <col style="width: 130px" />
+                                          <col style="width: 150px" />
+                                          <col style="width: auto" />
+                                          <col style="width: 240px" />
+                                          <col style="width: 140px" />
+                                          <col style="width: 140px" />
+                                          <col style="width: 180px" />
+                                        </colgroup>
+                                        <thead>
+                                          <tr>
+                                            <th>프로필</th>
+                                            <th>투입역할</th>
+                                            <th>직무/Skill-set</th>
+                                            <th>투입기간</th>
+                                            <th>요청 구분</th>
+                                            <th>승인 처리</th>
+                                            <th>반려 사유</th>
+                                          </tr>
+                                        </thead>
+                                        <tbody>
+                                          <tr>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button solid sm submit" disabled>승인 완료</button>
+                                            </td>
+                                            <td class="tac hover">타 프로젝트 투입</td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button solid sm submit" disabled>승인 완료</button>
+                                            </td>
+                                            <td class="tac hover">타 프로젝트 투입 긴텍스트 긴텍스트 긴텍스트 긴텍스트</td>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <div class="infoMemberBasic sm">
+                                                <span class="thumb"><img src="/assets/images/common/noimage_profile.png" width="30" /></span>
+                                                <div class="infos">
+                                                  <div class="row">
+                                                    <span class="userName">김프로</span>
+                                                    <span class="grade">P4</span>
+                                                  </div>
+                                                  <div class="row">
+                                                    <a href="#none" class="buttonLink idNumber">1324234</a>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </td>
+                                            <td>PM</td>
+                                            <td>
+                                              <div class="setItemSelected type3 xxs">
+                                                <span class="itemSelected">Cloud</span>
+                                                <span class="itemSelected">Infra Engineering</span>
+                                                <span class="itemSelected">Middleware</span>
+                                                <span class="itemSelected">Database Engineering</span>
+                                              </div>
+                                            </td>
+                                            <td class="tac">
+                                              <div class="infoMember period row">
+                                                <span class="date">26.04.01 - 26.07.31</span>
+                                                <span class="sum">Full Time · 4MM</span>
+                                              </div>
+                                            </td>
+                                            <td><span class="badge assign case1">배정 요청</span></td>
+                                            <td class="tac">
+                                              <button type="button" class="button solid sm submit" disabled>승인 완료</button>
+                                            </td>
+                                            <td class="tac hover">타 프로젝트 투입</td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </div>
+                              </li>
+                            </ul>
+                          </section>
+                        </div>
+                        <!-- //tabContent 2 inner 2 : 처리 결과 -->
+                      </div>
+                    </div>
+                    <!-- //tabContent 2 : 프로젝트별 보기 -->
+                  </div>
+                  <!-- //tabs -->
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+    </div>
+  </div>
+</body>
+<script>
+// TabMenu
+document.querySelectorAll('.tabs').forEach(tab => {
+  new TabMenu(tab);
+});
+
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // Accordion
+  Accordion.init();
+
+  // Dropdown
+  Dropdown.initAll();
+});
+</script>
+</html>

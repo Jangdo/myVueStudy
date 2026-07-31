@@ -1,0 +1,80 @@
+.aside {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  box-sizing: border-box;
+  transition:
+    width 0.22s ease,
+    padding 0.22s ease,
+    border-color 0.22s ease,
+    background-color 0.22s ease;
+}
+
+.asideOpen {
+  width: 616px;
+  padding: 0;
+}
+
+.asideCollapsed {
+  width: 56px;
+  padding: 16px 8px 16px 0;
+  align-items: flex-end;
+}
+
+.toggleBtn {
+  width: 36px;
+  height: 36px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #191b1e;
+}
+
+.toggleBtn:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.panel {
+  flex: 1;
+  min-height: 0;
+  width: 100%;
+  background: #f8fafc;
+  border: 1px solid #dfe3ec;
+  border-radius: 16px;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.panelHeader {
+  display: flex;
+  flex-direction: row-reverse;
+  margin: 0 32px;
+  padding: 32px 0 20px;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.panelTitle {
+  flex-shrink: 0;
+  margin-right: auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: #101828;
+}
+
+.scrollArea {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px 32px 32px;
+}

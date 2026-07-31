@@ -1,0 +1,486 @@
+<!doctype html>
+<html lang="ko-KR">
+<head>
+  <title>AI SCM 퍼블리싱</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/assets/css/globals.css">
+  
+  <script src="/assets/js/uiCommon.js"></script> <!-- 퍼블리싱 ui 참고를 위한 파일 / 개발에서는 가져가지 마세요. -->
+</head>
+<body>
+  <div class="viewportFill">
+    <div class="workspace">
+      <!-- layout : lnb -->
+      <aside class="aside asideCollapsed lnb">
+        <div class="collapsedColumn">
+          <div>
+            <div class="collapsedTop">
+              <button type="button" class="collapsedLogoBtn" aria-label="홈" title="SCM">
+                <span class="collapsedLogoMark" aria-hidden>
+                  <i class="IconAxgenticWireCollapsed">/</i>
+                </span>
+              </button>
+              <button type="button" class="toggleBtn">
+                <i class="IconPanelExpand">/</i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <!-- //layout : lnb -->
+
+      <!-- layout : main -->
+      <div class="mainColumn">
+        <div class="mainFrame">
+          <!-- root -->
+          <div class="root">
+            <div class="bodyPanel" data-anchor-scroll>
+              <div class="stack">
+
+                <!-- 본문 : 여기서부터 페이지 시작 -->
+                <div class="cmnHeader lg">
+                  <div class="cmnHeaderTitleArea">
+                    <div class="cmnHeaderTitlePreArea">
+                      <button type="button" class="button transparent md iconOnly buttonBack">뒤로</button>
+                    </div>
+                    <h2 class="cmnHeaderTitle lg">AT 서비스부문 신규 버전 생성</h2>
+                  </div>
+                  <div class="cmnHeaderSideArea">
+                    <div class="buttons">
+                      <button type="button" class="button primary outlined md iconPre buttonPlus">어젠다 추가</button>
+                      <button type="button" class="button assistive outlined md iconPre buttonPlus">액션 아이템 추가</button>
+                      <i class="divider"></i>
+                      <button type="button" class="button assistive outlined md">취소</button>
+                      <button type="button" class="button assistive outlined md">저장</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- bodyContents -->
+                <div class="bodyContents">
+                  <section class="manageSnOp">
+                    <div class="dropdownAnchorWrapper" data-anchor-fixed>
+                      <div class="dropdown xxl" data-anchor-dropdown>
+                        <button class="dropdownButton">어젠다 없음</button>
+                        <!-- root menu -->
+                        <div class="dropdownMenu">
+                          <ul class="dropdownMenuInner">
+                            <li class="menuItem">
+                              <button class="menuButton" data-anchor-target="anchorArea1">AX 사업 리소스 수요 대응방안</button>
+                            </li>
+                            <li class="menuItem">
+                              <button class="menuButton" data-anchor-target="anchorArea2">추가된 어젠다1</button>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+  
+                    <div class="manageSnOpBody">
+                      <!-- Area : 어젠다 추가 -->
+                      <div class="sectionRow" data-anchor="anchorArea1">
+                        <div class="agendaRegistBox" data-ddm-drop="agendaGroup1">
+                          <div class="defaultArea">
+                            <div class="fieldsetItem">
+                              <label class="title blind">어젠다</label>
+                              <div class="fieldBox lg">
+                                <div class="inputBox">
+                                  <input type="text" placeholder="부서 입력" value="AX 사업 리소스 수요 대응방안">
+                                  <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                </div>
+                              </div>
+                              <button type="button" class="button assistive outlined lg">삭제</button>
+                            </div>
+                            <div class="nodataBox typeDrag bg dashed icon1" data-empy-area>
+                              <div class="innerBody">
+                                <span class="text">Action Item을 드래그해주세요</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordions type1 border typeActionItem" data-ui="accordions" data-ddm-list></div>
+                        </div>
+                      </div>
+                      <!-- //Area : 어젠다 추가 -->
+
+                      <!-- Area : 어젠다 추가 -->
+                      <div class="sectionRow" data-anchor="anchorArea2">
+                        <div class="agendaRegistBox" data-ddm-drop="agendaGroup2">
+                          <div class="defaultArea">
+                            <div class="fieldsetItem">
+                              <label class="title blind">어젠다</label>
+                              <div class="fieldBox lg">
+                                <div class="inputBox">
+                                  <input type="text" placeholder="부서 입력">
+                                  <button type="button" class="button iconOnly buttonClear">입력 삭제</button>
+                                </div>
+                              </div>
+                              <button type="button" class="button assistive outlined lg">삭제</button>
+                            </div>
+                            <div class="nodataBox typeDrag bg dashed icon1" data-empy-area>
+                              <div class="innerBody">
+                                <span class="text">Action Item을 드래그해주세요</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="accordions type1 border typeActionItem" data-ui="accordions" data-ddm-list></div>
+                        </div>
+                      </div>
+                      <!-- //Area : 어젠다 추가 -->
+
+                      <!-- Area : Action Item -->
+                      <div class="sectionRow">
+                        <div class="accordions type1 border typeActionItem" data-ui="accordions" data-ddm-list>
+                          <!-- accordion :  -->
+                          <div class="accordion " data-ddm-item>
+                            <div class="accordionHeader">
+                              <div class="cardInfor typeActionItem2">
+                                <div class="titleArea">
+                                  <button type="button" class="button transparent iconOnly xs buttonDrag" data-ddm-handle>Drag</button>
+                                  <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                  <span class="badge actionItem ai">AI생성</span>
+                                </div>
+                                <div class="sideArea">
+                                  <div class="buttons">
+                                    <button type="button" class="button assistive outlined sm">수정</button>
+                                    <button type="button" class="button assistive outlined sm" data-ddm-delete>삭제</button>
+                                  </div>
+                                  <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                </div>
+                                <div class="bottomArea">
+                                  <div class="itemSummaryInfor">
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>생성일</dt>
+                                        <dd>26.04.13</dd>
+                                        <dt>유형</dt>
+                                        <dd>BR</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>귀속 연월</dt>
+                                        <dd>26년 8월</dd>
+                                        <dt>귀속 조직</dt>
+                                        <dd>Enterprise서비스 부문</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeColumn ellipsis">
+                                      <dl class="dlist">
+                                        <dt>원인</dt>
+                                        <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="accordionBody">
+                              <div class="actionItemInfor">
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                  <div class="thumbArea">
+                                    <span class=""><img src="/assets/images/temp/actionItem_1.jpg" class="" /></span><!-- sample 이미지 -->
+                                    <div class="downloadArea">
+                                      <button type="button" class="button outlined md assistive iconPre buttonDownload">다운로드</button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //accordion :  -->
+
+                          <!-- accordion :  -->
+                          <div class="accordion " data-ddm-item>
+                            <div class="accordionHeader">
+                              <div class="cardInfor typeActionItem2">
+                                <div class="titleArea">
+                                  <button type="button" class="button transparent iconOnly xs buttonDrag" data-ddm-handle>Drag</button>
+                                  <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                  <span class="badge actionItem ai">AI생성</span>
+                                </div>
+                                <div class="sideArea">
+                                  <div class="buttons">
+                                    <button type="button" class="button assistive outlined sm">수정</button>
+                                    <button type="button" class="button assistive outlined sm" data-ddm-delete>삭제</button>
+                                  </div>
+                                  <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                </div>
+                                <div class="bottomArea">
+                                  <div class="itemSummaryInfor">
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>생성일</dt>
+                                        <dd>26.04.13</dd>
+                                        <dt>유형</dt>
+                                        <dd>BR</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>귀속 연월</dt>
+                                        <dd>26년 8월</dd>
+                                        <dt>귀속 조직</dt>
+                                        <dd>Enterprise서비스 부문</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeColumn ellipsis">
+                                      <dl class="dlist">
+                                        <dt>원인</dt>
+                                        <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="accordionBody">
+                              <div class="actionItemInfor">
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //accordion :  -->
+
+                          <!-- accordion :  -->
+                          <div class="accordion " data-ddm-item>
+                            <div class="accordionHeader">
+                              <div class="cardInfor typeActionItem2">
+                                <div class="titleArea">
+                                  <button type="button" class="button transparent iconOnly xs buttonDrag" data-ddm-handle>Drag</button>
+                                  <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                  <span class="badge actionItem ai">AI생성</span>
+                                </div>
+                                <div class="sideArea">
+                                  <div class="buttons">
+                                    <button type="button" class="button assistive outlined sm">수정</button>
+                                    <button type="button" class="button assistive outlined sm" data-ddm-delete>삭제</button>
+                                  </div>
+                                  <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                </div>
+                                <div class="bottomArea">
+                                  <div class="itemSummaryInfor">
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>생성일</dt>
+                                        <dd>26.04.13</dd>
+                                        <dt>유형</dt>
+                                        <dd>BR</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>귀속 연월</dt>
+                                        <dd>26년 8월</dd>
+                                        <dt>귀속 조직</dt>
+                                        <dd>Enterprise서비스 부문</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeColumn ellipsis">
+                                      <dl class="dlist">
+                                        <dt>원인</dt>
+                                        <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="accordionBody">
+                              <div class="actionItemInfor">
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //accordion :  -->
+
+                          <!-- accordion :  -->
+                          <div class="accordion " data-ddm-item>
+                            <div class="accordionHeader">
+                              <div class="cardInfor typeActionItem2">
+                                <div class="titleArea">
+                                  <button type="button" class="button transparent iconOnly xs buttonDrag" data-ddm-handle>Drag</button>
+                                  <strong class="title">ㅇㅇ조직 계획비 0.5 % 감소 (기존 현황 정보)</strong>
+                                  <span class="badge actionItem ai">AI생성</span>
+                                </div>
+                                <div class="sideArea">
+                                  <div class="buttons">
+                                    <button type="button" class="button assistive outlined sm">수정</button>
+                                    <button type="button" class="button assistive outlined sm" data-ddm-delete>삭제</button>
+                                  </div>
+                                  <button type="button" data-ui="accordionTrigger" class="buttonAccordion"><span class="labelText" data-ui="accordionTriggerLabel"></span></button>
+                                </div>
+                                <div class="bottomArea">
+                                  <div class="itemSummaryInfor">
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>생성일</dt>
+                                        <dd>26.04.13</dd>
+                                        <dt>유형</dt>
+                                        <dd>BR</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeRow">
+                                      <dl class="dlist">
+                                        <dt>귀속 연월</dt>
+                                        <dd>26년 8월</dd>
+                                        <dt>귀속 조직</dt>
+                                        <dd>Enterprise서비스 부문</dd>
+                                      </dl>
+                                    </div>
+                                    <div class="col typeColumn ellipsis">
+                                      <dl class="dlist">
+                                        <dt>원인</dt>
+                                        <dd>최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</dd>
+                                      </dl>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+
+                            </div>
+                            <div class="accordionBody">
+                              <div class="actionItemInfor">
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                                <div class="innerBox">
+                                  <strong class="title">이동(부문간)</strong>
+                                  <p class="text">최근 글로벌 경기 둔화와 소비 심리 위축에도 불구하고, 비대면 플랫폼 중심의 디지털 전환은 산업 전반에서 더욱 가속화되는 양상을 보이고 있습니다. 특히 당사 주요 타깃 시장의 고객 니즈가 개인화·다변화됨에 따라, 기존의 범용적 마케팅 방식으로는 신규 수요 창출 및 고객 락인(Lock-in) 효과를 기대하기 어려운 한계에 직면하였습니다. 따라서 향후 전사적 차원의 데이터 통합 관리 체계를 조속히 구축하고, 이를 기반으로 한 맞춤형 고부가가치 서비스 개발을 통해 시장 변화에 선제적으로 대응함으로써 중장기적 성장 모멘텀을 확보해야 할 것으로 사료됩니다.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- //accordion :  -->
+                        </div>
+                      </div>
+                      <!-- //Area : Action Item -->
+                    </div>
+                  </section>
+                </div>
+                <!-- //bodyContents -->
+                
+                <!-- //본문 : 여기서부터 페이지 시작 -->
+                
+              </div>
+            </div>
+          </div>
+          <!-- //root -->
+        </div>
+      </div>
+      <!-- //layout : main -->
+      
+      <!-- layout : right panel Area -->
+      <!-- ==============================
+        #상태 open : .panel.isOpen
+      ============================== -->
+      <div class="panel right panelChat ">
+        <div class="resizeHandle"></div>
+        <div class="cmnHeader lg border panelHeader">
+          <div class="cmnHeaderTitleArea">
+            <strong class="cmnHeaderTitle lg">BR추정치 브리핑</strong>
+          </div>
+          <div class="cmnHeaderSideArea">
+            <div class="buttons">
+              <button type="button" class="button iconOnly buttonClose" onclick="closePanel('panelChat')">팝업 닫기</button>
+            </div>
+          </div>
+        </div>
+        <div class="panelBody">
+          우측 영역
+        </div>
+      </div>
+      <!-- //layout : right panel Area -->
+    </div>
+  </div>
+</body>
+
+<script>
+// onload
+window.addEventListener('DOMContentLoaded', () => {
+  // panel size 조절
+  new flexablePanel();
+
+  // Accordion
+  Accordion.init();
+
+  // Dropdown
+  Dropdown.initAll();
+
+  // Dropdown / DropdownAnchorPlugin
+  /* ==============================
+    - Dropdown.initAll(); 이 후에 실행
+    - scroll 영역 (.bodyPanel)에 data-anchor-scroll 추가
+  ============================== */
+  new DropdownAnchorPlugin({
+    selector: '[data-anchor-dropdown]',
+    offset: 80,
+    duration: 400
+  });
+});
+</script>
+
+<script>
+const manager = new DragDropManager({
+  root: document.querySelector('dragDropArea'),
+  scrollContainer: document.querySelector('.bodyPanel'), // scroll 영역, 생략 가능
+  animation : false,
+  animationDuration : 200,
+  returnButton : false,
+  autoScroll: true,
+  scrollEdge: 80,
+  scrollSpeed: 30,
+
+  canDrop(item, area){
+    return (area.dataset.ddmDrop !=='disabled');
+  },
+  onChange(data){
+    console.log('CHANGE', data);
+  },
+  onDrop(item){
+    console.log('DROP', item);
+    
+    // Accordion
+    Accordion.init();
+  },
+  onDelete(item){
+    console.log('DELETE', item);
+  },
+  onReturn(item){
+    console.log('RETURN', item);
+  },
+  canDrop(item, area) {
+    // return !area.classList.contains('disabled');
+    return area.dataset.ddmDrop !== 'disabled';
+  },
+});
+manager.init();
+
+// 테스트용
+window.ddm = manager;
+</script>
+</html>

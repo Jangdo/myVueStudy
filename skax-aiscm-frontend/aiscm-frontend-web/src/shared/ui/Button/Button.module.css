@@ -1,0 +1,181 @@
+/* root */
+.root {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  width: max-content;
+  max-width: 100%;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+  white-space: nowrap;
+  text-decoration: none;
+  transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease, filter 0.15s ease;
+}
+
+/* focus */
+.root:focus-visible {
+  outline: 2px solid #4872ff;
+  outline-offset: 2px;
+}
+
+.root:focus-visible:disabled {
+  outline-color: var(--border, #e2e8f0);
+}
+
+/* size, icon size */
+.xl {
+  height: 48px;
+  padding: 0 24px;
+  font-size: 14px;
+}
+
+.lg {
+  height: 40px;
+  padding: 10px 24px;
+}
+
+.md {
+  height: 28px;
+  padding: 8px 12px;
+}
+
+.sm {
+  height: 24px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+}
+
+/* primary */
+.primary.solid {
+  color: #ffffff;
+  background: #3D63FF;
+}
+
+.primary.solid:not(:disabled):hover {
+  background: #2E4BE6;
+}
+
+.primary.outlined {
+  border: 1px solid #94ADFF;
+  color: #2D55F4;
+  background: #ffffff;
+}
+
+.primary.outlined:not(:disabled):hover {
+  background: #F7F9FF;
+}
+
+/* assistive */
+.assistive.outlined {
+  border-color: #DCE0E5;
+  color: #444B59;
+  background: #ffffff;
+}
+
+.assistive.outlined:not(:disabled):hover {
+  background: #DCE0E5;
+}
+
+/* danger */
+.danger.solid {
+  color: #FFFFFF;
+  background: #EA2222;
+}
+
+.danger.solid:not(:disabled):hover {
+  background: #BB1B1B;
+}
+
+.danger.outlined {
+  border-color: #DCE0E5;
+  color: #EA2222;
+  background: #ffffff;
+}
+
+.danger.outlined:not(:disabled):hover {
+  border-color: #DCE0E5;
+  background: #F9FAFC;
+}
+
+/* submit */
+.submit.solid {
+  color: #FFF;
+  background: #0B135E;
+}
+
+.submit.solid:not(:disabled):hover {
+  background: #101828;
+}
+
+/* disabled */
+.root.solid:disabled {
+  color: #9AA1AD;
+  background: #EDF0F3;
+}
+
+.root.outlined:disabled {
+  border-color: #EDF0F3;
+  color: #9AA1AD;
+  background-color: #FFF;
+}
+
+/* icon > iconRight */
+.iconRight {
+
+}
+
+/* icon size */
+.xl .icon {
+  width: 14px;
+  height: 14px;
+}
+
+.lg .icon {
+  width: 12px;
+  height: 12px;
+}
+
+.md .icon {
+  width: 10px;
+  height: 10px;
+}
+
+.sm .icon {
+  width: 8px;
+  height: 8px;
+}
+
+/* icon > iconOnly */
+.iconOnly {
+  gap: 0;
+  padding: 0;
+}
+
+.iconOnly.xl {
+  width: 48px;
+}
+
+.iconOnly.lg {
+  width: 40px;
+}
+
+.iconOnly.md {
+  width: 28px;
+}
+
+.iconOnly.sm {
+  width: 24px;
+}
+
+.iconOnly .textLabel {
+    text-indent: -9999em;
+}
+
+.round {
+  border-radius: 100px;
+}

@@ -1,0 +1,214 @@
+
+@font-face {
+  font-family: "Pretendard Variable";
+  font-weight: 45 920;
+  font-style: normal;
+  font-display: swap;
+  src: url("/assets/fonts/PretendardVariable.woff2") format("woff2-variations");
+}
+
+::-webkit-scrollbar {
+	width: 4px;
+	height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+	background: #CCD1D7;
+}
+::-webkit-scrollbar-track {
+	border-radius: 4px;
+	background: transparent;
+}
+
+html,
+body,
+input,
+select,
+textarea,
+button {
+  font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif, Arial;
+  line-height: 1.5;
+}
+
+html, body, 
+div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, 
+p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+input, select, textarea, button,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--fontColorBase);
+}
+
+body {
+  background: #f8fafc;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+h1, h2, h3, h4, h5, h5, strong {
+  font-weight: 500;
+}
+
+em {
+  font-style: normal;
+}
+
+table {
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+th,
+td {
+  word-wrap: break-word;
+}
+
+th {
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+::placeholder {
+  font-weight: var(--fontThin);
+  color: var(--field-font-color-placeholder);
+}
+
+/* 입력상태가 아닌, placehoder 유무 만 구분 됨 */
+input:placeholder-shown {}
+input:not(:placeholder-shown) {}
+
+input:not([type="range"]),
+select {
+  appearance: none;
+}
+
+textarea {
+  resize: vertical;
+  overflow: auto;
+  width: 100%;
+}
+
+button,
+[role="button"] {
+  cursor: pointer;
+}
+
+/* input / range ========== */
+input[type="range"] {
+  accent-color: #3D63FF;
+  cursor: pointer
+}
+
+input[type="range"]:disabled {
+  cursor: default;
+}
+
+/* input / radio, checkbox ========== */
+input[type='radio'],
+input[type='checkbox'] {
+  flex: 0 0 auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+input[type='radio']:focus-visible,
+input[type='checkbox']:focus-visible {
+  outline: 2px solid #6684FF;
+  outline-offset: 2px;
+}
+
+/* input / radio */
+input[type='radio'] {
+  border-radius: 100%;
+  border: 1px solid #CCD1D7;
+  background-color: #FFF;
+}
+input[type='radio']:checked {
+  border:6px solid #3D63FF;
+}
+input[type='radio']:disabled {
+  background-color: #F1F3F5;
+}
+input[type='radio']:checked:disabled {
+  border-color: #C2D1FF;
+}
+
+/* input / checkbox */
+input[type='checkbox'] {
+  border-radius: 4px;
+  border: 1px solid #E4E7EB;
+  background: #FFF no-repeat center / 12px;
+}
+input[type='checkbox']:checked {
+  background-image: url('/assets/images/Icon/form_checkbox.svg');
+}
+
+/* checkbox / type : gray ========== */
+input[type='checkbox'].gray {
+  border-color: #CCD1D7;
+  background-color: #FFF;
+}
+input[type='checkbox'].gray:checked {
+  border-color: #5F6675;
+  background-color: #5F6675;
+}
+
+/* checkbox / type : primary ========== */
+input[type='checkbox'].primary {
+  border-color: #CCD1D7;
+  background-color: #FFF;
+}
+input[type='checkbox'].primary:checked {
+  border-color: #3D63FF;
+  background-color: #3D63FF;
+}
+input[type='checkbox'].gray:checked,
+input[type='checkbox'].primary:checked {
+  background-image: url('/assets/images/Icon/form_checkbox_wht.svg');
+}
+
+/* checkbox / type : dash ========== */
+input[type='checkbox'].dash:not(:checked) {
+  background-image: url('/assets/images/Icon/form_checkbox_dash.svg');
+}
+input[type='checkbox']:disabled {
+  opacity: .5;
+}
